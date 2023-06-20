@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -25,6 +29,7 @@
   <td id="projectalign">
    <div id="projectname">QuaSAR<span id="projectnumber">&#160;2.12.0</span>
    </div>
+   <div id="projectbrief">Ground control station software for SAR &quot;QuaSAR&quot;.</div>
   </td>
  </tr>
  </tbody>
@@ -49,6 +54,22 @@ $(function() {
 </script>
 <div id="main-nav"></div>
 </div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('functions_func.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -71,31 +92,23 @@ $(function() {
 </div>
 
 <div class="contents">
-&#160;
-
-<h3><a id="index_a" name="index_a"></a>- a -</h3><ul>
-<li>AbstractUDPSocket()&#160;:&#160;<a class="el" href="classNetworking_1_1AbstractUDPSocket.html#a7e66254d00af9f1d387c3926431d80ed">Networking::AbstractUDPSocket</a></li>
-<li>add()&#160;:&#160;<a class="el" href="classMap_1_1ImageModel.html#aebb5141e6e5e4bc2fbf733443ea0afa7">Map::ImageModel</a>, <a class="el" href="classMap_1_1MarkerModel.html#a4eede71538cf11bcfb38735eb4e4938d">Map::MarkerModel</a></li>
-<li>added()&#160;:&#160;<a class="el" href="classMap_1_1ImageModel.html#afc84f2193954f74a1eb22259a36fbbfc">Map::ImageModel</a>, <a class="el" href="classMap_1_1MarkerModel.html#a1f2a017b2cd5cc39b88b7492c91c8a9d">Map::MarkerModel</a></li>
-<li>addMarker()&#160;:&#160;<a class="el" href="classMap_1_1ClickHandler.html#a0198779e3c027aff148192d20dd9d4ba">Map::ClickHandler</a></li>
-<li>altitude()&#160;:&#160;<a class="el" href="classNetworking_1_1Telemetry.html#aba9568ec79757b74cf27518cd7fac551">Networking::Telemetry</a></li>
-<li>altitudeChanged()&#160;:&#160;<a class="el" href="classNetworking_1_1Telemetry.html#a8f8cdeae8fbb9436b74ee20f53409314">Networking::Telemetry</a></li>
-<li>angle()&#160;:&#160;<a class="el" href="classMap_1_1Diagram.html#a4c4729913192b69c7a4ce9b293ecaadd">Map::Diagram</a></li>
-<li>angleChanged()&#160;:&#160;<a class="el" href="classMap_1_1Diagram.html#a32c9828305285d23420ab8dbeaf42db4">Map::Diagram</a></li>
-<li>angleCorrection()&#160;:&#160;<a class="el" href="classConfig_1_1Config.html#a5d3e69e0ccbccd06940ec1be0dbba3cc">Config::Config</a></li>
-<li>angleCorrectionChanged()&#160;:&#160;<a class="el" href="classConfig_1_1Config.html#ad3e9caf4d8f42dfec6128d23c9e41eff">Config::Config</a></li>
-<li>antennaAlignment()&#160;:&#160;<a class="el" href="classConfig_1_1Config.html#aaae9f0f8a36c4d70e9c2f84438c11313">Config::Config</a></li>
-<li>antennaAlignmentChanged()&#160;:&#160;<a class="el" href="classConfig_1_1Config.html#a6da21194e94a0c33fc28f13da71fe532">Config::Config</a></li>
-<li>append()&#160;:&#160;<a class="el" href="classGUI_1_1TerminalBase.html#ad41ccc11b4fff1091c9b92887e57a758">GUI::TerminalBase</a>, <a class="el" href="classGUI_1_1WarningsModel.html#ad0638743f58473eb682da61409adef29">GUI::WarningsModel</a>, <a class="el" href="classMap_1_1Route.html#aabe80ffef9b6b74871416e441b5b7807">Map::Route</a>, <a class="el" href="classMap_1_1RouteLogger.html#a434684fb75d657d938bfc526c21f4632">Map::RouteLogger</a></li>
-<li>applyTheme()&#160;:&#160;<a class="el" href="classGUI_1_1ThemePrivate.html#ab3d66b1854ec6c768c56f4eb20333b8f">GUI::ThemePrivate</a></li>
-<li>argument()&#160;:&#160;<a class="el" href="classNetworking_1_1Network.html#ab55ec149f7ce12417d16b2077707af92">Networking::Network</a></li>
-<li>azimuth()&#160;:&#160;<a class="el" href="classMap_1_1Diagram.html#ab94130258343f1ebd06a35cc9af6c84f">Map::Diagram</a></li>
-<li>azimuthChanged()&#160;:&#160;<a class="el" href="classMap_1_1Diagram.html#a3bce951c66ce43237733573653fd9210">Map::Diagram</a></li>
+&#160;<ul>
+<li>get()&#160;:&#160;<a class="el" href="d5/dfa/classConfig_1_1Config.html#aab4f0df3041b8a7fb08052df350ebcbd">Config</a></li>
+<li>load()&#160;:&#160;<a class="el" href="d5/dfa/classConfig_1_1Config.html#a78f61ac2dd03bcba8e09ca20cd7d68e3">Config</a></li>
+<li>projectVersion()&#160;:&#160;<a class="el" href="d5/dfa/classConfig_1_1Config.html#a0664ef97a51606760964d90526e64ab2">Config</a></li>
+<li>reset()&#160;:&#160;<a class="el" href="d5/dfa/classConfig_1_1Config.html#ad20897c5c8bd47f5d4005989bead0e55">Config</a></li>
+<li>revert()&#160;:&#160;<a class="el" href="d5/dfa/classConfig_1_1Config.html#a9cf620340e16aa417bb112e0294038df">Config</a></li>
+<li>save()&#160;:&#160;<a class="el" href="d5/dfa/classConfig_1_1Config.html#aae2c382151ef7c9aa913361172b30db6">Config</a></li>
+<li>sync()&#160;:&#160;<a class="el" href="d5/dfa/classConfig_1_1Config.html#ad55f80ed3cd8b6c4f247763b747016af">Config</a></li>
+<li>~Config()&#160;:&#160;<a class="el" href="d5/dfa/classConfig_1_1Config.html#a54dfba499c9d9e1003d4c9bcbe6ad1c5">Config</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

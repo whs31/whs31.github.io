@@ -1,6 +1,9 @@
 var searchData=
 [
-  ['k_0',['k',['../structMap_1_1StripFormatMetadata.html#a92df93ae689b31cc633690c2a5999914',1,'Map::StripFormatMetadata::k()'],['../imagemetadata_8h.html#a9fc4cca635a26c692681a7071e379aa7',1,'k():&#160;imagemetadata.h']]],
-  ['kr_1',['kr',['../structMap_1_1ImageMetadata.html#a2ebe2e09c2709db9946e0c9f5d1141be',1,'Map::ImageMetadata']]],
-  ['kr_2',['KR',['../classMap_1_1ImageModel.html#a8a969379ac959d3a424fcfb8a60bdad8a6c0015c1b07dbaa154115697b46ec4ff',1,'Map::ImageModel']]]
+  ['save_0',['save',['../d5/dfa/classConfig_1_1Config.html#aae2c382151ef7c9aa913361172b30db6',1,'Config::Config']]],
+  ['storedcatalogue_1',['storedCatalogue',['../d5/dfa/classConfig_1_1Config.html#a153feb691de604b107e5765377364a9d',1,'Config::Config']]],
+  ['storedlatitude_2',['storedLatitude',['../d5/dfa/classConfig_1_1Config.html#abdcb3cc37ddbefe06ad99b3daa720afc',1,'Config::Config']]],
+  ['storedlongitude_3',['storedLongitude',['../d5/dfa/classConfig_1_1Config.html#a5b2d3b040ee55818de48aed7ffc5806f',1,'Config::Config']]],
+  ['storedzoomlevel_4',['storedZoomLevel',['../d5/dfa/classConfig_1_1Config.html#a6241b7c15dc9a3b9b8e412a80e00cc9d',1,'Config::Config']]],
+  ['sync_5',['sync',['../d5/dfa/classConfig_1_1Config.html#ad55f80ed3cd8b6c4f247763b747016af',1,'Config::Config']]]
 ];

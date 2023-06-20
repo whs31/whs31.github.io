@@ -1,8 +1,4 @@
 var searchData=
 [
-  ['entry_0',['Entry',['../classEntry.html',1,'']]],
-  ['enums_1',['Enums',['../classNetworking_1_1Enums.html',1,'Networking']]],
-  ['execdargument_2',['ExecdArgument',['../structNetworking_1_1ExecdArgument.html',1,'Networking']]],
-  ['execdargumentlist_3',['ExecdArgumentList',['../classNetworking_1_1ExecdArgumentList.html',1,'Networking']]],
-  ['execdsocket_4',['ExecdSocket',['../classNetworking_1_1ExecdSocket.html',1,'Networking']]]
+  ['стуктура_0',['Стуктура',['../d2/de9/struct_xD0_xA1_xD1_x82_xD1_x83_xD0_xBA_xD1_x82_xD1_x83_xD1_x80_xD0_xB0.html',1,'']]]
 ];

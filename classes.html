@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -25,6 +29,7 @@
   <td id="projectalign">
    <div id="projectname">QuaSAR<span id="projectnumber">&#160;2.12.0</span>
    </div>
+   <div id="projectbrief">Ground control station software for SAR &quot;QuaSAR&quot;.</div>
   </td>
  </tr>
  </tbody>
@@ -49,6 +54,22 @@ $(function() {
 </script>
 <div id="main-nav"></div>
 </div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classes.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -74,67 +95,31 @@ $(function() {
   <div class="headertitle"><div class="title">Class Index</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="qindex"><a class="qindex" href="#letter_A">A</a>&#160;|&#160;<a class="qindex" href="#letter_B">B</a>&#160;|&#160;<a class="qindex" href="#letter_C">C</a>&#160;|&#160;<a class="qindex" href="#letter_D">D</a>&#160;|&#160;<a class="qindex" href="#letter_E">E</a>&#160;|&#160;<a class="qindex" href="#letter_F">F</a>&#160;|&#160;<a class="qindex" href="#letter_I">I</a>&#160;|&#160;<a class="qindex" href="#letter_M">M</a>&#160;|&#160;<a class="qindex" href="#letter_N">N</a>&#160;|&#160;<a class="qindex" href="#letter_O">O</a>&#160;|&#160;<a class="qindex" href="#letter_P">P</a>&#160;|&#160;<a class="qindex" href="#letter_R">R</a>&#160;|&#160;<a class="qindex" href="#letter_S">S</a>&#160;|&#160;<a class="qindex" href="#letter_T">T</a>&#160;|&#160;<a class="qindex" href="#letter_V">V</a>&#160;|&#160;<a class="qindex" href="#letter_W">W</a>&#160;|&#160;<a class="qindex" href="#letter_0xd094">Д</a>&#160;|&#160;<a class="qindex" href="#letter_0xd0a1">С</a></div>
+<div class="qindex"><a class="qindex" href="#letter_C">C</a>&#160;|&#160;<a class="qindex" href="#letter_P">P</a>&#160;|&#160;<a class="qindex" href="#letter_T">T</a>&#160;|&#160;<a class="qindex" href="#letter_0xd094">Д</a>&#160;|&#160;<a class="qindex" href="#letter_0xd0a1">С</a></div>
 <div class="classindex">
 <dl class="classindex even">
-<dt class="alphachar"><a id="letter_A" name="letter_A">A</a></dt>
-<dd><a class="el" href="classNetworking_1_1AbstractUDPSocket.html">AbstractUDPSocket</a> (<a class="el" href="namespaceNetworking.html">Networking</a>)</dd></dl>
-<dl class="classindex odd">
-<dt class="alphachar"><a id="letter_B" name="letter_B">B</a></dt>
-<dd><a class="el" href="structGUI_1_1TerminalBase_1_1BasicMessage.html">TerminalBase::BasicMessage</a> (<a class="el" href="namespaceGUI.html">GUI</a>)</dd></dl>
-<dl class="classindex even">
 <dt class="alphachar"><a id="letter_C" name="letter_C">C</a></dt>
-<dd><a class="el" href="classClass.html">Class</a></dd><dd><a class="el" href="classMap_1_1ClickHandler.html">ClickHandler</a> (<a class="el" href="namespaceMap.html">Map</a>)</dd><dd><a class="el" href="classConfig_1_1Config.html">Config</a> (<a class="el" href="namespaceConfig.html">Config</a>)</dd></dl>
+<dd><a class="el" href="db/d96/classClass.html">Class</a></dd><dd><a class="el" href="d5/dfa/classConfig_1_1Config.html">Config</a> (<a class="el" href="d2/dff/namespaceConfig.html">Config</a>)</dd></dl>
 <dl class="classindex odd">
-<dt class="alphachar"><a id="letter_D" name="letter_D">D</a></dt>
-<dd><a class="el" href="classGUI_1_1DebugConsole.html">DebugConsole</a> (<a class="el" href="namespaceGUI.html">GUI</a>)</dd><dd><a class="el" href="classMap_1_1Diagram.html">Diagram</a> (<a class="el" href="namespaceMap.html">Map</a>)</dd></dl>
-<dl class="classindex even">
-<dt class="alphachar"><a id="letter_E" name="letter_E">E</a></dt>
-<dd><a class="el" href="classEntry.html">Entry</a></dd><dd><a class="el" href="classNetworking_1_1Enums.html">Enums</a> (<a class="el" href="namespaceNetworking.html">Networking</a>)</dd><dd><a class="el" href="structNetworking_1_1ExecdArgument.html">ExecdArgument</a> (<a class="el" href="namespaceNetworking.html">Networking</a>)</dd><dd><a class="el" href="classNetworking_1_1ExecdArgumentList.html">ExecdArgumentList</a> (<a class="el" href="namespaceNetworking.html">Networking</a>)</dd><dd><a class="el" href="classNetworking_1_1ExecdSocket.html">ExecdSocket</a> (<a class="el" href="namespaceNetworking.html">Networking</a>)</dd></dl>
-<dl class="classindex odd">
-<dt class="alphachar"><a id="letter_F" name="letter_F">F</a></dt>
-<dd><a class="el" href="classNetworking_1_1FeedbackSocket.html">FeedbackSocket</a> (<a class="el" href="namespaceNetworking.html">Networking</a>)</dd><dd><a class="el" href="classOS_1_1Filesystem.html">Filesystem</a> (<a class="el" href="namespaceOS.html">OS</a>)</dd></dl>
-<dl class="classindex even">
-<dt class="alphachar"><a id="letter_I" name="letter_I">I</a></dt>
-<dd><a class="el" href="structMap_1_1Image.html">Image</a> (<a class="el" href="namespaceMap.html">Map</a>)</dd><dd><a class="el" href="structMap_1_1ImageMetadata.html">ImageMetadata</a> (<a class="el" href="namespaceMap.html">Map</a>)</dd><dd><a class="el" href="structMap_1_1ImageMetaHeader.html">ImageMetaHeader</a> (<a class="el" href="namespaceMap.html">Map</a>)</dd><dd><a class="el" href="classMap_1_1ImageModel.html">ImageModel</a> (<a class="el" href="namespaceMap.html">Map</a>)</dd><dd><a class="el" href="classProcessing_1_1ImageProcessing.html">ImageProcessing</a> (<a class="el" href="namespaceProcessing.html">Processing</a>)</dd></dl>
-<dl class="classindex odd">
-<dt class="alphachar"><a id="letter_M" name="letter_M">M</a></dt>
-<dd><a class="el" href="structMap_1_1Marker.html">Marker</a> (<a class="el" href="namespaceMap.html">Map</a>)</dd><dd><a class="el" href="classMap_1_1MarkerModel.html">MarkerModel</a> (<a class="el" href="namespaceMap.html">Map</a>)</dd></dl>
-<dl class="classindex even">
-<dt class="alphachar"><a id="letter_N" name="letter_N">N</a></dt>
-<dd><a class="el" href="classNetworking_1_1Network.html">Network</a> (<a class="el" href="namespaceNetworking.html">Networking</a>)</dd></dl>
-<dl class="classindex odd">
-<dt class="alphachar"><a id="letter_O" name="letter_O">O</a></dt>
-<dd><a class="el" href="classMap_1_1OfflineTileLoader.html">OfflineTileLoader</a> (<a class="el" href="namespaceMap.html">Map</a>)</dd></dl>
-<dl class="classindex even">
 <dt class="alphachar"><a id="letter_P" name="letter_P">P</a></dt>
-<dd><a class="el" href="classConfig_1_1Paths.html">Paths</a> (<a class="el" href="namespaceConfig.html">Config</a>)</dd><dd><a class="el" href="classNetworking_1_1Pinger.html">Pinger</a> (<a class="el" href="namespaceNetworking.html">Networking</a>)</dd><dd><a class="el" href="structNetworking_1_1PlannerAppendDatagram.html">PlannerAppendDatagram</a> (<a class="el" href="namespaceNetworking.html">Networking</a>)</dd><dd><a class="el" href="structMap_1_1PlannerPoint.html">PlannerPoint</a> (<a class="el" href="namespaceMap.html">Map</a>)</dd><dd><a class="el" href="structNetworking_1_1PlannerRemoveDatagram.html">PlannerRemoveDatagram</a> (<a class="el" href="namespaceNetworking.html">Networking</a>)</dd><dd><a class="el" href="structNetworking_1_1PlannerResponseDatagram.html">PlannerResponseDatagram</a> (<a class="el" href="namespaceNetworking.html">Networking</a>)</dd><dd><a class="el" href="classProvides.html">Provides</a></dd></dl>
-<dl class="classindex odd">
-<dt class="alphachar"><a id="letter_R" name="letter_R">R</a></dt>
-<dd><a class="el" href="classNetworking_1_1RemoteData.html">RemoteData</a> (<a class="el" href="namespaceNetworking.html">Networking</a>)</dd><dd><a class="el" href="classMap_1_1Route.html">Route</a> (<a class="el" href="namespaceMap.html">Map</a>)</dd><dd><a class="el" href="classMap_1_1RouteLogger.html">RouteLogger</a> (<a class="el" href="namespaceMap.html">Map</a>)</dd><dd><a class="el" href="classMap_1_1Ruler.html">Ruler</a> (<a class="el" href="namespaceMap.html">Map</a>)</dd></dl>
+<dd><a class="el" href="d3/d16/classProvides.html">Provides</a></dd></dl>
 <dl class="classindex even">
-<dt class="alphachar"><a id="letter_S" name="letter_S">S</a></dt>
-<dd><a class="el" href="structMap_1_1StripFormatMetadata.html">StripFormatMetadata</a> (<a class="el" href="namespaceMap.html">Map</a>)</dd><dd><a class="el" href="structMap_1_1StripHeaderMetadata.html">StripHeaderMetadata</a> (<a class="el" href="namespaceMap.html">Map</a>)</dd><dd><a class="el" href="structMap_1_1StripImage.html">StripImage</a> (<a class="el" href="namespaceMap.html">Map</a>)</dd><dd><a class="el" href="structMap_1_1StripImageDatagram.html">StripImageDatagram</a> (<a class="el" href="namespaceMap.html">Map</a>)</dd><dd><a class="el" href="structMap_1_1StripNavigationMetadata.html">StripNavigationMetadata</a> (<a class="el" href="namespaceMap.html">Map</a>)</dd></dl>
-<dl class="classindex odd">
 <dt class="alphachar"><a id="letter_T" name="letter_T">T</a></dt>
-<dd><a class="el" href="classTCP.html">TCP</a></dd><dd><a class="el" href="classNetworking_1_1TCPSocket.html">TCPSocket</a> (<a class="el" href="namespaceNetworking.html">Networking</a>)</dd><dd><a class="el" href="classNetworking_1_1Telemetry.html">Telemetry</a> (<a class="el" href="namespaceNetworking.html">Networking</a>)</dd><dd><a class="el" href="structNetworking_1_1TelemetryDatagram.html">TelemetryDatagram</a> (<a class="el" href="namespaceNetworking.html">Networking</a>)</dd><dd><a class="el" href="structNetworking_1_1TelemetryRequest.html">TelemetryRequest</a> (<a class="el" href="namespaceNetworking.html">Networking</a>)</dd><dd><a class="el" href="classNetworking_1_1TelemetrySocket.html">TelemetrySocket</a> (<a class="el" href="namespaceNetworking.html">Networking</a>)</dd><dd><a class="el" href="classGUI_1_1TerminalBase.html">TerminalBase</a> (<a class="el" href="namespaceGUI.html">GUI</a>)</dd><dd><a class="el" href="classGUI_1_1Theme.html">Theme</a> (<a class="el" href="namespaceGUI.html">GUI</a>)</dd><dd><a class="el" href="classGUI_1_1ThemePrivate.html">ThemePrivate</a> (<a class="el" href="namespaceGUI.html">GUI</a>)</dd></dl>
-<dl class="classindex even">
-<dt class="alphachar"><a id="letter_V" name="letter_V">V</a></dt>
-<dd><a class="el" href="structNetworking_1_1utils_1_1vt100__result__t.html">vt100_result_t</a> (<a class="el" href="namespaceNetworking_1_1utils.html">Networking::utils</a>)</dd><dd><a class="el" href="classGUI_1_1VT100Terminal.html">VT100Terminal</a> (<a class="el" href="namespaceGUI.html">GUI</a>)</dd></dl>
+<dd><a class="el" href="d5/d32/classTCP.html">TCP</a></dd></dl>
 <dl class="classindex odd">
-<dt class="alphachar"><a id="letter_W" name="letter_W">W</a></dt>
-<dd><a class="el" href="classGUI_1_1WarningsModel.html">WarningsModel</a> (<a class="el" href="namespaceGUI.html">GUI</a>)</dd></dl>
-<dl class="classindex even">
 <dt class="alphachar"><a id="letter_0xd094" name="letter_0xd094">Д</a></dt>
-<dd><a class="el" href="struct_xD0_x94_xD0_xB0_xD1_x82_xD0_xB0_xD0_xB3_xD1_x80_xD0_xB0_xD0_xBC_xD0_xB0.html">Датаграма</a></dd></dl>
-<dl class="classindex odd">
+<dd><a class="el" href="d8/db3/struct_xD0_x94_xD0_xB0_xD1_x82_xD0_xB0_xD0_xB3_xD1_x80_xD0_xB0_xD0_xBC_xD0_xB0.html">Датаграма</a></dd></dl>
+<dl class="classindex even">
 <dt class="alphachar"><a id="letter_0xd0a1" name="letter_0xd0a1">С</a></dt>
-<dd><a class="el" href="struct_xD0_xA1_xD1_x82_xD1_x83_xD0_xBA_xD1_x82_xD1_x83_xD1_x80_xD0_xB0.html">Стуктура</a></dd></dl>
+<dd><a class="el" href="d2/de9/struct_xD0_xA1_xD1_x82_xD1_x83_xD0_xBA_xD1_x82_xD1_x83_xD1_x80_xD0_xB0.html">Стуктура</a></dd></dl>
 </div>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

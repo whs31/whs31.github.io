@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -25,6 +29,7 @@
   <td id="projectalign">
    <div id="projectname">QuaSAR<span id="projectnumber">&#160;2.12.0</span>
    </div>
+   <div id="projectbrief">Ground control station software for SAR &quot;QuaSAR&quot;.</div>
   </td>
  </tr>
  </tbody>
@@ -49,6 +54,22 @@ $(function() {
 </script>
 <div id="main-nav"></div>
 </div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('functions.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -71,37 +92,108 @@ $(function() {
 </div>
 
 <div class="contents">
-<div class="textblock">Here is a list of all class members with links to the classes they belong to:</div>
+<div class="textblock">Here is a list of all documented class members with links to the class documentation for each member:</div>
 
 <h3><a id="index_a" name="index_a"></a>- a -</h3><ul>
-<li>AbstractUDPSocket()&#160;:&#160;<a class="el" href="classNetworking_1_1AbstractUDPSocket.html#a7e66254d00af9f1d387c3926431d80ed">Networking::AbstractUDPSocket</a></li>
-<li>add()&#160;:&#160;<a class="el" href="classMap_1_1ImageModel.html#aebb5141e6e5e4bc2fbf733443ea0afa7">Map::ImageModel</a>, <a class="el" href="classMap_1_1MarkerModel.html#a4eede71538cf11bcfb38735eb4e4938d">Map::MarkerModel</a></li>
-<li>added()&#160;:&#160;<a class="el" href="classMap_1_1ImageModel.html#afc84f2193954f74a1eb22259a36fbbfc">Map::ImageModel</a>, <a class="el" href="classMap_1_1MarkerModel.html#a1f2a017b2cd5cc39b88b7492c91c8a9d">Map::MarkerModel</a></li>
-<li>addMarker()&#160;:&#160;<a class="el" href="classMap_1_1ClickHandler.html#a0198779e3c027aff148192d20dd9d4ba">Map::ClickHandler</a></li>
-<li>altitude&#160;:&#160;<a class="el" href="structMap_1_1ImageMetadata.html#a5716f0cc886135f15bdf7cad18f4a658">Map::ImageMetadata</a></li>
-<li>Altitude&#160;:&#160;<a class="el" href="classMap_1_1ImageModel.html#a8a969379ac959d3a424fcfb8a60bdad8afbac7791f19e2c9de05b449f3635aef8">Map::ImageModel</a></li>
-<li>altitude&#160;:&#160;<a class="el" href="classNetworking_1_1Telemetry.html#aecae2a24dec3b63d939a542dea6412a1">Networking::Telemetry</a>, <a class="el" href="structNetworking_1_1TelemetryDatagram.html#aa7d7daa9f7bb07005561056887d46e20">Networking::TelemetryDatagram</a></li>
-<li>altitudeChanged()&#160;:&#160;<a class="el" href="classNetworking_1_1Telemetry.html#a8f8cdeae8fbb9436b74ee20f53409314">Networking::Telemetry</a></li>
-<li>angle&#160;:&#160;<a class="el" href="classMap_1_1Diagram.html#a35ce53e8aaddff8de97de8e8a85c80ce">Map::Diagram</a>, <a class="el" href="structMap_1_1ImageMetadata.html#a2652674294dda62ddd7712855aacfd5b">Map::ImageMetadata</a></li>
-<li>Angle&#160;:&#160;<a class="el" href="classMap_1_1ImageModel.html#a8a969379ac959d3a424fcfb8a60bdad8a09ff65944187d6f0ba64e6cd1ead092e">Map::ImageModel</a></li>
-<li>angleChanged()&#160;:&#160;<a class="el" href="classMap_1_1Diagram.html#a32c9828305285d23420ab8dbeaf42db4">Map::Diagram</a></li>
-<li>angleCorrection&#160;:&#160;<a class="el" href="group__UAV.html#ga8540f130a0f40be354d762617dee0642">Config::Config</a></li>
-<li>angleCorrectionChanged()&#160;:&#160;<a class="el" href="classConfig_1_1Config.html#ad3e9caf4d8f42dfec6128d23c9e41eff">Config::Config</a></li>
-<li>antennaAlignment&#160;:&#160;<a class="el" href="group__UAV.html#gad1936d307937b7eae276be76aa1fbd4b">Config::Config</a></li>
-<li>antennaAlignmentChanged()&#160;:&#160;<a class="el" href="classConfig_1_1Config.html#a6da21194e94a0c33fc28f13da71fe532">Config::Config</a></li>
-<li>append()&#160;:&#160;<a class="el" href="classGUI_1_1TerminalBase.html#ad41ccc11b4fff1091c9b92887e57a758">GUI::TerminalBase</a>, <a class="el" href="classGUI_1_1WarningsModel.html#ad0638743f58473eb682da61409adef29">GUI::WarningsModel</a>, <a class="el" href="classMap_1_1Route.html#aabe80ffef9b6b74871416e441b5b7807">Map::Route</a>, <a class="el" href="classMap_1_1RouteLogger.html#a434684fb75d657d938bfc526c21f4632">Map::RouteLogger</a></li>
-<li>applyTheme()&#160;:&#160;<a class="el" href="classGUI_1_1ThemePrivate.html#ab3d66b1854ec6c768c56f4eb20333b8f">GUI::ThemePrivate</a></li>
-<li>argument()&#160;:&#160;<a class="el" href="classNetworking_1_1Network.html#ab55ec149f7ce12417d16b2077707af92">Networking::Network</a></li>
-<li>argument_list&#160;:&#160;<a class="el" href="classNetworking_1_1ExecdArgumentList.html#acf364b55da5436d3f30274d93e086d57">Networking::ExecdArgumentList</a></li>
-<li>ArgumentCategory&#160;:&#160;<a class="el" href="classNetworking_1_1Enums.html#ad5aada946b73c24be636cea5a1679caa">Networking::Enums</a></li>
-<li>ArgumentType&#160;:&#160;<a class="el" href="structNetworking_1_1ExecdArgument.html#a42601f1ee2f083ed342f8d5875ef7ff1">Networking::ExecdArgument</a></li>
-<li>azimuth&#160;:&#160;<a class="el" href="classMap_1_1Diagram.html#a88847c1632ad7ebaccd97f0d154819b7">Map::Diagram</a></li>
-<li>azimuthChanged()&#160;:&#160;<a class="el" href="classMap_1_1Diagram.html#a3bce951c66ce43237733573653fd9210">Map::Diagram</a></li>
+<li>angleCorrection&#160;:&#160;<a class="el" href="d5/dfa/classConfig_1_1Config.html#acc7856ea0497ce886547bd19075f4bcb">Config</a></li>
+<li>antennaAlignment&#160;:&#160;<a class="el" href="d5/dfa/classConfig_1_1Config.html#a66213c53fe947a7a4757bcc2b7d7fbb3">Config</a></li>
+</ul>
+
+
+<h3><a id="index_c" name="index_c"></a>- c -</h3><ul>
+<li>cutImage&#160;:&#160;<a class="el" href="d5/dfa/classConfig_1_1Config.html#a6e81ba455ac73046cba68a75c0d34991">Config</a></li>
+</ul>
+
+
+<h3><a id="index_e" name="index_e"></a>- e -</h3><ul>
+<li>execdPort&#160;:&#160;<a class="el" href="d5/dfa/classConfig_1_1Config.html#aa7c77c61e23cb38fce8948fff5baa648">Config</a></li>
+</ul>
+
+
+<h3><a id="index_f" name="index_f"></a>- f -</h3><ul>
+<li>feedbackPort&#160;:&#160;<a class="el" href="d5/dfa/classConfig_1_1Config.html#a1c046609722570c50455a36d69d0a037">Config</a></li>
+</ul>
+
+
+<h3><a id="index_g" name="index_g"></a>- g -</h3><ul>
+<li>get()&#160;:&#160;<a class="el" href="d5/dfa/classConfig_1_1Config.html#aab4f0df3041b8a7fb08052df350ebcbd">Config</a></li>
+</ul>
+
+
+<h3><a id="index_j" name="index_j"></a>- j -</h3><ul>
+<li>jetsonIP&#160;:&#160;<a class="el" href="d5/dfa/classConfig_1_1Config.html#a75af3a7370fd6e32995373d2dbbf1f81">Config</a></li>
+</ul>
+
+
+<h3><a id="index_l" name="index_l"></a>- l -</h3><ul>
+<li>load()&#160;:&#160;<a class="el" href="d5/dfa/classConfig_1_1Config.html#a78f61ac2dd03bcba8e09ca20cd7d68e3">Config</a></li>
+<li>localIP&#160;:&#160;<a class="el" href="d5/dfa/classConfig_1_1Config.html#abb00f8fd5508af1ffc1b56f474a7ba22">Config</a></li>
+</ul>
+
+
+<h3><a id="index_n" name="index_n"></a>- n -</h3><ul>
+<li>navIP&#160;:&#160;<a class="el" href="d5/dfa/classConfig_1_1Config.html#aa9f58cbedfcdde939083775c3a77ef6e">Config</a></li>
+</ul>
+
+
+<h3><a id="index_o" name="index_o"></a>- o -</h3><ul>
+<li>overrideImageHeight&#160;:&#160;<a class="el" href="d5/dfa/classConfig_1_1Config.html#aced4a69727f347e1e1a73bfdd8761143">Config</a></li>
+</ul>
+
+
+<h3><a id="index_p" name="index_p"></a>- p -</h3><ul>
+<li>projectVersion()&#160;:&#160;<a class="el" href="d5/dfa/classConfig_1_1Config.html#a0664ef97a51606760964d90526e64ab2">Config</a></li>
+<li>proxyEnabled&#160;:&#160;<a class="el" href="d5/dfa/classConfig_1_1Config.html#ae862ff88f11a3a2ef7eee0c21957dcb7">Config</a></li>
+</ul>
+
+
+<h3><a id="index_r" name="index_r"></a>- r -</h3><ul>
+<li>remoteIP&#160;:&#160;<a class="el" href="d5/dfa/classConfig_1_1Config.html#a29ca03d2272c4051d7c324cd6bac3b0b">Config</a></li>
+<li>reset()&#160;:&#160;<a class="el" href="d5/dfa/classConfig_1_1Config.html#ad20897c5c8bd47f5d4005989bead0e55">Config</a></li>
+<li>revert()&#160;:&#160;<a class="el" href="d5/dfa/classConfig_1_1Config.html#a9cf620340e16aa417bb112e0294038df">Config</a></li>
+</ul>
+
+
+<h3><a id="index_s" name="index_s"></a>- s -</h3><ul>
+<li>save()&#160;:&#160;<a class="el" href="d5/dfa/classConfig_1_1Config.html#aae2c382151ef7c9aa913361172b30db6">Config</a></li>
+<li>storedCatalogue&#160;:&#160;<a class="el" href="d5/dfa/classConfig_1_1Config.html#a153feb691de604b107e5765377364a9d">Config</a></li>
+<li>storedLatitude&#160;:&#160;<a class="el" href="d5/dfa/classConfig_1_1Config.html#abdcb3cc37ddbefe06ad99b3daa720afc">Config</a></li>
+<li>storedLongitude&#160;:&#160;<a class="el" href="d5/dfa/classConfig_1_1Config.html#a5b2d3b040ee55818de48aed7ffc5806f">Config</a></li>
+<li>storedZoomLevel&#160;:&#160;<a class="el" href="d5/dfa/classConfig_1_1Config.html#a6241b7c15dc9a3b9b8e412a80e00cc9d">Config</a></li>
+<li>sync()&#160;:&#160;<a class="el" href="d5/dfa/classConfig_1_1Config.html#ad55f80ed3cd8b6c4f247763b747016af">Config</a></li>
+</ul>
+
+
+<h3><a id="index_t" name="index_t"></a>- t -</h3><ul>
+<li>tcpLFSPort&#160;:&#160;<a class="el" href="d5/dfa/classConfig_1_1Config.html#a9a898d90c155973baa06c11e8ef95813">Config</a></li>
+<li>tcpMarker&#160;:&#160;<a class="el" href="d5/dfa/classConfig_1_1Config.html#a259e4f044a571c4bc7b34a23f39492be">Config</a></li>
+<li>telemetryFrequency&#160;:&#160;<a class="el" href="d5/dfa/classConfig_1_1Config.html#a752dbeb4be188be8d6e370263c380827">Config</a></li>
+<li>telemetryPort&#160;:&#160;<a class="el" href="d5/dfa/classConfig_1_1Config.html#a9400347615d36fd3eed76e4f027433df">Config</a></li>
+<li>telemetryRecvPort&#160;:&#160;<a class="el" href="d5/dfa/classConfig_1_1Config.html#afa3175de72b10c5da5e4664f75936346">Config</a></li>
+<li>theme&#160;:&#160;<a class="el" href="d5/dfa/classConfig_1_1Config.html#a53d9759116527e34443d82453b97f415">Config</a></li>
+<li>thetaAzimuthCorrection&#160;:&#160;<a class="el" href="d5/dfa/classConfig_1_1Config.html#afd2df17ea5b9473da8b4d307395c5085">Config</a></li>
+</ul>
+
+
+<h3><a id="index_u" name="index_u"></a>- u -</h3><ul>
+<li>udpLFSPort&#160;:&#160;<a class="el" href="d5/dfa/classConfig_1_1Config.html#a0eddf3d43e33470977841fae03717c29">Config</a></li>
+<li>useDriftAngle&#160;:&#160;<a class="el" href="d5/dfa/classConfig_1_1Config.html#afcbc3ba0faa77bf6b0a9b01f878181e6">Config</a></li>
+<li>useRadians&#160;:&#160;<a class="el" href="d5/dfa/classConfig_1_1Config.html#af6dc8053f62613e2dd7a79d2172c658d">Config</a></li>
+<li>utl1IP&#160;:&#160;<a class="el" href="d5/dfa/classConfig_1_1Config.html#a8af317d04dbe29e8f495cd928c0f30cb">Config</a></li>
+<li>utl2IP&#160;:&#160;<a class="el" href="d5/dfa/classConfig_1_1Config.html#afdd91838bc17767a1510db9d4e569aaa">Config</a></li>
+</ul>
+
+
+<h3><a id="index__7E" name="index__7E"></a>- ~ -</h3><ul>
+<li>~Config()&#160;:&#160;<a class="el" href="d5/dfa/classConfig_1_1Config.html#a54dfba499c9d9e1003d4c9bcbe6ad1c5">Config</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

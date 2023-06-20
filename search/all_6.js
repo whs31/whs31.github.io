@@ -1,31 +1,5 @@
 var searchData=
 [
-  ['feedbackport_0',['feedbackPort',['../group__Network.html#gab6de29fbc42a71a257bd4d6dbf6f32d1',1,'Config::Config::feedbackPort()'],['../classConfig_1_1Config.html#aa2e3ac63535a055ef8b961189aac40b5',1,'Config::Config::feedbackPort() const']]],
-  ['feedbackportchanged_1',['feedbackPortChanged',['../classConfig_1_1Config.html#ad7e6fe2f87fa59743fab997b60e51729',1,'Config::Config']]],
-  ['feedbacksocket_2',['feedbackSocket',['../classNetworking_1_1Network.html#a93914fa176fd7fa67024d952cb168c44',1,'Networking::Network']]],
-  ['feedbacksocket_3',['FeedbackSocket',['../classNetworking_1_1FeedbackSocket.html#a01f8ebac655964fc549de0dbbf6d26c8',1,'Networking::FeedbackSocket::FeedbackSocket()'],['../classNetworking_1_1FeedbackSocket.html',1,'Networking::FeedbackSocket']]],
-  ['feedbacksocket_2ec_2b_2b_4',['feedbacksocket.c++',['../feedbacksocket_8c_09_09.html',1,'']]],
-  ['feedbacksocket_2eh_5',['feedbacksocket.h',['../feedbacksocket_8h.html',1,'']]],
-  ['feedbacksocketmetrics_6',['feedbackSocketMetrics',['../classNetworking_1_1Network.html#a9272ac9b7f092165faf1c6484837c959',1,'Networking::Network']]],
-  ['fetchimagedirectory_7',['fetchImageDirectory',['../classOS_1_1Filesystem.html#a889b2efb50aadd1c839387af9d144286',1,'OS::Filesystem']]],
-  ['fetchtcpcache_8',['fetchTCPCache',['../classOS_1_1Filesystem.html#adc982673f354d07bd090001db0366f1c',1,'OS::Filesystem']]],
-  ['filename_9',['filename',['../structMap_1_1StripImage.html#abc5a051af671f5708491a4583b06a358',1,'Map::StripImage::filename()'],['../structMap_1_1Image.html#a29bcbfe80a9d0760fb4f097450a9c9cc',1,'Map::Image::filename()']]],
-  ['filename_10',['Filename',['../classMap_1_1ImageModel.html#a8a969379ac959d3a424fcfb8a60bdad8a8c2557ee17aef167d502f34327c7a184',1,'Map::ImageModel']]],
-  ['filesystem_11',['Filesystem',['../classOS_1_1Filesystem.html',1,'OS']]],
-  ['filesystem_2ec_2b_2b_12',['filesystem.c++',['../filesystem_8c_09_09.html',1,'']]],
-  ['filesystem_2eh_13',['filesystem.h',['../filesystem_8h.html',1,'']]],
-  ['findthemesinfolder_14',['findThemesInFolder',['../classGUI_1_1ThemePrivate.html#a28f048f45d559589f6af13b8bd12cf9a',1,'GUI::ThemePrivate']]],
-  ['float_15',['Float',['../structNetworking_1_1ExecdArgument.html#a42601f1ee2f083ed342f8d5875ef7ff1a89e408f521f3ecccc43a11ffd3e3ac61',1,'Networking::ExecdArgument']]],
-  ['floating_5fpoint_5fprecision_16',['FLOATING_POINT_PRECISION',['../structNetworking_1_1ExecdArgument.html#ac0c62772a4f03feaff47441928e05c27',1,'Networking::ExecdArgument']]],
-  ['focus_17',['Focus',['../classNetworking_1_1Enums.html#ad5aada946b73c24be636cea5a1679caaab03f33bbdb98c2fb5b73db6ee6a31e2f',1,'Networking::Enums']]],
-  ['focus_5fargument_5flist_18',['focus_argument_list',['../classNetworking_1_1ExecdArgumentList.html#a0bccc97084d215db0bdee202560283a1',1,'Networking::ExecdArgumentList']]],
-  ['focusimage_19',['FocusImage',['../classNetworking_1_1Enums.html#aa669864b51106c17a0f11dfc0a5bcab1a2453a115e219743a98205ac3cdf64225',1,'Networking::Enums']]],
-  ['form_20',['Form',['../classNetworking_1_1Enums.html#ad5aada946b73c24be636cea5a1679caaa51567507f5ec32df4442c5183493cb4c',1,'Networking::Enums']]],
-  ['format_21',['format',['../structMap_1_1StripImageDatagram.html#a9ff7345a7488d0c8ee2889ddcb03315b',1,'Map::StripImageDatagram']]],
-  ['formimage_22',['FormImage',['../classNetworking_1_1Enums.html#aa669864b51106c17a0f11dfc0a5bcab1a811a2395e560247fcc5e71b30e1143a4',1,'Networking::Enums']]],
-  ['foundthemes_23',['foundThemes',['../classGUI_1_1ThemePrivate.html#ab2b9f9d64832143be32eb2117170c470',1,'GUI::ThemePrivate']]],
-  ['frequency_24',['frequency',['../classNetworking_1_1TelemetrySocket.html#a9ff26fc07e1493f2f23963d171a52235',1,'Networking::TelemetrySocket::frequency()'],['../classNetworking_1_1TelemetrySocket.html#a93f0760892cdcf304038675d3298c98d',1,'Networking::TelemetrySocket::frequency() const']]],
-  ['frequencychanged_25',['frequencyChanged',['../classNetworking_1_1TelemetrySocket.html#a2486b4ee0bd2b1b1c89ad92d7243e9cc',1,'Networking::TelemetrySocket']]],
-  ['fullroute_26',['fullRoute',['../classMap_1_1Route.html#a723fb456d59b58d8a1d8ba6076d7678d',1,'Map::Route::fullRoute()'],['../classMap_1_1Route.html#aac6ca3801e9d154d3dc5bccb201c5f80',1,'Map::Route::fullRoute() const']]],
-  ['fullroutechanged_27',['fullRouteChanged',['../classMap_1_1Route.html#ad11edae25bf4fa22283d39fcd682c7c2',1,'Map::Route']]]
+  ['load_0',['load',['../d5/dfa/classConfig_1_1Config.html#a78f61ac2dd03bcba8e09ca20cd7d68e3',1,'Config::Config']]],
+  ['localip_1',['localIP',['../d5/dfa/classConfig_1_1Config.html#abb00f8fd5508af1ffc1b56f474a7ba22',1,'Config::Config']]]
 ];

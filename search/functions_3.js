@@ -1,22 +1,5 @@
 var searchData=
 [
-  ['calculateangle_0',['calculateAngle',['../classMap_1_1Ruler.html#a80553e08a5fb2607bc045afadc358e16',1,'Map::Ruler']]],
-  ['calculatecenter_1',['calculateCenter',['../classMap_1_1Ruler.html#ab605ecb05e554bc473760abc1a6ee9d7',1,'Map::Ruler']]],
-  ['clear_2',['clear',['../classGUI_1_1TerminalBase.html#a17745bc2ad52522b5ba40f83b554d312',1,'GUI::TerminalBase::clear()'],['../classGUI_1_1WarningsModel.html#a0997cadc28e9654ea0b1e499afa533a0',1,'GUI::WarningsModel::clear()'],['../classMap_1_1ImageModel.html#af987e92b9bccbbfdef7a7070020159ce',1,'Map::ImageModel::clear()'],['../classMap_1_1MarkerModel.html#a3f0887d9e0a3415a75d83d7e7645e1cc',1,'Map::MarkerModel::clear()'],['../classMap_1_1Route.html#abe728e3e58d3bb6d94665f8dd4caa761',1,'Map::Route::clear()']]],
-  ['clearimagecache_3',['clearImageCache',['../classConfig_1_1Paths.html#ae32a45857482b2fc5652a134c22c8789',1,'Config::Paths']]],
-  ['color_4',['color',['../classGUI_1_1Theme.html#a186a2f3770e5dbfe995dbceb35563c5e',1,'GUI::Theme']]],
-  ['colorschanged_5',['colorsChanged',['../classGUI_1_1Theme.html#ac3da7b3b014354bd139b10875bf3766d',1,'GUI::Theme']]],
-  ['colortext_6',['colorText',['../classGUI_1_1Theme.html#a34d1dd30e2b1b34605322ba059bb6fbc',1,'GUI::Theme']]],
-  ['commit_7',['commit',['../classMap_1_1RouteLogger.html#a438418eb317b1235bc80f974d597938a',1,'Map::RouteLogger']]],
-  ['config_8',['config',['../classConfig_1_1Paths.html#aa26973ef7466e7528613eb235141f757',1,'Config::Paths']]],
-  ['connect_9',['connect',['../classNetworking_1_1AbstractUDPSocket.html#ab60a7a8b141cbdfa5a49448ef06425e9',1,'Networking::AbstractUDPSocket']]],
-  ['connected_10',['connected',['../classNetworking_1_1Network.html#a2b4c830916e9407ba5e436eb6d822818',1,'Networking::Network']]],
-  ['connectedchanged_11',['connectedChanged',['../classNetworking_1_1Network.html#aa35d0e80fd3fc083d998ab5f5b14fdc6',1,'Networking::Network']]],
-  ['copycoordinatestoclipboard_12',['copyCoordinatesToClipboard',['../classMap_1_1ClickHandler.html#a84667b266f49df8821d95785497d2f63',1,'Map::ClickHandler']]],
-  ['course_13',['course',['../classNetworking_1_1Telemetry.html#a5d878b9e73d8192e2558b41664c81cdb',1,'Networking::Telemetry']]],
-  ['coursechanged_14',['courseChanged',['../classNetworking_1_1Telemetry.html#ae3217a55be9ac39efad57f0655d57a9c',1,'Networking::Telemetry']]],
-  ['createimagecache_15',['createImageCache',['../classConfig_1_1Paths.html#a4f518ac355c16135330d8912070da618',1,'Config::Paths']]],
-  ['createlog_16',['createLog',['../classMap_1_1RouteLogger.html#a572f2e44ea4738abb60977b0b153dcb6',1,'Map::RouteLogger']]],
-  ['cutimage_17',['cutImage',['../classConfig_1_1Config.html#a9cd9200532f17d524fc83aec0b0be74a',1,'Config::Config']]],
-  ['cutimagechanged_18',['cutImageChanged',['../classConfig_1_1Config.html#a9f7670eb9f00dcfd849d55e8e1bbbd4a',1,'Config::Config']]]
+  ['reset_0',['reset',['../d5/dfa/classConfig_1_1Config.html#ad20897c5c8bd47f5d4005989bead0e55',1,'Config::Config']]],
+  ['revert_1',['revert',['../d5/dfa/classConfig_1_1Config.html#a9cf620340e16aa417bb112e0294038df',1,'Config::Config']]]
 ];

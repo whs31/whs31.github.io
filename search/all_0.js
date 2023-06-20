@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['_5f_5fattribute_5f_5f_0',['__attribute__',['../namespaceMap.html#af551fc05ca954e5483b136b169b150b6',1,'Map']]]
+  ['anglecorrection_0',['angleCorrection',['../d5/dfa/classConfig_1_1Config.html#acc7856ea0497ce886547bd19075f4bcb',1,'Config::Config']]],
+  ['antennaalignment_1',['antennaAlignment',['../d5/dfa/classConfig_1_1Config.html#a66213c53fe947a7a4757bcc2b7d7fbb3',1,'Config::Config']]]
 ];

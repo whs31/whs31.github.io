@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['debugconsole_0',['DebugConsole',['../classGUI_1_1DebugConsole.html',1,'GUI']]],
-  ['diagram_1',['Diagram',['../classMap_1_1Diagram.html',1,'Map']]]
+  ['датаграма_0',['Датаграма',['../d8/db3/struct_xD0_x94_xD0_xB0_xD1_x82_xD0_xB0_xD0_xB3_xD1_x80_xD0_xB0_xD0_xBC_xD0_xB0.html',1,'']]]
 ];

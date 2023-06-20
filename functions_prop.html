@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -25,6 +29,7 @@
   <td id="projectalign">
    <div id="projectname">QuaSAR<span id="projectnumber">&#160;2.12.0</span>
    </div>
+   <div id="projectbrief">Ground control station software for SAR &quot;QuaSAR&quot;.</div>
   </td>
  </tr>
  </tbody>
@@ -49,6 +54,22 @@ $(function() {
 </script>
 <div id="main-nav"></div>
 </div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('functions_prop.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -71,144 +92,42 @@ $(function() {
 </div>
 
 <div class="contents">
-&#160;
-
-<h3><a id="index_a" name="index_a"></a>- a -</h3><ul>
-<li>altitude&#160;:&#160;<a class="el" href="classNetworking_1_1Telemetry.html#aecae2a24dec3b63d939a542dea6412a1">Networking::Telemetry</a></li>
-<li>angle&#160;:&#160;<a class="el" href="classMap_1_1Diagram.html#a35ce53e8aaddff8de97de8e8a85c80ce">Map::Diagram</a></li>
-<li>angleCorrection&#160;:&#160;<a class="el" href="group__UAV.html#ga8540f130a0f40be354d762617dee0642">Config::Config</a></li>
-<li>antennaAlignment&#160;:&#160;<a class="el" href="group__UAV.html#gad1936d307937b7eae276be76aa1fbd4b">Config::Config</a></li>
-<li>azimuth&#160;:&#160;<a class="el" href="classMap_1_1Diagram.html#a88847c1632ad7ebaccd97f0d154819b7">Map::Diagram</a></li>
-</ul>
-
-
-<h3><a id="index_c" name="index_c"></a>- c -</h3><ul>
-<li>connected&#160;:&#160;<a class="el" href="group__Properties.html#ga7699220558893c267c1ecbc291cf9f58">Networking::Network</a></li>
-<li>course&#160;:&#160;<a class="el" href="classNetworking_1_1Telemetry.html#a0308809fdedf4128033ca0112e9a118e">Networking::Telemetry</a></li>
-<li>cutImage&#160;:&#160;<a class="el" href="group__UAV.html#gaad06ebf71336f48d8ad6671f086b63d4">Config::Config</a></li>
-</ul>
-
-
-<h3><a id="index_d" name="index_d"></a>- d -</h3><ul>
-<li>de10ping&#160;:&#160;<a class="el" href="classNetworking_1_1RemoteData.html#a64575be70fb240580cadba5b05ef90f1">Networking::RemoteData</a></li>
-<li>direction&#160;:&#160;<a class="el" href="classMap_1_1Diagram.html#a89b83b26e0b698e4cbc633e6912b9ff9">Map::Diagram</a></li>
-</ul>
-
-
-<h3><a id="index_e" name="index_e"></a>- e -</h3><ul>
-<li>execdPort&#160;:&#160;<a class="el" href="group__Network.html#ga6c4c7a55e3d6a1628b4c9e1e81ba6157">Config::Config</a></li>
-</ul>
-
-
-<h3><a id="index_f" name="index_f"></a>- f -</h3><ul>
-<li>feedbackPort&#160;:&#160;<a class="el" href="group__Network.html#gab6de29fbc42a71a257bd4d6dbf6f32d1">Config::Config</a></li>
-<li>frequency&#160;:&#160;<a class="el" href="classNetworking_1_1TelemetrySocket.html#a9ff26fc07e1493f2f23963d171a52235">Networking::TelemetrySocket</a></li>
-<li>fullRoute&#160;:&#160;<a class="el" href="classMap_1_1Route.html#a723fb456d59b58d8a1d8ba6076d7678d">Map::Route</a></li>
-</ul>
-
-
-<h3><a id="index_j" name="index_j"></a>- j -</h3><ul>
-<li>jetsonIP&#160;:&#160;<a class="el" href="group__Network.html#ga6f34f4f3353513441a0e80e33d36b04e">Config::Config</a></li>
-<li>jetsonping&#160;:&#160;<a class="el" href="classNetworking_1_1RemoteData.html#aa4a8b9cd66150a817af7e160e01cbd21">Networking::RemoteData</a></li>
-</ul>
-
-
-<h3><a id="index_l" name="index_l"></a>- l -</h3><ul>
-<li>lastLatitude&#160;:&#160;<a class="el" href="classMap_1_1Ruler.html#aea5774c7c1ad752f061e9bdcd4a39f87">Map::Ruler</a></li>
-<li>lastLongitude&#160;:&#160;<a class="el" href="classMap_1_1Ruler.html#acac1b7aef3bd0a9c4de1c15b6e804cbd">Map::Ruler</a></li>
-<li>latitude&#160;:&#160;<a class="el" href="classNetworking_1_1Telemetry.html#a0ff261883ed75d6adedba4c3bc880993">Networking::Telemetry</a></li>
-<li>length&#160;:&#160;<a class="el" href="classMap_1_1Diagram.html#ae6918e11ac08caa9058819d63188b59c">Map::Diagram</a></li>
-<li>localIP&#160;:&#160;<a class="el" href="group__Network.html#ga83efa1375676af7c7314839ecebf4ce4">Config::Config</a></li>
-<li>longitude&#160;:&#160;<a class="el" href="classNetworking_1_1Telemetry.html#a35b8cf94f4f2dbba629edcca354cc552">Networking::Telemetry</a></li>
-</ul>
-
-
-<h3><a id="index_n" name="index_n"></a>- n -</h3><ul>
-<li>navIP&#160;:&#160;<a class="el" href="group__Network.html#ga228e49715386ed0ca156b7a707cd6a4e">Config::Config</a></li>
-<li>navping&#160;:&#160;<a class="el" href="classNetworking_1_1RemoteData.html#aea3cae6645b2e3ad8726b2ebac617313">Networking::RemoteData</a></li>
-<li>networkDelay&#160;:&#160;<a class="el" href="group__Properties.html#ga8faa0f475ccedfbaf3b5bcc5261fed00">Networking::Network</a></li>
-</ul>
-
-
-<h3><a id="index_o" name="index_o"></a>- o -</h3><ul>
-<li>overrideImageHeight&#160;:&#160;<a class="el" href="group__UAV.html#gae4197fa7c71daac4097824ed6ea81f15">Config::Config</a></li>
-</ul>
-
-
-<h3><a id="index_p" name="index_p"></a>- p -</h3><ul>
-<li>pitch&#160;:&#160;<a class="el" href="classNetworking_1_1Telemetry.html#a7c8c130ce73576e9a331df7c2db5d56d">Networking::Telemetry</a></li>
-<li>polygon&#160;:&#160;<a class="el" href="classMap_1_1Diagram.html#a8b0818d6d696def78733b0221cdb061d">Map::Diagram</a></li>
-<li>processingImage&#160;:&#160;<a class="el" href="classProcessing_1_1ImageProcessing.html#a4a67937b9376dffc7ef16bcecada0267">Processing::ImageProcessing</a></li>
-<li>processingStrip&#160;:&#160;<a class="el" href="classProcessing_1_1ImageProcessing.html#aca75a309403f242bf8eff0fdad591adf">Processing::ImageProcessing</a></li>
-<li>proxyEnabled&#160;:&#160;<a class="el" href="group__Network.html#gaed89795250742d1bd14642678b944bf9">Config::Config</a></li>
-</ul>
-
-
-<h3><a id="index_r" name="index_r"></a>- r -</h3><ul>
-<li>range&#160;:&#160;<a class="el" href="classMap_1_1Diagram.html#a814ef09e8f2f16ab5416b8f5f1d4dd57">Map::Diagram</a></li>
-<li>recentRoute&#160;:&#160;<a class="el" href="classMap_1_1Route.html#a9fb9c265616ad260cc9a24ccb2ffdb0c">Map::Route</a></li>
-<li>remoteData&#160;:&#160;<a class="el" href="group__Properties.html#gac96b77e2304c4f308dfd5bd59d25e383">Networking::Network</a></li>
-<li>remoteIP&#160;:&#160;<a class="el" href="group__Network.html#ga53201871167f59da4a0b030ac2236a52">Config::Config</a></li>
-<li>roll&#160;:&#160;<a class="el" href="classNetworking_1_1Telemetry.html#a5f522ba2a1e1275e4649b074bb1b95a0">Networking::Telemetry</a></li>
-</ul>
-
-
-<h3><a id="index_s" name="index_s"></a>- s -</h3><ul>
-<li>satellites&#160;:&#160;<a class="el" href="classNetworking_1_1Telemetry.html#a1ea75d5d4218d65d209a534ed712e309">Networking::Telemetry</a></li>
-<li>seaLevel&#160;:&#160;<a class="el" href="classNetworking_1_1Telemetry.html#a09791576323f2d24a15ad2a4bf257565">Networking::Telemetry</a></li>
-<li>state&#160;:&#160;<a class="el" href="classMap_1_1ClickHandler.html#a6f7a7ae3be1bb9d2b66e0baa0a7e540f">Map::ClickHandler</a></li>
-<li>storageSpace&#160;:&#160;<a class="el" href="classNetworking_1_1RemoteData.html#a97d63b9d48e8f4759951a15129f8f4b7">Networking::RemoteData</a></li>
-<li>storedCatalogue&#160;:&#160;<a class="el" href="group__Previous.html#gab754ac42251e5d19242369484c52976a">Config::Config</a></li>
-<li>storedLatitude&#160;:&#160;<a class="el" href="group__Previous.html#ga53610034d9c0b8e4b72957f7f6038aea">Config::Config</a></li>
-<li>storedLongitude&#160;:&#160;<a class="el" href="group__Previous.html#ga9bb09093e547fb3ee7ba9867e7ceb3cf">Config::Config</a></li>
-<li>storedZoomLevel&#160;:&#160;<a class="el" href="group__Previous.html#gabdd3742c56733450a271bdfd11164b06">Config::Config</a></li>
-</ul>
-
-
-<h3><a id="index_t" name="index_t"></a>- t -</h3><ul>
-<li>tcpLFSPort&#160;:&#160;<a class="el" href="group__Network.html#ga4eb8c190ac01fcb1f06e6068ddcce6c4">Config::Config</a></li>
-<li>tcpMarker&#160;:&#160;<a class="el" href="group__Network.html#ga4d636297c5b2507d500ac977aeae24ab">Config::Config</a></li>
-<li>tcpProgress&#160;:&#160;<a class="el" href="group__Properties.html#ga9ec5c75178b85fb66b7a424c3bf398df">Networking::Network</a></li>
-<li>telemetry&#160;:&#160;<a class="el" href="group__Properties.html#ga1b8969b46c27f16da4d4f37754bcd7ad">Networking::Network</a></li>
-<li>telemetryFrequency&#160;:&#160;<a class="el" href="group__Network.html#ga1b0a28c06f494980a5e5a1cb27e13807">Config::Config</a></li>
-<li>telemetryPort&#160;:&#160;<a class="el" href="group__Network.html#ga7e75cbb4bb5965edbf4533766168f321">Config::Config</a></li>
-<li>telemetryRecvPort&#160;:&#160;<a class="el" href="group__Network.html#gae7e6a0575c98833a88a4ce8bc84a2bbe">Config::Config</a></li>
-<li>theme&#160;:&#160;<a class="el" href="group__Application.html#gad0dc9539aff9c895e938d9af25e29bac">Config::Config</a></li>
-<li>thetaAzimuthCorrection&#160;:&#160;<a class="el" href="group__UAV.html#gab158fee869502b2d1dbd139a2dab35d9">Config::Config</a></li>
-<li>time&#160;:&#160;<a class="el" href="classNetworking_1_1Telemetry.html#aa9eb08284d56832c407e23e76d6c611e">Networking::Telemetry</a></li>
-<li>totalCount&#160;:&#160;<a class="el" href="classMap_1_1ImageModel.html#a3afac11d239bdc7af523a5826a3a2477">Map::ImageModel</a></li>
-<li>totalLength&#160;:&#160;<a class="el" href="classMap_1_1Ruler.html#a61531c8ff7a91a8fe35cee130dfa53e0">Map::Ruler</a></li>
-<li>type&#160;:&#160;<a class="el" href="classMap_1_1Diagram.html#acdf350f3a60fd326e758715f12357869">Map::Diagram</a></li>
-</ul>
-
-
-<h3><a id="index_u" name="index_u"></a>- u -</h3><ul>
-<li>uavPosition&#160;:&#160;<a class="el" href="classMap_1_1Diagram.html#a92b278984fdf1672b7350d7ea2e881e8">Map::Diagram</a></li>
-<li>udpLFSPort&#160;:&#160;<a class="el" href="group__Network.html#gade2456d8323aa0592d3b1ffe7f9a52dc">Config::Config</a></li>
-<li>useDriftAngle&#160;:&#160;<a class="el" href="group__UAV.html#ga14104d9a2e30741a0fadddf69ffc4a8a">Config::Config</a></li>
-<li>useRadians&#160;:&#160;<a class="el" href="group__UAV.html#gacf2fb5fcae01050db34ca586e8d24dc2">Config::Config</a></li>
-<li>utl1IP&#160;:&#160;<a class="el" href="group__Network.html#gac4250a3eec1e11ee5292c4b2a480b6ca">Config::Config</a></li>
-<li>utl1ping&#160;:&#160;<a class="el" href="classNetworking_1_1RemoteData.html#a9a3c2b9f4186c2cf711103f845746e86">Networking::RemoteData</a></li>
-<li>utl2IP&#160;:&#160;<a class="el" href="group__Network.html#gab4fe48535d01d430c293ed52be0a7b36">Config::Config</a></li>
-<li>utl2ping&#160;:&#160;<a class="el" href="classNetworking_1_1RemoteData.html#ad4aea3788e291baa32df44564be6d4d6">Networking::RemoteData</a></li>
-</ul>
-
-
-<h3><a id="index_v" name="index_v"></a>- v -</h3><ul>
-<li>velocityCourse&#160;:&#160;<a class="el" href="classNetworking_1_1Telemetry.html#ae43928bd31e6eb3c105e78e0535f07b3">Networking::Telemetry</a></li>
-<li>velocityEast&#160;:&#160;<a class="el" href="classNetworking_1_1Telemetry.html#a20721f52a9e741c69f4bc8508c1d130d">Networking::Telemetry</a></li>
-<li>velocityNorth&#160;:&#160;<a class="el" href="classNetworking_1_1Telemetry.html#a5e924120b7b030fa156560c6da4ad600">Networking::Telemetry</a></li>
-<li>velocityVertical&#160;:&#160;<a class="el" href="classNetworking_1_1Telemetry.html#ab3b02a4a46f2aa989e89590afabe2747">Networking::Telemetry</a></li>
-</ul>
-
-
-<h3><a id="index_y" name="index_y"></a>- y -</h3><ul>
-<li>yaw&#160;:&#160;<a class="el" href="classNetworking_1_1Telemetry.html#a8234a1aa99742a7ccc457c3966a576dc">Networking::Telemetry</a></li>
+&#160;<ul>
+<li>angleCorrection&#160;:&#160;<a class="el" href="d5/dfa/classConfig_1_1Config.html#acc7856ea0497ce886547bd19075f4bcb">Config</a></li>
+<li>antennaAlignment&#160;:&#160;<a class="el" href="d5/dfa/classConfig_1_1Config.html#a66213c53fe947a7a4757bcc2b7d7fbb3">Config</a></li>
+<li>cutImage&#160;:&#160;<a class="el" href="d5/dfa/classConfig_1_1Config.html#a6e81ba455ac73046cba68a75c0d34991">Config</a></li>
+<li>execdPort&#160;:&#160;<a class="el" href="d5/dfa/classConfig_1_1Config.html#aa7c77c61e23cb38fce8948fff5baa648">Config</a></li>
+<li>feedbackPort&#160;:&#160;<a class="el" href="d5/dfa/classConfig_1_1Config.html#a1c046609722570c50455a36d69d0a037">Config</a></li>
+<li>jetsonIP&#160;:&#160;<a class="el" href="d5/dfa/classConfig_1_1Config.html#a75af3a7370fd6e32995373d2dbbf1f81">Config</a></li>
+<li>localIP&#160;:&#160;<a class="el" href="d5/dfa/classConfig_1_1Config.html#abb00f8fd5508af1ffc1b56f474a7ba22">Config</a></li>
+<li>navIP&#160;:&#160;<a class="el" href="d5/dfa/classConfig_1_1Config.html#aa9f58cbedfcdde939083775c3a77ef6e">Config</a></li>
+<li>overrideImageHeight&#160;:&#160;<a class="el" href="d5/dfa/classConfig_1_1Config.html#aced4a69727f347e1e1a73bfdd8761143">Config</a></li>
+<li>proxyEnabled&#160;:&#160;<a class="el" href="d5/dfa/classConfig_1_1Config.html#ae862ff88f11a3a2ef7eee0c21957dcb7">Config</a></li>
+<li>remoteIP&#160;:&#160;<a class="el" href="d5/dfa/classConfig_1_1Config.html#a29ca03d2272c4051d7c324cd6bac3b0b">Config</a></li>
+<li>storedCatalogue&#160;:&#160;<a class="el" href="d5/dfa/classConfig_1_1Config.html#a153feb691de604b107e5765377364a9d">Config</a></li>
+<li>storedLatitude&#160;:&#160;<a class="el" href="d5/dfa/classConfig_1_1Config.html#abdcb3cc37ddbefe06ad99b3daa720afc">Config</a></li>
+<li>storedLongitude&#160;:&#160;<a class="el" href="d5/dfa/classConfig_1_1Config.html#a5b2d3b040ee55818de48aed7ffc5806f">Config</a></li>
+<li>storedZoomLevel&#160;:&#160;<a class="el" href="d5/dfa/classConfig_1_1Config.html#a6241b7c15dc9a3b9b8e412a80e00cc9d">Config</a></li>
+<li>tcpLFSPort&#160;:&#160;<a class="el" href="d5/dfa/classConfig_1_1Config.html#a9a898d90c155973baa06c11e8ef95813">Config</a></li>
+<li>tcpMarker&#160;:&#160;<a class="el" href="d5/dfa/classConfig_1_1Config.html#a259e4f044a571c4bc7b34a23f39492be">Config</a></li>
+<li>telemetryFrequency&#160;:&#160;<a class="el" href="d5/dfa/classConfig_1_1Config.html#a752dbeb4be188be8d6e370263c380827">Config</a></li>
+<li>telemetryPort&#160;:&#160;<a class="el" href="d5/dfa/classConfig_1_1Config.html#a9400347615d36fd3eed76e4f027433df">Config</a></li>
+<li>telemetryRecvPort&#160;:&#160;<a class="el" href="d5/dfa/classConfig_1_1Config.html#afa3175de72b10c5da5e4664f75936346">Config</a></li>
+<li>theme&#160;:&#160;<a class="el" href="d5/dfa/classConfig_1_1Config.html#a53d9759116527e34443d82453b97f415">Config</a></li>
+<li>thetaAzimuthCorrection&#160;:&#160;<a class="el" href="d5/dfa/classConfig_1_1Config.html#afd2df17ea5b9473da8b4d307395c5085">Config</a></li>
+<li>udpLFSPort&#160;:&#160;<a class="el" href="d5/dfa/classConfig_1_1Config.html#a0eddf3d43e33470977841fae03717c29">Config</a></li>
+<li>useDriftAngle&#160;:&#160;<a class="el" href="d5/dfa/classConfig_1_1Config.html#afcbc3ba0faa77bf6b0a9b01f878181e6">Config</a></li>
+<li>useRadians&#160;:&#160;<a class="el" href="d5/dfa/classConfig_1_1Config.html#af6dc8053f62613e2dd7a79d2172c658d">Config</a></li>
+<li>utl1IP&#160;:&#160;<a class="el" href="d5/dfa/classConfig_1_1Config.html#a8af317d04dbe29e8f495cd928c0f30cb">Config</a></li>
+<li>utl2IP&#160;:&#160;<a class="el" href="d5/dfa/classConfig_1_1Config.html#afdd91838bc17767a1510db9d4e569aaa">Config</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>
