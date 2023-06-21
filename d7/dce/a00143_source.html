@@ -139,6 +139,32 @@ $(document).ready(function(){initNavTree('d7/dce/a00143_source.html','../../'); 
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            signals:</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>                <span class="keywordtype">void</span> processImageFinished(<span class="keyword">const</span> Map::Image&amp; image);</div>
+<<<<<<< HEAD
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>                <span class="keywordtype">void</span> processStripFinished(<span class="keyword">const</span> Map::StripImage&amp; image);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>                <span class="keywordtype">void</span> stripVector8bit(vector&lt;uint8_t&gt; vec, <span class="keywordtype">int</span> rows, <span class="keywordtype">int</span> columns);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>                <span class="keywordtype">void</span> concurrencyFinished();</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>                <span class="keywordtype">void</span> progressChanged();</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>            <span class="keyword">explicit</span> ImageProcessing(QObject* parent = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            ImageProcessing(<span class="keyword">const</span> ImageProcessing &amp;);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            ImageProcessing &amp;operator=(<span class="keyword">const</span> ImageProcessing &amp;);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            <span class="keywordtype">void</span> asyncProcess(<span class="keyword">const</span> QString&amp; filename);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            <span class="keywordtype">void</span> asyncStripProcess(<span class="keyword">const</span> QString&amp; filename);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            QByteArray fileToByteArray(<span class="keyword">const</span> QString&amp; path);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>            Map::Image decodeTelescopic(<span class="keyword">const</span> QString&amp; path);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>            QImage cutImage(<span class="keyword">const</span> Map::Image&amp; image) <span class="keyword">noexcept</span>;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>            Map::ImageModel* m_model;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>            <span class="keywordtype">float</span> m_progress;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>            <span class="keywordtype">int</span> m_total;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>            <span class="keywordtype">int</span> m_processed;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    };</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>} <span class="comment">// namespace Processing;</span></div>
+=======
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>                <span class="keywordtype">void</span> stripVector8bit(vector&lt;uint8_t&gt; vec, <span class="keywordtype">int</span> rows, <span class="keywordtype">int</span> columns);</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>                <span class="keywordtype">void</span> concurrencyFinished();</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
@@ -162,6 +188,7 @@ $(document).ready(function(){initNavTree('d7/dce/a00143_source.html','../../'); 
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>            <span class="keywordtype">int</span> m_processed;</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    };</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>} <span class="comment">// namespace Processing;</span></div>
+>>>>>>> 8bb130cfe57a5be880530ff4fabd355decd1213a
 <div class="ttc" id="aa00223_html"><div class="ttname"><a href="../../dc/d28/a00223.html">Map</a></div><div class="ttdoc">Пространство имен для классов и функций, связанных с картографией.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dec/a00080_source.html#l00006">clickhandler.h:7</a></div></div>
 <div class="ttc" id="aa00226_html"><div class="ttname"><a href="../../dc/d55/a00226.html">Processing</a></div><div class="ttdoc">Пространство имен для низкоуровневого декодирования и обработки данных.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d1e/a00149_source.html#l00006">arrayreader.h:7</a></div></div>
 </div><!-- fragment --></div><!-- contents -->

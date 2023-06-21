@@ -93,7 +93,12 @@ var NAVTREEINDEX0 =
 "examples.html":[3],
 "functions.html":[2,2,0],
 "functions_func.html":[2,2,1],
+<<<<<<< HEAD
+"functions_prop.html":[2,2,3],
+"functions_vars.html":[2,2,2],
+=======
 "functions_prop.html":[2,2,2],
+>>>>>>> 8bb130cfe57a5be880530ff4fabd355decd1213a
 "index.html":[],
 "modules.html":[0],
 "namespaces.html":[1,0],
