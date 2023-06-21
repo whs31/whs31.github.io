@@ -1,5 +1,5 @@
 var namespaces_dup =
 [
-    [ "Config", "d2/dff/namespaceConfig.html", "d2/dff/namespaceConfig" ],
-    [ "Namespace", "da/d8a/namespaceNamespace.html", null ]
+    [ "Config", "d1/de1/a00213.html", "d1/de1/a00213" ],
+    [ "Namespace", "d3/dd1/a00214.html", null ]
 ];

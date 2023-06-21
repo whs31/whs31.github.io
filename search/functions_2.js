@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['projectversion_0',['projectVersion',['../d5/dfa/classConfig_1_1Config.html#a0664ef97a51606760964d90526e64ab2',1,'Config::Config']]]
+  ['disconnect_0',['disconnect',['../df/d03/a00348.html#a960705de531a20389fb29928d43258c3',1,'Networking::AbstractUDPSocket']]]
 ];

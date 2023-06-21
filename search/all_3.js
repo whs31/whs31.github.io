@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['feedbackport_0',['feedbackPort',['../d5/dfa/classConfig_1_1Config.html#a1c046609722570c50455a36d69d0a037',1,'Config::Config']]]
+  ['debugconsole_0',['DebugConsole',['../d9/d21/a00240.html',1,'GUI']]],
+  ['diagram_1',['Diagram',['../dc/d28/a00276.html',1,'Map']]],
+  ['disconnect_2',['disconnect',['../df/d03/a00348.html#a960705de531a20389fb29928d43258c3',1,'Networking::AbstractUDPSocket']]]
 ];

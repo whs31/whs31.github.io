@@ -1,0 +1,2388 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>QuaSAR: Класс Config</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="../../icon.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">QuaSAR<span id="projectnumber">&#160;2.12.0</span>
+   </div>
+   <div id="projectbrief">СПО для РЛС &quot;Квазар&quot;</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.6 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('d5/ddf/a00224.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#signals">Сигналы</a> &#124;
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-static-methods">Открытые статические члены</a> &#124;
+<a href="#properties">Свойства</a> &#124;
+<a href="../../dd/d52/a00221.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Класс Config</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+Граф наследования:Config:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d5/ddf/a00224.png" alt=""/>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="signals" name="signals"></a>
+Сигналы</h2></td></tr>
+<tr class="memitem:abfd0a384bb6d6d2106eccdea957b6616"><td class="memItemLeft" align="right" valign="top"><a id="abfd0a384bb6d6d2106eccdea957b6616" name="abfd0a384bb6d6d2106eccdea957b6616"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>remoteIPChanged</b> ()</td></tr>
+<tr class="separator:abfd0a384bb6d6d2106eccdea957b6616"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a328d395d17d69010a0c9ae0a8dd9b67d"><td class="memItemLeft" align="right" valign="top"><a id="a328d395d17d69010a0c9ae0a8dd9b67d" name="a328d395d17d69010a0c9ae0a8dd9b67d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>localIPChanged</b> ()</td></tr>
+<tr class="separator:a328d395d17d69010a0c9ae0a8dd9b67d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3bd8b0448632a0a40f9ad21bd3297ab"><td class="memItemLeft" align="right" valign="top"><a id="ae3bd8b0448632a0a40f9ad21bd3297ab" name="ae3bd8b0448632a0a40f9ad21bd3297ab"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>telemetryPortChanged</b> ()</td></tr>
+<tr class="separator:ae3bd8b0448632a0a40f9ad21bd3297ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a542ae5b92c0097c5fa223f45228004af"><td class="memItemLeft" align="right" valign="top"><a id="a542ae5b92c0097c5fa223f45228004af" name="a542ae5b92c0097c5fa223f45228004af"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>tcpLFSPortChanged</b> ()</td></tr>
+<tr class="separator:a542ae5b92c0097c5fa223f45228004af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a61381e24998af7980732c6a4b6edb4"><td class="memItemLeft" align="right" valign="top"><a id="a4a61381e24998af7980732c6a4b6edb4" name="a4a61381e24998af7980732c6a4b6edb4"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>udpLFSPortChanged</b> ()</td></tr>
+<tr class="separator:a4a61381e24998af7980732c6a4b6edb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afba61b29cbed67967aa51656b2ad102f"><td class="memItemLeft" align="right" valign="top"><a id="afba61b29cbed67967aa51656b2ad102f" name="afba61b29cbed67967aa51656b2ad102f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>execdPortChanged</b> ()</td></tr>
+<tr class="separator:afba61b29cbed67967aa51656b2ad102f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b7753a9155e35590940ca1c63663b57"><td class="memItemLeft" align="right" valign="top"><a id="a9b7753a9155e35590940ca1c63663b57" name="a9b7753a9155e35590940ca1c63663b57"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>feedbackPortChanged</b> ()</td></tr>
+<tr class="separator:a9b7753a9155e35590940ca1c63663b57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09abe047bc72a0f25a475c0dcb316086"><td class="memItemLeft" align="right" valign="top"><a id="a09abe047bc72a0f25a475c0dcb316086" name="a09abe047bc72a0f25a475c0dcb316086"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>proxyEnabledChanged</b> ()</td></tr>
+<tr class="separator:a09abe047bc72a0f25a475c0dcb316086"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa997a7d53e78c0866630d563d9997c7e"><td class="memItemLeft" align="right" valign="top"><a id="aa997a7d53e78c0866630d563d9997c7e" name="aa997a7d53e78c0866630d563d9997c7e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>antennaAlignmentChanged</b> ()</td></tr>
+<tr class="separator:aa997a7d53e78c0866630d563d9997c7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9ef299e7c0ff21d18982fc3103dd90a"><td class="memItemLeft" align="right" valign="top"><a id="af9ef299e7c0ff21d18982fc3103dd90a" name="af9ef299e7c0ff21d18982fc3103dd90a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>angleCorrectionChanged</b> ()</td></tr>
+<tr class="separator:af9ef299e7c0ff21d18982fc3103dd90a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09e3d7f0270d9eb289c30a35259a588a"><td class="memItemLeft" align="right" valign="top"><a id="a09e3d7f0270d9eb289c30a35259a588a" name="a09e3d7f0270d9eb289c30a35259a588a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>useRadiansChanged</b> ()</td></tr>
+<tr class="separator:a09e3d7f0270d9eb289c30a35259a588a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a44c9982d29533bae4f783c822698b3"><td class="memItemLeft" align="right" valign="top"><a id="a2a44c9982d29533bae4f783c822698b3" name="a2a44c9982d29533bae4f783c822698b3"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>useDriftAngleChanged</b> ()</td></tr>
+<tr class="separator:a2a44c9982d29533bae4f783c822698b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81490f64ec5e84ee32a9ffeb569d1d72"><td class="memItemLeft" align="right" valign="top"><a id="a81490f64ec5e84ee32a9ffeb569d1d72" name="a81490f64ec5e84ee32a9ffeb569d1d72"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>thetaAzimuthCorrectionChanged</b> ()</td></tr>
+<tr class="separator:a81490f64ec5e84ee32a9ffeb569d1d72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a500f45f47933aab9f405f96abf01c0a6"><td class="memItemLeft" align="right" valign="top"><a id="a500f45f47933aab9f405f96abf01c0a6" name="a500f45f47933aab9f405f96abf01c0a6"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>storedLatitudeChanged</b> ()</td></tr>
+<tr class="separator:a500f45f47933aab9f405f96abf01c0a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a683ec2fa776336b1222573b5303c5c25"><td class="memItemLeft" align="right" valign="top"><a id="a683ec2fa776336b1222573b5303c5c25" name="a683ec2fa776336b1222573b5303c5c25"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>storedLongitudeChanged</b> ()</td></tr>
+<tr class="separator:a683ec2fa776336b1222573b5303c5c25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc07a39e75028101c157d042b59d26a1"><td class="memItemLeft" align="right" valign="top"><a id="afc07a39e75028101c157d042b59d26a1" name="afc07a39e75028101c157d042b59d26a1"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>storedZoomLevelChanged</b> ()</td></tr>
+<tr class="separator:afc07a39e75028101c157d042b59d26a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83595cdc21222ce8aeb7c602de502a46"><td class="memItemLeft" align="right" valign="top"><a id="a83595cdc21222ce8aeb7c602de502a46" name="a83595cdc21222ce8aeb7c602de502a46"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>storedCatalogueChanged</b> ()</td></tr>
+<tr class="separator:a83595cdc21222ce8aeb7c602de502a46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea92fb82fd8093337f89cb345892666b"><td class="memItemLeft" align="right" valign="top"><a id="aea92fb82fd8093337f89cb345892666b" name="aea92fb82fd8093337f89cb345892666b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>telemetryFrequencyChanged</b> ()</td></tr>
+<tr class="separator:aea92fb82fd8093337f89cb345892666b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae14b7f16e039c4fc2c116ee9e8f2759a"><td class="memItemLeft" align="right" valign="top"><a id="ae14b7f16e039c4fc2c116ee9e8f2759a" name="ae14b7f16e039c4fc2c116ee9e8f2759a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>overrideImageHeightChanged</b> ()</td></tr>
+<tr class="separator:ae14b7f16e039c4fc2c116ee9e8f2759a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa03f9e95ff4ce3109328862017c794af"><td class="memItemLeft" align="right" valign="top"><a id="aa03f9e95ff4ce3109328862017c794af" name="aa03f9e95ff4ce3109328862017c794af"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>cutImageChanged</b> ()</td></tr>
+<tr class="separator:aa03f9e95ff4ce3109328862017c794af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4dd6dc048053f32556394949b9c70aee"><td class="memItemLeft" align="right" valign="top"><a id="a4dd6dc048053f32556394949b9c70aee" name="a4dd6dc048053f32556394949b9c70aee"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>tcpMarkerChanged</b> ()</td></tr>
+<tr class="separator:a4dd6dc048053f32556394949b9c70aee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7ca87e8fae7b8edfda275909e41535e"><td class="memItemLeft" align="right" valign="top"><a id="ae7ca87e8fae7b8edfda275909e41535e" name="ae7ca87e8fae7b8edfda275909e41535e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>themeChanged</b> ()</td></tr>
+<tr class="separator:ae7ca87e8fae7b8edfda275909e41535e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9dd5f47b10def4fb9cba6ce4cbd87bec"><td class="memItemLeft" align="right" valign="top"><a id="a9dd5f47b10def4fb9cba6ce4cbd87bec" name="a9dd5f47b10def4fb9cba6ce4cbd87bec"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>scheduleRestart</b> ()</td></tr>
+<tr class="separator:a9dd5f47b10def4fb9cba6ce4cbd87bec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab026888c070c26cd179cbeb2165b8907"><td class="memItemLeft" align="right" valign="top"><a id="ab026888c070c26cd179cbeb2165b8907" name="ab026888c070c26cd179cbeb2165b8907"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>jetsonIPChanged</b> ()</td></tr>
+<tr class="separator:ab026888c070c26cd179cbeb2165b8907"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73accd9785a92cb32766dc9b557b6162"><td class="memItemLeft" align="right" valign="top"><a id="a73accd9785a92cb32766dc9b557b6162" name="a73accd9785a92cb32766dc9b557b6162"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>navIPChanged</b> ()</td></tr>
+<tr class="separator:a73accd9785a92cb32766dc9b557b6162"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae25a38ec6027b2285c5de7106b77216"><td class="memItemLeft" align="right" valign="top"><a id="aae25a38ec6027b2285c5de7106b77216" name="aae25a38ec6027b2285c5de7106b77216"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>utl1IPChanged</b> ()</td></tr>
+<tr class="separator:aae25a38ec6027b2285c5de7106b77216"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e125692a5a2774f3db86493f409a508"><td class="memItemLeft" align="right" valign="top"><a id="a3e125692a5a2774f3db86493f409a508" name="a3e125692a5a2774f3db86493f409a508"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>utl2IPChanged</b> ()</td></tr>
+<tr class="separator:a3e125692a5a2774f3db86493f409a508"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9bf9870cb65fe0387a40c1058d875af"><td class="memItemLeft" align="right" valign="top"><a id="ae9bf9870cb65fe0387a40c1058d875af" name="ae9bf9870cb65fe0387a40c1058d875af"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>telemetryRecvPortChanged</b> ()</td></tr>
+<tr class="separator:ae9bf9870cb65fe0387a40c1058d875af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a54dfba499c9d9e1003d4c9bcbe6ad1c5"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/ddf/a00224.html#a54dfba499c9d9e1003d4c9bcbe6ad1c5">~Config</a> ()</td></tr>
+<tr class="separator:a54dfba499c9d9e1003d4c9bcbe6ad1c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad55f80ed3cd8b6c4f247763b747016af"><td class="memItemLeft" align="right" valign="top">Q_INVOKABLE void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/ddf/a00224.html#ad55f80ed3cd8b6c4f247763b747016af">sync</a> ()</td></tr>
+<tr class="separator:ad55f80ed3cd8b6c4f247763b747016af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae2c382151ef7c9aa913361172b30db6"><td class="memItemLeft" align="right" valign="top">Q_INVOKABLE void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/ddf/a00224.html#aae2c382151ef7c9aa913361172b30db6">save</a> ()</td></tr>
+<tr class="separator:aae2c382151ef7c9aa913361172b30db6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78f61ac2dd03bcba8e09ca20cd7d68e3"><td class="memItemLeft" align="right" valign="top">Q_INVOKABLE void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/ddf/a00224.html#a78f61ac2dd03bcba8e09ca20cd7d68e3">load</a> ()</td></tr>
+<tr class="separator:a78f61ac2dd03bcba8e09ca20cd7d68e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9cf620340e16aa417bb112e0294038df"><td class="memItemLeft" align="right" valign="top">Q_INVOKABLE void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/ddf/a00224.html#a9cf620340e16aa417bb112e0294038df">revert</a> ()</td></tr>
+<tr class="separator:a9cf620340e16aa417bb112e0294038df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad20897c5c8bd47f5d4005989bead0e55"><td class="memItemLeft" align="right" valign="top">Q_INVOKABLE void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/ddf/a00224.html#ad20897c5c8bd47f5d4005989bead0e55">reset</a> ()</td></tr>
+<tr class="separator:ad20897c5c8bd47f5d4005989bead0e55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0664ef97a51606760964d90526e64ab2"><td class="memItemLeft" align="right" valign="top">Q_INVOKABLE QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/ddf/a00224.html#a0664ef97a51606760964d90526e64ab2">projectVersion</a> ()</td></tr>
+<tr class="separator:a0664ef97a51606760964d90526e64ab2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc6bb48dc9f34f40692826ac7af1986d"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/ddf/a00224.html#adc6bb48dc9f34f40692826ac7af1986d">remoteIP</a> () const</td></tr>
+<tr class="separator:adc6bb48dc9f34f40692826ac7af1986d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7bdaf2ef611e2214ac2784045b3b04d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/ddf/a00224.html#ac7bdaf2ef611e2214ac2784045b3b04d">setRemoteIP</a> (const QString &amp;)</td></tr>
+<tr class="separator:ac7bdaf2ef611e2214ac2784045b3b04d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afca91e94a6703172928101818276d5f9"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/ddf/a00224.html#afca91e94a6703172928101818276d5f9">localIP</a> () const</td></tr>
+<tr class="separator:afca91e94a6703172928101818276d5f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ae0e2ab305e2fc61942da3dafe5dd50"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/ddf/a00224.html#a8ae0e2ab305e2fc61942da3dafe5dd50">setLocalIP</a> (const QString &amp;)</td></tr>
+<tr class="separator:a8ae0e2ab305e2fc61942da3dafe5dd50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2959aca31c58b6ebf75f18305e62c35a"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/ddf/a00224.html#a2959aca31c58b6ebf75f18305e62c35a">telemetryPort</a> () const</td></tr>
+<tr class="separator:a2959aca31c58b6ebf75f18305e62c35a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb3b488161b51b25d0975af0f34a4c62"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/ddf/a00224.html#adb3b488161b51b25d0975af0f34a4c62">setTelemetryPort</a> (const QString &amp;)</td></tr>
+<tr class="separator:adb3b488161b51b25d0975af0f34a4c62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af73470dfd217833036c89733192a0d67"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/ddf/a00224.html#af73470dfd217833036c89733192a0d67">tcpLFSPort</a> () const</td></tr>
+<tr class="separator:af73470dfd217833036c89733192a0d67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f3cfcede68e1ea0a7d7a506d70c6eef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/ddf/a00224.html#a4f3cfcede68e1ea0a7d7a506d70c6eef">setTcpLFSPort</a> (const QString &amp;)</td></tr>
+<tr class="separator:a4f3cfcede68e1ea0a7d7a506d70c6eef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9d52712d1bf0d8262f5307dff02fc96"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/ddf/a00224.html#af9d52712d1bf0d8262f5307dff02fc96">udpLFSPort</a> () const</td></tr>
+<tr class="separator:af9d52712d1bf0d8262f5307dff02fc96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd6f47ab44c07ca2395eccb9824f0273"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/ddf/a00224.html#afd6f47ab44c07ca2395eccb9824f0273">setUdpLFSPort</a> (const QString &amp;)</td></tr>
+<tr class="separator:afd6f47ab44c07ca2395eccb9824f0273"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7fdfc8d3e7156ceb009b99099f6e5e9"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/ddf/a00224.html#ab7fdfc8d3e7156ceb009b99099f6e5e9">execdPort</a> () const</td></tr>
+<tr class="separator:ab7fdfc8d3e7156ceb009b99099f6e5e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2bcf83212a042a376aa2f2e30bb2a57d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/ddf/a00224.html#a2bcf83212a042a376aa2f2e30bb2a57d">setExecdPort</a> (const QString &amp;)</td></tr>
+<tr class="separator:a2bcf83212a042a376aa2f2e30bb2a57d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a510779484a374e779a622f8079fd79ec"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/ddf/a00224.html#a510779484a374e779a622f8079fd79ec">feedbackPort</a> () const</td></tr>
+<tr class="separator:a510779484a374e779a622f8079fd79ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1810d50a9b4f876b5200d0963fdf3e73"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/ddf/a00224.html#a1810d50a9b4f876b5200d0963fdf3e73">setFeedbackPort</a> (const QString &amp;)</td></tr>
+<tr class="separator:a1810d50a9b4f876b5200d0963fdf3e73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2daed5b217babaee456e45e66b9089f3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/ddf/a00224.html#a2daed5b217babaee456e45e66b9089f3">proxyEnabled</a> () const</td></tr>
+<tr class="separator:a2daed5b217babaee456e45e66b9089f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf4e9f4fd7dacb53c29ff2b09b207745"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/ddf/a00224.html#acf4e9f4fd7dacb53c29ff2b09b207745">setProxyEnabled</a> (bool)</td></tr>
+<tr class="separator:acf4e9f4fd7dacb53c29ff2b09b207745"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53eda8647fd26c9c39447d19d76755dc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/ddf/a00224.html#a53eda8647fd26c9c39447d19d76755dc">antennaAlignment</a> () const</td></tr>
+<tr class="separator:a53eda8647fd26c9c39447d19d76755dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf608b43530d951f30c9d3ee8f820cc1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/ddf/a00224.html#aaf608b43530d951f30c9d3ee8f820cc1">setAntennaAlignment</a> (bool)</td></tr>
+<tr class="separator:aaf608b43530d951f30c9d3ee8f820cc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3770bffc0e5fc384edd2d8c81e6ff5c0"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/ddf/a00224.html#a3770bffc0e5fc384edd2d8c81e6ff5c0">angleCorrection</a> () const</td></tr>
+<tr class="separator:a3770bffc0e5fc384edd2d8c81e6ff5c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29460c2dad6447229f3d0c7b39172d61"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/ddf/a00224.html#a29460c2dad6447229f3d0c7b39172d61">setAngleCorrection</a> (float)</td></tr>
+<tr class="separator:a29460c2dad6447229f3d0c7b39172d61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a623188d87f6c7831e430d301e50c07eb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/ddf/a00224.html#a623188d87f6c7831e430d301e50c07eb">useRadians</a> () const</td></tr>
+<tr class="separator:a623188d87f6c7831e430d301e50c07eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32bc590c3015ddf737ee782f2332d029"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/ddf/a00224.html#a32bc590c3015ddf737ee782f2332d029">setUseRadians</a> (bool)</td></tr>
+<tr class="separator:a32bc590c3015ddf737ee782f2332d029"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16bd48c77efc1c3ec31440d0cdb20b03"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/ddf/a00224.html#a16bd48c77efc1c3ec31440d0cdb20b03">useDriftAngle</a> () const</td></tr>
+<tr class="separator:a16bd48c77efc1c3ec31440d0cdb20b03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a7947447256f45a7c9b90916e885e78"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/ddf/a00224.html#a6a7947447256f45a7c9b90916e885e78">setUseDriftAngle</a> (bool)</td></tr>
+<tr class="separator:a6a7947447256f45a7c9b90916e885e78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3c04c8f681b09df7ab2e5382ffef9ae"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/ddf/a00224.html#ab3c04c8f681b09df7ab2e5382ffef9ae">thetaAzimuthCorrection</a> () const</td></tr>
+<tr class="separator:ab3c04c8f681b09df7ab2e5382ffef9ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a683b36bdb99aec032ad1dbf15d1ed0cd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/ddf/a00224.html#a683b36bdb99aec032ad1dbf15d1ed0cd">setThetaAzimuthCorrection</a> (float)</td></tr>
+<tr class="separator:a683b36bdb99aec032ad1dbf15d1ed0cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a605d0bc57ffb8de0723f4924e69ee2c7"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/ddf/a00224.html#a605d0bc57ffb8de0723f4924e69ee2c7">storedLatitude</a> () const</td></tr>
+<tr class="separator:a605d0bc57ffb8de0723f4924e69ee2c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a807c4b40f8f25bbf23fc4470a28ecaa9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/ddf/a00224.html#a807c4b40f8f25bbf23fc4470a28ecaa9">setStoredLatitude</a> (double)</td></tr>
+<tr class="separator:a807c4b40f8f25bbf23fc4470a28ecaa9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9def0f7bff96d471705eb6c03d0207e8"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/ddf/a00224.html#a9def0f7bff96d471705eb6c03d0207e8">storedLongitude</a> () const</td></tr>
+<tr class="separator:a9def0f7bff96d471705eb6c03d0207e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21e8877a88685d726156aa50c0a0abe8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/ddf/a00224.html#a21e8877a88685d726156aa50c0a0abe8">setStoredLongitude</a> (double)</td></tr>
+<tr class="separator:a21e8877a88685d726156aa50c0a0abe8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ad273d5ce777accc26e3e95181b7a6f"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/ddf/a00224.html#a3ad273d5ce777accc26e3e95181b7a6f">storedZoomLevel</a> () const</td></tr>
+<tr class="separator:a3ad273d5ce777accc26e3e95181b7a6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1934d2d72b8a2f9ae53031476d66d477"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/ddf/a00224.html#a1934d2d72b8a2f9ae53031476d66d477">setStoredZoomLevel</a> (double)</td></tr>
+<tr class="separator:a1934d2d72b8a2f9ae53031476d66d477"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1912a3760f0ca70c26d935316ac417d7"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/ddf/a00224.html#a1912a3760f0ca70c26d935316ac417d7">storedCatalogue</a> () const</td></tr>
+<tr class="separator:a1912a3760f0ca70c26d935316ac417d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1abdb0971aa6bf922280d8f1ed133a96"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/ddf/a00224.html#a1abdb0971aa6bf922280d8f1ed133a96">setStoredCatalogue</a> (const QString &amp;)</td></tr>
+<tr class="separator:a1abdb0971aa6bf922280d8f1ed133a96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04d2ac585a2fa48079a21815a3f1f793"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/ddf/a00224.html#a04d2ac585a2fa48079a21815a3f1f793">telemetryFrequency</a> () const</td></tr>
+<tr class="separator:a04d2ac585a2fa48079a21815a3f1f793"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b8a857c2a5a3ac797c90fd9b3f28ba1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/ddf/a00224.html#a7b8a857c2a5a3ac797c90fd9b3f28ba1">setTelemetryFrequency</a> (float)</td></tr>
+<tr class="separator:a7b8a857c2a5a3ac797c90fd9b3f28ba1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aace9598fbc8ec995ea3bea9c1d329d28"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/ddf/a00224.html#aace9598fbc8ec995ea3bea9c1d329d28">overrideImageHeight</a> () const</td></tr>
+<tr class="separator:aace9598fbc8ec995ea3bea9c1d329d28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9dfc8db2b691daa6b3e6f563617f3f3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/ddf/a00224.html#ac9dfc8db2b691daa6b3e6f563617f3f3">setOverrideImageHeight</a> (bool)</td></tr>
+<tr class="separator:ac9dfc8db2b691daa6b3e6f563617f3f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac343c55a02feef88899c8b386cb8f8c7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/ddf/a00224.html#ac343c55a02feef88899c8b386cb8f8c7">cutImage</a> () const</td></tr>
+<tr class="separator:ac343c55a02feef88899c8b386cb8f8c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27af868f3dd4065b17ef966fd60d8237"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/ddf/a00224.html#a27af868f3dd4065b17ef966fd60d8237">setCutImage</a> (bool)</td></tr>
+<tr class="separator:a27af868f3dd4065b17ef966fd60d8237"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae559ffddf0855f9cf300e6adff72cd9e"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/ddf/a00224.html#ae559ffddf0855f9cf300e6adff72cd9e">tcpMarker</a> () const</td></tr>
+<tr class="separator:ae559ffddf0855f9cf300e6adff72cd9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeadaffdd2e4cab1041c6f7da38d5b6dd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/ddf/a00224.html#aeadaffdd2e4cab1041c6f7da38d5b6dd">setTcpMarker</a> (const QString &amp;)</td></tr>
+<tr class="separator:aeadaffdd2e4cab1041c6f7da38d5b6dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30dc7e081b20a834b4f37c507812705c"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/ddf/a00224.html#a30dc7e081b20a834b4f37c507812705c">theme</a> () const</td></tr>
+<tr class="separator:a30dc7e081b20a834b4f37c507812705c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71f42a77763bd4442357a28487e0bc74"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/ddf/a00224.html#a71f42a77763bd4442357a28487e0bc74">setTheme</a> (const QString &amp;)</td></tr>
+<tr class="separator:a71f42a77763bd4442357a28487e0bc74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b0231a8241c4ebdfc65017c15ff6da6"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/ddf/a00224.html#a0b0231a8241c4ebdfc65017c15ff6da6">jetsonIP</a> () const</td></tr>
+<tr class="separator:a0b0231a8241c4ebdfc65017c15ff6da6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ff15f4347b932c4f6800fc3789abbf8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/ddf/a00224.html#a7ff15f4347b932c4f6800fc3789abbf8">setJetsonIP</a> (const QString &amp;)</td></tr>
+<tr class="separator:a7ff15f4347b932c4f6800fc3789abbf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad517bd8b95c9352533b446f35581a35e"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/ddf/a00224.html#ad517bd8b95c9352533b446f35581a35e">navIP</a> () const</td></tr>
+<tr class="separator:ad517bd8b95c9352533b446f35581a35e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87c9af56ec07aea350fdd3a8a925f2e2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/ddf/a00224.html#a87c9af56ec07aea350fdd3a8a925f2e2">setNavIP</a> (const QString &amp;)</td></tr>
+<tr class="separator:a87c9af56ec07aea350fdd3a8a925f2e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb6519c188f3dd424b48f2c9a0020b82"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/ddf/a00224.html#adb6519c188f3dd424b48f2c9a0020b82">utl1IP</a> () const</td></tr>
+<tr class="separator:adb6519c188f3dd424b48f2c9a0020b82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a091c9f38e1854563429488cbef6684fe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/ddf/a00224.html#a091c9f38e1854563429488cbef6684fe">setUtl1IP</a> (const QString &amp;)</td></tr>
+<tr class="separator:a091c9f38e1854563429488cbef6684fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2b0a2b79fbaea5c78e4c15e8adab9b6"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/ddf/a00224.html#aa2b0a2b79fbaea5c78e4c15e8adab9b6">utl2IP</a> () const</td></tr>
+<tr class="separator:aa2b0a2b79fbaea5c78e4c15e8adab9b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2e09e44d50aef9e883815ffa28c6b25"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/ddf/a00224.html#ad2e09e44d50aef9e883815ffa28c6b25">setUtl2IP</a> (const QString &amp;)</td></tr>
+<tr class="separator:ad2e09e44d50aef9e883815ffa28c6b25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5db7151d5882739841cfa0fa45535e1c"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/ddf/a00224.html#a5db7151d5882739841cfa0fa45535e1c">telemetryRecvPort</a> () const</td></tr>
+<tr class="separator:a5db7151d5882739841cfa0fa45535e1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a903e68e7d352d60741ccab4be893f8d5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/ddf/a00224.html#a903e68e7d352d60741ccab4be893f8d5">setTelemetryRecvPort</a> (const QString &amp;)</td></tr>
+<tr class="separator:a903e68e7d352d60741ccab4be893f8d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Открытые статические члены</h2></td></tr>
+<tr class="memitem:aab4f0df3041b8a7fb08052df350ebcbd"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d5/ddf/a00224.html">Config</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/ddf/a00224.html#aab4f0df3041b8a7fb08052df350ebcbd">get</a> ()</td></tr>
+<tr class="separator:aab4f0df3041b8a7fb08052df350ebcbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="properties" name="properties"></a>
+Свойства</h2></td></tr>
+<tr class="memitem:a29ca03d2272c4051d7c324cd6bac3b0b"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/ddf/a00224.html#a29ca03d2272c4051d7c324cd6bac3b0b">remoteIP</a></td></tr>
+<tr class="separator:a29ca03d2272c4051d7c324cd6bac3b0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb00f8fd5508af1ffc1b56f474a7ba22"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/ddf/a00224.html#abb00f8fd5508af1ffc1b56f474a7ba22">localIP</a></td></tr>
+<tr class="separator:abb00f8fd5508af1ffc1b56f474a7ba22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75af3a7370fd6e32995373d2dbbf1f81"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/ddf/a00224.html#a75af3a7370fd6e32995373d2dbbf1f81">jetsonIP</a></td></tr>
+<tr class="separator:a75af3a7370fd6e32995373d2dbbf1f81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9f58cbedfcdde939083775c3a77ef6e"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/ddf/a00224.html#aa9f58cbedfcdde939083775c3a77ef6e">navIP</a></td></tr>
+<tr class="separator:aa9f58cbedfcdde939083775c3a77ef6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8af317d04dbe29e8f495cd928c0f30cb"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/ddf/a00224.html#a8af317d04dbe29e8f495cd928c0f30cb">utl1IP</a></td></tr>
+<tr class="separator:a8af317d04dbe29e8f495cd928c0f30cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afdd91838bc17767a1510db9d4e569aaa"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/ddf/a00224.html#afdd91838bc17767a1510db9d4e569aaa">utl2IP</a></td></tr>
+<tr class="separator:afdd91838bc17767a1510db9d4e569aaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9400347615d36fd3eed76e4f027433df"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/ddf/a00224.html#a9400347615d36fd3eed76e4f027433df">telemetryPort</a></td></tr>
+<tr class="separator:a9400347615d36fd3eed76e4f027433df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa3175de72b10c5da5e4664f75936346"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/ddf/a00224.html#afa3175de72b10c5da5e4664f75936346">telemetryRecvPort</a></td></tr>
+<tr class="separator:afa3175de72b10c5da5e4664f75936346"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a898d90c155973baa06c11e8ef95813"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/ddf/a00224.html#a9a898d90c155973baa06c11e8ef95813">tcpLFSPort</a></td></tr>
+<tr class="separator:a9a898d90c155973baa06c11e8ef95813"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0eddf3d43e33470977841fae03717c29"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/ddf/a00224.html#a0eddf3d43e33470977841fae03717c29">udpLFSPort</a></td></tr>
+<tr class="separator:a0eddf3d43e33470977841fae03717c29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7c77c61e23cb38fce8948fff5baa648"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/ddf/a00224.html#aa7c77c61e23cb38fce8948fff5baa648">execdPort</a></td></tr>
+<tr class="separator:aa7c77c61e23cb38fce8948fff5baa648"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c046609722570c50455a36d69d0a037"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/ddf/a00224.html#a1c046609722570c50455a36d69d0a037">feedbackPort</a></td></tr>
+<tr class="separator:a1c046609722570c50455a36d69d0a037"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a752dbeb4be188be8d6e370263c380827"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/ddf/a00224.html#a752dbeb4be188be8d6e370263c380827">telemetryFrequency</a></td></tr>
+<tr class="separator:a752dbeb4be188be8d6e370263c380827"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae862ff88f11a3a2ef7eee0c21957dcb7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/ddf/a00224.html#ae862ff88f11a3a2ef7eee0c21957dcb7">proxyEnabled</a></td></tr>
+<tr class="separator:ae862ff88f11a3a2ef7eee0c21957dcb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a259e4f044a571c4bc7b34a23f39492be"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/ddf/a00224.html#a259e4f044a571c4bc7b34a23f39492be">tcpMarker</a></td></tr>
+<tr class="separator:a259e4f044a571c4bc7b34a23f39492be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66213c53fe947a7a4757bcc2b7d7fbb3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/ddf/a00224.html#a66213c53fe947a7a4757bcc2b7d7fbb3">antennaAlignment</a></td></tr>
+<tr class="separator:a66213c53fe947a7a4757bcc2b7d7fbb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc7856ea0497ce886547bd19075f4bcb"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/ddf/a00224.html#acc7856ea0497ce886547bd19075f4bcb">angleCorrection</a></td></tr>
+<tr class="separator:acc7856ea0497ce886547bd19075f4bcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6dc8053f62613e2dd7a79d2172c658d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/ddf/a00224.html#af6dc8053f62613e2dd7a79d2172c658d">useRadians</a></td></tr>
+<tr class="separator:af6dc8053f62613e2dd7a79d2172c658d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afcbc3ba0faa77bf6b0a9b01f878181e6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/ddf/a00224.html#afcbc3ba0faa77bf6b0a9b01f878181e6">useDriftAngle</a></td></tr>
+<tr class="separator:afcbc3ba0faa77bf6b0a9b01f878181e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd2df17ea5b9473da8b4d307395c5085"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/ddf/a00224.html#afd2df17ea5b9473da8b4d307395c5085">thetaAzimuthCorrection</a></td></tr>
+<tr class="separator:afd2df17ea5b9473da8b4d307395c5085"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aced4a69727f347e1e1a73bfdd8761143"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/ddf/a00224.html#aced4a69727f347e1e1a73bfdd8761143">overrideImageHeight</a></td></tr>
+<tr class="separator:aced4a69727f347e1e1a73bfdd8761143"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e81ba455ac73046cba68a75c0d34991"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/ddf/a00224.html#a6e81ba455ac73046cba68a75c0d34991">cutImage</a></td></tr>
+<tr class="separator:a6e81ba455ac73046cba68a75c0d34991"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abdcb3cc37ddbefe06ad99b3daa720afc"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/ddf/a00224.html#abdcb3cc37ddbefe06ad99b3daa720afc">storedLatitude</a></td></tr>
+<tr class="separator:abdcb3cc37ddbefe06ad99b3daa720afc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b2d3b040ee55818de48aed7ffc5806f"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/ddf/a00224.html#a5b2d3b040ee55818de48aed7ffc5806f">storedLongitude</a></td></tr>
+<tr class="separator:a5b2d3b040ee55818de48aed7ffc5806f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6241b7c15dc9a3b9b8e412a80e00cc9d"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/ddf/a00224.html#a6241b7c15dc9a3b9b8e412a80e00cc9d">storedZoomLevel</a></td></tr>
+<tr class="separator:a6241b7c15dc9a3b9b8e412a80e00cc9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a153feb691de604b107e5765377364a9d"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/ddf/a00224.html#a153feb691de604b107e5765377364a9d">storedCatalogue</a></td></tr>
+<tr class="separator:a153feb691de604b107e5765377364a9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53d9759116527e34443d82453b97f415"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/ddf/a00224.html#a53d9759116527e34443d82453b97f415">theme</a></td></tr>
+<tr class="separator:a53d9759116527e34443d82453b97f415"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p><a class="el" href="../../dc/df3/a00424.html">Class</a> for working with local application settings, stored in filesystem. </p>
+<p><a class="el" href="../../d9/dd5/a00432.html">Provides</a> access to reading and writing application settings to local .ini file. Automatically load default settings on fresh application install. <a class="el" href="../../dc/df3/a00424.html">Class</a> mainly used as wrapper over <b>QSettings</b> instance, providing useful invokable functions and properties avialable in QML.</p>
+<p><a class="el" href="../../d5/ddf/a00224.html" title="Class for working with local application settings, stored in filesystem.">Config</a> class also provides useful macro for accessing it's properties from different classes and namespaces: </p><div class="fragment"><div class="line">CONFIG(property_name);</div>
+</div><!-- fragment --><p> Example usage of macro: </p><div class="fragment"><div class="line">Network::startTelemetrySocket(CONFIG(<a class="code hl_property" href="../../d5/ddf/a00224.html#a29ca03d2272c4051d7c324cd6bac3b0b">remoteIP</a>) + <span class="stringliteral">&quot;:&quot;</span> + CONFIG(<a class="code hl_property" href="../../d5/ddf/a00224.html#a9400347615d36fd3eed76e4f027433df">telemetryPort</a>), CONFIG(<a class="code hl_property" href="../../d5/ddf/a00224.html#a752dbeb4be188be8d6e370263c380827">telemetryFrequency</a>));</div>
+<div class="ttc" id="aa00224_html_a29ca03d2272c4051d7c324cd6bac3b0b"><div class="ttname"><a href="../../d5/ddf/a00224.html#a29ca03d2272c4051d7c324cd6bac3b0b">Config::Config::remoteIP</a></div><div class="ttdeci">QString remoteIP</div><div class="ttdoc">IPv4-address of SAR (DE10-NANO).</div><div class="ttdef"><b>Definition:</b> <a href="../../db/ddf/a00164_source.html#l00001">config.h:47</a></div></div>
+<div class="ttc" id="aa00224_html_a752dbeb4be188be8d6e370263c380827"><div class="ttname"><a href="../../d5/ddf/a00224.html#a752dbeb4be188be8d6e370263c380827">Config::Config::telemetryFrequency</a></div><div class="ttdeci">float telemetryFrequency</div><div class="ttdoc">Telemetry package interval in seconds.</div><div class="ttdef"><b>Definition:</b> <a href="../../db/ddf/a00164_source.html#l00001">config.h:175</a></div></div>
+<div class="ttc" id="aa00224_html_a9400347615d36fd3eed76e4f027433df"><div class="ttname"><a href="../../d5/ddf/a00224.html#a9400347615d36fd3eed76e4f027433df">Config::Config::telemetryPort</a></div><div class="ttdeci">QString telemetryPort</div><div class="ttdoc">Port for requesting telemetry.</div><div class="ttdef"><b>Definition:</b> <a href="../../db/ddf/a00164_source.html#l00001">config.h:109</a></div></div>
+</div><!-- fragment --><p>In QML, exactly same code can be achieved using following example: </p><div class="fragment"><div class="line">Network.startTelemetrySocket(Config.remoteIP + &quot;:&quot; + Config.telemetryPort, Config.telemetryFrequency);</div>
+</div><!-- fragment --> 
+<p class="definition">См. определение в файле <a class="el" href="../../db/ddf/a00164_source.html">config.h</a> строка <a class="el" href="../../db/ddf/a00164_source.html#l00036">36</a></p>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a54dfba499c9d9e1003d4c9bcbe6ad1c5" name="a54dfba499c9d9e1003d4c9bcbe6ad1c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54dfba499c9d9e1003d4c9bcbe6ad1c5">&#9670;&#160;</a></span>~Config()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">~<a class="el" href="../../d5/ddf/a00224.html">Config</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Destroys config class and syncs settings with filesystem. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d5/dcb/a00170_source.html">config.c++</a> строка <a class="el" href="../../d5/dcb/a00170_source.html#l00011">11</a></p>
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="aab4f0df3041b8a7fb08052df350ebcbd" name="aab4f0df3041b8a7fb08052df350ebcbd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab4f0df3041b8a7fb08052df350ebcbd">&#9670;&#160;</a></span>get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d5/ddf/a00224.html">Config::Config</a> * get </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns singleton instance of class. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d5/dcb/a00170_source.html">config.c++</a> строка <a class="el" href="../../d5/dcb/a00170_source.html#l00009">9</a></p>
+
+</div>
+</div>
+<a id="ad55f80ed3cd8b6c4f247763b747016af" name="ad55f80ed3cd8b6c4f247763b747016af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad55f80ed3cd8b6c4f247763b747016af">&#9670;&#160;</a></span>sync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sync </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Syncs settings on disk. </p>
+<dl class="section note"><dt>Заметки</dt><dd>Can be invoked from QML. </dd></dl>
+<dl class="section warning"><dt>Предупреждения</dt><dd>Internal function. Do not call if you are not exactly knowing what you want to achieve. </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d5/dcb/a00170_source.html">config.c++</a> строка <a class="el" href="../../d5/dcb/a00170_source.html#l00106">106</a></p>
+
+</div>
+</div>
+<a id="aae2c382151ef7c9aa913361172b30db6" name="aae2c382151ef7c9aa913361172b30db6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae2c382151ef7c9aa913361172b30db6">&#9670;&#160;</a></span>save()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void save </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Saves settings on disk. </p>
+<p>Writes all currently present in RAM properties to .ini file on disk. </p><dl class="section note"><dt>Заметки</dt><dd>Can be invoked from QML. </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d5/dcb/a00170_source.html">config.c++</a> строка <a class="el" href="../../d5/dcb/a00170_source.html#l00017">17</a></p>
+
+</div>
+</div>
+<a id="a78f61ac2dd03bcba8e09ca20cd7d68e3" name="a78f61ac2dd03bcba8e09ca20cd7d68e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78f61ac2dd03bcba8e09ca20cd7d68e3">&#9670;&#160;</a></span>load()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void load </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Discards settings and loads saved state from disk. </p>
+<p>Replaces all currently stored in RAM properties with stored in .ini file values. </p><dl class="section note"><dt>Заметки</dt><dd>Can be invoked from QML. </dd></dl>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="../../d5/ddf/a00224.html#a9cf620340e16aa417bb112e0294038df" title="Alternative name for load().">revert()</a> </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d5/dcb/a00170_source.html">config.c++</a> строка <a class="el" href="../../d5/dcb/a00170_source.html#l00062">62</a></p>
+
+</div>
+</div>
+<a id="a9cf620340e16aa417bb112e0294038df" name="a9cf620340e16aa417bb112e0294038df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9cf620340e16aa417bb112e0294038df">&#9670;&#160;</a></span>revert()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void revert </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Alternative name for <a class="el" href="../../d5/ddf/a00224.html#a78f61ac2dd03bcba8e09ca20cd7d68e3" title="Discards settings and loads saved state from disk.">load()</a>. </p>
+<dl class="section note"><dt>Заметки</dt><dd>Can be invoked from QML. </dd></dl>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="../../d5/ddf/a00224.html#a78f61ac2dd03bcba8e09ca20cd7d68e3" title="Discards settings and loads saved state from disk.">load()</a> </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d5/dcb/a00170_source.html">config.c++</a> строка <a class="el" href="../../d5/dcb/a00170_source.html#l00095">95</a></p>
+
+</div>
+</div>
+<a id="ad20897c5c8bd47f5d4005989bead0e55" name="ad20897c5c8bd47f5d4005989bead0e55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad20897c5c8bd47f5d4005989bead0e55">&#9670;&#160;</a></span>reset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void reset </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Discards settings and .ini file and loads factory defaults. </p>
+<p>Fully erases all settings in .ini file and RAM, then loads statically stored in application memory default values. </p><dl class="section note"><dt>Заметки</dt><dd>Can be invoked from QML. </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d5/dcb/a00170_source.html">config.c++</a> строка <a class="el" href="../../d5/dcb/a00170_source.html#l00097">97</a></p>
+
+</div>
+</div>
+<a id="a0664ef97a51606760964d90526e64ab2" name="a0664ef97a51606760964d90526e64ab2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0664ef97a51606760964d90526e64ab2">&#9670;&#160;</a></span>projectVersion()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString projectVersion </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns current software version. </p>
+<p>Version is taken from CMake definitions. </p><dl class="section note"><dt>Заметки</dt><dd>Can be invoked from QML. </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d5/dcb/a00170_source.html">config.c++</a> строка <a class="el" href="../../d5/dcb/a00170_source.html#l00105">105</a></p>
+
+</div>
+</div>
+<a id="adc6bb48dc9f34f40692826ac7af1986d" name="adc6bb48dc9f34f40692826ac7af1986d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc6bb48dc9f34f40692826ac7af1986d">&#9670;&#160;</a></span>remoteIP()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString remoteIP </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d5/dcb/a00170_source.html">config.c++</a> строка <a class="el" href="../../d5/dcb/a00170_source.html#l00140">140</a></p>
+
+</div>
+</div>
+<a id="ac7bdaf2ef611e2214ac2784045b3b04d" name="ac7bdaf2ef611e2214ac2784045b3b04d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7bdaf2ef611e2214ac2784045b3b04d">&#9670;&#160;</a></span>setRemoteIP()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setRemoteIP </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d5/dcb/a00170_source.html">config.c++</a> строка <a class="el" href="../../d5/dcb/a00170_source.html#l00141">141</a></p>
+
+</div>
+</div>
+<a id="afca91e94a6703172928101818276d5f9" name="afca91e94a6703172928101818276d5f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afca91e94a6703172928101818276d5f9">&#9670;&#160;</a></span>localIP()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString localIP </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d5/dcb/a00170_source.html">config.c++</a> строка <a class="el" href="../../d5/dcb/a00170_source.html#l00148">148</a></p>
+
+</div>
+</div>
+<a id="a8ae0e2ab305e2fc61942da3dafe5dd50" name="a8ae0e2ab305e2fc61942da3dafe5dd50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ae0e2ab305e2fc61942da3dafe5dd50">&#9670;&#160;</a></span>setLocalIP()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setLocalIP </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d5/dcb/a00170_source.html">config.c++</a> строка <a class="el" href="../../d5/dcb/a00170_source.html#l00149">149</a></p>
+
+</div>
+</div>
+<a id="a2959aca31c58b6ebf75f18305e62c35a" name="a2959aca31c58b6ebf75f18305e62c35a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2959aca31c58b6ebf75f18305e62c35a">&#9670;&#160;</a></span>telemetryPort()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString telemetryPort </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d5/dcb/a00170_source.html">config.c++</a> строка <a class="el" href="../../d5/dcb/a00170_source.html#l00156">156</a></p>
+
+</div>
+</div>
+<a id="adb3b488161b51b25d0975af0f34a4c62" name="adb3b488161b51b25d0975af0f34a4c62"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb3b488161b51b25d0975af0f34a4c62">&#9670;&#160;</a></span>setTelemetryPort()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setTelemetryPort </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d5/dcb/a00170_source.html">config.c++</a> строка <a class="el" href="../../d5/dcb/a00170_source.html#l00157">157</a></p>
+
+</div>
+</div>
+<a id="af73470dfd217833036c89733192a0d67" name="af73470dfd217833036c89733192a0d67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af73470dfd217833036c89733192a0d67">&#9670;&#160;</a></span>tcpLFSPort()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString tcpLFSPort </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d5/dcb/a00170_source.html">config.c++</a> строка <a class="el" href="../../d5/dcb/a00170_source.html#l00164">164</a></p>
+
+</div>
+</div>
+<a id="a4f3cfcede68e1ea0a7d7a506d70c6eef" name="a4f3cfcede68e1ea0a7d7a506d70c6eef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f3cfcede68e1ea0a7d7a506d70c6eef">&#9670;&#160;</a></span>setTcpLFSPort()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setTcpLFSPort </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d5/dcb/a00170_source.html">config.c++</a> строка <a class="el" href="../../d5/dcb/a00170_source.html#l00165">165</a></p>
+
+</div>
+</div>
+<a id="af9d52712d1bf0d8262f5307dff02fc96" name="af9d52712d1bf0d8262f5307dff02fc96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9d52712d1bf0d8262f5307dff02fc96">&#9670;&#160;</a></span>udpLFSPort()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString udpLFSPort </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d5/dcb/a00170_source.html">config.c++</a> строка <a class="el" href="../../d5/dcb/a00170_source.html#l00172">172</a></p>
+
+</div>
+</div>
+<a id="afd6f47ab44c07ca2395eccb9824f0273" name="afd6f47ab44c07ca2395eccb9824f0273"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd6f47ab44c07ca2395eccb9824f0273">&#9670;&#160;</a></span>setUdpLFSPort()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setUdpLFSPort </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d5/dcb/a00170_source.html">config.c++</a> строка <a class="el" href="../../d5/dcb/a00170_source.html#l00173">173</a></p>
+
+</div>
+</div>
+<a id="ab7fdfc8d3e7156ceb009b99099f6e5e9" name="ab7fdfc8d3e7156ceb009b99099f6e5e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7fdfc8d3e7156ceb009b99099f6e5e9">&#9670;&#160;</a></span>execdPort()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString execdPort </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d5/dcb/a00170_source.html">config.c++</a> строка <a class="el" href="../../d5/dcb/a00170_source.html#l00180">180</a></p>
+
+</div>
+</div>
+<a id="a2bcf83212a042a376aa2f2e30bb2a57d" name="a2bcf83212a042a376aa2f2e30bb2a57d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2bcf83212a042a376aa2f2e30bb2a57d">&#9670;&#160;</a></span>setExecdPort()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setExecdPort </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d5/dcb/a00170_source.html">config.c++</a> строка <a class="el" href="../../d5/dcb/a00170_source.html#l00181">181</a></p>
+
+</div>
+</div>
+<a id="a510779484a374e779a622f8079fd79ec" name="a510779484a374e779a622f8079fd79ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a510779484a374e779a622f8079fd79ec">&#9670;&#160;</a></span>feedbackPort()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString feedbackPort </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d5/dcb/a00170_source.html">config.c++</a> строка <a class="el" href="../../d5/dcb/a00170_source.html#l00188">188</a></p>
+
+</div>
+</div>
+<a id="a1810d50a9b4f876b5200d0963fdf3e73" name="a1810d50a9b4f876b5200d0963fdf3e73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1810d50a9b4f876b5200d0963fdf3e73">&#9670;&#160;</a></span>setFeedbackPort()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setFeedbackPort </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d5/dcb/a00170_source.html">config.c++</a> строка <a class="el" href="../../d5/dcb/a00170_source.html#l00189">189</a></p>
+
+</div>
+</div>
+<a id="a2daed5b217babaee456e45e66b9089f3" name="a2daed5b217babaee456e45e66b9089f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2daed5b217babaee456e45e66b9089f3">&#9670;&#160;</a></span>proxyEnabled()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool proxyEnabled </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d5/dcb/a00170_source.html">config.c++</a> строка <a class="el" href="../../d5/dcb/a00170_source.html#l00196">196</a></p>
+
+</div>
+</div>
+<a id="acf4e9f4fd7dacb53c29ff2b09b207745" name="acf4e9f4fd7dacb53c29ff2b09b207745"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf4e9f4fd7dacb53c29ff2b09b207745">&#9670;&#160;</a></span>setProxyEnabled()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setProxyEnabled </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d5/dcb/a00170_source.html">config.c++</a> строка <a class="el" href="../../d5/dcb/a00170_source.html#l00197">197</a></p>
+
+</div>
+</div>
+<a id="a53eda8647fd26c9c39447d19d76755dc" name="a53eda8647fd26c9c39447d19d76755dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53eda8647fd26c9c39447d19d76755dc">&#9670;&#160;</a></span>antennaAlignment()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool antennaAlignment </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d5/dcb/a00170_source.html">config.c++</a> строка <a class="el" href="../../d5/dcb/a00170_source.html#l00204">204</a></p>
+
+</div>
+</div>
+<a id="aaf608b43530d951f30c9d3ee8f820cc1" name="aaf608b43530d951f30c9d3ee8f820cc1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf608b43530d951f30c9d3ee8f820cc1">&#9670;&#160;</a></span>setAntennaAlignment()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setAntennaAlignment </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d5/dcb/a00170_source.html">config.c++</a> строка <a class="el" href="../../d5/dcb/a00170_source.html#l00205">205</a></p>
+
+</div>
+</div>
+<a id="a3770bffc0e5fc384edd2d8c81e6ff5c0" name="a3770bffc0e5fc384edd2d8c81e6ff5c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3770bffc0e5fc384edd2d8c81e6ff5c0">&#9670;&#160;</a></span>angleCorrection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float angleCorrection </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d5/dcb/a00170_source.html">config.c++</a> строка <a class="el" href="../../d5/dcb/a00170_source.html#l00212">212</a></p>
+
+</div>
+</div>
+<a id="a29460c2dad6447229f3d0c7b39172d61" name="a29460c2dad6447229f3d0c7b39172d61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29460c2dad6447229f3d0c7b39172d61">&#9670;&#160;</a></span>setAngleCorrection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setAngleCorrection </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d5/dcb/a00170_source.html">config.c++</a> строка <a class="el" href="../../d5/dcb/a00170_source.html#l00213">213</a></p>
+
+</div>
+</div>
+<a id="a623188d87f6c7831e430d301e50c07eb" name="a623188d87f6c7831e430d301e50c07eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a623188d87f6c7831e430d301e50c07eb">&#9670;&#160;</a></span>useRadians()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool useRadians </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d5/dcb/a00170_source.html">config.c++</a> строка <a class="el" href="../../d5/dcb/a00170_source.html#l00220">220</a></p>
+
+</div>
+</div>
+<a id="a32bc590c3015ddf737ee782f2332d029" name="a32bc590c3015ddf737ee782f2332d029"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32bc590c3015ddf737ee782f2332d029">&#9670;&#160;</a></span>setUseRadians()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setUseRadians </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d5/dcb/a00170_source.html">config.c++</a> строка <a class="el" href="../../d5/dcb/a00170_source.html#l00221">221</a></p>
+
+</div>
+</div>
+<a id="a16bd48c77efc1c3ec31440d0cdb20b03" name="a16bd48c77efc1c3ec31440d0cdb20b03"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16bd48c77efc1c3ec31440d0cdb20b03">&#9670;&#160;</a></span>useDriftAngle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool useDriftAngle </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d5/dcb/a00170_source.html">config.c++</a> строка <a class="el" href="../../d5/dcb/a00170_source.html#l00228">228</a></p>
+
+</div>
+</div>
+<a id="a6a7947447256f45a7c9b90916e885e78" name="a6a7947447256f45a7c9b90916e885e78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a7947447256f45a7c9b90916e885e78">&#9670;&#160;</a></span>setUseDriftAngle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setUseDriftAngle </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d5/dcb/a00170_source.html">config.c++</a> строка <a class="el" href="../../d5/dcb/a00170_source.html#l00229">229</a></p>
+
+</div>
+</div>
+<a id="ab3c04c8f681b09df7ab2e5382ffef9ae" name="ab3c04c8f681b09df7ab2e5382ffef9ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3c04c8f681b09df7ab2e5382ffef9ae">&#9670;&#160;</a></span>thetaAzimuthCorrection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float thetaAzimuthCorrection </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d5/dcb/a00170_source.html">config.c++</a> строка <a class="el" href="../../d5/dcb/a00170_source.html#l00236">236</a></p>
+
+</div>
+</div>
+<a id="a683b36bdb99aec032ad1dbf15d1ed0cd" name="a683b36bdb99aec032ad1dbf15d1ed0cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a683b36bdb99aec032ad1dbf15d1ed0cd">&#9670;&#160;</a></span>setThetaAzimuthCorrection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setThetaAzimuthCorrection </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d5/dcb/a00170_source.html">config.c++</a> строка <a class="el" href="../../d5/dcb/a00170_source.html#l00237">237</a></p>
+
+</div>
+</div>
+<a id="a605d0bc57ffb8de0723f4924e69ee2c7" name="a605d0bc57ffb8de0723f4924e69ee2c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a605d0bc57ffb8de0723f4924e69ee2c7">&#9670;&#160;</a></span>storedLatitude()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double storedLatitude </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d5/dcb/a00170_source.html">config.c++</a> строка <a class="el" href="../../d5/dcb/a00170_source.html#l00244">244</a></p>
+
+</div>
+</div>
+<a id="a807c4b40f8f25bbf23fc4470a28ecaa9" name="a807c4b40f8f25bbf23fc4470a28ecaa9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a807c4b40f8f25bbf23fc4470a28ecaa9">&#9670;&#160;</a></span>setStoredLatitude()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setStoredLatitude </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d5/dcb/a00170_source.html">config.c++</a> строка <a class="el" href="../../d5/dcb/a00170_source.html#l00245">245</a></p>
+
+</div>
+</div>
+<a id="a9def0f7bff96d471705eb6c03d0207e8" name="a9def0f7bff96d471705eb6c03d0207e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9def0f7bff96d471705eb6c03d0207e8">&#9670;&#160;</a></span>storedLongitude()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double storedLongitude </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d5/dcb/a00170_source.html">config.c++</a> строка <a class="el" href="../../d5/dcb/a00170_source.html#l00252">252</a></p>
+
+</div>
+</div>
+<a id="a21e8877a88685d726156aa50c0a0abe8" name="a21e8877a88685d726156aa50c0a0abe8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21e8877a88685d726156aa50c0a0abe8">&#9670;&#160;</a></span>setStoredLongitude()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setStoredLongitude </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d5/dcb/a00170_source.html">config.c++</a> строка <a class="el" href="../../d5/dcb/a00170_source.html#l00253">253</a></p>
+
+</div>
+</div>
+<a id="a3ad273d5ce777accc26e3e95181b7a6f" name="a3ad273d5ce777accc26e3e95181b7a6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ad273d5ce777accc26e3e95181b7a6f">&#9670;&#160;</a></span>storedZoomLevel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double storedZoomLevel </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d5/dcb/a00170_source.html">config.c++</a> строка <a class="el" href="../../d5/dcb/a00170_source.html#l00260">260</a></p>
+
+</div>
+</div>
+<a id="a1934d2d72b8a2f9ae53031476d66d477" name="a1934d2d72b8a2f9ae53031476d66d477"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1934d2d72b8a2f9ae53031476d66d477">&#9670;&#160;</a></span>setStoredZoomLevel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setStoredZoomLevel </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d5/dcb/a00170_source.html">config.c++</a> строка <a class="el" href="../../d5/dcb/a00170_source.html#l00261">261</a></p>
+
+</div>
+</div>
+<a id="a1912a3760f0ca70c26d935316ac417d7" name="a1912a3760f0ca70c26d935316ac417d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1912a3760f0ca70c26d935316ac417d7">&#9670;&#160;</a></span>storedCatalogue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString storedCatalogue </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d5/dcb/a00170_source.html">config.c++</a> строка <a class="el" href="../../d5/dcb/a00170_source.html#l00268">268</a></p>
+
+</div>
+</div>
+<a id="a1abdb0971aa6bf922280d8f1ed133a96" name="a1abdb0971aa6bf922280d8f1ed133a96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1abdb0971aa6bf922280d8f1ed133a96">&#9670;&#160;</a></span>setStoredCatalogue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setStoredCatalogue </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d5/dcb/a00170_source.html">config.c++</a> строка <a class="el" href="../../d5/dcb/a00170_source.html#l00269">269</a></p>
+
+</div>
+</div>
+<a id="a04d2ac585a2fa48079a21815a3f1f793" name="a04d2ac585a2fa48079a21815a3f1f793"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04d2ac585a2fa48079a21815a3f1f793">&#9670;&#160;</a></span>telemetryFrequency()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float telemetryFrequency </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d5/dcb/a00170_source.html">config.c++</a> строка <a class="el" href="../../d5/dcb/a00170_source.html#l00284">284</a></p>
+
+</div>
+</div>
+<a id="a7b8a857c2a5a3ac797c90fd9b3f28ba1" name="a7b8a857c2a5a3ac797c90fd9b3f28ba1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b8a857c2a5a3ac797c90fd9b3f28ba1">&#9670;&#160;</a></span>setTelemetryFrequency()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setTelemetryFrequency </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d5/dcb/a00170_source.html">config.c++</a> строка <a class="el" href="../../d5/dcb/a00170_source.html#l00285">285</a></p>
+
+</div>
+</div>
+<a id="aace9598fbc8ec995ea3bea9c1d329d28" name="aace9598fbc8ec995ea3bea9c1d329d28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aace9598fbc8ec995ea3bea9c1d329d28">&#9670;&#160;</a></span>overrideImageHeight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool overrideImageHeight </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d5/dcb/a00170_source.html">config.c++</a> строка <a class="el" href="../../d5/dcb/a00170_source.html#l00122">122</a></p>
+
+</div>
+</div>
+<a id="ac9dfc8db2b691daa6b3e6f563617f3f3" name="ac9dfc8db2b691daa6b3e6f563617f3f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9dfc8db2b691daa6b3e6f563617f3f3">&#9670;&#160;</a></span>setOverrideImageHeight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setOverrideImageHeight </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d5/dcb/a00170_source.html">config.c++</a> строка <a class="el" href="../../d5/dcb/a00170_source.html#l00123">123</a></p>
+
+</div>
+</div>
+<a id="ac343c55a02feef88899c8b386cb8f8c7" name="ac343c55a02feef88899c8b386cb8f8c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac343c55a02feef88899c8b386cb8f8c7">&#9670;&#160;</a></span>cutImage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool cutImage </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d5/dcb/a00170_source.html">config.c++</a> строка <a class="el" href="../../d5/dcb/a00170_source.html#l00131">131</a></p>
+
+</div>
+</div>
+<a id="a27af868f3dd4065b17ef966fd60d8237" name="a27af868f3dd4065b17ef966fd60d8237"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27af868f3dd4065b17ef966fd60d8237">&#9670;&#160;</a></span>setCutImage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setCutImage </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d5/dcb/a00170_source.html">config.c++</a> строка <a class="el" href="../../d5/dcb/a00170_source.html#l00132">132</a></p>
+
+</div>
+</div>
+<a id="ae559ffddf0855f9cf300e6adff72cd9e" name="ae559ffddf0855f9cf300e6adff72cd9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae559ffddf0855f9cf300e6adff72cd9e">&#9670;&#160;</a></span>tcpMarker()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString tcpMarker </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d5/dcb/a00170_source.html">config.c++</a> строка <a class="el" href="../../d5/dcb/a00170_source.html#l00292">292</a></p>
+
+</div>
+</div>
+<a id="aeadaffdd2e4cab1041c6f7da38d5b6dd" name="aeadaffdd2e4cab1041c6f7da38d5b6dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeadaffdd2e4cab1041c6f7da38d5b6dd">&#9670;&#160;</a></span>setTcpMarker()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setTcpMarker </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d5/dcb/a00170_source.html">config.c++</a> строка <a class="el" href="../../d5/dcb/a00170_source.html#l00293">293</a></p>
+
+</div>
+</div>
+<a id="a30dc7e081b20a834b4f37c507812705c" name="a30dc7e081b20a834b4f37c507812705c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30dc7e081b20a834b4f37c507812705c">&#9670;&#160;</a></span>theme()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString theme </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d5/dcb/a00170_source.html">config.c++</a> строка <a class="el" href="../../d5/dcb/a00170_source.html#l00300">300</a></p>
+
+</div>
+</div>
+<a id="a71f42a77763bd4442357a28487e0bc74" name="a71f42a77763bd4442357a28487e0bc74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71f42a77763bd4442357a28487e0bc74">&#9670;&#160;</a></span>setTheme()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setTheme </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d5/dcb/a00170_source.html">config.c++</a> строка <a class="el" href="../../d5/dcb/a00170_source.html#l00301">301</a></p>
+
+</div>
+</div>
+<a id="a0b0231a8241c4ebdfc65017c15ff6da6" name="a0b0231a8241c4ebdfc65017c15ff6da6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b0231a8241c4ebdfc65017c15ff6da6">&#9670;&#160;</a></span>jetsonIP()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString jetsonIP </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d5/dcb/a00170_source.html">config.c++</a> строка <a class="el" href="../../d5/dcb/a00170_source.html#l00308">308</a></p>
+
+</div>
+</div>
+<a id="a7ff15f4347b932c4f6800fc3789abbf8" name="a7ff15f4347b932c4f6800fc3789abbf8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ff15f4347b932c4f6800fc3789abbf8">&#9670;&#160;</a></span>setJetsonIP()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setJetsonIP </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d5/dcb/a00170_source.html">config.c++</a> строка <a class="el" href="../../d5/dcb/a00170_source.html#l00309">309</a></p>
+
+</div>
+</div>
+<a id="ad517bd8b95c9352533b446f35581a35e" name="ad517bd8b95c9352533b446f35581a35e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad517bd8b95c9352533b446f35581a35e">&#9670;&#160;</a></span>navIP()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString navIP </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d5/dcb/a00170_source.html">config.c++</a> строка <a class="el" href="../../d5/dcb/a00170_source.html#l00316">316</a></p>
+
+</div>
+</div>
+<a id="a87c9af56ec07aea350fdd3a8a925f2e2" name="a87c9af56ec07aea350fdd3a8a925f2e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87c9af56ec07aea350fdd3a8a925f2e2">&#9670;&#160;</a></span>setNavIP()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setNavIP </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d5/dcb/a00170_source.html">config.c++</a> строка <a class="el" href="../../d5/dcb/a00170_source.html#l00317">317</a></p>
+
+</div>
+</div>
+<a id="adb6519c188f3dd424b48f2c9a0020b82" name="adb6519c188f3dd424b48f2c9a0020b82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb6519c188f3dd424b48f2c9a0020b82">&#9670;&#160;</a></span>utl1IP()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString utl1IP </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d5/dcb/a00170_source.html">config.c++</a> строка <a class="el" href="../../d5/dcb/a00170_source.html#l00324">324</a></p>
+
+</div>
+</div>
+<a id="a091c9f38e1854563429488cbef6684fe" name="a091c9f38e1854563429488cbef6684fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a091c9f38e1854563429488cbef6684fe">&#9670;&#160;</a></span>setUtl1IP()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setUtl1IP </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d5/dcb/a00170_source.html">config.c++</a> строка <a class="el" href="../../d5/dcb/a00170_source.html#l00325">325</a></p>
+
+</div>
+</div>
+<a id="aa2b0a2b79fbaea5c78e4c15e8adab9b6" name="aa2b0a2b79fbaea5c78e4c15e8adab9b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2b0a2b79fbaea5c78e4c15e8adab9b6">&#9670;&#160;</a></span>utl2IP()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString utl2IP </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d5/dcb/a00170_source.html">config.c++</a> строка <a class="el" href="../../d5/dcb/a00170_source.html#l00332">332</a></p>
+
+</div>
+</div>
+<a id="ad2e09e44d50aef9e883815ffa28c6b25" name="ad2e09e44d50aef9e883815ffa28c6b25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2e09e44d50aef9e883815ffa28c6b25">&#9670;&#160;</a></span>setUtl2IP()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setUtl2IP </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d5/dcb/a00170_source.html">config.c++</a> строка <a class="el" href="../../d5/dcb/a00170_source.html#l00333">333</a></p>
+
+</div>
+</div>
+<a id="a5db7151d5882739841cfa0fa45535e1c" name="a5db7151d5882739841cfa0fa45535e1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5db7151d5882739841cfa0fa45535e1c">&#9670;&#160;</a></span>telemetryRecvPort()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString telemetryRecvPort </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d5/dcb/a00170_source.html">config.c++</a> строка <a class="el" href="../../d5/dcb/a00170_source.html#l00340">340</a></p>
+
+</div>
+</div>
+<a id="a903e68e7d352d60741ccab4be893f8d5" name="a903e68e7d352d60741ccab4be893f8d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a903e68e7d352d60741ccab4be893f8d5">&#9670;&#160;</a></span>setTelemetryRecvPort()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setTelemetryRecvPort </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d5/dcb/a00170_source.html">config.c++</a> строка <a class="el" href="../../d5/dcb/a00170_source.html#l00341">341</a></p>
+
+</div>
+</div>
+<h2 class="groupheader">Полный список свойств</h2>
+<a id="a29ca03d2272c4051d7c324cd6bac3b0b" name="a29ca03d2272c4051d7c324cd6bac3b0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29ca03d2272c4051d7c324cd6bac3b0b">&#9670;&#160;</a></span>remoteIP</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">remoteIP</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">write</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>IPv4-address of SAR (DE10-NANO). </p>
+<p>This property is used for <b>telemetry</b> socket and <b>Execd</b> socket. By default, this property returns <code>127.0.0.1</code> (localhost). </p><dl class="section user"><dt>remoteIP(), setRemoteIP(), remoteIPChanged()</dt><dd></dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="../../db/ddf/a00164_source.html">config.h</a> строка <a class="el" href="../../db/ddf/a00164_source.html#l00001">1</a></p>
+
+</div>
+</div>
+<a id="abb00f8fd5508af1ffc1b56f474a7ba22" name="abb00f8fd5508af1ffc1b56f474a7ba22"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb00f8fd5508af1ffc1b56f474a7ba22">&#9670;&#160;</a></span>localIP</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">localIP</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">write</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>IPv4-address of application host computer. </p>
+<p>This property is used for <b>feedback</b> socket, <b>TCP-IP</b> LFS socket and <b>UDP</b> LFS socket. By default, this property returns <code>127.0.0.1</code> (localhost). </p><dl class="section user"><dt>localIP(), setLocalIP(), localIPChanged()</dt><dd></dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="../../db/ddf/a00164_source.html">config.h</a> строка <a class="el" href="../../db/ddf/a00164_source.html#l00001">1</a></p>
+
+</div>
+</div>
+<a id="a75af3a7370fd6e32995373d2dbbf1f81" name="a75af3a7370fd6e32995373d2dbbf1f81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75af3a7370fd6e32995373d2dbbf1f81">&#9670;&#160;</a></span>jetsonIP</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">jetsonIP</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">write</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>IPv4-address of Jetson Xavier. </p>
+<p>Currently, this property is used only for pinging Jetson Xavier. By default, this property returns <code>192.168.1.48</code>. </p><dl class="section user"><dt>jetsonIP(), setJetsonIP(), jetsonIPChanged()</dt><dd></dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="../../db/ddf/a00164_source.html">config.h</a> строка <a class="el" href="../../db/ddf/a00164_source.html#l00001">1</a></p>
+
+</div>
+</div>
+<a id="aa9f58cbedfcdde939083775c3a77ef6e" name="aa9f58cbedfcdde939083775c3a77ef6e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9f58cbedfcdde939083775c3a77ef6e">&#9670;&#160;</a></span>navIP</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">navIP</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">write</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>IPv4-address of NavSAR. </p>
+<p>Currently, this property is used only for pinging navigation module on SAR. By default, this property returns 192.168.1.49. </p><dl class="section user"><dt>navIP(), setNavIP(), navIPChanged()</dt><dd></dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="../../db/ddf/a00164_source.html">config.h</a> строка <a class="el" href="../../db/ddf/a00164_source.html#l00001">1</a></p>
+
+</div>
+</div>
+<a id="a8af317d04dbe29e8f495cd928c0f30cb" name="a8af317d04dbe29e8f495cd928c0f30cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8af317d04dbe29e8f495cd928c0f30cb">&#9670;&#160;</a></span>utl1IP</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">utl1IP</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">write</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reserved IPv4-address. </p>
+<p>Currently, this property is used only for pinging setted IP-address. In future, this property will hold address of antenna commutator. By default, this property returns 192.168.1.50. </p><dl class="section user"><dt>utl1IP(), setUtl1IP(), utl1IPChanged()</dt><dd></dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="../../db/ddf/a00164_source.html">config.h</a> строка <a class="el" href="../../db/ddf/a00164_source.html#l00001">1</a></p>
+
+</div>
+</div>
+<a id="afdd91838bc17767a1510db9d4e569aaa" name="afdd91838bc17767a1510db9d4e569aaa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afdd91838bc17767a1510db9d4e569aaa">&#9670;&#160;</a></span>utl2IP</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">utl2IP</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">write</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reserved IPv4-address. </p>
+<p>Currently, this property is used only for pinging setted IP-address. In future, this property will hold address of power commutator. By default, this property returns 192.168.1.51. </p><dl class="section user"><dt>utl2IP(), setUtl2IP(), utl2IPChanged()</dt><dd></dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="../../db/ddf/a00164_source.html">config.h</a> строка <a class="el" href="../../db/ddf/a00164_source.html#l00001">1</a></p>
+
+</div>
+</div>
+<a id="a9400347615d36fd3eed76e4f027433df" name="a9400347615d36fd3eed76e4f027433df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9400347615d36fd3eed76e4f027433df">&#9670;&#160;</a></span>telemetryPort</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">telemetryPort</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">write</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Port for requesting telemetry. </p>
+<p>This port is used for connecting to SAR <b>navd2</b> service and requesting telemetry. Needs to be used in pair with property <a class="el" href="../../d5/ddf/a00224.html#a29ca03d2272c4051d7c324cd6bac3b0b" title="IPv4-address of SAR (DE10-NANO).">remoteIP</a>. By default, this property returns <code>9955</code>. </p><dl class="section user"><dt>telemetryPort(), setTelemetryPort(), telemetryPortChanged()</dt><dd></dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="../../db/ddf/a00164_source.html">config.h</a> строка <a class="el" href="../../db/ddf/a00164_source.html#l00001">1</a></p>
+
+</div>
+</div>
+<a id="afa3175de72b10c5da5e4664f75936346" name="afa3175de72b10c5da5e4664f75936346"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa3175de72b10c5da5e4664f75936346">&#9670;&#160;</a></span>telemetryRecvPort</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">telemetryRecvPort</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">write</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Port for receiving telemetry. </p>
+<p>This port is used for receiving telemetry from SAR <b>navd2</b> service and requesting telemetry. Needs to be used in pair with property <a class="el" href="../../d5/ddf/a00224.html#abb00f8fd5508af1ffc1b56f474a7ba22" title="IPv4-address of application host computer.">localIP</a>. By default, this property returns <code>10337</code>. </p><dl class="section user"><dt>telemetryRecvPort(), setTelemetryRecvPort(), telemetryRecvPortChanged()</dt><dd></dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="../../db/ddf/a00164_source.html">config.h</a> строка <a class="el" href="../../db/ddf/a00164_source.html#l00001">1</a></p>
+
+</div>
+</div>
+<a id="a9a898d90c155973baa06c11e8ef95813" name="a9a898d90c155973baa06c11e8ef95813"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a898d90c155973baa06c11e8ef95813">&#9670;&#160;</a></span>tcpLFSPort</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">tcpLFSPort</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">write</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Port for receiving TCP-IP fsend data. </p>
+<p>TCP-IP LFS server will be working on this port. SAR <b>fsend</b> service will try to connect to this port when data is ready to send. Application will automatically set this port and <a class="el" href="../../d5/ddf/a00224.html#abb00f8fd5508af1ffc1b56f474a7ba22" title="IPv4-address of application host computer.">localIP</a> as <b>execd</b> argument. Needs to be used in pair with <a class="el" href="../../d5/ddf/a00224.html#abb00f8fd5508af1ffc1b56f474a7ba22" title="IPv4-address of application host computer.">localIP</a>. By default, this property returns <code>10000</code>. </p><dl class="section user"><dt>tcpLFSPort(), setTcpLFSPort(), tcpLFSPortChanged()</dt><dd></dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="../../db/ddf/a00164_source.html">config.h</a> строка <a class="el" href="../../db/ddf/a00164_source.html#l00001">1</a></p>
+
+</div>
+</div>
+<a id="a0eddf3d43e33470977841fae03717c29" name="a0eddf3d43e33470977841fae03717c29"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0eddf3d43e33470977841fae03717c29">&#9670;&#160;</a></span>udpLFSPort</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">udpLFSPort</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">write</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Port for receiving UDP <b>fsend</b> data. </p>
+<p>UDP LFS server will be working on this port. SAR <b>fsend</b> service will try to connect to this port when strip data is ready to send. Needs to be used in pair with <a class="el" href="../../d5/ddf/a00224.html#abb00f8fd5508af1ffc1b56f474a7ba22" title="IPv4-address of application host computer.">localIP</a>. By default, this property returns <code>48455</code>. </p><dl class="section warning"><dt>Предупреждения</dt><dd>Functionality of UDP LFS server is currently <b>not</b> implemented. </dd></dl>
+<dl class="section user"><dt>udpLFSPort(), setUdpLFSPort(), udpLFSPortChanged()</dt><dd></dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="../../db/ddf/a00164_source.html">config.h</a> строка <a class="el" href="../../db/ddf/a00164_source.html#l00001">1</a></p>
+
+</div>
+</div>
+<a id="aa7c77c61e23cb38fce8948fff5baa648" name="aa7c77c61e23cb38fce8948fff5baa648"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7c77c61e23cb38fce8948fff5baa648">&#9670;&#160;</a></span>execdPort</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">execdPort</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">write</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Port for SAR <b>execd</b> service. </p>
+<p>Application will send command requests to this port. SAR can provide <b>execd</b> feedback (not to confuse with <b>stdout</b> feedback) to <a class="el" href="../../d5/ddf/a00224.html#abb00f8fd5508af1ffc1b56f474a7ba22" title="IPv4-address of application host computer.">localIP</a>. Needs to be used in pair with <a class="el" href="../../d5/ddf/a00224.html#a29ca03d2272c4051d7c324cd6bac3b0b" title="IPv4-address of SAR (DE10-NANO).">remoteIP</a>. By default, this property returns <code>9845</code>. </p><dl class="section user"><dt>execdPort(), setExecdPort(), execdPortChanged()</dt><dd></dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="../../db/ddf/a00164_source.html">config.h</a> строка <a class="el" href="../../db/ddf/a00164_source.html#l00001">1</a></p>
+
+</div>
+</div>
+<a id="a1c046609722570c50455a36d69d0a037" name="a1c046609722570c50455a36d69d0a037"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c046609722570c50455a36d69d0a037">&#9670;&#160;</a></span>feedbackPort</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">feedbackPort</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">write</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Port for SAR <b>execd</b> service. </p>
+<p>Port for SAR <b>stdout/stderr</b>. SAR will redirect it's <b>stdout</b> and <b>stderr</b> to this port. Needs to be used in pair with <a class="el" href="../../d5/ddf/a00224.html#abb00f8fd5508af1ffc1b56f474a7ba22" title="IPv4-address of application host computer.">localIP</a>. By default, this property returns <code>9846</code>. </p><dl class="section user"><dt>feedbackPort(), setFeedbackPort(), feedbackPortChanged()</dt><dd></dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="../../db/ddf/a00164_source.html">config.h</a> строка <a class="el" href="../../db/ddf/a00164_source.html#l00001">1</a></p>
+
+</div>
+</div>
+<a id="a752dbeb4be188be8d6e370263c380827" name="a752dbeb4be188be8d6e370263c380827"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a752dbeb4be188be8d6e370263c380827">&#9670;&#160;</a></span>telemetryFrequency</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">telemetryFrequency</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">write</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Telemetry package interval in seconds. </p>
+<p>Describes how fast SAR <b>navd2</b> service will send telemetry packages to application host computer. By default, this property returns <code>0.1</code> (seconds). </p><dl class="section user"><dt>telemetryFrequency(), setTelemetryFrequency(), telemetryFrequencyChanged()</dt><dd></dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="../../db/ddf/a00164_source.html">config.h</a> строка <a class="el" href="../../db/ddf/a00164_source.html#l00001">1</a></p>
+
+</div>
+</div>
+<a id="ae862ff88f11a3a2ef7eee0c21957dcb7" name="ae862ff88f11a3a2ef7eee0c21957dcb7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae862ff88f11a3a2ef7eee0c21957dcb7">&#9670;&#160;</a></span>proxyEnabled</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">proxyEnabled</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">write</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Legacy setting for replacing <b>--remote</b> flag. </p>
+<p>If this property evaluates to true, application will replace <a class="el" href="../../d5/ddf/a00224.html#abb00f8fd5508af1ffc1b56f474a7ba22" title="IPv4-address of application host computer.">localIP</a> in &ndash;remote <b>execd</b> argument with <a class="el" href="../../d5/ddf/a00224.html#a29ca03d2272c4051d7c324cd6bac3b0b" title="IPv4-address of SAR (DE10-NANO).">remoteIP</a>. By default, this property returns <code>false</code>. </p><dl class="section warning"><dt>Предупреждения</dt><dd>Implementation removed in <b>version</b> <b>2.0</b>. </dd></dl>
+<dl class="section user"><dt>proxyEnabled(), setProxyEnabled(), proxyEnabledChanged()</dt><dd></dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="../../db/ddf/a00164_source.html">config.h</a> строка <a class="el" href="../../db/ddf/a00164_source.html#l00001">1</a></p>
+
+</div>
+</div>
+<a id="a259e4f044a571c4bc7b34a23f39492be" name="a259e4f044a571c4bc7b34a23f39492be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a259e4f044a571c4bc7b34a23f39492be">&#9670;&#160;</a></span>tcpMarker</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">tcpMarker</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">write</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Compatibility setting for old <b>fsend</b> versions. </p>
+<p>Describes, which split char between file size and file name will be used on parsing TCP-IP data packet. In known cases, can evaluate to <code>NULL</code> char and <code>NEWLINE</code> char. By default, this property returns <code>\0</code> (NULL). </p><dl class="section user"><dt>tcpMarker(), setTcpMarker(), tcpMarkerChanged()</dt><dd></dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="../../db/ddf/a00164_source.html">config.h</a> строка <a class="el" href="../../db/ddf/a00164_source.html#l00001">1</a></p>
+
+</div>
+</div>
+<a id="a66213c53fe947a7a4757bcc2b7d7fbb3" name="a66213c53fe947a7a4757bcc2b7d7fbb3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66213c53fe947a7a4757bcc2b7d7fbb3">&#9670;&#160;</a></span>antennaAlignment</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">antennaAlignment</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">write</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Describes, in which side of UAV antenna was placed. </p>
+<p>If boolean evaluates to <code>true</code>, antenna is placed on the right side of UAV, otherwise, on the left. By default, this property returns <code>false</code> (left side). </p><dl class="section user"><dt>antennaAlignment(), setAntennaAlignment(), antennaAlignmentChanged()</dt><dd></dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="../../db/ddf/a00164_source.html">config.h</a> строка <a class="el" href="../../db/ddf/a00164_source.html#l00001">1</a></p>
+
+</div>
+</div>
+<a id="acc7856ea0497ce886547bd19075f4bcb" name="acc7856ea0497ce886547bd19075f4bcb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc7856ea0497ce886547bd19075f4bcb">&#9670;&#160;</a></span>angleCorrection</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">angleCorrection</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">write</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Debug property for adding or subtracting angle values from image metadata. </p>
+<p>Value describes, how many degrees will be added/subtracted from image metadata azimuth. By default, this property returns <code>0</code> (no correction). </p><dl class="section note"><dt>Заметки</dt><dd>In current software version, it is probably better approach to use image editor for individual images. Setting this property to any values other than <code>0</code> can result in strange image geopositioning behaviour. </dd></dl>
+<dl class="section user"><dt>angleCorrection(), setAngleCorrection(), angleCorrectionChanged()</dt><dd></dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="../../db/ddf/a00164_source.html">config.h</a> строка <a class="el" href="../../db/ddf/a00164_source.html#l00001">1</a></p>
+
+</div>
+</div>
+<a id="af6dc8053f62613e2dd7a79d2172c658d" name="af6dc8053f62613e2dd7a79d2172c658d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6dc8053f62613e2dd7a79d2172c658d">&#9670;&#160;</a></span>useRadians</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">useRadians</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">write</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Compatibility setting for older firmware versions. </p>
+<p>If boolean evalueates to <code>true</code>, image metadata decoding process will expect radian values in azimuth, drift angle and div fields. VT45-firmware (target platform) currently behaves like that. User needs to manually uncheck this boolean, if resulting images are poor cut and incorrectly aligned. By default, this property returns <code>true</code>. </p><dl class="section user"><dt>useRadians(), setUseRadians(), useRadiansChanged()</dt><dd></dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="../../db/ddf/a00164_source.html">config.h</a> строка <a class="el" href="../../db/ddf/a00164_source.html#l00001">1</a></p>
+
+</div>
+</div>
+<a id="afcbc3ba0faa77bf6b0a9b01f878181e6" name="afcbc3ba0faa77bf6b0a9b01f878181e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afcbc3ba0faa77bf6b0a9b01f878181e6">&#9670;&#160;</a></span>useDriftAngle</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">useDriftAngle</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">write</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Compatibility setting for older firmware versions. </p>
+<p>If boolean evalueates to <code>true</code>, image metadata decoding process will use drift angle values in geopositioning, otherwise drift angle value will be ignored. User needs to manually uncheck this boolean, if resulting images are incorrectly aligned. By default, this property returns <code>true</code>. </p><dl class="section user"><dt>useDriftAngle(), setUseDriftAngle(), useDriftAngleChanged()</dt><dd></dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="../../db/ddf/a00164_source.html">config.h</a> строка <a class="el" href="../../db/ddf/a00164_source.html#l00001">1</a></p>
+
+</div>
+</div>
+<a id="afd2df17ea5b9473da8b4d307395c5085" name="afd2df17ea5b9473da8b4d307395c5085"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd2df17ea5b9473da8b4d307395c5085">&#9670;&#160;</a></span>thetaAzimuthCorrection</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">thetaAzimuthCorrection</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">write</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Debug property for subtracting diargam size angle value from image metadata. </p>
+<p>Value describes, how many degrees will be subtracted from image metadata theta-azimuth (div). By default, this property returns <code>5</code> (diargam angle is lower by 5 degrees). </p><dl class="section user"><dt>thetaAzimuthCorrection(), setThetaAzimuthCorrection(), thetaAzimuthCorrectionChanged()</dt><dd></dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="../../db/ddf/a00164_source.html">config.h</a> строка <a class="el" href="../../db/ddf/a00164_source.html#l00001">1</a></p>
+
+</div>
+</div>
+<a id="aced4a69727f347e1e1a73bfdd8761143" name="aced4a69727f347e1e1a73bfdd8761143"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aced4a69727f347e1e1a73bfdd8761143">&#9670;&#160;</a></span>overrideImageHeight</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">overrideImageHeight</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">write</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Debug property for overriding image <b>ly</b> parameter with real pixel height. </p>
+<p>If value evaluates to true, <b>ly</b> field of image metadata will be replaced with actual pixel height of this image. By default, this property returns <code>true</code> (ly is overriden). </p><dl class="section warning"><dt>Предупреждения</dt><dd>Currently, setting this boolean to false results in incorrect cutting of image. This can be changed in future firmware versions. </dd></dl>
+<dl class="section user"><dt>overrideImageHeight(), setOverrideImageHeight(), overrideImageHeightChanged()</dt><dd></dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="../../db/ddf/a00164_source.html">config.h</a> строка <a class="el" href="../../db/ddf/a00164_source.html#l00001">1</a></p>
+
+</div>
+</div>
+<a id="a6e81ba455ac73046cba68a75c0d34991" name="a6e81ba455ac73046cba68a75c0d34991"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e81ba455ac73046cba68a75c0d34991">&#9670;&#160;</a></span>cutImage</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">cutImage</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">write</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Debug property for disabling image software cutting. </p>
+<p>If value evaluates to false, no cutting will be applied to telescopic images. Otherwise, image will be cut according to it's metadata. By default, this property returns <code>true</code> (cutting enabled). </p><dl class="section user"><dt>cutImage(), setCutImage(), cutImageChanged()</dt><dd></dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="../../db/ddf/a00164_source.html">config.h</a> строка <a class="el" href="../../db/ddf/a00164_source.html#l00001">1</a></p>
+
+</div>
+</div>
+<a id="abdcb3cc37ddbefe06ad99b3daa720afc" name="abdcb3cc37ddbefe06ad99b3daa720afc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abdcb3cc37ddbefe06ad99b3daa720afc">&#9670;&#160;</a></span>storedLatitude</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">storedLatitude</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">write</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Internal stored property for restoring map camera position between sessions. </p>
+<dl class="section user"><dt>storedLatitude(), setStoredLatitude(), storedLatitudeChanged()</dt><dd></dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="../../db/ddf/a00164_source.html">config.h</a> строка <a class="el" href="../../db/ddf/a00164_source.html#l00001">1</a></p>
+
+</div>
+</div>
+<a id="a5b2d3b040ee55818de48aed7ffc5806f" name="a5b2d3b040ee55818de48aed7ffc5806f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b2d3b040ee55818de48aed7ffc5806f">&#9670;&#160;</a></span>storedLongitude</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">storedLongitude</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">write</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Internal stored property for restoring map camera position between sessions. </p>
+<dl class="section user"><dt>storedLongitude(), setStoredLongitude(), storedLongitudeChanged()</dt><dd></dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="../../db/ddf/a00164_source.html">config.h</a> строка <a class="el" href="../../db/ddf/a00164_source.html#l00001">1</a></p>
+
+</div>
+</div>
+<a id="a6241b7c15dc9a3b9b8e412a80e00cc9d" name="a6241b7c15dc9a3b9b8e412a80e00cc9d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6241b7c15dc9a3b9b8e412a80e00cc9d">&#9670;&#160;</a></span>storedZoomLevel</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">storedZoomLevel</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">write</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Internal stored property for restoring map camera position between sessions. </p>
+<dl class="section user"><dt>storedZoomLevel(), setStoredZoomLevel(), storedZoomLevelChanged()</dt><dd></dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="../../db/ddf/a00164_source.html">config.h</a> строка <a class="el" href="../../db/ddf/a00164_source.html#l00001">1</a></p>
+
+</div>
+</div>
+<a id="a153feb691de604b107e5765377364a9d" name="a153feb691de604b107e5765377364a9d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a153feb691de604b107e5765377364a9d">&#9670;&#160;</a></span>storedCatalogue</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">storedCatalogue</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">write</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Internal stored property for restoring offline view folder between sessions. </p>
+<dl class="section user"><dt>storedCatalogue(), setStoredCatalogue(), storedCatalogueChanged()</dt><dd></dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="../../db/ddf/a00164_source.html">config.h</a> строка <a class="el" href="../../db/ddf/a00164_source.html#l00001">1</a></p>
+
+</div>
+</div>
+<a id="a53d9759116527e34443d82453b97f415" name="a53d9759116527e34443d82453b97f415"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53d9759116527e34443d82453b97f415">&#9670;&#160;</a></span>theme</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">theme</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">write</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Selected application theme. </p>
+<p>Currently can evaluates to <code>nord</code> or <code>contrast</code>. In future rework of theme engine, it will fetch theme type from theme .json file. By default, this property returns <code>contrast</code>. </p><dl class="section user"><dt>theme(), setTheme(), themeChanged()</dt><dd></dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="../../db/ddf/a00164_source.html">config.h</a> строка <a class="el" href="../../db/ddf/a00164_source.html#l00001">1</a></p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../d1/de1/a00213.html">Config</a></li><li class="navelem"><a class="el" href="../../d5/ddf/a00224.html">Config</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
+</body>
+</html>

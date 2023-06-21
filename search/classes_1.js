@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['provides_0',['Provides',['../d3/d16/classProvides.html',1,'']]]
+  ['basicmessage_0',['BasicMessage',['../d6/d08/a00244.html#dd/dd7/a00248',1,'GUI::TerminalBase']]]
 ];

@@ -1,9 +1,9 @@
 var examples =
 [
-    [ "connect", "d6/d43/connect-example.html", null ],
-    [ "startTelemetrySocket", "d6/d5e/startTelemetrySocket-example.html", null ],
-    [ "executeCommand", "d2/d60/executeCommand-example.html", null ],
-    [ "argument", "d3/d66/argument-example.html", null ],
-    [ "setArgument", "df/d4b/setArgument-example.html", null ],
-    [ "some_script", "dd/d16/some_script-example.html", null ]
+    [ "connect", "db/d34/a00442.html", null ],
+    [ "startTelemetrySocket", "d3/dea/a00444.html", null ],
+    [ "executeCommand", "d3/def/a00446.html", null ],
+    [ "argument", "de/dfe/a00448.html", null ],
+    [ "setArgument", "de/df4/a00450.html", null ],
+    [ "some_script", "d1/d0b/a00452.html", null ]
 ];

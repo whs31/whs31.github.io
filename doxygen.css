@@ -29,7 +29,7 @@ h1.groupheader {
 }
 
 h2.groupheader {
-	border-bottom: 1px solid #9366A0;
+	border-bottom: 1px solid #9266A0;
 	color: #332238;
 	font-size: 150%;
 	font-weight: normal;
@@ -198,13 +198,13 @@ dt.alphachar{
 /* @group Link Styling */
 
 a {
-	color: #402B45;
+	color: #3F2B45;
 	font-weight: normal;
 	text-decoration: none;
 }
 
 .contents a:visited {
-	color: #513658;
+	color: #503658;
 }
 
 a:hover {
@@ -219,11 +219,11 @@ a.elRef {
 }
 
 a.code, a.code:visited, a.line, a.line:visited {
-	color: #513658;
+	color: #503658;
 }
 
 a.codeRef, a.codeRef:visited, a.lineRef, a.lineRef:visited {
-	color: #513658;
+	color: #503658;
 }
 
 a.code.hl_class { /* style for links to class names in code snippets */ }
@@ -289,7 +289,7 @@ ul.multicol {
 }
 
 pre.fragment {
-        border: 1px solid #C7AFCD;
+        border: 1px solid #C6AFCD;
         background-color: #FBFAFC;
 	color: black;
         padding: 4px 6px;
@@ -307,7 +307,7 @@ div.fragment {
 	margin: 4px 8px 4px 2px;
 	color: black;
 	background-color: #FBFAFC;
-	border: 1px solid #C7AFCD;
+	border: 1px solid #C6AFCD;
 }
 
 div.line {
@@ -358,12 +358,12 @@ span.lineno {
         white-space: pre;
 }
 span.lineno a, span.lineno a:visited {
-	color: #513658;
+	color: #503658;
 	background-color: #D8D8D8;
 }
 
 span.lineno a:hover {
-	color: #513658;
+	color: #503658;
 	background-color: #C8C8C8;
 }
 
@@ -449,7 +449,7 @@ img.footer {
 }
 
 .compoundTemplParams {
-	color: #513658;
+	color: #503658;
 	font-size: 80%;
 	line-height: 120%;
 }
@@ -502,7 +502,7 @@ span.vhdllogic {
 
 blockquote {
         background-color: #F7F3F8;
-        border-left: 2px solid #A47DAF;
+        border-left: 2px solid #A37DAF;
         margin: 0 24px 0 4px;
         padding: 0 12px 0 16px;
 }
@@ -590,7 +590,7 @@ table.memberdecls {
 }
 
 .memTemplParams {
-	color: #513658;
+	color: #503658;
         white-space: nowrap;
 	font-size: 80%;
 }
@@ -603,9 +603,9 @@ table.memberdecls {
 
 .memtitle {
 	padding: 8px;
-	border-top: 1px solid #AE8CB7;
-	border-left: 1px solid #AE8CB7;
-	border-right: 1px solid #AE8CB7;
+	border-top: 1px solid #AD8CB7;
+	border-left: 1px solid #AD8CB7;
+	border-right: 1px solid #AD8CB7;
 	border-top-right-radius: 4px;
 	border-top-left-radius: 4px;
 	margin-bottom: -1px;
@@ -626,7 +626,7 @@ table.memberdecls {
 
 .memtemplate {
 	font-size: 80%;
-	color: #513658;
+	color: #503658;
 	font-weight: normal;
 	margin-left: 9px;
 }
@@ -662,9 +662,9 @@ table.memberdecls {
 }
 
 .memproto, dl.reflist dt {
-        border-top: 1px solid #AE8CB7;
-        border-left: 1px solid #AE8CB7;
-        border-right: 1px solid #AE8CB7;
+        border-top: 1px solid #AD8CB7;
+        border-left: 1px solid #AD8CB7;
+        border-right: 1px solid #AD8CB7;
         padding: 6px 0px 6px 0px;
         color: #1C131F;
         font-weight: bold;
@@ -680,9 +680,9 @@ table.memberdecls {
 }
 
 .memdoc, dl.reflist dd {
-        border-bottom: 1px solid #AE8CB7;
-        border-left: 1px solid #AE8CB7;
-        border-right: 1px solid #AE8CB7;
+        border-bottom: 1px solid #AD8CB7;
+        border-left: 1px solid #AD8CB7;
+        border-right: 1px solid #AD8CB7;
         padding: 6px 10px 2px 10px;
         border-top-width: 0;
         background-image:url('nav_g.png');
@@ -770,11 +770,11 @@ span.mlabels {
 }
 
 span.mlabel {
-        background-color: #7F568B;
-        border-top:1px solid #63426C;
-        border-left:1px solid #63426C;
-        border-right:1px solid #C7AFCD;
-        border-bottom:1px solid #C7AFCD;
+        background-color: #7E568B;
+        border-top:1px solid #62426C;
+        border-left:1px solid #62426C;
+        border-right:1px solid #C6AFCD;
+        border-bottom:1px solid #C6AFCD;
 	text-shadow: none;
 	color: white;
 	margin-right: 4px;
@@ -793,8 +793,8 @@ span.mlabel {
 
 div.directory {
         margin: 10px 0px;
-        border-top: 1px solid #A47DAF;
-        border-bottom: 1px solid #A47DAF;
+        border-top: 1px solid #A37DAF;
+        border-bottom: 1px solid #A37DAF;
         width: 100%;
 }
 
@@ -855,11 +855,11 @@ div.directory {
         cursor: pointer;
         padding-left: 2px;
         padding-right: 2px;
-	color: #402B45;
+	color: #3F2B45;
 }
 
 .arrow {
-    color: #A47DAF;
+    color: #A37DAF;
     -webkit-user-select: none;
     -khtml-user-select: none;
     -moz-user-select: none;
@@ -880,7 +880,7 @@ div.directory {
     height: 14px;
     width: 16px;
     display: inline-block;
-    background-color: #7F568B;
+    background-color: #7E568B;
     color: white;
     text-align: center;
     border-radius: 4px;
@@ -969,7 +969,7 @@ table.doxtable th {
 
 table.fieldtable {
         margin-bottom: 10px;
-        border: 1px solid #AE8CB7;
+        border: 1px solid #AD8CB7;
         border-spacing: 0px;
         border-radius: 4px;
         box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.15);
@@ -981,8 +981,8 @@ table.fieldtable {
 
 .fieldtable td.fieldtype, .fieldtable td.fieldname {
         white-space: nowrap;
-        border-right: 1px solid #AE8CB7;
-        border-bottom: 1px solid #AE8CB7;
+        border-right: 1px solid #AD8CB7;
+        border-bottom: 1px solid #AD8CB7;
         vertical-align: top;
 }
 
@@ -991,7 +991,7 @@ table.fieldtable {
 }
 
 .fieldtable td.fielddoc {
-        border-bottom: 1px solid #AE8CB7;
+        border-bottom: 1px solid #AD8CB7;
 }
 
 .fieldtable td.fielddoc p:first-child {
@@ -1018,7 +1018,7 @@ table.fieldtable {
         font-weight: 400;
         border-top-left-radius: 4px;
         border-top-right-radius: 4px;
-        border-bottom: 1px solid #AE8CB7;
+        border-bottom: 1px solid #AD8CB7;
 }
 
 
@@ -1041,7 +1041,7 @@ table.fieldtable {
 	height:30px;
 	line-height:30px;
 	color:#201623;
-	border:solid 1px #C5ACCC;
+	border:solid 1px #C4ACCC;
 	overflow:hidden;
 	margin:0px;
 	padding:0px;
@@ -1135,7 +1135,7 @@ div.header
         background-repeat:repeat-x;
 	background-color: #F9F6FA;
 	margin:  0px;
-	border-bottom: 1px solid #C7AFCD;
+	border-bottom: 1px solid #C6AFCD;
 }
 
 div.headertitle
@@ -1264,7 +1264,7 @@ dl.section dd {
 	padding: 0px;
 	margin: 0px;
 	width: 100%;
-	border-bottom: 1px solid #63426C;
+	border-bottom: 1px solid #62426C;
 	background-color: white;
 }
 
@@ -1338,7 +1338,7 @@ div.toc li {
 
 div.toc h3 {
         font: bold 12px/1.2 Verdana,'DejaVu Sans',Geneva,sans-serif;
-	color: #513658;
+	color: #503658;
         border-bottom: 0 none;
         margin: 0;
 }
@@ -1434,7 +1434,7 @@ tr.heading h2 {
 }
 
 #powerTip a {
-	color: #513658;
+	color: #503658;
 }
 
 #powerTip div.ttname {
