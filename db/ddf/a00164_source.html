@@ -3,9 +3,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="generator" content="Doxygen 1.9.7"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuaSAR: Исходный файл src/c++/config/paths.h</title>
+<title>QuaSAR: Исходный файл src/c++/network/lfs/stripsocket.c++</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -36,7 +36,7 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Создано системой Doxygen 1.9.6 -->
+<!-- Создано системой Doxygen 1.9.7 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 var searchBox = new SearchBox("searchBox", "../../search/",'.html');
@@ -92,67 +92,46 @@ $(document).ready(function(){initNavTree('db/ddf/a00164_source.html','../../'); 
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">paths.h</div></div>
+  <div class="headertitle"><div class="title">stripsocket.c++</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;stripsocket.h&quot;</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;QtCore/QObject&gt;</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../dd/df3/a00219.html">Config</a></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../da/d31/a00234.html">Networking</a></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span>{</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>StripSocket::StripSocket(QObject* parent)</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>    : AbstractUDPSocket(parent)</div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>{</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="keyword">class </span>Paths : <span class="keyword">public</span> QObject</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    {</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        Q_OBJECT</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        <span class="keyword">constexpr</span> <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> LOD_LEVELS = 2;</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>            <span class="keyword">static</span> Paths* get();</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    QObject::connect(<span class="keyword">this</span>, &amp;StripSocket::received, <span class="keyword">this</span>, &amp;StripSocket::processResult, Qt::DirectConnection);</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>}</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keywordtype">void</span> StripSocket::start(<span class="keyword">const</span> QString&amp; address)</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>{</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    this-&gt;connect(address);</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    qInfo().noquote() &lt;&lt; <span class="stringliteral">&quot;[STRIPLFS] Started listening to SAR on&quot;</span> &lt;&lt; address;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>}</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keywordtype">void</span> StripSocket::stop()</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>{</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    this-&gt;disconnect();</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    qInfo() &lt;&lt; <span class="stringliteral">&quot;[STRIPLFS] Socket disconnected&quot;</span>;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>}</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>            Q_INVOKABLE [[nodiscard]] <span class="keyword">static</span> QString root();</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>            Q_INVOKABLE [[nodiscard]] <span class="keyword">static</span> QString imageCache();</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>            Q_INVOKABLE [[nodiscard]] <span class="keyword">static</span> QString lod(<span class="keywordtype">int</span> level);</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            Q_INVOKABLE [[nodiscard]] <span class="keyword">static</span> QString tcp();</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            Q_INVOKABLE [[nodiscard]] <span class="keyword">static</span> QString mapConfig();</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            Q_INVOKABLE [[nodiscard]] <span class="keyword">static</span> QString offlineTiles();</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            Q_INVOKABLE [[nodiscard]] <span class="keyword">static</span> QString config();</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            Q_INVOKABLE [[nodiscard]] <span class="keyword">static</span> QString logs();</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>            Q_INVOKABLE [[nodiscard]] <span class="keyword">static</span> QString themes();</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>            Q_INVOKABLE [[nodiscard]] <span class="keyword">static</span> QString bash();</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>            Q_INVOKABLE [[nodiscard]] <span class="keyword">static</span> QString runtimeBash();</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>            Q_INVOKABLE <span class="keywordtype">void</span> createImageCache(<span class="keywordtype">void</span>) <span class="keyword">noexcept</span>;</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>            Q_INVOKABLE <span class="keywordtype">void</span> clearImageCache(<span class="keywordtype">void</span>) <span class="keyword">noexcept</span>;</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>            <span class="keyword">explicit</span> Paths(QObject* parent = <span class="keyword">nullptr</span>);</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>            Paths(<span class="keyword">const</span> Paths&amp;);</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>            Paths &amp;operator=(<span class="keyword">const</span> Paths&amp;);</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>            <span class="keywordtype">void</span> createMapConfigs(<span class="keywordtype">void</span>);</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    };</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>} <span class="comment">// namespace Config;</span></div>
-<div class="ttc" id="aa00219_html"><div class="ttname"><a href="../../dd/df3/a00219.html">Config</a></div><div class="ttdoc">Пространство имен для данных, сохраняемых между сессиями.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de9/a00176_source.html#l00121">config.c++:121</a></div></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keywordtype">void</span> StripSocket::processResult(QByteArray data)</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>{</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>}</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>} <span class="comment">// Networking</span></div>
+<div class="ttc" id="aa00234_html"><div class="ttname"><a href="../../da/d31/a00234.html">Networking</a></div><div class="ttdoc">Пространство имен для работы с сетевыми подключениями к РЛС.</div><div class="ttdef"><b>Definition</b> <a href="../../d2/df5/a00137_source.html#l00006">abstractudpsocket.h:7</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="../../dir_fcb2a60e1810a51543a3cc3a113d0956.html">c++</a></li><li class="navelem"><a class="el" href="../../dir_48a82678458ea86f0aa1c1f2db0ce8e0.html">config</a></li><li class="navelem"><b>paths.h</b></li>
-    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+    <li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="../../dir_fcb2a60e1810a51543a3cc3a113d0956.html">c++</a></li><li class="navelem"><a class="el" href="../../dir_2658f57a99a735e2e16983d97ef2d726.html">network</a></li><li class="navelem"><a class="el" href="../../dir_6ba4e83d1f2d782e24b74a56831904e9.html">lfs</a></li><li class="navelem"><b>stripsocket.c++</b></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7 </li>
   </ul>
 </div>
 </body>

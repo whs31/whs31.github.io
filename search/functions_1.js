@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['load_0',['load',['../d1/da8/a00230.html#a78f61ac2dd03bcba8e09ca20cd7d68e3',1,'Config::Config']]]
+  ['bash_0',['bash',['../dd/dd7/a00248.html#ad12648a539fe227e3a96aadb632b0e4c',1,'Config::Paths']]],
+  ['begin_1',['begin',['../d9/de6/a00404.html#a8d83a5ff6a115cd814d26dd733b69c31',1,'Networking::Network']]]
 ];

@@ -3,9 +3,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="generator" content="Doxygen 1.9.7"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuaSAR: Исходный файл src/c++/network/telemetry/telemetrysocket.h</title>
+<title>QuaSAR: Исходный файл src/c++/gui/terminal/debugconsole.c++</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -36,7 +36,7 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Создано системой Doxygen 1.9.6 -->
+<!-- Создано системой Doxygen 1.9.7 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 var searchBox = new SearchBox("searchBox", "../../search/",'.html');
@@ -92,63 +92,86 @@ $(document).ready(function(){initNavTree('dc/d87/a00032_source.html','../../'); 
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">telemetrysocket.h</div></div>
+  <div class="headertitle"><div class="title">debugconsole.c++</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;network/abstractudpsocket.h&quot;</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">class </span>QTimer;</div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">namespace </span>Networking</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>{</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    <span class="keyword">class </span>Telemetry;</div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;debugconsole.h&quot;</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &lt;QtCore/QDebug&gt;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;QtCore/QCoreApplication&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;QtCore/QProcess&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;network/network.h&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;config/config.h&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">namespace </span>GUI</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>{</div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <span class="keyword">class </span>TelemetrySocket : <span class="keyword">public</span> AbstractUDPSocket</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    {</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        Q_OBJECT</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        Q_PROPERTY(<span class="keywordtype">float</span> frequency READ frequency WRITE setFrequency NOTIFY frequencyChanged)</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        <span class="keyword">constexpr</span> <span class="keyword">static</span> uint32_t MARKER = 0x55bb55bb;</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        <span class="keyword">constexpr</span> <span class="keyword">static</span> uint32_t RECV_MARKER_LITTLE = 0xaa55aa55;</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        <span class="keyword">constexpr</span> <span class="keyword">static</span> uint32_t RECV_MARKER_BIG = 0x55aa55aa;</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        <span class="keyword">constexpr</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> CRC_CHECK = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>            TelemetrySocket(QObject* parent = <span class="keyword">nullptr</span>, Telemetry* output = <span class="keyword">nullptr</span>);</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>            <span class="keywordtype">void</span> start(<span class="keyword">const</span> QString&amp; address, <span class="keyword">const</span> QString&amp; recv_address);</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>            <span class="keywordtype">void</span> stop();</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keywordtype">void</span> DebugConsole::execute(<span class="keyword">const</span> QString&amp; command)</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>{</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keywordflow">if</span>(command_list.find(command) != command_list.end())</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        command_list[command]();</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        qWarning().nospace().noquote() &lt;&lt; <span class="stringliteral">&quot;[CONSOLE] Unrecognized console command [&quot;</span> &lt;&lt; command &lt;&lt; <span class="stringliteral">&quot;]&quot;</span>;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>}</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>DebugConsole::DebugConsole(QObject* parent)</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    : TerminalBase(parent)</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>{</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    qInfo() &lt;&lt; <span class="stringliteral">&quot;$ Console initialized&quot;</span>;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>}</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>DebugConsole* DebugConsole::get() { <span class="keyword">static</span> DebugConsole instance; <span class="keywordflow">return</span> &amp;instance; }</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>            [[nodiscard]] <span class="keywordtype">float</span> frequency() <span class="keyword">const</span>; <span class="keywordtype">void</span> setFrequency(<span class="keywordtype">float</span>);</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>            signals:</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>                <span class="keywordtype">void</span> frequencyChanged();</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>                <span class="keywordtype">void</span> ping();</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            <span class="keyword">private</span> slots:</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>                <span class="keywordtype">void</span> processTelemetry(QByteArray data);</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>                <span class="keywordtype">void</span> requestTelemetry();</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            QTimer* m_updateTimer;</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            QUdpSocket* m_requestsock;</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            <span class="keywordtype">float</span> m_frequency = 0.2;</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            Telemetry* output;</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            QString req_addr;</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            uint16_t req_port;</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>            uint16_t recv_port;</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    };</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>} <span class="comment">// namespace Network</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keywordtype">void</span> DebugConsole::help()</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>{</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    qInfo() &lt;&lt; <span class="stringliteral">&quot;$ &lt;i&gt;&lt;u&gt;&quot;</span> &lt;&lt; CONSOLE_INTERNAL_PROJECT_STRING &lt;&lt; <span class="stringliteral">&quot;CONSOLE v0.9&lt;/u&gt;&lt;/i&gt;&quot;</span>;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    qInfo() &lt;&lt; <span class="stringliteral">&quot;$ \t &lt;i&gt;quit&lt;/i&gt; - exits the application and cleanup used resources&quot;</span>;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    qInfo() &lt;&lt; <span class="stringliteral">&quot;$ \t &lt;i&gt;connect&lt;/i&gt; - starts all sockets&quot;</span>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    qInfo() &lt;&lt; <span class="stringliteral">&quot;$ \t &lt;i&gt;disconnect&lt;/i&gt; - stops all sockets&quot;</span>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    qInfo() &lt;&lt; <span class="stringliteral">&quot;$ \t &lt;i&gt;clear&lt;/i&gt; - clears console log&quot;</span>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>}</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="keywordtype">void</span> DebugConsole::quit()</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>{</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    qInfo() &lt;&lt; <span class="stringliteral">&quot;$ [CONSOLE] Shutting down...&quot;</span>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    QCoreApplication::quit();</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>}</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="keywordtype">void</span> DebugConsole::sim()</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>{</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    qWarning() &lt;&lt; <span class="stringliteral">&quot;[CONSOLE] Emulator support was removed in version 2.11.1&quot;</span>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    qWarning() &lt;&lt; <span class="stringliteral">&quot;[CONSOLE] Consider using quasar-firmware instance&quot;</span>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>}</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="keywordtype">void</span> DebugConsole::connect()</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>{</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    qInfo() &lt;&lt; <span class="stringliteral">&quot;$ [CONSOLE] Trying to connect through console...&quot;</span>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <a class="code hl_function" href="../../d9/de6/a00404.html#a4375ce843b59746a5d8b99050c076f30">Networking::Network::get</a>()-&gt;<a class="code hl_function" href="../../d9/de6/a00404.html#a8d83a5ff6a115cd814d26dd733b69c31">begin</a>(<a class="code hl_function" href="../../d9/de6/a00404.html#a1e2e61d85577271603fbafece3302047">Networking::Network::stringifyIP</a>(CONFIG(remoteIP), CONFIG(telemetryPort)),</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>                                      <a class="code hl_function" href="../../d9/de6/a00404.html#a1e2e61d85577271603fbafece3302047">Networking::Network::stringifyIP</a>(CONFIG(remoteIP), CONFIG(telemetryRecvPort)),</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>                                      CONFIG(telemetryFrequency),</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>                                      <a class="code hl_function" href="../../d9/de6/a00404.html#a1e2e61d85577271603fbafece3302047">Networking::Network::stringifyIP</a>(CONFIG(remoteIP), CONFIG(execdPort)),</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>                                      <a class="code hl_function" href="../../d9/de6/a00404.html#a1e2e61d85577271603fbafece3302047">Networking::Network::stringifyIP</a>(CONFIG(localIP), CONFIG(feedbackPort)),</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>                                      <a class="code hl_function" href="../../d9/de6/a00404.html#a1e2e61d85577271603fbafece3302047">Networking::Network::stringifyIP</a>(CONFIG(localIP), CONFIG(tcpLFSPort)),</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>                                      <a class="code hl_function" href="../../d9/de6/a00404.html#a1e2e61d85577271603fbafece3302047">Networking::Network::stringifyIP</a>(CONFIG(localIP), CONFIG(udpLFSPort)));</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>}</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="keywordtype">void</span> DebugConsole::disconnect()</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>{</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    qInfo() &lt;&lt; <span class="stringliteral">&quot;$ [CONSOLE] Disconnecting through console...&quot;</span>;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <a class="code hl_function" href="../../d9/de6/a00404.html#a4375ce843b59746a5d8b99050c076f30">Networking::Network::get</a>()-&gt;<a class="code hl_function" href="../../d9/de6/a00404.html#aba28ee97ffe6d508e26f534ec7e62f8f">stop</a>();</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>}</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>} <span class="comment">// GUI</span></div>
+<div class="ttc" id="aa00404_html_a1e2e61d85577271603fbafece3302047"><div class="ttname"><a href="../../d9/de6/a00404.html#a1e2e61d85577271603fbafece3302047">Networking::Network::stringifyIP</a></div><div class="ttdeci">static Q_INVOKABLE QString stringifyIP(const QString &amp;ip, const QString &amp;port) noexcept</div><div class="ttdoc">Конвертирует IP-адрес и порт в общую строку.</div><div class="ttdef"><b>Definition</b> <a href="../../db/dd9/a00179_source.html#l00152">network.c++:152</a></div></div>
+<div class="ttc" id="aa00404_html_a4375ce843b59746a5d8b99050c076f30"><div class="ttname"><a href="../../d9/de6/a00404.html#a4375ce843b59746a5d8b99050c076f30">Networking::Network::get</a></div><div class="ttdeci">static Network * get()</div><div class="ttdoc">Возвращает указатель на статический экземпляр класса.</div><div class="ttdef"><b>Definition</b> <a href="../../db/dd9/a00179_source.html#l00021">network.c++:21</a></div></div>
+<div class="ttc" id="aa00404_html_a8d83a5ff6a115cd814d26dd733b69c31"><div class="ttname"><a href="../../d9/de6/a00404.html#a8d83a5ff6a115cd814d26dd733b69c31">Networking::Network::begin</a></div><div class="ttdeci">Q_INVOKABLE void begin(const QString &amp;telemetry_request_addr, const QString &amp;telemetry_recv_addr, float telemetry_frequency, const QString &amp;execd_addr, const QString &amp;feedback_addr, const QString &amp;tcp_lfs_addr, const QString &amp;udp_lfs_addr) noexcept</div><div class="ttdoc">Производит попытку подключения к РЛС.</div><div class="ttdef"><b>Definition</b> <a href="../../db/dd9/a00179_source.html#l00082">network.c++:82</a></div></div>
+<div class="ttc" id="aa00404_html_aba28ee97ffe6d508e26f534ec7e62f8f"><div class="ttname"><a href="../../d9/de6/a00404.html#aba28ee97ffe6d508e26f534ec7e62f8f">Networking::Network::stop</a></div><div class="ttdeci">Q_INVOKABLE void stop() noexcept</div><div class="ttdoc">Производит отключение от РЛС.</div><div class="ttdef"><b>Definition</b> <a href="../../db/dd9/a00179_source.html#l00093">network.c++:93</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="../../dir_fcb2a60e1810a51543a3cc3a113d0956.html">c++</a></li><li class="navelem"><a class="el" href="../../dir_2658f57a99a735e2e16983d97ef2d726.html">network</a></li><li class="navelem"><a class="el" href="../../dir_3dd779012d603974b3147e6dab239616.html">telemetry</a></li><li class="navelem"><b>telemetrysocket.h</b></li>
-    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+    <li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="../../dir_fcb2a60e1810a51543a3cc3a113d0956.html">c++</a></li><li class="navelem"><a class="el" href="../../dir_26318e8bd4be45baf98311c3e5c1a731.html">gui</a></li><li class="navelem"><a class="el" href="../../dir_10768d6f609ecfc3f66ae09e455d5fe5.html">terminal</a></li><li class="navelem"><b>debugconsole.c++</b></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7 </li>
   </ul>
 </div>
 </body>

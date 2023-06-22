@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['meta_5fmarker_0',['meta_marker',['../dc/d28/a00223.html#a1ef68cababe80d680337efbc77524812',1,'Map::ImageMetaHeader']]],
-  ['meta_5fsize_1',['meta_size',['../dc/d28/a00223.html#afc253a7e3aa01efe133353d8c6034f4b',1,'Map::ImageMetaHeader']]],
-  ['mode_2',['mode',['../dc/d28/a00223.html#a37e90f5e3bd99fac2021fb3a326607d4',1,'Map::ImageMetadata']]]
+  ['k_0',['k',['../d6/de1/a00233.html#a9fc4cca635a26c692681a7071e379aa7',1,'Map::StripFormatMetadata']]],
+  ['kr_1',['kr',['../d6/de1/a00233.html#a969c435ef4ca6cab2727eac4b439680d',1,'Map::ImageMetadata']]]
 ];

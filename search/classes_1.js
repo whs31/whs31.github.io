@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['class_0',['Class',['../dd/dfd/a00438.html',1,'']]],
-  ['config_1',['Config',['../d1/da8/a00230.html',1,'Config']]]
+  ['config_0',['Config',['../d9/d21/a00240.html',1,'Config']]]
 ];

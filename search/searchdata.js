@@ -1,12 +1,13 @@
 var indexSectionsWithContent =
 {
-  0: "acdefgijklmnoprstuvwxyдс",
-  1: "acipstдс",
-  2: "cmnp",
-  3: "glprs",
-  4: "acdeiklmnprstvwxy",
-  5: "acefjlnoprstu",
-  6: "p"
+  0: "abcdefgijklmnoprstuvwxy",
+  1: "acefinpst",
+  2: "cmnop",
+  3: "abcdefgilmoprst",
+  4: "acdefijklmnprstvwxy",
+  5: "anp",
+  6: "cdfiprst",
+  7: "acefjlnoprstu"
 };
 
 var indexSectionNames =
@@ -16,8 +17,9 @@ var indexSectionNames =
   2: "namespaces",
   3: "functions",
   4: "variables",
-  5: "properties",
-  6: "groups"
+  5: "enums",
+  6: "enumvalues",
+  7: "properties"
 };
 
 var indexSectionLabels =
@@ -27,7 +29,8 @@ var indexSectionLabels =
   2: "Пространства имен",
   3: "Функции",
   4: "Переменные",
-  5: "Свойства",
-  6: "Группы"
+  5: "Перечисления",
+  6: "Элементы перечислений",
+  7: "Свойства"
 };
 

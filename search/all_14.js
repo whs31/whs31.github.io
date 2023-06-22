@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['x0_0',['x0',['../dc/d28/a00223.html#a3c9556645d92e863376a4063a3ad7001',1,'Map::ImageMetadata::x0()'],['../dc/d28/a00223.html#a3c9556645d92e863376a4063a3ad7001',1,'Map::StripFormatMetadata::x0()']]]
+  ['word_5fsize_0',['word_size',['../d6/de1/a00233.html#a018e57d63b6c2c3a802377f95d7a4e96',1,'Map::StripFormatMetadata']]]
 ];

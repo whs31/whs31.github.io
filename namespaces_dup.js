@@ -1,7 +1,8 @@
 var namespaces_dup =
 [
-    [ "Config", "dd/df3/a00219.html", "dd/df3/a00219" ],
-    [ "Map", "dc/d28/a00223.html", "dc/d28/a00223" ],
-    [ "Namespace", "d5/d0b/a00220.html", null ],
-    [ "Processing", "dc/d55/a00226.html", "dc/d55/a00226" ]
+    [ "Config", "d1/da8/a00230.html", "d1/da8/a00230" ],
+    [ "Map", "d6/de1/a00233.html", "d6/de1/a00233" ],
+    [ "Networking", "da/d31/a00234.html", "da/d31/a00234" ],
+    [ "OS", "df/d17/a00231.html", "df/d17/a00231" ],
+    [ "Processing", "d7/d40/a00236.html", "d7/d40/a00236" ]
 ];

@@ -25,27 +25,29 @@
 var NAVTREE =
 [
   [ "QuaSAR", "index.html", [
-    [ "Группы", "modules.html", "modules" ],
     [ "Пространства имен", "namespaces.html", [
       [ "Пространства имен", "namespaces.html", "namespaces_dup" ]
     ] ],
     [ "Классы", "annotated.html", [
       [ "Классы", "annotated.html", "annotated_dup" ],
       [ "Алфавитный указатель классов", "classes.html", null ],
+      [ "Иерархия классов", "hierarchy.html", "hierarchy" ],
       [ "Члены классов", "functions.html", [
-        [ "Указатель", "functions.html", null ],
+        [ "Указатель", "functions.html", "functions_dup" ],
         [ "Функции", "functions_func.html", null ],
         [ "Переменные", "functions_vars.html", null ],
+        [ "Перечисления", "functions_enum.html", null ],
+        [ "Элементы перечислений", "functions_eval.html", null ],
         [ "Свойства", "functions_prop.html", null ]
       ] ]
-    ] ],
-    [ "Примеры", "examples.html", "examples" ]
+    ] ]
   ] ]
 ];
 
 var NAVTREEINDEX =
 [
-"annotated.html"
+"annotated.html",
+"dc/df3/a00424.html#a1d3228afa3a1d6773954f40c1e519eb9"
 ];
 
 var SYNCONMSG = 'нажмите на выключить для синхронизации панелей';

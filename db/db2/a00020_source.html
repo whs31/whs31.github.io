@@ -3,9 +3,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="generator" content="Doxygen 1.9.7"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuaSAR: Исходный файл src/c++/network/execd/execdsocket.h</title>
+<title>QuaSAR: Исходный файл src/c++/entry.c++</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -36,7 +36,7 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Создано системой Doxygen 1.9.6 -->
+<!-- Создано системой Doxygen 1.9.7 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 var searchBox = new SearchBox("searchBox", "../../search/",'.html');
@@ -92,57 +92,86 @@ $(document).ready(function(){initNavTree('db/db2/a00020_source.html','../../'); 
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">execdsocket.h</div></div>
+  <div class="headertitle"><div class="title">entry.c++</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;entry.h&quot;</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;network/abstractudpsocket.h&quot;</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;network/netenums.h&quot;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">namespace </span>Networking</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>{</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    <span class="keyword">class </span>ExecdArgumentList;</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    <span class="keyword">class </span>ExecdSocket : <span class="keyword">public</span> AbstractUDPSocket</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    {</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>        Q_OBJECT</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        <span class="keyword">constexpr</span> <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* COMMAND_TELESCOPIC = <span class="stringliteral">&quot;$FORM&quot;</span>;</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        <span class="keyword">constexpr</span> <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* COMMAND_START_STRIP = <span class="stringliteral">&quot;$strip&quot;</span>;</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        <span class="keyword">constexpr</span> <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* COMMAND_FOCUS = <span class="stringliteral">&quot;$focus&quot;</span>;</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        <span class="keyword">constexpr</span> <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* COMMAND_STORAGE_STATUS = <span class="stringliteral">&quot;$storage_status()&quot;</span>;</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        <span class="keyword">constexpr</span> <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* COMMAND_CLEAR_STORAGE = <span class="stringliteral">&quot;$clear_storage()&quot;</span>;</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>            <span class="keyword">explicit</span> ExecdSocket(QObject* parent = <span class="keyword">nullptr</span>);</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>            <span class="keywordtype">void</span> start(<span class="keyword">const</span> QString&amp; address);</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>            <span class="keywordtype">void</span> stop();</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>            <span class="keywordtype">void</span> executeCommand(<span class="keyword">const</span> QString&amp; command);</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>            <span class="keywordtype">void</span> executeCommand(Enums::NetworkCommand command);</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>            ExecdArgumentList* list() const noexcept;</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>            signals:</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>                <span class="keywordtype">void</span> ping();</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        private:</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>            QString wrap(const QString&amp; <span class="keywordtype">string</span>);</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>            QByteArray finalize(const QString&amp; <span class="keywordtype">string</span>);</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            private slots:</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>                <span class="keywordtype">void</span> processResult(QByteArray data);</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        private:</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            ExecdArgumentList* args;</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            uint16_t message_uid;</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    };</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>}</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;QtCore/QCoreApplication&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;QtCore/QDebug&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;QtCore/QProcess&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;QtQml/qqml.h&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;gui/theme/include/theme.h&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;gui/terminal/vt100terminal.h&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;gui/terminal/debugconsole.h&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;gui/warningsmodel.h&quot;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;config/paths.h&quot;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;config/config.h&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;filesystem/filesystem.h&quot;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;processing/imageprocessing.h&quot;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &quot;map/ruler.h&quot;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &quot;map/route.h&quot;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &quot;map/clickhandler.h&quot;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &quot;map/imagemodel.h&quot;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &quot;map/markermodel.h&quot;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &quot;map/entities/diagram.h&quot;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &quot;map/tools/offlinetileloader.h&quot;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &quot;network/network.h&quot;</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>Entry::Entry(QObject *parent)</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    : QObject{parent}</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>{</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    QML_EXPOSE_INSTANCE(<a class="code hl_class" href="../../dd/dd7/a00248.html">Config::Paths</a>, <span class="stringliteral">&quot;Config&quot;</span>, <span class="stringliteral">&quot;Paths&quot;</span>, <a class="code hl_function" href="../../dd/dd7/a00248.html#ac99cfb381fa19967d6461e584f25d027">Config::Paths::get</a>());</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    QML_EXPOSE_INSTANCE(<a class="code hl_class" href="../../d9/d21/a00240.html">Config::Config</a>, <span class="stringliteral">&quot;Config&quot;</span>, <span class="stringliteral">&quot;Config&quot;</span>, <a class="code hl_function" href="../../d9/d21/a00240.html#aab4f0df3041b8a7fb08052df350ebcbd">Config::Config::get</a>());</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    QML_EXPOSE_INSTANCE(GUI::Theme, <span class="stringliteral">&quot;Theme&quot;</span>, <span class="stringliteral">&quot;Theme&quot;</span>, GUI::Theme::get());</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    QML_EXPOSE_INSTANCE(GUI::VT100Terminal, <span class="stringliteral">&quot;Terminals&quot;</span>, <span class="stringliteral">&quot;VT100Terminal&quot;</span>, GUI::VT100Terminal::get());</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    QML_EXPOSE_INSTANCE(GUI::DebugConsole, <span class="stringliteral">&quot;Terminals&quot;</span>, <span class="stringliteral">&quot;DebugConsole&quot;</span>, GUI::DebugConsole::get());</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    QML_EXPOSE_INSTANCE(GUI::WarningsModel, <span class="stringliteral">&quot;Notifications&quot;</span>, <span class="stringliteral">&quot;WarningsModel&quot;</span>, GUI::WarningsModel::get());</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    QML_EXPOSE_INSTANCE(<a class="code hl_class" href="../../d0/def/a00256.html">OS::Filesystem</a>, <span class="stringliteral">&quot;Filesystem&quot;</span>, <span class="stringliteral">&quot;Filesystem&quot;</span>, <a class="code hl_function" href="../../d0/def/a00256.html#a5e84ed65192a6a85aca09d8b0e8a0684">OS::Filesystem::get</a>());</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    QML_EXPOSE_INSTANCE(<a class="code hl_class" href="../../d9/de6/a00404.html">Networking::Network</a>, <span class="stringliteral">&quot;Network&quot;</span>, <span class="stringliteral">&quot;Network&quot;</span>, <a class="code hl_function" href="../../d9/de6/a00404.html#a4375ce843b59746a5d8b99050c076f30">Networking::Network::get</a>());</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    qmlRegisterUncreatableType&lt;Networking::Enums&gt;(<span class="stringliteral">&quot;Network&quot;</span>, 1, 0, <span class="stringliteral">&quot;Net&quot;</span>, <span class="stringliteral">&quot;Enumeration&quot;</span>);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    QML_EXPOSE_INSTANCE(Map::ImageModel, <span class="stringliteral">&quot;Images&quot;</span>, <span class="stringliteral">&quot;ImagesModel&quot;</span>, Processing::ImageProcessing::get()-&gt;model());</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    QML_EXPOSE_INSTANCE(Map::MarkerModel, <span class="stringliteral">&quot;Markers&quot;</span>, <span class="stringliteral">&quot;MarkersModel&quot;</span>, Map::ClickHandler::get()-&gt;markerModel());</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    QML_EXPOSE_INSTANCE(Map::ClickHandler, <span class="stringliteral">&quot;ClickHandler&quot;</span>, <span class="stringliteral">&quot;ClickHandler&quot;</span>, Map::ClickHandler::get());</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    QML_EXPOSE_INSTANCE(Map::OfflineTileLoader, <span class="stringliteral">&quot;Offline&quot;</span>, <span class="stringliteral">&quot;TileLoader&quot;</span>, Map::OfflineTileLoader::get());</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    QML_EXPOSE_INSTANCE(Processing::ImageProcessing, <span class="stringliteral">&quot;ImageProcessing&quot;</span>, <span class="stringliteral">&quot;ImageProcessing&quot;</span>, Processing::ImageProcessing::get());</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    QML_EXPOSE_INSTANTIABLE(Map::Ruler, <span class="stringliteral">&quot;Ruler&quot;</span>, <span class="stringliteral">&quot;RulerModel&quot;</span>);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    QML_EXPOSE_INSTANTIABLE(Map::Route, <span class="stringliteral">&quot;Route&quot;</span>, <span class="stringliteral">&quot;Route&quot;</span>);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    QML_EXPOSE_INSTANTIABLE(Map::Diagram, <span class="stringliteral">&quot;RadarDiagram&quot;</span>, <span class="stringliteral">&quot;RadarDiagram&quot;</span>);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    connect(<a class="code hl_function" href="../../d0/def/a00256.html#a5e84ed65192a6a85aca09d8b0e8a0684">OS::Filesystem::get</a>(), &amp;OS::Filesystem::imageListCached, Processing::ImageProcessing::get(), &amp;Processing::ImageProcessing::processList, Qt::QueuedConnection);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    connect(Processing::ImageProcessing::get()-&gt;model(), &amp;Map::ImageModel::markedForExport, <a class="code hl_function" href="../../d0/def/a00256.html#a5e84ed65192a6a85aca09d8b0e8a0684">OS::Filesystem::get</a>(), &amp;<a class="code hl_slot" href="../../d0/def/a00256.html#a53e577925b27924ac14315a47bf819e2">OS::Filesystem::exportImagesToFolder</a>);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    connect(<a class="code hl_function" href="../../d9/d21/a00240.html#aab4f0df3041b8a7fb08052df350ebcbd">Config::Config::get</a>(), &amp;Config::Config::scheduleRestart, <span class="keyword">this</span>, [<span class="keyword">this</span>](){</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        qWarning() &lt;&lt; <span class="stringliteral">&quot;[CORE] Requested restart, but current configuration will fail executing it.&quot;</span>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        qWarning() &lt;&lt; <span class="stringliteral">&quot;[CORE] Please, restart manually.&quot;</span>;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    });</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    GUI::WarningsModel::get()-&gt;append(GUI::WarningsModel::NotConnected, <span class="stringliteral">&quot;Отсутствует соединение с РЛС&quot;</span>, <span class="keyword">false</span>);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    connect(<a class="code hl_function" href="../../d9/de6/a00404.html#a4375ce843b59746a5d8b99050c076f30">Networking::Network::get</a>(), &amp;Networking::Network::connectedChanged, <span class="keyword">this</span>, [<span class="keyword">this</span>](){</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <span class="keywordflow">if</span>(<a class="code hl_function" href="../../d9/de6/a00404.html#a4375ce843b59746a5d8b99050c076f30">Networking::Network::get</a>()-&gt;connected() != 2)</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            GUI::WarningsModel::get()-&gt;append(GUI::WarningsModel::NotConnected, <span class="stringliteral">&quot;Отсутствует соединение с РЛС&quot;</span>, <span class="keyword">false</span>);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>            GUI::WarningsModel::get()-&gt;remove(GUI::WarningsModel::NotConnected);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    });</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>}</div>
+<div class="ttc" id="aa00240_html"><div class="ttname"><a href="../../d9/d21/a00240.html">Config::Config</a></div><div class="ttdoc">Класс-синглтон для работы с локальными настройками приложения, сохранямыми на диске.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/dad/a00005_source.html#l00047">config.h:48</a></div></div>
+<div class="ttc" id="aa00240_html_aab4f0df3041b8a7fb08052df350ebcbd"><div class="ttname"><a href="../../d9/d21/a00240.html#aab4f0df3041b8a7fb08052df350ebcbd">Config::Config::get</a></div><div class="ttdeci">static Config * get()</div><div class="ttdoc">Возвращает указатель на статический экземпляр класса.</div><div class="ttdef"><b>Definition</b> <a href="../../d7/d46/a00002_source.html#l00009">config.c++:9</a></div></div>
+<div class="ttc" id="aa00248_html"><div class="ttname"><a href="../../dd/dd7/a00248.html">Config::Paths</a></div><div class="ttdoc">Class, providing access to commonly used filesystem paths and resource management.</div><div class="ttdef"><b>Definition</b> <a href="../../d4/d51/a00017_source.html#l00010">paths.h:11</a></div></div>
+<div class="ttc" id="aa00248_html_ac99cfb381fa19967d6461e584f25d027"><div class="ttname"><a href="../../dd/dd7/a00248.html#ac99cfb381fa19967d6461e584f25d027">Config::Paths::get</a></div><div class="ttdeci">static Paths * get()</div><div class="ttdoc">Returns singleton instance of class.</div><div class="ttdef"><b>Definition</b> <a href="../../d2/de7/a00014_source.html#l00045">paths.c++:45</a></div></div>
+<div class="ttc" id="aa00256_html"><div class="ttname"><a href="../../d0/def/a00256.html">OS::Filesystem</a></div><div class="ttdoc">Class, providing access to filesystem operations and cache manipulation.</div><div class="ttdef"><b>Definition</b> <a href="../../d5/d16/a00029_source.html#l00011">filesystem.h:12</a></div></div>
+<div class="ttc" id="aa00256_html_a53e577925b27924ac14315a47bf819e2"><div class="ttname"><a href="../../d0/def/a00256.html#a53e577925b27924ac14315a47bf819e2">OS::Filesystem::exportImagesToFolder</a></div><div class="ttdeci">void exportImagesToFolder(const QList&lt; QString &gt; &amp;ls, const QString &amp;folder)</div><div class="ttdoc">Exports given list of filenames in LOD0 cache to specified folder.</div><div class="ttdef"><b>Definition</b> <a href="../../d6/d5b/a00026_source.html#l00090">filesystem.c++:90</a></div></div>
+<div class="ttc" id="aa00256_html_a5e84ed65192a6a85aca09d8b0e8a0684"><div class="ttname"><a href="../../d0/def/a00256.html#a5e84ed65192a6a85aca09d8b0e8a0684">OS::Filesystem::get</a></div><div class="ttdeci">static Filesystem * get()</div><div class="ttdoc">Returns singleton instance of class.</div><div class="ttdef"><b>Definition</b> <a href="../../d6/d5b/a00026_source.html#l00017">filesystem.c++:17</a></div></div>
+<div class="ttc" id="aa00404_html"><div class="ttname"><a href="../../d9/de6/a00404.html">Networking::Network</a></div><div class="ttdoc">Класс-синглтон, отвечающий за связь с РЛС.</div><div class="ttdef"><b>Definition</b> <a href="../../d7/d25/a00182_source.html#l00037">network.h:38</a></div></div>
+<div class="ttc" id="aa00404_html_a4375ce843b59746a5d8b99050c076f30"><div class="ttname"><a href="../../d9/de6/a00404.html#a4375ce843b59746a5d8b99050c076f30">Networking::Network::get</a></div><div class="ttdeci">static Network * get()</div><div class="ttdoc">Возвращает указатель на статический экземпляр класса.</div><div class="ttdef"><b>Definition</b> <a href="../../db/dd9/a00179_source.html#l00021">network.c++:21</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="../../dir_fcb2a60e1810a51543a3cc3a113d0956.html">c++</a></li><li class="navelem"><a class="el" href="../../dir_2658f57a99a735e2e16983d97ef2d726.html">network</a></li><li class="navelem"><a class="el" href="../../dir_6ef7e0ae247fe3f6196a2ffc3d436052.html">execd</a></li><li class="navelem"><b>execdsocket.h</b></li>
-    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+    <li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="../../dir_fcb2a60e1810a51543a3cc3a113d0956.html">c++</a></li><li class="navelem"><b>entry.c++</b></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7 </li>
   </ul>
 </div>
 </body>
