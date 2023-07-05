@@ -1,0 +1,6 @@
+<map id="received" name="received">
+<area shape="rect" id="node1" title="Signal with received data." alt="" coords="263,83,340,111"/>
+<area shape="rect" id="node2" href="$d3/dd6/a00624.html#aa88751a63390d47bdbd43c98c9dcf181" title="Constructs new ExecdSocket with given parent." alt="" coords="17,5,203,50"/>
+<area shape="rect" id="node3" href="$d1/d51/a00628.html#aab5c038baa1b44dcc1a4acf4e6b0b4b2" title="Constructs new FeedbackSocket object with given parent." alt="" coords="5,75,215,119"/>
+<area shape="rect" id="node4" href="$dc/d62/a00640.html#a1dc0347f6e97ffd1f34ed614272dbb47" title="Constructs new UDP with given parent." alt="" coords="21,144,199,189"/>
+</map>

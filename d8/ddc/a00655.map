@@ -1,0 +1,11 @@
+<map id="Network" name="Network">
+<area shape="rect" id="node1" title="Класс&#45;синглтон, отвечающий за связь с РЛС." alt="" coords="349,259,425,286"/>
+<area shape="rect" id="node2" href="$da/dd1/a00629.html" title="Class for execd service interactions." alt="" coords="275,98,377,126"/>
+<area shape="rect" id="node3" href="$d4/dc4/a00617.html" title="Base class for handling UDP connections." alt="" coords="121,5,245,33"/>
+<area shape="rect" id="node5" href="$d9/d1d/a00633.html" title="Class for receiving feedback from SAR." alt="" coords="5,98,132,126"/>
+<area shape="rect" id="node7" href="$d6/dcf/a00645.html" title="Class for receiving large files from SAR via UDP." alt="" coords="156,98,250,126"/>
+<area shape="rect" id="node4" href="$d2/d34/a00625.html" title="Class for storing and processing execd arguments." alt="" coords="270,5,416,33"/>
+<area shape="rect" id="node6" href="$dd/d6b/a00649.html" title="Class for receiving large files from SAR via TCP." alt="" coords="402,98,490,126"/>
+<area shape="rect" id="node8" href="$de/dbb/a00637.html" title="Class for storing SAR&#45;related data." alt="" coords="514,98,618,126"/>
+<area shape="rect" id="node9" href="$d1/d87/a00689.html" title="Class for checking connection to specified IPv4 address via ICMP." alt="" coords="656,98,718,126"/>
+</map>

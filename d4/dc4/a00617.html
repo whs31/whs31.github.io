@@ -1,0 +1,424 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>QuaSAR: Класс UDPSocketBase</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="../../icon.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">QuaSAR<span id="projectnumber">&#160;2.12.0</span>
+   </div>
+   <div id="projectbrief">SAR control software</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.6 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('d4/dc4/a00617.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#signals">Сигналы</a> &#124;
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="../../d7/d80/a00614.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Класс UDPSocketBase</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="../../dc/dee/a00053_source.html">udpsocketbase.h</a>&gt;</code></p>
+<div class="dynheader">
+Граф наследования:UDPSocketBase:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../db/db5/a00616.png" border="0" usemap="#aUDPSocketBase_inherit__map" alt="Inheritance graph"/></div>
+<map name="aUDPSocketBase_inherit__map" id="aUDPSocketBase_inherit__map">
+<area shape="rect" title="Base class for handling UDP connections." alt="" coords="133,5,257,33"/>
+<area shape="rect" href="../../da/dd1/a00629.html" title="Class for execd service interactions." alt="" coords="5,81,108,109"/>
+<area shape="rect" href="../../d9/d1d/a00633.html" title="Class for receiving feedback from SAR." alt="" coords="132,81,258,109"/>
+<area shape="rect" href="../../d6/dcf/a00645.html" title="Class for receiving large files from SAR via UDP." alt="" coords="283,81,377,109"/>
+</map>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">см. легенду</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="signals" name="signals"></a>
+Сигналы</h2></td></tr>
+<tr class="memitem:a3eb63c5af67a44fb60ba731d3da7a56d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dc4/a00617.html#a3eb63c5af67a44fb60ba731d3da7a56d">received</a> (QByteArray data)</td></tr>
+<tr class="separator:a3eb63c5af67a44fb60ba731d3da7a56d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a270b32a7b4f3d08e655807d4101acbd7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dc4/a00617.html#a270b32a7b4f3d08e655807d4101acbd7">socketDisconnected</a> ()</td></tr>
+<tr class="separator:a270b32a7b4f3d08e655807d4101acbd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58d7e2b4c7d46a5ae4041d122b03b584"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dc4/a00617.html#a58d7e2b4c7d46a5ae4041d122b03b584">socketMetrics</a> (const QString &amp;data, int size_bytes, bool out)</td></tr>
+<tr class="separator:a58d7e2b4c7d46a5ae4041d122b03b584"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a011e2f4b901dd5ac2c8b9f3cf56d4fa3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dc4/a00617.html#a011e2f4b901dd5ac2c8b9f3cf56d4fa3">UDPSocketBase</a> (QObject *parent=nullptr)</td></tr>
+<tr class="separator:a011e2f4b901dd5ac2c8b9f3cf56d4fa3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01948d8cb99ea51677e34382c9e2c8aa"><td class="memItemLeft" align="right" valign="top">virtual Q_INVOKABLE bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dc4/a00617.html#a01948d8cb99ea51677e34382c9e2c8aa">connect</a> (const QString &amp;address)</td></tr>
+<tr class="separator:a01948d8cb99ea51677e34382c9e2c8aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a960705de531a20389fb29928d43258c3"><td class="memItemLeft" align="right" valign="top">virtual Q_INVOKABLE void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dc4/a00617.html#a960705de531a20389fb29928d43258c3">disconnect</a> ()</td></tr>
+<tr class="separator:a960705de531a20389fb29928d43258c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1239ca09fddf150d1584cdf26baf7f3"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dc4/a00617.html#ad1239ca09fddf150d1584cdf26baf7f3">send</a> (QByteArray data)</td></tr>
+<tr class="separator:ad1239ca09fddf150d1584cdf26baf7f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6aac8bbc4a1ac6c37d4c9f0564256fbd"><td class="memItemLeft" align="right" valign="top">virtual uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dc4/a00617.html#a6aac8bbc4a1ac6c37d4c9f0564256fbd">port</a> () const noexcept</td></tr>
+<tr class="separator:a6aac8bbc4a1ac6c37d4c9f0564256fbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Base class for handling UDP connections. </p>
+<p>Class provides useful extensions over QUdpSocket methods, such as abstraction from QHostAddress/port, and much more. Socket provides in/out metrics in text format via signal <a class="el" href="../../d4/dc4/a00617.html#a58d7e2b4c7d46a5ae4041d122b03b584" title="Signal with debug socket metrics.">socketMetrics()</a>. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/dee/a00053_source.html">udpsocketbase.h</a> строка <a class="el" href="../../dc/dee/a00053_source.html#l00024">24</a></p>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a011e2f4b901dd5ac2c8b9f3cf56d4fa3" name="a011e2f4b901dd5ac2c8b9f3cf56d4fa3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a011e2f4b901dd5ac2c8b9f3cf56d4fa3">&#9670;&#160;</a></span>UDPSocketBase()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d4/dc4/a00617.html">UDPSocketBase</a> </td>
+          <td>(</td>
+          <td class="paramtype">QObject *&#160;</td>
+          <td class="paramname"><em>parent</em> = <code>nullptr</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs new UDP socket with specified parent. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d5/de0/a00050_source.html">udpsocketbase.c++</a> строка <a class="el" href="../../d5/de0/a00050_source.html#l00007">7</a></p>
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a01948d8cb99ea51677e34382c9e2c8aa" name="a01948d8cb99ea51677e34382c9e2c8aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01948d8cb99ea51677e34382c9e2c8aa">&#9670;&#160;</a></span>connect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool connect </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>address</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Binds this socket to specified address. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">address</td><td>- address to connect (e.g. <code>192.168.1.47:25565</code>). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Operation result. </dd></dl>
+<dl class="section note"><dt>Заметки</dt><dd>Can be invoked from QML via meta-object system. </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d5/de0/a00050_source.html">udpsocketbase.c++</a> строка <a class="el" href="../../d5/de0/a00050_source.html#l00013">13</a></p>
+
+</div>
+</div>
+<a id="a960705de531a20389fb29928d43258c3" name="a960705de531a20389fb29928d43258c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a960705de531a20389fb29928d43258c3">&#9670;&#160;</a></span>disconnect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void disconnect </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns socket to unconnected state. </p>
+<dl class="section note"><dt>Заметки</dt><dd>Can be invoked from QML via meta-object system. </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d5/de0/a00050_source.html">udpsocketbase.c++</a> строка <a class="el" href="../../d5/de0/a00050_source.html#l00036">36</a></p>
+
+</div>
+</div>
+<a id="ad1239ca09fddf150d1584cdf26baf7f3" name="ad1239ca09fddf150d1584cdf26baf7f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1239ca09fddf150d1584cdf26baf7f3">&#9670;&#160;</a></span>send()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool send </td>
+          <td>(</td>
+          <td class="paramtype">QByteArray&#160;</td>
+          <td class="paramname"><em>data</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sends given <code>QByteArray</code> to socket. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d5/de0/a00050_source.html">udpsocketbase.c++</a> строка <a class="el" href="../../d5/de0/a00050_source.html#l00047">47</a></p>
+
+</div>
+</div>
+<a id="a6aac8bbc4a1ac6c37d4c9f0564256fbd" name="a6aac8bbc4a1ac6c37d4c9f0564256fbd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6aac8bbc4a1ac6c37d4c9f0564256fbd">&#9670;&#160;</a></span>port()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t port </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns current socket port. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d5/de0/a00050_source.html">udpsocketbase.c++</a> строка <a class="el" href="../../d5/de0/a00050_source.html#l00057">57</a></p>
+
+</div>
+</div>
+<a id="a3eb63c5af67a44fb60ba731d3da7a56d" name="a3eb63c5af67a44fb60ba731d3da7a56d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3eb63c5af67a44fb60ba731d3da7a56d">&#9670;&#160;</a></span>received</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void received </td>
+          <td>(</td>
+          <td class="paramtype">QByteArray&#160;</td>
+          <td class="paramname"><em>data</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Signal with received data. </p>
+<p>Emitted when socket receives data via UDP. Data is provided in raw format without any changes. </p>
+
+</div>
+</div>
+<a id="a270b32a7b4f3d08e655807d4101acbd7" name="a270b32a7b4f3d08e655807d4101acbd7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a270b32a7b4f3d08e655807d4101acbd7">&#9670;&#160;</a></span>socketDisconnected</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void socketDisconnected </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Emitted when socket breaks connection. </p>
+
+</div>
+</div>
+<a id="a58d7e2b4c7d46a5ae4041d122b03b584" name="a58d7e2b4c7d46a5ae4041d122b03b584"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58d7e2b4c7d46a5ae4041d122b03b584">&#9670;&#160;</a></span>socketMetrics</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void socketMetrics </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>size_bytes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>out</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Signal with debug socket metrics. </p>
+<p>Emitted when socket receives or sends data via UDP. Data is provided in string format with direction and size. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>- stringified data. </td></tr>
+    <tr><td class="paramname">size_bytes</td><td>- size of data. </td></tr>
+    <tr><td class="paramname">out</td><td>- flow direction of data: <code>true</code> means data is flowing from host to remote, <code>false</code> means data is flowing from remote to host. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li><a class="el" href="../../dc/dee/a00053_source.html">udpsocketbase.h</a></li>
+<li><a class="el" href="../../d5/de0/a00050_source.html">udpsocketbase.c++</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../d0/dc5/a00435.html">Networking</a></li><li class="navelem"><a class="el" href="../../d4/dc4/a00617.html">UDPSocketBase</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
+</body>
+</html>

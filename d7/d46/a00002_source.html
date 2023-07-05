@@ -3,9 +3,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.7"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuaSAR: Исходный файл src/c++/config/config.c++</title>
+<title>QuaSAR: Исходный файл httpdownloader.c++</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -29,14 +29,14 @@
   <td id="projectalign">
    <div id="projectname">QuaSAR<span id="projectnumber">&#160;2.12.0</span>
    </div>
-   <div id="projectbrief">СПО для РЛС &quot;Квазар&quot;</div>
+   <div id="projectbrief">SAR control software</div>
   </td>
  </tr>
  </tbody>
 </table>
 </div>
 <!-- end header part -->
-<!-- Создано системой Doxygen 1.9.7 -->
+<!-- Создано системой Doxygen 1.9.6 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 var searchBox = new SearchBox("searchBox", "../../search/",'.html');
@@ -92,401 +92,116 @@ $(document).ready(function(){initNavTree('d7/d46/a00002_source.html','../../'); 
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">config.c++</div></div>
+  <div class="headertitle"><div class="title">httpdownloader.c++</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;config.h&quot;</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;paths.h&quot;</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;QtCore/QSettings&gt;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;QtCore/QDebug&gt;</span></div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;<a class="code" href="../../dd/dad/a00005.html">httpdownloader.h</a>&quot;</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &lt;QtCore/QFile&gt;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;QtNetwork/QNetworkAccessManager&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;QtNetwork/QNetworkReply&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;QtNetwork/QNetworkRequest&gt;</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#define QSTRING_CAST(x) QVariant(x).toString()</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="../../d9/d21/a00240.html#aab4f0df3041b8a7fb08052df350ebcbd">    9</a></span><a class="code hl_class" href="../../d9/d21/a00240.html">Config::Config</a> *<a class="code hl_function" href="../../d9/d21/a00240.html#aab4f0df3041b8a7fb08052df350ebcbd">Config::Config::get</a>() { <span class="keyword">static</span> <a class="code hl_namespace" href="../../d1/da8/a00230.html">Config</a> instance; <span class="keywordflow">return</span> &amp;instance; }</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>Config::Config::~Config()</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>{</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    this-&gt;save();</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    this-&gt;sync();</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>}</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="../../d9/d21/a00240.html#aae2c382151ef7c9aa913361172b30db6">   17</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="../../d9/d21/a00240.html#aae2c382151ef7c9aa913361172b30db6">Config::Config::save</a>()</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>{</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    qInfo() &lt;&lt; <span class="stringliteral">&quot;[CONFIG] Saving settings to file&quot;</span>;</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keywordtype">bool</span> schedule_restart = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    ini-&gt;setValue(<span class="stringliteral">&quot;remoteIP&quot;</span>, remoteIP());</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    ini-&gt;setValue(<span class="stringliteral">&quot;localIP&quot;</span>, localIP());</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    ini-&gt;setValue(<span class="stringliteral">&quot;jetsonIP&quot;</span>, jetsonIP());</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    ini-&gt;setValue(<span class="stringliteral">&quot;navIP&quot;</span>, navIP());</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    ini-&gt;setValue(<span class="stringliteral">&quot;utl1IP&quot;</span>, utl1IP());</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    ini-&gt;setValue(<span class="stringliteral">&quot;utl2IP&quot;</span>, utl2IP());</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    ini-&gt;setValue(<span class="stringliteral">&quot;telemetryPort&quot;</span>, telemetryPort());</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    ini-&gt;setValue(<span class="stringliteral">&quot;telemetryRecvPort&quot;</span>, telemetryRecvPort());</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    ini-&gt;setValue(<span class="stringliteral">&quot;lfsPort&quot;</span>, tcpLFSPort());</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    ini-&gt;setValue(<span class="stringliteral">&quot;stripPort&quot;</span>, udpLFSPort());</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    ini-&gt;setValue(<span class="stringliteral">&quot;execdPort&quot;</span>, execdPort());</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    ini-&gt;setValue(<span class="stringliteral">&quot;feedbackPort&quot;</span>, feedbackPort());</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    ini-&gt;setValue(<span class="stringliteral">&quot;telemetryFrequency&quot;</span>, QSTRING_CAST(telemetryFrequency()));</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    ini-&gt;setValue(<span class="stringliteral">&quot;proxyEnabled&quot;</span>, QSTRING_CAST(proxyEnabled()));</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    ini-&gt;setValue(<span class="stringliteral">&quot;tcpMarker&quot;</span>, tcpMarker());</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    ini-&gt;setValue(<span class="stringliteral">&quot;storedLatitude&quot;</span>, QSTRING_CAST(storedLatitude()));</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    ini-&gt;setValue(<span class="stringliteral">&quot;storedLongitude&quot;</span>, QSTRING_CAST(storedLongitude()));</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    ini-&gt;setValue(<span class="stringliteral">&quot;storedZoomLevel&quot;</span>, QSTRING_CAST(storedZoomLevel()));</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    ini-&gt;setValue(<span class="stringliteral">&quot;storedCatalogue&quot;</span>, storedCatalogue());</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    ini-&gt;setValue(<span class="stringliteral">&quot;antennaAlignment&quot;</span>, QSTRING_CAST(antennaAlignment()));</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    ini-&gt;setValue(<span class="stringliteral">&quot;angleCorrection&quot;</span>, QSTRING_CAST(angleCorrection()));</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    ini-&gt;setValue(<span class="stringliteral">&quot;useRadians&quot;</span>, QSTRING_CAST(useRadians()));</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    ini-&gt;setValue(<span class="stringliteral">&quot;useDriftAngle&quot;</span>, QSTRING_CAST(useDriftAngle()));</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    ini-&gt;setValue(<span class="stringliteral">&quot;thetaAzimuthCorrection&quot;</span>, QSTRING_CAST(thetaAzimuthCorrection()));</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    ini-&gt;setValue(<span class="stringliteral">&quot;overrideImageHeight&quot;</span>, QSTRING_CAST(overrideImageHeight()));</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    ini-&gt;setValue(<span class="stringliteral">&quot;cutImage&quot;</span>, QSTRING_CAST(cutImage()));</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keywordflow">if</span>(ini-&gt;value(<span class="stringliteral">&quot;theme&quot;</span>).toString() != theme())</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        schedule_restart = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    ini-&gt;setValue(<span class="stringliteral">&quot;theme&quot;</span>, theme());</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keywordflow">if</span>(schedule_restart)</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    {</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        qInfo() &lt;&lt; <span class="stringliteral">&quot;[CONFIG] Requested restart&quot;</span>;</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        this-&gt;sync();</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        emit scheduleRestart();</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    }</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>}</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="../../d9/d21/a00240.html#a78f61ac2dd03bcba8e09ca20cd7d68e3">   62</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="../../d9/d21/a00240.html#a78f61ac2dd03bcba8e09ca20cd7d68e3">Config::Config::load</a>()</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>{</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    qInfo() &lt;&lt; <span class="stringliteral">&quot;[CONFIG] Loading settings from file&quot;</span>;</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    setRemoteIP(ini-&gt;value(<span class="stringliteral">&quot;remoteIP&quot;</span>).toString());</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    setLocalIP(ini-&gt;value(<span class="stringliteral">&quot;localIP&quot;</span>).toString());</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    setJetsonIP(ini-&gt;value(<span class="stringliteral">&quot;jetsonIP&quot;</span>).toString());</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    setNavIP(ini-&gt;value(<span class="stringliteral">&quot;navIP&quot;</span>).toString());</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    setUtl1IP(ini-&gt;value(<span class="stringliteral">&quot;utl1IP&quot;</span>).toString());</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    setUtl2IP(ini-&gt;value(<span class="stringliteral">&quot;utl2IP&quot;</span>).toString());</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    setTelemetryPort(ini-&gt;value(<span class="stringliteral">&quot;telemetryPort&quot;</span>).toString());</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    setTelemetryRecvPort(ini-&gt;value(<span class="stringliteral">&quot;telemetryRecvPort&quot;</span>).toString());</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    setTcpLFSPort(ini-&gt;value(<span class="stringliteral">&quot;lfsPort&quot;</span>).toString());</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    setUdpLFSPort(ini-&gt;value(<span class="stringliteral">&quot;stripPort&quot;</span>).toString());</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    setExecdPort(ini-&gt;value(<span class="stringliteral">&quot;execdPort&quot;</span>).toString());</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    setFeedbackPort(ini-&gt;value(<span class="stringliteral">&quot;feedbackPort&quot;</span>).toString());</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    setTelemetryFrequency(ini-&gt;value(<span class="stringliteral">&quot;telemetryFrequency&quot;</span>).toFloat());</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    setProxyEnabled(ini-&gt;value(<span class="stringliteral">&quot;proxyEnabled&quot;</span>).toBool());</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    setTcpMarker(ini-&gt;value(<span class="stringliteral">&quot;tcpMarker&quot;</span>).toString());</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    setStoredLatitude(ini-&gt;value(<span class="stringliteral">&quot;storedLatitude&quot;</span>).toDouble());</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    setStoredLongitude(ini-&gt;value(<span class="stringliteral">&quot;storedLongitude&quot;</span>).toDouble());</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    setStoredZoomLevel(ini-&gt;value(<span class="stringliteral">&quot;storedZoomLevel&quot;</span>).toDouble());</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    setStoredCatalogue(ini-&gt;value(<span class="stringliteral">&quot;storedCatalogue&quot;</span>).toString());</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    setAntennaAlignment(ini-&gt;value(<span class="stringliteral">&quot;antennaAlignment&quot;</span>).toBool());</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    setAngleCorrection(ini-&gt;value(<span class="stringliteral">&quot;angleCorrection&quot;</span>).toFloat());</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    setUseRadians(ini-&gt;value(<span class="stringliteral">&quot;useRadians&quot;</span>).toBool());</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    setUseDriftAngle(ini-&gt;value(<span class="stringliteral">&quot;useDriftAngle&quot;</span>).toBool());</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    setThetaAzimuthCorrection(ini-&gt;value(<span class="stringliteral">&quot;thetaAzimuthCorrection&quot;</span>).toFloat());</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    setOverrideImageHeight(ini-&gt;value(<span class="stringliteral">&quot;overrideImageHeight&quot;</span>).toBool());</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    setCutImage(ini-&gt;value(<span class="stringliteral">&quot;cutImage&quot;</span>).toBool());</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    setTheme(ini-&gt;value(<span class="stringliteral">&quot;theme&quot;</span>).toString());</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>}</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno"><a class="line" href="../../d9/d21/a00240.html#a9cf620340e16aa417bb112e0294038df">   95</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="../../d9/d21/a00240.html#a9cf620340e16aa417bb112e0294038df">Config::Config::revert</a>() { this-&gt;load(); }</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="../../d9/d21/a00240.html#ad20897c5c8bd47f5d4005989bead0e55">   97</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="../../d9/d21/a00240.html#ad20897c5c8bd47f5d4005989bead0e55">Config::Config::reset</a>()</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>{</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    qWarning() &lt;&lt; <span class="stringliteral">&quot;[CONFIG] Settings file resetted&quot;</span>;</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> &amp;key : defaults.keys())</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        ini-&gt;setValue(key, defaults.value(key));</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>}</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno"><a class="line" href="../../d9/d21/a00240.html#a0664ef97a51606760964d90526e64ab2">  105</a></span>QString <a class="code hl_function" href="../../d9/d21/a00240.html#a0664ef97a51606760964d90526e64ab2">Config::Config::projectVersion</a>() { <span class="keywordflow">return</span> PROJECT_VERSION; }</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno"><a class="line" href="../../d9/d21/a00240.html#ad55f80ed3cd8b6c4f247763b747016af">  106</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="../../d9/d21/a00240.html#ad55f80ed3cd8b6c4f247763b747016af">Config::Config::sync</a>() { ini-&gt;sync(); }</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>Config::Config::Config(QObject* parent)</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    : QObject{parent}</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    , ini(new QSettings(<a class="code hl_class" href="../../dd/dd7/a00248.html">Paths</a>::config() + <span class="stringliteral">&quot;/config.ini&quot;</span>, QSettings::IniFormat, this))</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>{</div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    qDebug().noquote() &lt;&lt; <span class="stringliteral">&quot;[CONFIG] Storing config in&quot;</span> &lt;&lt; ini-&gt;fileName();</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    <span class="keywordflow">if</span>(ini-&gt;allKeys().size() &lt; 5)</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        this-&gt;reset();</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    this-&gt;load();</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    emit tcpLFSPortChanged();</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>}</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno"><a class="line" href="../../d1/da8/a00230.html">  121</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d1/da8/a00230.html">Config</a> {</div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span><span class="keywordtype">bool</span> <a class="code hl_property" href="../../d9/d21/a00240.html#aced4a69727f347e1e1a73bfdd8761143">Config::overrideImageHeight</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_overrideImageHeight; }</div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span><span class="keywordtype">void</span> Config::setOverrideImageHeight(<span class="keywordtype">bool</span> other)</div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>{</div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    <span class="keywordflow">if</span> (m_overrideImageHeight == other)</div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    m_overrideImageHeight = other;</div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    emit overrideImageHeightChanged();</div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>}</div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span> </div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span><span class="keywordtype">bool</span> <a class="code hl_property" href="../../d9/d21/a00240.html#a6e81ba455ac73046cba68a75c0d34991">Config::cutImage</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_cutImage; }</div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span><span class="keywordtype">void</span> Config::setCutImage(<span class="keywordtype">bool</span> other)</div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>{</div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    <span class="keywordflow">if</span> (m_cutImage == other)</div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    m_cutImage = other;</div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    emit cutImageChanged();</div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>}</div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span> </div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>QString <a class="code hl_property" href="../../d9/d21/a00240.html#a29ca03d2272c4051d7c324cd6bac3b0b">Config::remoteIP</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_remoteIP; }</div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span><span class="keywordtype">void</span> Config::setRemoteIP(<span class="keyword">const</span> QString&amp; other) {</div>
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    <span class="keywordflow">if</span> (m_remoteIP == other)</div>
-<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>    m_remoteIP = other;</div>
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    emit remoteIPChanged();</div>
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>}</div>
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span> </div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>QString <a class="code hl_property" href="../../d9/d21/a00240.html#abb00f8fd5508af1ffc1b56f474a7ba22">Config::localIP</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_localIP; }</div>
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span><span class="keywordtype">void</span> Config::setLocalIP(<span class="keyword">const</span> QString&amp; other) {</div>
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>    <span class="keywordflow">if</span> (m_localIP == other)</div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>    m_localIP = other;</div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    emit localIPChanged();</div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>}</div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span> </div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>QString <a class="code hl_property" href="../../d9/d21/a00240.html#a9400347615d36fd3eed76e4f027433df">Config::telemetryPort</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_telemetryPort; }</div>
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span><span class="keywordtype">void</span> Config::setTelemetryPort(<span class="keyword">const</span> QString&amp; other) {</div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>    <span class="keywordflow">if</span> (m_telemetryPort == other)</div>
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>    m_telemetryPort = other;</div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>    emit telemetryPortChanged();</div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>}</div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span> </div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>QString <a class="code hl_property" href="../../d9/d21/a00240.html#a9a898d90c155973baa06c11e8ef95813">Config::tcpLFSPort</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_tcpLFSPort; }</div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span><span class="keywordtype">void</span> Config::setTcpLFSPort(<span class="keyword">const</span> QString&amp; other) {</div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    <span class="keywordflow">if</span> (m_tcpLFSPort == other)</div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>    m_tcpLFSPort = other;</div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    emit tcpLFSPortChanged();</div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>}</div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span> </div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>QString <a class="code hl_property" href="../../d9/d21/a00240.html#a0eddf3d43e33470977841fae03717c29">Config::udpLFSPort</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_udpLFSPort; }</div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span><span class="keywordtype">void</span> Config::setUdpLFSPort(<span class="keyword">const</span> QString&amp; other) {</div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>    <span class="keywordflow">if</span> (m_udpLFSPort == other)</div>
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>    m_udpLFSPort = other;</div>
-<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>    emit udpLFSPortChanged();</div>
-<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>}</div>
-<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span> </div>
-<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>QString <a class="code hl_property" href="../../d9/d21/a00240.html#aa7c77c61e23cb38fce8948fff5baa648">Config::execdPort</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_execdPort; }</div>
-<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span><span class="keywordtype">void</span> Config::setExecdPort(<span class="keyword">const</span> QString&amp; other) {</div>
-<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>    <span class="keywordflow">if</span> (m_execdPort == other)</div>
-<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>    m_execdPort = other;</div>
-<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>    emit execdPortChanged();</div>
-<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>}</div>
-<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span> </div>
-<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>QString <a class="code hl_property" href="../../d9/d21/a00240.html#a1c046609722570c50455a36d69d0a037">Config::feedbackPort</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_feedbackPort; }</div>
-<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span><span class="keywordtype">void</span> Config::setFeedbackPort(<span class="keyword">const</span> QString&amp; other) {</div>
-<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>    <span class="keywordflow">if</span> (m_feedbackPort == other)</div>
-<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>    m_feedbackPort = other;</div>
-<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>    emit feedbackPortChanged();</div>
-<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>}</div>
-<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span> </div>
-<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span><span class="keywordtype">bool</span> <a class="code hl_property" href="../../d9/d21/a00240.html#ae862ff88f11a3a2ef7eee0c21957dcb7">Config::proxyEnabled</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_proxyEnabled; }</div>
-<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span><span class="keywordtype">void</span> Config::setProxyEnabled(<span class="keywordtype">bool</span> other) {</div>
-<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>    <span class="keywordflow">if</span> (m_proxyEnabled == other)</div>
-<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>    m_proxyEnabled = other;</div>
-<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>    emit proxyEnabledChanged();</div>
-<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>}</div>
-<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span> </div>
-<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span><span class="keywordtype">bool</span> <a class="code hl_property" href="../../d9/d21/a00240.html#a66213c53fe947a7a4757bcc2b7d7fbb3">Config::antennaAlignment</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_antennaAlignment; }</div>
-<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span><span class="keywordtype">void</span> Config::setAntennaAlignment(<span class="keywordtype">bool</span> other) {</div>
-<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>    <span class="keywordflow">if</span> (m_antennaAlignment == other)</div>
-<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>    m_antennaAlignment = other;</div>
-<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>    emit antennaAlignmentChanged();</div>
-<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>}</div>
-<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span> </div>
-<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span><span class="keywordtype">float</span> <a class="code hl_property" href="../../d9/d21/a00240.html#acc7856ea0497ce886547bd19075f4bcb">Config::angleCorrection</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_angleCorrection; }</div>
-<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span><span class="keywordtype">void</span> Config::setAngleCorrection(<span class="keywordtype">float</span> other) {</div>
-<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>    <span class="keywordflow">if</span> (qFuzzyCompare(m_angleCorrection, other))</div>
-<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>    m_angleCorrection = other;</div>
-<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>    emit angleCorrectionChanged();</div>
-<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>}</div>
-<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span> </div>
-<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span><span class="keywordtype">bool</span> <a class="code hl_property" href="../../d9/d21/a00240.html#af6dc8053f62613e2dd7a79d2172c658d">Config::useRadians</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_useRadians; }</div>
-<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span><span class="keywordtype">void</span> Config::setUseRadians(<span class="keywordtype">bool</span> other) {</div>
-<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>    <span class="keywordflow">if</span> (m_useRadians == other)</div>
-<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>    m_useRadians = other;</div>
-<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>    emit useRadiansChanged();</div>
-<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>}</div>
-<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span> </div>
-<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span><span class="keywordtype">bool</span> <a class="code hl_property" href="../../d9/d21/a00240.html#afcbc3ba0faa77bf6b0a9b01f878181e6">Config::useDriftAngle</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_useDriftAngle; }</div>
-<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span><span class="keywordtype">void</span> Config::setUseDriftAngle(<span class="keywordtype">bool</span> other) {</div>
-<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>    <span class="keywordflow">if</span> (m_useDriftAngle == other)</div>
-<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>    m_useDriftAngle = other;</div>
-<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>    emit useDriftAngleChanged();</div>
-<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>}</div>
-<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span> </div>
-<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span><span class="keywordtype">float</span> <a class="code hl_property" href="../../d9/d21/a00240.html#afd2df17ea5b9473da8b4d307395c5085">Config::thetaAzimuthCorrection</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_thetaAzimuthCorrection; }</div>
-<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span><span class="keywordtype">void</span> Config::setThetaAzimuthCorrection(<span class="keywordtype">float</span> other) {</div>
-<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>    <span class="keywordflow">if</span> (qFuzzyCompare(m_thetaAzimuthCorrection, other))</div>
-<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>    m_thetaAzimuthCorrection = other;</div>
-<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>    emit thetaAzimuthCorrectionChanged();</div>
-<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>}</div>
-<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span> </div>
-<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span><span class="keywordtype">double</span> <a class="code hl_property" href="../../d9/d21/a00240.html#abdcb3cc37ddbefe06ad99b3daa720afc">Config::storedLatitude</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_storedLatitude; }</div>
-<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span><span class="keywordtype">void</span> Config::setStoredLatitude(<span class="keywordtype">double</span> other) {</div>
-<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>    <span class="keywordflow">if</span> (qFuzzyCompare(m_storedLatitude, other))</div>
-<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>    m_storedLatitude = other;</div>
-<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>    emit storedLatitudeChanged();</div>
-<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>}</div>
-<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span> </div>
-<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span><span class="keywordtype">double</span> <a class="code hl_property" href="../../d9/d21/a00240.html#a5b2d3b040ee55818de48aed7ffc5806f">Config::storedLongitude</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_storedLongitude; }</div>
-<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span><span class="keywordtype">void</span> Config::setStoredLongitude(<span class="keywordtype">double</span> other) {</div>
-<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>    <span class="keywordflow">if</span> (qFuzzyCompare(m_storedLongitude, other))</div>
-<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>    m_storedLongitude = other;</div>
-<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>    emit storedLongitudeChanged();</div>
-<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>}</div>
-<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span> </div>
-<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span><span class="keywordtype">double</span> <a class="code hl_property" href="../../d9/d21/a00240.html#a6241b7c15dc9a3b9b8e412a80e00cc9d">Config::storedZoomLevel</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_storedZoomLevel; }</div>
-<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span><span class="keywordtype">void</span> Config::setStoredZoomLevel(<span class="keywordtype">double</span> other) {</div>
-<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>    <span class="keywordflow">if</span> (qFuzzyCompare(m_storedZoomLevel, other))</div>
-<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>    m_storedZoomLevel = other;</div>
-<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>    emit storedZoomLevelChanged();</div>
-<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>}</div>
-<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span> </div>
-<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>QString <a class="code hl_property" href="../../d9/d21/a00240.html#a153feb691de604b107e5765377364a9d">Config::storedCatalogue</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_storedCatalogue; }</div>
-<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span><span class="keywordtype">void</span> Config::setStoredCatalogue(<span class="keyword">const</span> QString&amp; other) {</div>
-<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>    <span class="keywordflow">if</span> (m_storedCatalogue == other)</div>
-<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>    <span class="keywordflow">if</span>(other.startsWith(<span class="stringliteral">&quot;file:///&quot;</span>))</div>
-<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>    {</div>
-<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>        m_storedCatalogue = other.right(other.size() - strlen(<span class="stringliteral">&quot;file:///&quot;</span>));</div>
-<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span><span class="preprocessor">        #if !defined Q_OS_WINDOWS</span></div>
-<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>        m_storedCatalogue.prepend(<span class="charliteral">&#39;/&#39;</span>);</div>
-<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span><span class="preprocessor">        #endif</span></div>
-<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>    }</div>
-<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>    <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>        m_storedCatalogue = other;</div>
-<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>    emit storedCatalogueChanged();</div>
-<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>}</div>
-<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span> </div>
-<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span><span class="keywordtype">float</span> <a class="code hl_property" href="../../d9/d21/a00240.html#a752dbeb4be188be8d6e370263c380827">Config::telemetryFrequency</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_telemetryFrequency; }</div>
-<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span><span class="keywordtype">void</span> Config::setTelemetryFrequency(<span class="keywordtype">float</span> other) {</div>
-<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>    <span class="keywordflow">if</span> (qFuzzyCompare(m_telemetryFrequency, other))</div>
-<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>    m_telemetryFrequency = other;</div>
-<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>    emit telemetryFrequencyChanged();</div>
-<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>}</div>
-<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span> </div>
-<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>QString <a class="code hl_property" href="../../d9/d21/a00240.html#a259e4f044a571c4bc7b34a23f39492be">Config::tcpMarker</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_tcpMarker; }</div>
-<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span><span class="keywordtype">void</span> Config::setTcpMarker(<span class="keyword">const</span> QString&amp; other) {</div>
-<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>    <span class="keywordflow">if</span>(m_tcpMarker == other)</div>
-<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>    m_tcpMarker = other;</div>
-<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>    emit tcpMarkerChanged();</div>
-<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>}</div>
-<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span> </div>
-<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>QString <a class="code hl_property" href="../../d9/d21/a00240.html#a53d9759116527e34443d82453b97f415">Config::theme</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_theme; }</div>
-<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span><span class="keywordtype">void</span> Config::setTheme(<span class="keyword">const</span> QString&amp; other) {</div>
-<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>    <span class="keywordflow">if</span>(m_theme == other)</div>
-<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>    m_theme = other;</div>
-<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>    emit themeChanged();</div>
-<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>}</div>
-<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span> </div>
-<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>QString <a class="code hl_property" href="../../d9/d21/a00240.html#a75af3a7370fd6e32995373d2dbbf1f81">Config::jetsonIP</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_jetsonIP; }</div>
-<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span><span class="keywordtype">void</span> Config::setJetsonIP(<span class="keyword">const</span> QString&amp; other) {</div>
-<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>    <span class="keywordflow">if</span> (m_jetsonIP == other)</div>
-<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>    m_jetsonIP = other;</div>
-<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>    emit jetsonIPChanged();</div>
-<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>}</div>
-<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span> </div>
-<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>QString <a class="code hl_property" href="../../d9/d21/a00240.html#aa9f58cbedfcdde939083775c3a77ef6e">Config::navIP</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_navIP; }</div>
-<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span><span class="keywordtype">void</span> Config::setNavIP(<span class="keyword">const</span> QString&amp; other) {</div>
-<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>    <span class="keywordflow">if</span> (m_navIP == other)</div>
-<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>    m_navIP = other;</div>
-<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>    emit navIPChanged();</div>
-<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>}</div>
-<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span> </div>
-<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>QString <a class="code hl_property" href="../../d9/d21/a00240.html#a8af317d04dbe29e8f495cd928c0f30cb">Config::utl1IP</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_utl1IP; }</div>
-<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span><span class="keywordtype">void</span> Config::setUtl1IP(<span class="keyword">const</span> QString&amp; other) {</div>
-<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>    <span class="keywordflow">if</span> (m_utl1IP == other)</div>
-<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>    m_utl1IP = other;</div>
-<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>    emit utl1IPChanged();</div>
-<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>}</div>
-<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span> </div>
-<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>QString <a class="code hl_property" href="../../d9/d21/a00240.html#afdd91838bc17767a1510db9d4e569aaa">Config::utl2IP</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_utl2IP; }</div>
-<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span><span class="keywordtype">void</span> Config::setUtl2IP(<span class="keyword">const</span> QString&amp; other) {</div>
-<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>    <span class="keywordflow">if</span> (m_utl2IP == other)</div>
-<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>    m_utl2IP = other;</div>
-<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>    emit utl2IPChanged();</div>
-<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>}</div>
-<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span> </div>
-<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>QString <a class="code hl_property" href="../../d9/d21/a00240.html#afa3175de72b10c5da5e4664f75936346">Config::telemetryRecvPort</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_telemetryRecvPort; }</div>
-<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span><span class="keywordtype">void</span> Config::setTelemetryRecvPort(<span class="keyword">const</span> QString&amp; other) {</div>
-<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>    <span class="keywordflow">if</span> (m_telemetryRecvPort == other)</div>
-<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>    m_telemetryRecvPort = other;</div>
-<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>    emit telemetryRecvPortChanged();</div>
-<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>}</div>
-<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span> </div>
-<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>} <span class="comment">// Config</span></div>
-<div class="ttc" id="aa00230_html"><div class="ttname"><a href="../../d1/da8/a00230.html">Config</a></div><div class="ttdoc">Пространство имен для данных, сохраняемых между сессиями.</div><div class="ttdef"><b>Definition</b> <a href="../../d7/d46/a00002_source.html#l00121">config.c++:121</a></div></div>
-<div class="ttc" id="aa00240_html"><div class="ttname"><a href="../../d9/d21/a00240.html">Config::Config</a></div><div class="ttdoc">Класс-синглтон для работы с локальными настройками приложения, сохранямыми на диске.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/dad/a00005_source.html#l00047">config.h:48</a></div></div>
-<div class="ttc" id="aa00240_html_a0664ef97a51606760964d90526e64ab2"><div class="ttname"><a href="../../d9/d21/a00240.html#a0664ef97a51606760964d90526e64ab2">Config::Config::projectVersion</a></div><div class="ttdeci">Q_INVOKABLE QString projectVersion()</div><div class="ttdoc">Возвращает текущую версию приложения.</div><div class="ttdef"><b>Definition</b> <a href="../../d7/d46/a00002_source.html#l00105">config.c++:105</a></div></div>
-<div class="ttc" id="aa00240_html_a0eddf3d43e33470977841fae03717c29"><div class="ttname"><a href="../../d9/d21/a00240.html#a0eddf3d43e33470977841fae03717c29">Config::Config::udpLFSPort</a></div><div class="ttdeci">QString udpLFSPort</div><div class="ttdoc">Порт для сервера UDP, используемого сервисом fsend на РЛС.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/dad/a00005_source.html#l00001">config.h:261</a></div></div>
-<div class="ttc" id="aa00240_html_a153feb691de604b107e5765377364a9d"><div class="ttname"><a href="../../d9/d21/a00240.html#a153feb691de604b107e5765377364a9d">Config::Config::storedCatalogue</a></div><div class="ttdeci">QString storedCatalogue</div><div class="ttdoc">Приватное свойство, хранящее каталог с оффлайн-изображениями из прошлой сессии.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/dad/a00005_source.html#l00001">config.h:277</a></div></div>
-<div class="ttc" id="aa00240_html_a1c046609722570c50455a36d69d0a037"><div class="ttname"><a href="../../d9/d21/a00240.html#a1c046609722570c50455a36d69d0a037">Config::Config::feedbackPort</a></div><div class="ttdeci">QString feedbackPort</div><div class="ttdoc">Порт для сервиса execd на РЛС.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/dad/a00005_source.html#l00001">config.h:263</a></div></div>
-<div class="ttc" id="aa00240_html_a259e4f044a571c4bc7b34a23f39492be"><div class="ttname"><a href="../../d9/d21/a00240.html#a259e4f044a571c4bc7b34a23f39492be">Config::Config::tcpMarker</a></div><div class="ttdeci">QString tcpMarker</div><div class="ttdoc">Свойство совместимости со старыми версиями сервиса fsend.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/dad/a00005_source.html#l00001">config.h:266</a></div></div>
-<div class="ttc" id="aa00240_html_a29ca03d2272c4051d7c324cd6bac3b0b"><div class="ttname"><a href="../../d9/d21/a00240.html#a29ca03d2272c4051d7c324cd6bac3b0b">Config::Config::remoteIP</a></div><div class="ttdeci">QString remoteIP</div><div class="ttdoc">IPv4-адрес РЛС (DE10-NANO).</div><div class="ttdef"><b>Definition</b> <a href="../../dd/dad/a00005_source.html#l00001">config.h:252</a></div></div>
-<div class="ttc" id="aa00240_html_a53d9759116527e34443d82453b97f415"><div class="ttname"><a href="../../d9/d21/a00240.html#a53d9759116527e34443d82453b97f415">Config::Config::theme</a></div><div class="ttdeci">QString theme</div><div class="ttdoc">Выбранная цветовая схема приложения.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/dad/a00005_source.html#l00001">config.h:278</a></div></div>
-<div class="ttc" id="aa00240_html_a5b2d3b040ee55818de48aed7ffc5806f"><div class="ttname"><a href="../../d9/d21/a00240.html#a5b2d3b040ee55818de48aed7ffc5806f">Config::Config::storedLongitude</a></div><div class="ttdeci">double storedLongitude</div><div class="ttdoc">Приватное свойство для сохранения состояния карты между сессиями.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/dad/a00005_source.html#l00001">config.h:275</a></div></div>
-<div class="ttc" id="aa00240_html_a6241b7c15dc9a3b9b8e412a80e00cc9d"><div class="ttname"><a href="../../d9/d21/a00240.html#a6241b7c15dc9a3b9b8e412a80e00cc9d">Config::Config::storedZoomLevel</a></div><div class="ttdeci">double storedZoomLevel</div><div class="ttdoc">Приватное свойство для сохранения состояния карты между сессиями.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/dad/a00005_source.html#l00001">config.h:276</a></div></div>
-<div class="ttc" id="aa00240_html_a66213c53fe947a7a4757bcc2b7d7fbb3"><div class="ttname"><a href="../../d9/d21/a00240.html#a66213c53fe947a7a4757bcc2b7d7fbb3">Config::Config::antennaAlignment</a></div><div class="ttdeci">bool antennaAlignment</div><div class="ttdoc">Свойство, определяющее, на какой стороне борта установленна антенна.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/dad/a00005_source.html#l00001">config.h:267</a></div></div>
-<div class="ttc" id="aa00240_html_a6e81ba455ac73046cba68a75c0d34991"><div class="ttname"><a href="../../d9/d21/a00240.html#a6e81ba455ac73046cba68a75c0d34991">Config::Config::cutImage</a></div><div class="ttdeci">bool cutImage</div><div class="ttdoc">Отладочное свойство, регулирующее обрезку РЛИ по диаграмме.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/dad/a00005_source.html#l00001">config.h:273</a></div></div>
-<div class="ttc" id="aa00240_html_a752dbeb4be188be8d6e370263c380827"><div class="ttname"><a href="../../d9/d21/a00240.html#a752dbeb4be188be8d6e370263c380827">Config::Config::telemetryFrequency</a></div><div class="ttdeci">float telemetryFrequency</div><div class="ttdoc">Интервал между пакетами телеметрии.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/dad/a00005_source.html#l00001">config.h:264</a></div></div>
-<div class="ttc" id="aa00240_html_a75af3a7370fd6e32995373d2dbbf1f81"><div class="ttname"><a href="../../d9/d21/a00240.html#a75af3a7370fd6e32995373d2dbbf1f81">Config::Config::jetsonIP</a></div><div class="ttdeci">QString jetsonIP</div><div class="ttdoc">IPv4-адрес вычислителя Jetson Xavier.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/dad/a00005_source.html#l00001">config.h:254</a></div></div>
-<div class="ttc" id="aa00240_html_a78f61ac2dd03bcba8e09ca20cd7d68e3"><div class="ttname"><a href="../../d9/d21/a00240.html#a78f61ac2dd03bcba8e09ca20cd7d68e3">Config::Config::load</a></div><div class="ttdeci">Q_INVOKABLE void load()</div><div class="ttdoc">Загружает в память приложения настройки из файла.</div><div class="ttdef"><b>Definition</b> <a href="../../d7/d46/a00002_source.html#l00062">config.c++:62</a></div></div>
-<div class="ttc" id="aa00240_html_a8af317d04dbe29e8f495cd928c0f30cb"><div class="ttname"><a href="../../d9/d21/a00240.html#a8af317d04dbe29e8f495cd928c0f30cb">Config::Config::utl1IP</a></div><div class="ttdeci">QString utl1IP</div><div class="ttdoc">Зарезервированный IPv4-адрес.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/dad/a00005_source.html#l00001">config.h:256</a></div></div>
-<div class="ttc" id="aa00240_html_a9400347615d36fd3eed76e4f027433df"><div class="ttname"><a href="../../d9/d21/a00240.html#a9400347615d36fd3eed76e4f027433df">Config::Config::telemetryPort</a></div><div class="ttdeci">QString telemetryPort</div><div class="ttdoc">Порт для запросов телеметрии.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/dad/a00005_source.html#l00001">config.h:258</a></div></div>
-<div class="ttc" id="aa00240_html_a9a898d90c155973baa06c11e8ef95813"><div class="ttname"><a href="../../d9/d21/a00240.html#a9a898d90c155973baa06c11e8ef95813">Config::Config::tcpLFSPort</a></div><div class="ttdeci">QString tcpLFSPort</div><div class="ttdoc">Порт для сервера TCP-IP, используемого сервисом fsend на РЛС.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/dad/a00005_source.html#l00001">config.h:260</a></div></div>
-<div class="ttc" id="aa00240_html_a9cf620340e16aa417bb112e0294038df"><div class="ttname"><a href="../../d9/d21/a00240.html#a9cf620340e16aa417bb112e0294038df">Config::Config::revert</a></div><div class="ttdeci">Q_INVOKABLE void revert()</div><div class="ttdoc">Альтернативное имя для load().</div><div class="ttdef"><b>Definition</b> <a href="../../d7/d46/a00002_source.html#l00095">config.c++:95</a></div></div>
-<div class="ttc" id="aa00240_html_aa7c77c61e23cb38fce8948fff5baa648"><div class="ttname"><a href="../../d9/d21/a00240.html#aa7c77c61e23cb38fce8948fff5baa648">Config::Config::execdPort</a></div><div class="ttdeci">QString execdPort</div><div class="ttdoc">Порт для сервиса execd на РЛС.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/dad/a00005_source.html#l00001">config.h:262</a></div></div>
-<div class="ttc" id="aa00240_html_aa9f58cbedfcdde939083775c3a77ef6e"><div class="ttname"><a href="../../d9/d21/a00240.html#aa9f58cbedfcdde939083775c3a77ef6e">Config::Config::navIP</a></div><div class="ttdeci">QString navIP</div><div class="ttdoc">IPv4-адрес бортовой навигации.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/dad/a00005_source.html#l00001">config.h:255</a></div></div>
-<div class="ttc" id="aa00240_html_aab4f0df3041b8a7fb08052df350ebcbd"><div class="ttname"><a href="../../d9/d21/a00240.html#aab4f0df3041b8a7fb08052df350ebcbd">Config::Config::get</a></div><div class="ttdeci">static Config * get()</div><div class="ttdoc">Возвращает указатель на статический экземпляр класса.</div><div class="ttdef"><b>Definition</b> <a href="../../d7/d46/a00002_source.html#l00009">config.c++:9</a></div></div>
-<div class="ttc" id="aa00240_html_aae2c382151ef7c9aa913361172b30db6"><div class="ttname"><a href="../../d9/d21/a00240.html#aae2c382151ef7c9aa913361172b30db6">Config::Config::save</a></div><div class="ttdeci">Q_INVOKABLE void save()</div><div class="ttdoc">Сохраняет настройки из памяти на диск.</div><div class="ttdef"><b>Definition</b> <a href="../../d7/d46/a00002_source.html#l00017">config.c++:17</a></div></div>
-<div class="ttc" id="aa00240_html_abb00f8fd5508af1ffc1b56f474a7ba22"><div class="ttname"><a href="../../d9/d21/a00240.html#abb00f8fd5508af1ffc1b56f474a7ba22">Config::Config::localIP</a></div><div class="ttdeci">QString localIP</div><div class="ttdoc">IPv4-адрес компьютера, на котором установлено приложение.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/dad/a00005_source.html#l00001">config.h:253</a></div></div>
-<div class="ttc" id="aa00240_html_abdcb3cc37ddbefe06ad99b3daa720afc"><div class="ttname"><a href="../../d9/d21/a00240.html#abdcb3cc37ddbefe06ad99b3daa720afc">Config::Config::storedLatitude</a></div><div class="ttdeci">double storedLatitude</div><div class="ttdoc">Приватное свойство для сохранения состояния карты между сессиями.ns.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/dad/a00005_source.html#l00001">config.h:274</a></div></div>
-<div class="ttc" id="aa00240_html_acc7856ea0497ce886547bd19075f4bcb"><div class="ttname"><a href="../../d9/d21/a00240.html#acc7856ea0497ce886547bd19075f4bcb">Config::Config::angleCorrection</a></div><div class="ttdeci">float angleCorrection</div><div class="ttdoc">Отладочное свойство для коррекции азимута РЛИ.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/dad/a00005_source.html#l00001">config.h:268</a></div></div>
-<div class="ttc" id="aa00240_html_aced4a69727f347e1e1a73bfdd8761143"><div class="ttname"><a href="../../d9/d21/a00240.html#aced4a69727f347e1e1a73bfdd8761143">Config::Config::overrideImageHeight</a></div><div class="ttdeci">bool overrideImageHeight</div><div class="ttdoc">Отладочное свойство для коррекции пиксельной высоты РЛИ.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/dad/a00005_source.html#l00001">config.h:272</a></div></div>
-<div class="ttc" id="aa00240_html_ad20897c5c8bd47f5d4005989bead0e55"><div class="ttname"><a href="../../d9/d21/a00240.html#ad20897c5c8bd47f5d4005989bead0e55">Config::Config::reset</a></div><div class="ttdeci">Q_INVOKABLE void reset()</div><div class="ttdoc">Сбрасывает настройки в ОЗУ и в файле на диске к заводским.</div><div class="ttdef"><b>Definition</b> <a href="../../d7/d46/a00002_source.html#l00097">config.c++:97</a></div></div>
-<div class="ttc" id="aa00240_html_ad55f80ed3cd8b6c4f247763b747016af"><div class="ttname"><a href="../../d9/d21/a00240.html#ad55f80ed3cd8b6c4f247763b747016af">Config::Config::sync</a></div><div class="ttdeci">Q_INVOKABLE void sync()</div><div class="ttdoc">Синхронизирует настройки в ОЗУ с файлом на диске.</div><div class="ttdef"><b>Definition</b> <a href="../../d7/d46/a00002_source.html#l00106">config.c++:106</a></div></div>
-<div class="ttc" id="aa00240_html_ae862ff88f11a3a2ef7eee0c21957dcb7"><div class="ttname"><a href="../../d9/d21/a00240.html#ae862ff88f11a3a2ef7eee0c21957dcb7">Config::Config::proxyEnabled</a></div><div class="ttdeci">bool proxyEnabled</div><div class="ttdoc">Свойство совместимости, переопределяющее флаг --remote.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/dad/a00005_source.html#l00001">config.h:265</a></div></div>
-<div class="ttc" id="aa00240_html_af6dc8053f62613e2dd7a79d2172c658d"><div class="ttname"><a href="../../d9/d21/a00240.html#af6dc8053f62613e2dd7a79d2172c658d">Config::Config::useRadians</a></div><div class="ttdeci">bool useRadians</div><div class="ttdoc">Свойство совместимости для старых версий прошивки.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/dad/a00005_source.html#l00001">config.h:269</a></div></div>
-<div class="ttc" id="aa00240_html_afa3175de72b10c5da5e4664f75936346"><div class="ttname"><a href="../../d9/d21/a00240.html#afa3175de72b10c5da5e4664f75936346">Config::Config::telemetryRecvPort</a></div><div class="ttdeci">QString telemetryRecvPort</div><div class="ttdoc">Порт для входящих пакетов телеметрии.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/dad/a00005_source.html#l00001">config.h:259</a></div></div>
-<div class="ttc" id="aa00240_html_afcbc3ba0faa77bf6b0a9b01f878181e6"><div class="ttname"><a href="../../d9/d21/a00240.html#afcbc3ba0faa77bf6b0a9b01f878181e6">Config::Config::useDriftAngle</a></div><div class="ttdeci">bool useDriftAngle</div><div class="ttdoc">Свойство совместимости для старых версий прошивки.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/dad/a00005_source.html#l00001">config.h:270</a></div></div>
-<div class="ttc" id="aa00240_html_afd2df17ea5b9473da8b4d307395c5085"><div class="ttname"><a href="../../d9/d21/a00240.html#afd2df17ea5b9473da8b4d307395c5085">Config::Config::thetaAzimuthCorrection</a></div><div class="ttdeci">float thetaAzimuthCorrection</div><div class="ttdoc">Отладочное свойство для коррекции угла расхождения диаграммы РЛИ.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/dad/a00005_source.html#l00001">config.h:271</a></div></div>
-<div class="ttc" id="aa00240_html_afdd91838bc17767a1510db9d4e569aaa"><div class="ttname"><a href="../../d9/d21/a00240.html#afdd91838bc17767a1510db9d4e569aaa">Config::Config::utl2IP</a></div><div class="ttdeci">QString utl2IP</div><div class="ttdoc">Зарезервированный IPv4-адрес.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/dad/a00005_source.html#l00001">config.h:257</a></div></div>
-<div class="ttc" id="aa00248_html"><div class="ttname"><a href="../../dd/dd7/a00248.html">Config::Paths</a></div><div class="ttdoc">Class, providing access to commonly used filesystem paths and resource management.</div><div class="ttdef"><b>Definition</b> <a href="../../d4/d51/a00017_source.html#l00010">paths.h:11</a></div></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d4/d82/a00436.html">Networking</a></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>{</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="../../de/d19/a00643.html#a8df39362cf4d9df8172121d4e52845a2">    9</a></span>  <a class="code hl_function" href="../../de/d19/a00643.html#a8df39362cf4d9df8172121d4e52845a2">HTTPDownloader::HTTPDownloader</a>(QObject* parent)</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>      : QObject(parent)</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>      , m_accessManager(new QNetworkAccessManager(this))</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>      , m_progress(0)</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>      , m_downloadedBytes(0)</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>      , m_totalBytes(1)</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>  {</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    connect(m_accessManager, &amp;QNetworkAccessManager::finished, <span class="keyword">this</span>, &amp;HTTPDownloader::fileDownloaded, Qt::QueuedConnection);</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>  }</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="../../de/d19/a00643.html#ab34ce209fa9eff78d4cf6656a5d4b3e1">   19</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="../../de/d19/a00643.html#ab34ce209fa9eff78d4cf6656a5d4b3e1">HTTPDownloader::download</a>(<span class="keyword">const</span> QString&amp; url) <span class="keyword">noexcept</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>  {</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    m_data.clear();</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    qDebug() &lt;&lt; <span class="stringliteral">&quot;[HTTP DOWNLOADER] Requested download from&quot;</span> &lt;&lt; url;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    QNetworkRequest request(url);</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    request.setAttribute(QNetworkRequest::RedirectPolicyAttribute, <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    QNetworkReply* m_reply = m_accessManager-&gt;get(request);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    connect(m_reply, &amp;QNetworkReply::downloadProgress, <span class="keyword">this</span>, &amp;HTTPDownloader::progressReply);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    connect(m_reply, &amp;QNetworkReply::readyRead, <span class="keyword">this</span>, [<span class="keyword">this</span>, m_reply](){</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>      m_data.append(m_reply-&gt;readAll());</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    });</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>  }</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="../../de/d19/a00643.html#a58c9cb26b18c19f45f218accf9833eb3">   32</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="../../de/d19/a00643.html#a58c9cb26b18c19f45f218accf9833eb3">HTTPDownloader::cache</a>(<span class="keyword">const</span> QString&amp; destination) <span class="keyword">noexcept</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>  {</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    QFile file(destination);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keywordflow">if</span>(not file.open(QIODevice::WriteOnly))</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    {</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>      qCritical() &lt;&lt; <span class="stringliteral">&quot;[HTTP DOWNLOADER] Error opening&quot;</span> &lt;&lt; destination;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>      <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    }</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    file.write(m_data);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    file.close();</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>  }</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>  QByteArray HTTPDownloader::data()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="keyword">  </span>{</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keywordflow">return</span> m_data;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>  }</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>  <span class="keywordtype">void</span> HTTPDownloader::fileDownloaded(QNetworkReply* reply)</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>  {</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    reply-&gt;deleteLater();</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    emit <a class="code hl_signal" href="../../de/d19/a00643.html#a575676c0aa3e5bcc74bc9be7a053e0d5">downloadFinished</a>();</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>  }</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>  <span class="keywordtype">void</span> HTTPDownloader::progressReply(qint64 recv, qint64 total)</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>  {</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    this-&gt;setDownloadedBytes(recv);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    this-&gt;setTotalBytes(total);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keywordflow">if</span>(total != 0)</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>      this-&gt;setProgress((<span class="keywordtype">float</span>)recv / (<span class="keywordtype">float</span>)total);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>  }</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>  <span class="keywordtype">float</span> <a class="code hl_property" href="../../de/d19/a00643.html#a991fd2c404665f13f536fc7791e53504">HTTPDownloader::progress</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_progress; }</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>  <span class="keywordtype">void</span> HTTPDownloader::setProgress(<span class="keywordtype">float</span> o)</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>  {</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="keywordflow">if</span>(m_progress == o)</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>      <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    m_progress = o;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    emit progressChanged();</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>  }</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>  <span class="keywordtype">int</span> <a class="code hl_property" href="../../de/d19/a00643.html#aaf17bf5a5fe2080b85e3d146e6a8706b">HTTPDownloader::downloadedBytes</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_downloadedBytes; }</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>  <span class="keywordtype">void</span> HTTPDownloader::setDownloadedBytes(<span class="keywordtype">int</span> o)</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>  {</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="keywordflow">if</span>(m_downloadedBytes == o)</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>      <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    m_downloadedBytes = o;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    emit downloadedBytesChanged();</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>  }</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>  <span class="keywordtype">int</span> <a class="code hl_property" href="../../de/d19/a00643.html#a8516f594751b78c18e2515d724c2db82">HTTPDownloader::totalBytes</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_totalBytes; }</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>  <span class="keywordtype">void</span> HTTPDownloader::setTotalBytes(<span class="keywordtype">int</span> o)</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>  {</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="keywordflow">if</span>(m_totalBytes == o)</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>      <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    m_totalBytes = o;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    emit totalBytesChanged();</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>  }</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>} <span class="comment">// Networking</span></div>
+<div class="ttc" id="aa00005_html"><div class="ttname"><a href="../../dd/dad/a00005.html">httpdownloader.h</a></div></div>
+<div class="ttc" id="aa00436_html"><div class="ttname"><a href="../../d4/d82/a00436.html">Networking</a></div><div class="ttdoc">Пространство имен для работы с сетевыми подключениями к РЛС.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d03/a00254_source.html#l00010">entry.h:11</a></div></div>
+<div class="ttc" id="aa00643_html_a575676c0aa3e5bcc74bc9be7a053e0d5"><div class="ttname"><a href="../../de/d19/a00643.html#a575676c0aa3e5bcc74bc9be7a053e0d5">Networking::HTTPDownloader::downloadFinished</a></div><div class="ttdeci">void downloadFinished()</div><div class="ttdoc">Emitted when downloading file is finished.</div></div>
+<div class="ttc" id="aa00643_html_a58c9cb26b18c19f45f218accf9833eb3"><div class="ttname"><a href="../../de/d19/a00643.html#a58c9cb26b18c19f45f218accf9833eb3">Networking::HTTPDownloader::cache</a></div><div class="ttdeci">Q_INVOKABLE void cache(const QString &amp;destination) noexcept</div><div class="ttdoc">Saves all currently downloaded data in file.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d46/a00002_source.html#l00032">httpdownloader.c++:32</a></div></div>
+<div class="ttc" id="aa00643_html_a8516f594751b78c18e2515d724c2db82"><div class="ttname"><a href="../../de/d19/a00643.html#a8516f594751b78c18e2515d724c2db82">Networking::HTTPDownloader::totalBytes</a></div><div class="ttdeci">int totalBytes</div><div class="ttdoc">Total bytes count to download.</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dad/a00005_source.html#l00001">httpdownloader.h:42</a></div></div>
+<div class="ttc" id="aa00643_html_a8df39362cf4d9df8172121d4e52845a2"><div class="ttname"><a href="../../de/d19/a00643.html#a8df39362cf4d9df8172121d4e52845a2">Networking::HTTPDownloader::HTTPDownloader</a></div><div class="ttdeci">HTTPDownloader(QObject *parent)</div><div class="ttdoc">Constructs new HTTPDownloader object with given parent.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d46/a00002_source.html#l00009">httpdownloader.c++:9</a></div></div>
+<div class="ttc" id="aa00643_html_a991fd2c404665f13f536fc7791e53504"><div class="ttname"><a href="../../de/d19/a00643.html#a991fd2c404665f13f536fc7791e53504">Networking::HTTPDownloader::progress</a></div><div class="ttdeci">float progress</div><div class="ttdoc">Download progress in normalized percentage.</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dad/a00005_source.html#l00001">httpdownloader.h:40</a></div></div>
+<div class="ttc" id="aa00643_html_aaf17bf5a5fe2080b85e3d146e6a8706b"><div class="ttname"><a href="../../de/d19/a00643.html#aaf17bf5a5fe2080b85e3d146e6a8706b">Networking::HTTPDownloader::downloadedBytes</a></div><div class="ttdeci">int downloadedBytes</div><div class="ttdoc">Currently downloaded bytes count.</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dad/a00005_source.html#l00001">httpdownloader.h:41</a></div></div>
+<div class="ttc" id="aa00643_html_ab34ce209fa9eff78d4cf6656a5d4b3e1"><div class="ttname"><a href="../../de/d19/a00643.html#ab34ce209fa9eff78d4cf6656a5d4b3e1">Networking::HTTPDownloader::download</a></div><div class="ttdeci">Q_INVOKABLE void download(const QString &amp;url) noexcept</div><div class="ttdoc">Tries to download file from given URL.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d46/a00002_source.html#l00019">httpdownloader.c++:19</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="../../dir_fcb2a60e1810a51543a3cc3a113d0956.html">c++</a></li><li class="navelem"><a class="el" href="../../dir_48a82678458ea86f0aa1c1f2db0ce8e0.html">config</a></li><li class="navelem"><b>config.c++</b></li>
-    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7 </li>
+    <li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="../../dir_fcb2a60e1810a51543a3cc3a113d0956.html">c++</a></li><li class="navelem"><a class="el" href="../../dir_2658f57a99a735e2e16983d97ef2d726.html">network</a></li><li class="navelem"><a class="el" href="../../dir_f6d5a32daa91d60516c85d970d4ca09c.html">http</a></li><li class="navelem"><b>httpdownloader.c++</b></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
   </ul>
 </div>
 </body>

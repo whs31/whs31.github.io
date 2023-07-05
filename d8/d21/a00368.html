@@ -3,9 +3,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.7"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuaSAR: Класс AbstractUDPSocket</title>
+<title>QuaSAR: Файл quasarsdk_plannerdatagram.h</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -29,14 +29,14 @@
   <td id="projectalign">
    <div id="projectname">QuaSAR<span id="projectnumber">&#160;2.12.0</span>
    </div>
-   <div id="projectbrief">СПО для РЛС &quot;Квазар&quot;</div>
+   <div id="projectbrief">SAR control software</div>
   </td>
  </tr>
  </tbody>
 </table>
 </div>
 <!-- end header part -->
-<!-- Создано системой Doxygen 1.9.7 -->
+<!-- Создано системой Doxygen 1.9.6 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 var searchBox = new SearchBox("searchBox", "../../search/",'.html');
@@ -93,207 +93,236 @@ $(document).ready(function(){initNavTree('d8/d21/a00368.html','../../'); initRes
 
 <div class="header">
   <div class="summary">
-<a href="#signals">Сигналы</a> &#124;
-<a href="#pub-methods">Открытые члены</a> &#124;
-<a href="../../dd/db5/a00365.html">Полный список членов класса</a>  </div>
-  <div class="headertitle"><div class="title">Класс AbstractUDPSocket</div></div>
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#namespaces">Пространства имен</a>  </div>
+  <div class="headertitle"><div class="title">Файл quasarsdk_plannerdatagram.h</div></div>
 </div><!--header-->
 <div class="contents">
-
-<p>Class, which serves as base for all UDP sockets.  
- <a href="../../d8/d21/a00368.html#details">Подробнее...</a></p>
-
-<p><code>#include &lt;<a class="el" href="../../d2/df5/a00137_source.html">abstractudpsocket.h</a>&gt;</code></p>
-
-<p>Базовые классы:QUdpSocket.</p>
-
-<p>Производные классы:ExecdSocket, FeedbackSocket, StripSocket и TelemetrySocket.</p>
+<div class="textblock"><code>#include &lt;cstdint&gt;</code><br />
+<code>#include &lt;QtCore/QDataStream&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для quasarsdk_plannerdatagram.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../df/dee/a00369.png" border="0" usemap="#aquasarsdk__plannerdatagram_8h" alt=""/></div>
+<map name="aquasarsdk__plannerdatagram_8h" id="aquasarsdk__plannerdatagram_8h">
+<area shape="rect" title=" " alt="" coords="5,5,225,33"/>
+<area shape="rect" title=" " alt="" coords="14,81,80,109"/>
+<area shape="rect" title=" " alt="" coords="104,81,262,109"/>
+</map>
+</div>
+</div>
+<p><a href="../../d8/d21/a00368_source.html">См. исходные тексты.</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="signals" name="signals"></a>
-Сигналы</h2></td></tr>
-<tr class="memitem:a3eb63c5af67a44fb60ba731d3da7a56d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d21/a00368.html#a3eb63c5af67a44fb60ba731d3da7a56d">received</a> (QByteArray data)</td></tr>
-<tr class="memdesc:a3eb63c5af67a44fb60ba731d3da7a56d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Emits when socket receives data from other side.  <br /></td></tr>
-<tr class="separator:a3eb63c5af67a44fb60ba731d3da7a56d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a270b32a7b4f3d08e655807d4101acbd7"><td class="memItemLeft" align="right" valign="top"><a id="a270b32a7b4f3d08e655807d4101acbd7" name="a270b32a7b4f3d08e655807d4101acbd7"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>socketDisconnected</b> ()</td></tr>
-<tr class="memdesc:a270b32a7b4f3d08e655807d4101acbd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Emits when socket breaks connection. <br /></td></tr>
-<tr class="separator:a270b32a7b4f3d08e655807d4101acbd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a58d7e2b4c7d46a5ae4041d122b03b584"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d21/a00368.html#a58d7e2b4c7d46a5ae4041d122b03b584">socketMetrics</a> (const QString &amp;data, int size_bytes, bool out)</td></tr>
-<tr class="memdesc:a58d7e2b4c7d46a5ae4041d122b03b584"><td class="mdescLeft">&#160;</td><td class="mdescRight">Emits when socket sends or receives data.  <br /></td></tr>
-<tr class="separator:a58d7e2b4c7d46a5ae4041d122b03b584"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:dc/d0c/a00783"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d69/a00451.html#dc/d0c/a00783">PlannerAppendDatagram</a></td></tr>
+<tr class="separator:dc/d0c/a00783"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d8/d7f/a00787"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d69/a00451.html#d8/d7f/a00787">PlannerRemoveDatagram</a></td></tr>
+<tr class="separator:d8/d7f/a00787"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d4/d45/a00791"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d69/a00451.html#d4/d45/a00791">PlannerResponseDatagram</a></td></tr>
+<tr class="separator:d4/d45/a00791"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
-Открытые члены</h2></td></tr>
-<tr class="memitem:a01948d8cb99ea51677e34382c9e2c8aa"><td class="memItemLeft" align="right" valign="top">virtual Q_INVOKABLE bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d21/a00368.html#a01948d8cb99ea51677e34382c9e2c8aa">connect</a> (const QString &amp;address)</td></tr>
-<tr class="memdesc:a01948d8cb99ea51677e34382c9e2c8aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Connects to given IPv4 address and port.  <br /></td></tr>
-<tr class="separator:a01948d8cb99ea51677e34382c9e2c8aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a960705de531a20389fb29928d43258c3"><td class="memItemLeft" align="right" valign="top">virtual Q_INVOKABLE void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d21/a00368.html#a960705de531a20389fb29928d43258c3">disconnect</a> ()</td></tr>
-<tr class="memdesc:a960705de531a20389fb29928d43258c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disconnects from current session.  <br /></td></tr>
-<tr class="separator:a960705de531a20389fb29928d43258c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad1239ca09fddf150d1584cdf26baf7f3"><td class="memItemLeft" align="right" valign="top"><a id="ad1239ca09fddf150d1584cdf26baf7f3" name="ad1239ca09fddf150d1584cdf26baf7f3"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>send</b> (QByteArray data)</td></tr>
-<tr class="memdesc:ad1239ca09fddf150d1584cdf26baf7f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends given QByteArray to socket. <br /></td></tr>
-<tr class="separator:ad1239ca09fddf150d1584cdf26baf7f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6aac8bbc4a1ac6c37d4c9f0564256fbd"><td class="memItemLeft" align="right" valign="top"><a id="a6aac8bbc4a1ac6c37d4c9f0564256fbd" name="a6aac8bbc4a1ac6c37d4c9f0564256fbd"></a>
-virtual uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>port</b> () const noexcept</td></tr>
-<tr class="memdesc:a6aac8bbc4a1ac6c37d4c9f0564256fbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns current socket port. <br /></td></tr>
-<tr class="separator:a6aac8bbc4a1ac6c37d4c9f0564256fbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+Пространства имен</h2></td></tr>
+<tr class="memitem:d9/d10/a00449"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d10/a00449.html">QuasarSDK</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d9/d69/a00451"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d69/a00451.html">QuasarSDK::Datagrams</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
-<div class="textblock"><p>Class, which serves as base for all UDP sockets. </p>
+<div class="textblock"><dl class="section author"><dt>Автор</dt><dd>Дмитрий Рязанцев </dd></dl>
+<dl class="section date"><dt>Дата</dt><dd>04.07.2023 </dd></dl>
+<dl class="section copyright"><dt>Авторство</dt><dd>Radar-MMS 2023 </dd></dl>
 
-<p class="definition">См. определение в файле <a class="el" href="../../d2/df5/a00137_source.html">abstractudpsocket.h</a> строка <a class="el" href="../../d2/df5/a00137_source.html#l00010">10</a></p>
-</div><h2 class="groupheader">Методы</h2>
-<a id="a01948d8cb99ea51677e34382c9e2c8aa" name="a01948d8cb99ea51677e34382c9e2c8aa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a01948d8cb99ea51677e34382c9e2c8aa">&#9670;&#160;</a></span>connect()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool connect </td>
-          <td>(</td>
-          <td class="paramtype">const QString &amp;&#160;</td>
-          <td class="paramname"><em>address</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Connects to given IPv4 address and port. </p>
-<dl class="params"><dt>Аргументы</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">address</td><td>- IPv4 address with port. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section note"><dt>Заметки</dt><dd>Can be invoked from QML. </dd></dl>
-
-<p class="definition">См. определение в файле <a class="el" href="../../de/d76/a00134_source.html">abstractudpsocket.c++</a> строка <a class="el" href="../../de/d76/a00134_source.html#l00012">12</a></p>
-
-</div>
-</div>
-<a id="a960705de531a20389fb29928d43258c3" name="a960705de531a20389fb29928d43258c3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a960705de531a20389fb29928d43258c3">&#9670;&#160;</a></span>disconnect()</h2>
+<p class="definition">См. определение в файле <a class="el" href="../../d8/d21/a00368_source.html">quasarsdk_plannerdatagram.h</a></p>
+</div><hr/><h2 class="groupheader">Классы</h2>
+<a name="dc/d0c/a00783" id="dc/d0c/a00783"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#dc/d0c/a00783">&#9670;&#160;</a></span>QuasarSDK::Datagrams::PlannerAppendDatagram</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void disconnect </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td class="memname">struct QuasarSDK::Datagrams::PlannerAppendDatagram</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
+<div class="textblock"><p>Структура добавления точки в полётное задание. </p>
+<p>Для создания полетного задания необходимо передать сервису сообщение, которое состоит из заголовка и данных. Данные должны располагаться сразу же после заголовка. Данные должны быть представлены в виде строки в формате <code>execd</code>.</p>
+<p>Пример: </p><div class="fragment"><div class="line"><span class="comment">// для этой команды len = 30</span></div>
+<div class="line">$some_script(arg1, arg2, arg3)</div>
+</div><!-- fragment --> <dl class="section note"><dt>Заметки</dt><dd>Сериализована в Big Endian. </dd></dl>
 
-<p>Disconnects from current session. </p>
-<dl class="section note"><dt>Заметки</dt><dd>Can be invoked from QML. </dd></dl>
-
-<p class="definition">См. определение в файле <a class="el" href="../../de/d76/a00134_source.html">abstractudpsocket.c++</a> строка <a class="el" href="../../de/d76/a00134_source.html#l00033">33</a></p>
+<p class="definition">См. определение в файле <a class="el" href="../../d8/d21/a00368_source.html">quasarsdk_plannerdatagram.h</a> строка <a class="el" href="../../d8/d21/a00368_source.html#l00029">29</a></p>
+</div><table class="fieldtable">
+<tr><th colspan="3">Члены классов</th></tr>
+<tr><td class="fieldtype">
+<a id="a0ea604dd26c415c8f380323b91bdba56" name="a0ea604dd26c415c8f380323b91bdba56"></a>uint32_t</td>
+<td class="fieldname">
+marker</td>
+<td class="fielddoc">
+Маркер датаграммы. <p>Всегда равен 0x55DD55DD. </p>
+</td></tr>
+<tr><td class="fieldtype">
+<a id="a4fc3a0c58dfbd1e68224521185cb9384" name="a4fc3a0c58dfbd1e68224521185cb9384"></a>uint16_t</td>
+<td class="fieldname">
+id</td>
+<td class="fielddoc">
+Номер точки для планировщика от 0 до <code>UINT16_MAX</code>. <p>Точка будет перезаписана, если номер не уникален. </p>
+</td></tr>
+<tr><td class="fieldtype">
+<a id="acfb1795eb860b37ae4a0cf5007525b11" name="acfb1795eb860b37ae4a0cf5007525b11"></a>uint16_t</td>
+<td class="fieldname">
+r</td>
+<td class="fielddoc">
+Радиус зоны, в которой будет срабатывать задание планировщика (в м). </td></tr>
+<tr><td class="fieldtype">
+<a id="a69ddb9c845da426f636d9dd0dbed4e7e" name="a69ddb9c845da426f636d9dd0dbed4e7e"></a>uint32_t</td>
+<td class="fieldname">
+ip</td>
+<td class="fielddoc">
+IP-адрес для обратной связи в hex-виде. </td></tr>
+<tr><td class="fieldtype">
+<a id="a8e0798404bf2cf5dabb84c5ba9a4f236" name="a8e0798404bf2cf5dabb84c5ba9a4f236"></a>uint16_t</td>
+<td class="fieldname">
+port</td>
+<td class="fielddoc">
+Порт для обратной связи. </td></tr>
+<tr><td class="fieldtype">
+<a id="a7972334534f68166121a6e51b0aac2d6" name="a7972334534f68166121a6e51b0aac2d6"></a>double</td>
+<td class="fieldname">
+lat</td>
+<td class="fielddoc">
+Широта точки в WGS-84 (в градусах). </td></tr>
+<tr><td class="fieldtype">
+<a id="aa96391e04b5977c50b96d77bea86a01d" name="aa96391e04b5977c50b96d77bea86a01d"></a>double</td>
+<td class="fieldname">
+lon</td>
+<td class="fielddoc">
+Долгота точки в WGS-84 (в градусах). </td></tr>
+<tr><td class="fieldtype">
+<a id="ae1d905c6ac1a0c9b96dca16153917334" name="ae1d905c6ac1a0c9b96dca16153917334"></a>uint16_t</td>
+<td class="fieldname">
+cnt</td>
+<td class="fielddoc">
+Количество срабатывания события в точке перед ее удалением от 0 до <code>UINT16_MAX</code>. </td></tr>
+<tr><td class="fieldtype">
+<a id="a8aed22e2c7b283705ec82e0120515618" name="a8aed22e2c7b283705ec82e0120515618"></a>uint16_t</td>
+<td class="fieldname">
+len</td>
+<td class="fielddoc">
+Количество байт в <a class="el" href="../../d9/d69/a00451.html#af161fc144504ebd2d6a3a287a47efcc0" title="Команда для выполнения в точке в формате execd.">command</a>. </td></tr>
+<tr><td class="fieldtype">
+<a id="af161fc144504ebd2d6a3a287a47efcc0" name="af161fc144504ebd2d6a3a287a47efcc0"></a>QByteArray</td>
+<td class="fieldname">
+command</td>
+<td class="fielddoc">
+Команда для выполнения в точке в формате <b>execd</b>. </td></tr>
+</table>
 
 </div>
 </div>
-<a id="a3eb63c5af67a44fb60ba731d3da7a56d" name="a3eb63c5af67a44fb60ba731d3da7a56d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3eb63c5af67a44fb60ba731d3da7a56d">&#9670;&#160;</a></span>received</h2>
+<a name="d8/d7f/a00787" id="d8/d7f/a00787"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#d8/d7f/a00787">&#9670;&#160;</a></span>QuasarSDK::Datagrams::PlannerRemoveDatagram</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void received </td>
-          <td>(</td>
-          <td class="paramtype">QByteArray&#160;</td>
-          <td class="paramname"><em>data</em></td><td>)</td>
-          <td></td>
+          <td class="memname">struct QuasarSDK::Datagrams::PlannerRemoveDatagram</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">signal</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
+<div class="textblock"><p>Структура удаления точки из полётного задания. </p>
+<p>Точки удаляются автоматически при достижении cnt = 0; При очередном достижении зоны события счетчик cnt уменьшается на 1. Для ручного удаления точки необходимо передать <a class="el" href="../../d9/d69/a00451.html#d8/d7f/a00787" title="Структура удаления точки из полётного задания.">PlannerRemoveDatagram</a>. </p><dl class="section note"><dt>Заметки</dt><dd>Сериализована в Big Endian. </dd></dl>
 
-<p>Emits when socket receives data from other side. </p>
-<dl class="params"><dt>Аргументы</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">data</td><td>- received QByteArray. </td></tr>
-  </table>
-  </dd>
-</dl>
+<p class="definition">См. определение в файле <a class="el" href="../../d8/d21/a00368_source.html">quasarsdk_plannerdatagram.h</a> строка <a class="el" href="../../d8/d21/a00368_source.html#l00056">56</a></p>
+</div><table class="fieldtable">
+<tr><th colspan="3">Члены классов</th></tr>
+<tr><td class="fieldtype">
+<a id="a0ea604dd26c415c8f380323b91bdba56" name="a0ea604dd26c415c8f380323b91bdba56"></a>uint32_t</td>
+<td class="fieldname">
+marker</td>
+<td class="fielddoc">
+Маркер датаграммы. <p>Всегда равен <code>0x55DD55DD</code>. </p>
+</td></tr>
+<tr><td class="fieldtype">
+<a id="a4fc3a0c58dfbd1e68224521185cb9384" name="a4fc3a0c58dfbd1e68224521185cb9384"></a>uint16_t</td>
+<td class="fieldname">
+id</td>
+<td class="fielddoc">
+Номер точки для удаления. </td></tr>
+<tr><td class="fieldtype">
+<a id="acfb1795eb860b37ae4a0cf5007525b11" name="acfb1795eb860b37ae4a0cf5007525b11"></a>uint16_t</td>
+<td class="fieldname">
+r = 0</td>
+<td class="fielddoc">
+Всегда равен 0. </td></tr>
+<tr><td class="fieldtype">
+<a id="a7972334534f68166121a6e51b0aac2d6" name="a7972334534f68166121a6e51b0aac2d6"></a>double</td>
+<td class="fieldname">
+lat = 0</td>
+<td class="fielddoc">
+Всегда равен 0. </td></tr>
+<tr><td class="fieldtype">
+<a id="aa96391e04b5977c50b96d77bea86a01d" name="aa96391e04b5977c50b96d77bea86a01d"></a>double</td>
+<td class="fieldname">
+lon = 0</td>
+<td class="fielddoc">
+Всегда равен 0. </td></tr>
+<tr><td class="fieldtype">
+<a id="ae1d905c6ac1a0c9b96dca16153917334" name="ae1d905c6ac1a0c9b96dca16153917334"></a>uint16_t</td>
+<td class="fieldname">
+cnt = 0</td>
+<td class="fielddoc">
+Всегда равен 0. </td></tr>
+<tr><td class="fieldtype">
+<a id="a8aed22e2c7b283705ec82e0120515618" name="a8aed22e2c7b283705ec82e0120515618"></a>uint16_t</td>
+<td class="fieldname">
+len = 0</td>
+<td class="fielddoc">
+Всегда равен 0. </td></tr>
+</table>
 
 </div>
 </div>
-<a id="a58d7e2b4c7d46a5ae4041d122b03b584" name="a58d7e2b4c7d46a5ae4041d122b03b584"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a58d7e2b4c7d46a5ae4041d122b03b584">&#9670;&#160;</a></span>socketMetrics</h2>
+<a name="d4/d45/a00791" id="d4/d45/a00791"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#d4/d45/a00791">&#9670;&#160;</a></span>QuasarSDK::Datagrams::PlannerResponseDatagram</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void socketMetrics </td>
-          <td>(</td>
-          <td class="paramtype">const QString &amp;&#160;</td>
-          <td class="paramname"><em>data</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>size_bytes</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>out</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="memname">struct QuasarSDK::Datagrams::PlannerResponseDatagram</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">signal</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
+<div class="textblock"><p>Структура ответа на прохождение БПЛА через точку из полётного задания. </p>
+<p>При достижении зоны события сервис отправляет сообщение по адресу, указанному при добавлении точки. </p><dl class="section note"><dt>Заметки</dt><dd>Сериализована в Big Endian. </dd></dl>
 
-<p>Emits when socket sends or receives data. </p>
-<dl class="params"><dt>Аргументы</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">data</td><td>- stringified data, which passes through socket. </td></tr>
-    <tr><td class="paramname">size_bytes</td><td>- size of data. </td></tr>
-    <tr><td class="paramname">out</td><td>- flow direction of data. </td></tr>
-  </table>
-  </dd>
-</dl>
+<p class="definition">См. определение в файле <a class="el" href="../../d8/d21/a00368_source.html">quasarsdk_plannerdatagram.h</a> строка <a class="el" href="../../d8/d21/a00368_source.html#l00079">79</a></p>
+</div><table class="fieldtable">
+<tr><th colspan="3">Члены классов</th></tr>
+<tr><td class="fieldtype">
+<a id="a0ea604dd26c415c8f380323b91bdba56" name="a0ea604dd26c415c8f380323b91bdba56"></a>uint32_t</td>
+<td class="fieldname">
+marker</td>
+<td class="fielddoc">
+Маркер датаграммы. <p>Всегда равен <code>0x55CC55CC</code>. </p>
+</td></tr>
+<tr><td class="fieldtype">
+<a id="a4fc3a0c58dfbd1e68224521185cb9384" name="a4fc3a0c58dfbd1e68224521185cb9384"></a>uint16_t</td>
+<td class="fieldname">
+id</td>
+<td class="fielddoc">
+Номер точки. </td></tr>
+<tr><td class="fieldtype">
+<a id="ae1d905c6ac1a0c9b96dca16153917334" name="ae1d905c6ac1a0c9b96dca16153917334"></a>uint16_t</td>
+<td class="fieldname">
+cnt</td>
+<td class="fielddoc">
+Актуальное значение счетчика времени жизни точки. </td></tr>
+</table>
 
 </div>
 </div>
@@ -302,8 +331,8 @@ virtual uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>port</b> 
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../da/d31/a00234.html">Networking</a></li><li class="navelem"><a class="el" href="../../d8/d21/a00368.html">AbstractUDPSocket</a></li>
-    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7 </li>
+    <li class="navelem"><a class="el" href="../../dir_6719ab1f1f7655efc2fa43f7eb574fd1.html">libs</a></li><li class="navelem"><a class="el" href="../../dir_c5d4018c0fe90f1660bca3f6235e9876.html">libquasarsdk</a></li><li class="navelem"><a class="el" href="../../dir_0f9d83d35d962a1c6c5b739b964daf6d.html">src</a></li><li class="navelem"><a class="el" href="../../dir_d734eb5648cc5bb2b8e3f352630d13d6.html">public</a></li><li class="navelem"><a class="el" href="../../dir_5ae3da6fa5f3b01d46a11cfe65fb85bc.html">navd2</a></li><li class="navelem"><a class="el" href="../../d8/d21/a00368.html">quasarsdk_plannerdatagram.h</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
   </ul>
 </div>
 </body>

@@ -1,12 +1,10 @@
 var searchData=
 [
-  ['tcplfsport_0',['tcpLFSPort',['../d9/d21/a00240.html#a9a898d90c155973baa06c11e8ef95813',1,'Config::Config']]],
-  ['tcpmarker_1',['tcpMarker',['../d9/d21/a00240.html#a259e4f044a571c4bc7b34a23f39492be',1,'Config::Config']]],
-  ['tcpprogress_2',['tcpProgress',['../d9/de6/a00404.html#a7e724b1b3184f524aa488b9bf25d4ff6',1,'Networking::Network']]],
-  ['telemetry_3',['telemetry',['../d9/de6/a00404.html#a7caa83797f2f419d1201b652b1970ef9',1,'Networking::Network']]],
-  ['telemetryfrequency_4',['telemetryFrequency',['../d9/d21/a00240.html#a752dbeb4be188be8d6e370263c380827',1,'Config::Config']]],
-  ['telemetryport_5',['telemetryPort',['../d9/d21/a00240.html#a9400347615d36fd3eed76e4f027433df',1,'Config::Config']]],
-  ['telemetryrecvport_6',['telemetryRecvPort',['../d9/d21/a00240.html#afa3175de72b10c5da5e4664f75936346',1,'Config::Config']]],
-  ['theme_7',['theme',['../d9/d21/a00240.html#a53d9759116527e34443d82453b97f415',1,'Config::Config']]],
-  ['thetaazimuthcorrection_8',['thetaAzimuthCorrection',['../d9/d21/a00240.html#afd2df17ea5b9473da8b4d307395c5085',1,'Config::Config']]]
+  ['satellites_0',['satellites',['../dd/d7a/a00795.html#a4d90ddb43bcba374ebe4e8738faafed1',1,'QuasarSDK::Telemetry']]],
+  ['sealevel_1',['seaLevel',['../dd/d7a/a00795.html#aa65c033c3e64f540f4b9833c74a0887e',1,'QuasarSDK::Telemetry']]],
+  ['storagespace_2',['storageSpace',['../dd/db6/a00639.html#a66f2ebfeb3e0e823b05351f875ec8639',1,'Networking::RemoteData::storageSpace()'],['../dd/de5/a00771.html#a49e2a8f80f7c33ebc5a1d7a7fb8b8bf0',1,'QuasarSDK::RemoteData::storageSpace()']]],
+  ['storedcatalogue_3',['storedCatalogue',['../d2/d91/a00459.html#a153feb691de604b107e5765377364a9d',1,'Config::Config']]],
+  ['storedlatitude_4',['storedLatitude',['../d2/d91/a00459.html#abdcb3cc37ddbefe06ad99b3daa720afc',1,'Config::Config']]],
+  ['storedlongitude_5',['storedLongitude',['../d2/d91/a00459.html#a5b2d3b040ee55818de48aed7ffc5806f',1,'Config::Config']]],
+  ['storedzoomlevel_6',['storedZoomLevel',['../d2/d91/a00459.html#a6241b7c15dc9a3b9b8e412a80e00cc9d',1,'Config::Config']]]
 ];

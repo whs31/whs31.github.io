@@ -3,9 +3,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.7"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuaSAR: Структура TelemetryRequest</title>
+<title>QuaSAR: Пространство имен Networking</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -29,14 +29,14 @@
   <td id="projectalign">
    <div id="projectname">QuaSAR<span id="projectnumber">&#160;2.12.0</span>
    </div>
-   <div id="projectbrief">СПО для РЛС &quot;Квазар&quot;</div>
+   <div id="projectbrief">SAR control software</div>
   </td>
  </tr>
  </tbody>
 </table>
 </div>
 <!-- end header part -->
-<!-- Создано системой Doxygen 1.9.7 -->
+<!-- Создано системой Doxygen 1.9.6 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 var searchBox = new SearchBox("searchBox", "../../search/",'.html');
@@ -93,88 +93,57 @@ $(document).ready(function(){initNavTree('d4/dd3/a00428.html','../../'); initRes
 
 <div class="header">
   <div class="summary">
-<a href="#pub-attribs">Открытые атрибуты</a> &#124;
-<a href="../../dc/d2f/a00425.html">Полный список членов класса</a>  </div>
-  <div class="headertitle"><div class="title">Структура TelemetryRequest</div></div>
+<a href="#nested-classes">Классы</a>  </div>
+  <div class="headertitle"><div class="title">Пространство имен Networking</div></div>
 </div><!--header-->
 <div class="contents">
-
-<p>Датаграма запроса телеметрии от наземки к РЛС. Сериализована в Big Endian.  
- <a href="../../d4/dd3/a00428.html#details">Подробнее...</a></p>
-
-<p><code>#include &lt;<a class="el" href="../../dc/d57/a00194_source.html">telemetrydatagram.h</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
-Открытые атрибуты</h2></td></tr>
-<tr class="memitem:a0ea604dd26c415c8f380323b91bdba56"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dd3/a00428.html#a0ea604dd26c415c8f380323b91bdba56">marker</a> = 0x55bb55bb</td></tr>
-<tr class="memdesc:a0ea604dd26c415c8f380323b91bdba56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Маркер сообщения.  <br /></td></tr>
-<tr class="separator:a0ea604dd26c415c8f380323b91bdba56"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a210e06aa846736988dbee1b9f1bb4464"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dd3/a00428.html#a210e06aa846736988dbee1b9f1bb4464">init_flag</a> = 0x00</td></tr>
-<tr class="memdesc:a210e06aa846736988dbee1b9f1bb4464"><td class="mdescLeft">&#160;</td><td class="mdescRight">Тип команды.  <br /></td></tr>
-<tr class="separator:a210e06aa846736988dbee1b9f1bb4464"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8e0798404bf2cf5dabb84c5ba9a4f236"><td class="memItemLeft" align="right" valign="top"><a id="a8e0798404bf2cf5dabb84c5ba9a4f236" name="a8e0798404bf2cf5dabb84c5ba9a4f236"></a>
-uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>port</b> = 0</td></tr>
-<tr class="memdesc:a8e0798404bf2cf5dabb84c5ba9a4f236"><td class="mdescLeft">&#160;</td><td class="mdescRight">Порт для обратной связи. <br /></td></tr>
-<tr class="separator:a8e0798404bf2cf5dabb84c5ba9a4f236"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a90ade0bc499be730c6d20696fffaf4f7"><td class="memItemLeft" align="right" valign="top"><a id="a90ade0bc499be730c6d20696fffaf4f7" name="a90ade0bc499be730c6d20696fffaf4f7"></a>
-uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>interval_ms</b> = 0</td></tr>
-<tr class="memdesc:a90ade0bc499be730c6d20696fffaf4f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Интервал передачи телеметрии в мс. <br /></td></tr>
-<tr class="separator:a90ade0bc499be730c6d20696fffaf4f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4438e0df9f58b1861feb3fc659f52534"><td class="memItemLeft" align="right" valign="top"><a id="a4438e0df9f58b1861feb3fc659f52534" name="a4438e0df9f58b1861feb3fc659f52534"></a>
-uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>crc16</b> = 0x0</td></tr>
-<tr class="memdesc:a4438e0df9f58b1861feb3fc659f52534"><td class="mdescLeft">&#160;</td><td class="mdescRight">Контрольная сумма датаграмы <code>CRC16_CCIT</code>. <br /></td></tr>
-<tr class="separator:a4438e0df9f58b1861feb3fc659f52534"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d08/a00646.html">Enums</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d80/a00614.html">ExecdArgument</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d85/a00618.html">ExecdArgumentList</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/db1/a00622.html">ExecdSocket</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dfa/a00626.html">FeedbackSocket</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/de4/a00634.html">HTTPDownloader</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d36/a00650.html">Network</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dc3/a00682.html">Pinger</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d2a/a00654.html">PlannerAppendDatagram</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/db8/a00658.html">PlannerRemoveDatagram</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/df1/a00662.html">PlannerResponseDatagram</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d66/a00630.html">RemoteData</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/daa/a00638.html">StripSocket</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dcf/a00642.html">TCPSocket</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d97/a00670.html">TelemetryDatagram</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d73/a00674.html">TelemetryRequest</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d6e/a00610.html">UDPSocketBase</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
-<div class="textblock"><p>Датаграма запроса телеметрии от наземки к РЛС. Сериализована в Big Endian. </p>
-
-<p class="definition">См. определение в файле <a class="el" href="../../dc/d57/a00194_source.html">telemetrydatagram.h</a> строка <a class="el" href="../../dc/d57/a00194_source.html#l00059">59</a></p>
-</div><h2 class="groupheader">Данные класса</h2>
-<a id="a0ea604dd26c415c8f380323b91bdba56" name="a0ea604dd26c415c8f380323b91bdba56"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0ea604dd26c415c8f380323b91bdba56">&#9670;&#160;</a></span>marker</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint32_t marker = 0x55bb55bb</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Маркер сообщения. </p>
-<p>Равен <code>0x55BB55BB</code>. </p>
-
-<p class="definition">См. определение в файле <a class="el" href="../../dc/d57/a00194_source.html">telemetrydatagram.h</a> строка <a class="el" href="../../dc/d57/a00194_source.html#l00061">61</a></p>
-
-</div>
-</div>
-<a id="a210e06aa846736988dbee1b9f1bb4464" name="a210e06aa846736988dbee1b9f1bb4464"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a210e06aa846736988dbee1b9f1bb4464">&#9670;&#160;</a></span>init_flag</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint8_t init_flag = 0x00</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Тип команды. </p>
-<p><code>0x00</code> завершает передачу, <code>0х01</code> - начинает. </p>
-
-<p class="definition">См. определение в файле <a class="el" href="../../dc/d57/a00194_source.html">telemetrydatagram.h</a> строка <a class="el" href="../../dc/d57/a00194_source.html#l00062">62</a></p>
-
-</div>
-</div>
-</div><!-- contents -->
+<div class="textblock"><p>Пространство имен для работы с сетевыми подключениями к РЛС. </p>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../da/d31/a00234.html">Networking</a></li><li class="navelem"><a class="el" href="../../d4/dd3/a00428.html">TelemetryRequest</a></li>
-    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7 </li>
+    <li class="navelem"><a class="el" href="../../d4/dd3/a00428.html">Networking</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
   </ul>
 </div>
 </body>

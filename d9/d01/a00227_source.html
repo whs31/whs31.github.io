@@ -3,9 +3,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.7"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuaSAR: Исходный файл src/c++/processing/imageprocessing.h</title>
+<title>QuaSAR: Исходный файл sdkorthodrom.c++</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -29,14 +29,14 @@
   <td id="projectalign">
    <div id="projectname">QuaSAR<span id="projectnumber">&#160;2.12.0</span>
    </div>
-   <div id="projectbrief">СПО для РЛС &quot;Квазар&quot;</div>
+   <div id="projectbrief">SAR control software</div>
   </td>
  </tr>
  </tbody>
 </table>
 </div>
 <!-- end header part -->
-<!-- Создано системой Doxygen 1.9.7 -->
+<!-- Создано системой Doxygen 1.9.6 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 var searchBox = new SearchBox("searchBox", "../../search/",'.html');
@@ -92,87 +92,103 @@ $(document).ready(function(){initNavTree('d9/d01/a00227_source.html','../../'); 
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">imageprocessing.h</div></div>
+  <div class="headertitle"><div class="title">sdkorthodrom.c++</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;QtCore/QObject&gt;</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;map/entities/image.h&quot;</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;map/entities/stripimage.h&quot;</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">using </span>std::vector;</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d6/de1/a00233.html">Map</a></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>{</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="keyword">class </span>ImageModel;</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>} <span class="comment">// Map</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">class </span>QImage;</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d7/d40/a00236.html">Processing</a></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>{</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keyword">class </span>ImageProcessing : <span class="keyword">public</span> QObject</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    {</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        Q_OBJECT</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        Q_PROPERTY(<span class="keywordtype">float</span> progress READ progress WRITE setProgress NOTIFY progressChanged)</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>            <span class="keyword">enum</span> ImageType</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>            {</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>                Telescopic,</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>                Strip</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>            };</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>            <span class="keyword">static</span> ImageProcessing* get();</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            Map::ImageModel* model();</div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;sdkorthodrom.h&quot;</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &lt;cmath&gt;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;QtCore/QtMath&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">constexpr</span> <span class="keyword">const</span> <span class="keywordtype">double</span> d2r = M_PI / 180;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">namespace </span>SDK::Cartography</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>{</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>  Orthodrom::Orthodrom(<span class="keyword">const</span> QGeoCoordinate&amp; first, <span class="keyword">const</span> QGeoCoordinate&amp; second)</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>      : first(first)</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>      , second(second)</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>  {</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    a1 = qTan(qDegreesToRadians(first.latitude())) / qSin(qDegreesToRadians(second.longitude() - first.longitude()));</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    a2 = qTan(qDegreesToRadians(second.latitude())) / qSin(qDegreesToRadians(second.longitude() - first.longitude()));</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    this-&gt;distribute();</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>  }</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>  Orthodrom::Orthodrom()</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>      : first({0, 0})</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>      , second({0, 0})</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>  {</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    a1 = qTan(qDegreesToRadians(first.latitude())) / qSin(qDegreesToRadians(second.longitude() - first.longitude()));</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    a2 = qTan(qDegreesToRadians(second.latitude())) / qSin(qDegreesToRadians(second.longitude() - first.longitude()));</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>  }</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>  QList&lt;QVariant&gt; Orthodrom::get() const noexcept</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>  {</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keywordflow">if</span>(sin(first.longitude() - second.longitude()))</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>      <span class="keywordflow">return</span> path;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keywordflow">return</span> { QVariant::fromValue(first), QVariant::fromValue(second) };</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>  }</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>            <span class="keywordtype">bool</span> exists(<span class="keyword">const</span> QString&amp; name);</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>            <span class="keywordtype">int</span> indexFrom(<span class="keyword">const</span> QString&amp; name) <span class="keyword">noexcept</span>;</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            [[nodiscard]] <span class="keywordtype">float</span> progress() <span class="keyword">const</span>; <span class="keywordtype">void</span> setProgress(<span class="keywordtype">float</span>);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>  <span class="keywordtype">void</span> Orthodrom::set(<span class="keyword">const</span> QGeoCoordinate&amp; a, <span class="keyword">const</span> QGeoCoordinate&amp; b) <span class="keyword">noexcept</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>  {</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    first = a;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    second = b;</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            <span class="keyword">public</span> slots:</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>                <span class="keywordtype">void</span> processList(QList&lt;QString&gt; list);</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>                <span class="keywordtype">void</span> passImage(Map::Image image);</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            signals:</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>                <span class="keywordtype">void</span> processImageFinished(Map::Image image);</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>                <span class="keywordtype">void</span> processStripFinished(Map::StripImage image);</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>                <span class="keywordtype">void</span> stripVector8bit(vector&lt;uint8_t&gt; vec, <span class="keywordtype">int</span> rows, <span class="keywordtype">int</span> columns);</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>                <span class="keywordtype">void</span> concurrencyFinished();</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>                <span class="keywordtype">void</span> progressChanged();</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            <span class="keyword">explicit</span> ImageProcessing(QObject* parent = <span class="keyword">nullptr</span>);</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            ImageProcessing(<span class="keyword">const</span> ImageProcessing&amp;);</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            ImageProcessing&amp; operator=(<span class="keyword">const</span> ImageProcessing&amp;);</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            <span class="keywordtype">void</span> asyncProcess(<span class="keyword">const</span> QString&amp; filename);</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            <span class="keywordtype">void</span> asyncStripProcess(<span class="keyword">const</span> QString&amp; filename);</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>            QByteArray fileToByteArray(<span class="keyword">const</span> QString&amp; path);</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>            Map::Image decodeTelescopic(<span class="keyword">const</span> QString&amp; path);</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>            QImage cutImage(<span class="keyword">const</span> Map::Image&amp; image) <span class="keyword">noexcept</span>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    a1 = qTan(qDegreesToRadians(first.latitude())) / qSin(qDegreesToRadians(second.longitude() - first.longitude()));</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    a2 = qTan(qDegreesToRadians(second.latitude())) / qSin(qDegreesToRadians(second.longitude() - first.longitude()));</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    this-&gt;distribute();</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>  }</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>  <span class="keywordtype">double</span> Orthodrom::latitudeAt(<span class="keywordtype">double</span> <a class="code hl_variable" href="../../d2/df5/a00137.html#ac155e35fdeebafc89723a51520fb9fe6">longitude</a>) <span class="keyword">const</span> <span class="keyword">noexcept</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>  {</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keywordtype">double</span> angle = qAtan(a2 * qSin(qDegreesToRadians(<a class="code hl_variable" href="../../d2/df5/a00137.html#ac155e35fdeebafc89723a51520fb9fe6">longitude</a> - first.longitude()))</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>                         + a1 * qSin(qDegreesToRadians(second.longitude() - <a class="code hl_variable" href="../../d2/df5/a00137.html#ac155e35fdeebafc89723a51520fb9fe6">longitude</a>)));</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keywordflow">return</span> qRadiansToDegrees(angle);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>  }</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>  <span class="keywordtype">void</span> Orthodrom::distribute() noexcept</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>  {</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keywordflow">if</span> (qIsNaN(a1) or qIsNaN(a2))</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>      <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    path.clear();</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    path &lt;&lt; QVariant::fromValue(second);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keywordtype">double</span> az = first.azimuthTo(second);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keywordtype">double</span> d = distance();</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>            Map::ImageModel* m_model;</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>            <span class="keywordtype">float</span> m_progress;</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>            <span class="keywordtype">int</span> m_total;</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>            <span class="keywordtype">int</span> m_processed;</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    };</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>} <span class="comment">// namespace Processing;</span></div>
-<div class="ttc" id="aa00233_html"><div class="ttname"><a href="../../d6/de1/a00233.html">Map</a></div><div class="ttdoc">Пространство имен для классов и функций, связанных с картографией.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/d89/a00071_source.html#l00006">clickhandler.h:7</a></div></div>
-<div class="ttc" id="aa00236_html"><div class="ttname"><a href="../../d7/d40/a00236.html">Processing</a></div><div class="ttdoc">Пространство имен для низкоуровневого декодирования и обработки данных.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d52/a00221_source.html#l00014">arrayreader.h:15</a></div></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keywordflow">while</span> (d - 10 &gt; 0)</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    {</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>      QGeoCoordinate tmp = first.atDistanceAndAzimuth(d * 1000, az);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>      path &lt;&lt; QVariant::fromValue(QGeoCoordinate(latitudeAt(tmp.longitude()), tmp.longitude(), 0));</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>      d -= 10;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    }</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    QGeoCoordinate tmp = first.atDistanceAndAzimuth(d, az);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="keywordflow">if</span>(tmp.longitude() - second.longitude() != 0)</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>      path &lt;&lt; QVariant::fromValue(QGeoCoordinate(latitudeAt(tmp.longitude()), tmp.longitude(), 0));</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>      path &lt;&lt; QVariant::fromValue(tmp);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>  }</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>  <span class="keywordtype">double</span> Orthodrom::distance() const noexcept</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>  {</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="keywordtype">double</span> tmp = qSin(qDegreesToRadians(first.latitude())) * qSin(qDegreesToRadians(second.latitude())) +</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>                 qCos(qDegreesToRadians(first.latitude())) * qCos(qDegreesToRadians(second.latitude()))</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>                 * qCos(qDegreesToRadians(second.longitude() - first.longitude()));</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="keywordtype">double</span> angle = qRadiansToDegrees(qAcos(tmp)) * 60;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <span class="keywordflow">return</span> angle * 1.853;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>  }</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>} <span class="comment">// SDK::Cartography</span></div>
+<div class="ttc" id="aa00137_html_ac155e35fdeebafc89723a51520fb9fe6"><div class="ttname"><a href="../../d2/df5/a00137.html#ac155e35fdeebafc89723a51520fb9fe6">longitude</a></div><div class="ttdeci">double longitude</div><div class="ttdoc">Долгота в градусах в проекции WGS-84.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/df5/a00137_source.html#l00004">imagemetadata.h:4</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="../../dir_fcb2a60e1810a51543a3cc3a113d0956.html">c++</a></li><li class="navelem"><a class="el" href="../../dir_4ceb41d6cb119213b0b762a086661145.html">processing</a></li><li class="navelem"><b>imageprocessing.h</b></li>
-    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7 </li>
+    <li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="../../dir_fcb2a60e1810a51543a3cc3a113d0956.html">c++</a></li><li class="navelem"><a class="el" href="../../dir_5eaa9160e914aa78085dedce4b00e66f.html">sdk</a></li><li class="navelem"><a class="el" href="../../dir_72207ca2e38c1e1375ea23aa1480da49.html">src</a></li><li class="navelem"><a class="el" href="../../dir_d870837f33cedd26bb049026a9d97fef.html">cartography</a></li><li class="navelem"><b>sdkorthodrom.c++</b></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
   </ul>
 </div>
 </body>

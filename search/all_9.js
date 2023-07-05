@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['k_0',['k',['../d6/de1/a00233.html#a9fc4cca635a26c692681a7071e379aa7',1,'Map::StripFormatMetadata']]],
-  ['kr_1',['kr',['../d6/de1/a00233.html#a969c435ef4ca6cab2727eac4b439680d',1,'Map::ImageMetadata']]]
+  ['jetsonip_0',['jetsonIP',['../d2/d91/a00459.html#a75af3a7370fd6e32995373d2dbbf1f81',1,'Config::Config']]],
+  ['jetsonping_1',['jetsonping',['../dd/db6/a00639.html#afd38636f9b028739b2bc560f0dd308fb',1,'Networking::RemoteData']]],
+  ['jpeg_5fheader_5fsize_2',['JPEG_HEADER_SIZE',['../de/df8/a00440.html#a9b773bb2583171e07274d1ea066c09c8',1,'Map::ImageMetaHeader']]]
 ];

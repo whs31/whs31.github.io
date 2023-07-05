@@ -1,16 +1,19 @@
 var searchData=
 [
-  ['clearimagecache_0',['clearImageCache',['../dd/dd7/a00248.html#a24fbd0c2fa835544a50805c75ef1050b',1,'Config::Paths']]],
-  ['clearremotestorage_1',['ClearRemoteStorage',['../d9/d95/a00400.html#a8dd47094c7079ec1fcbd5df9870c486ea2bcce22d62ab5e5ce2590c13529b7e64',1,'Networking::Enums']]],
-  ['cnt_2',['cnt',['../d6/de1/a00233.html#ae1d905c6ac1a0c9b96dca16153917334',1,'Map::StripHeaderMetadata::cnt'],['../dd/dea/a00408.html#ae1d905c6ac1a0c9b96dca16153917334',1,'Networking::PlannerAppendDatagram::cnt'],['../d9/d72/a00412.html#ae1d905c6ac1a0c9b96dca16153917334',1,'Networking::PlannerRemoveDatagram::cnt'],['../df/d15/a00416.html#ae1d905c6ac1a0c9b96dca16153917334',1,'Networking::PlannerResponseDatagram::cnt']]],
-  ['command_3',['command',['../dd/dea/a00408.html#af161fc144504ebd2d6a3a287a47efcc0',1,'Networking::PlannerAppendDatagram']]],
-  ['config_4',['Config',['../d1/da8/a00230.html',1,'']]],
-  ['config_5',['config',['../dd/dd7/a00248.html#a8c771e9a4eb6555d1dc3e348244e2596',1,'Config::Paths']]],
-  ['config_6',['Config',['../d9/d21/a00240.html',1,'Config']]],
-  ['connect_7',['connect',['../d8/d21/a00368.html#a01948d8cb99ea51677e34382c9e2c8aa',1,'Networking::AbstractUDPSocket']]],
-  ['connected_8',['connected',['../d9/de6/a00404.html#a0d28f70b9b7238e7de23f1128d858d39',1,'Networking::Network']]],
-  ['course_9',['course',['../d6/de1/a00233.html#ac6894c88aabf335922736a63b2b87b97',1,'Map::StripNavigationMetadata::course'],['../d6/de1/a00233.html#ac6894c88aabf335922736a63b2b87b97',1,'Map::StripFormatMetadata::course'],['../dc/df3/a00424.html#acaa2fde7e3fad7df8f5755347603d17b',1,'Networking::TelemetryDatagram::course']]],
-  ['crc16_10',['crc16',['../d6/de1/a00233.html#a4438e0df9f58b1861feb3fc659f52534',1,'Map::ImageMetadata::crc16'],['../dc/df3/a00424.html#a4438e0df9f58b1861feb3fc659f52534',1,'Networking::TelemetryDatagram::crc16'],['../d4/dd3/a00428.html#a4438e0df9f58b1861feb3fc659f52534',1,'Networking::TelemetryRequest::crc16']]],
-  ['createimagecache_11',['createImageCache',['../dd/dd7/a00248.html#ac4ba0309ec01a00b9b5d8e8530d19969',1,'Config::Paths']]],
-  ['cutimage_12',['cutImage',['../d9/d21/a00240.html#a6e81ba455ac73046cba68a75c0d34991',1,'Config::Config']]]
+  ['cache_0',['cache',['../de/d19/a00643.html#a58c9cb26b18c19f45f218accf9833eb3',1,'Networking::HTTPDownloader']]],
+  ['checkcrc_1',['checkCRC',['../df/dc7/a00807.html#a4e364dd16670e0b52593e57472de695c',1,'QuasarSDK::TelemetrySocket']]],
+  ['clearimagecache_2',['clearImageCache',['../d4/d4b/a00471.html#a302e70bd6e9c041eee58143363ab1475',1,'Config::Paths']]],
+  ['clearremotestorage_3',['ClearRemoteStorage',['../d8/ddc/a00655.html#a8dd47094c7079ec1fcbd5df9870c486ea2bcce22d62ab5e5ce2590c13529b7e64',1,'Networking::Enums::ClearRemoteStorage()'],['../d8/d2d/a00815.html#a8dd47094c7079ec1fcbd5df9870c486ea2bcce22d62ab5e5ce2590c13529b7e64',1,'QuasarSDK::Enums::ClearRemoteStorage()']]],
+  ['cnt_4',['cnt',['../d2/df5/a00137.html#ae1d905c6ac1a0c9b96dca16153917334',1,'cnt():&#160;imagemetadata.h'],['../d9/d69/a00451.html#ae1d905c6ac1a0c9b96dca16153917334',1,'QuasarSDK::Datagrams::PlannerResponseDatagram::cnt()'],['../d9/d69/a00451.html#ae1d905c6ac1a0c9b96dca16153917334',1,'QuasarSDK::Datagrams::PlannerRemoveDatagram::cnt()'],['../d9/d69/a00451.html#ae1d905c6ac1a0c9b96dca16153917334',1,'QuasarSDK::Datagrams::PlannerAppendDatagram::cnt()'],['../d8/d13/a00671.html#ae1d905c6ac1a0c9b96dca16153917334',1,'Networking::PlannerResponseDatagram::cnt()'],['../d2/d6e/a00667.html#ae1d905c6ac1a0c9b96dca16153917334',1,'Networking::PlannerRemoveDatagram::cnt()'],['../d7/d5f/a00663.html#ae1d905c6ac1a0c9b96dca16153917334',1,'Networking::PlannerAppendDatagram::cnt()'],['../de/df8/a00440.html#ae1d905c6ac1a0c9b96dca16153917334',1,'Map::StripHeaderMetadata::cnt()']]],
+  ['command_5',['command',['../d7/d5f/a00663.html#af161fc144504ebd2d6a3a287a47efcc0',1,'Networking::PlannerAppendDatagram::command()'],['../d9/d69/a00451.html#af161fc144504ebd2d6a3a287a47efcc0',1,'QuasarSDK::Datagrams::PlannerAppendDatagram::command()']]],
+  ['config_6',['config',['../d4/d4b/a00471.html#a8c771e9a4eb6555d1dc3e348244e2596',1,'Config::Paths']]],
+  ['config_7',['Config',['../d1/d7e/a00434.html',1,'Config'],['../d2/d91/a00459.html',1,'Config']]],
+  ['config_2eh_8',['config.h',['../d5/d35/a00266.html',1,'']]],
+  ['connect_9',['connect',['../d6/d6a/a00619.html#a01948d8cb99ea51677e34382c9e2c8aa',1,'Networking::UDPSocketBase']]],
+  ['connected_10',['connected',['../dc/d91/a00659.html#a0d28f70b9b7238e7de23f1128d858d39',1,'Networking::Network']]],
+  ['course_11',['course',['../de/df8/a00440.html#ac6894c88aabf335922736a63b2b87b97',1,'Map::StripNavigationMetadata::course()'],['../de/df8/a00440.html#ac6894c88aabf335922736a63b2b87b97',1,'Map::StripFormatMetadata::course()'],['../d2/d85/a00679.html#acaa2fde7e3fad7df8f5755347603d17b',1,'Networking::TelemetryDatagram::course()'],['../d9/d69/a00451.html#acaa2fde7e3fad7df8f5755347603d17b',1,'QuasarSDK::Datagrams::TelemetryDatagram::course()'],['../d2/df5/a00137.html#ac6894c88aabf335922736a63b2b87b97',1,'course():&#160;imagemetadata.h']]],
+  ['crc16_12',['crc16',['../db/d77/a00683.html#a4438e0df9f58b1861feb3fc659f52534',1,'Networking::TelemetryRequest::crc16()'],['../de/df4/a00450.html#a097cfb084605da99a62a9eeac5020848',1,'QuasarSDK::Utils::crc16()'],['../d9/d69/a00451.html#a4438e0df9f58b1861feb3fc659f52534',1,'QuasarSDK::Datagrams::TelemetryRequest::crc16()'],['../d9/d69/a00451.html#a4438e0df9f58b1861feb3fc659f52534',1,'QuasarSDK::Datagrams::TelemetryDatagram::crc16()'],['../d2/d85/a00679.html#a4438e0df9f58b1861feb3fc659f52534',1,'Networking::TelemetryDatagram::crc16()'],['../de/df8/a00440.html#a4438e0df9f58b1861feb3fc659f52534',1,'Map::ImageMetadata::crc16()']]],
+  ['crc16_5fccitt_13',['crc16_ccitt',['../de/df4/a00450.html#a15a9ef310fea932c75d1cfee9d7dc1d4',1,'QuasarSDK::Utils']]],
+  ['createimagecache_14',['createImageCache',['../d4/d4b/a00471.html#a1979f13990bd009fe15969804f0e30bf',1,'Config::Paths']]],
+  ['cutimage_15',['cutImage',['../d2/d91/a00459.html#a6e81ba455ac73046cba68a75c0d34991',1,'Config::Config']]]
 ];

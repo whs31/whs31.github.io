@@ -1,0 +1,7 @@
+<map id="executeCommand" name="executeCommand">
+<area shape="rect" id="node1" title="Executes built&#45;in command in execd service." alt="" coords="5,118,145,146"/>
+<area shape="rect" id="node2" href="$dc/d4d/a00620.html#a78fe1baa942e1f462b98f844883ee06b" title="Returns arguments for Focus mode." alt="" coords="193,5,400,50"/>
+<area shape="rect" id="node3" href="$dc/d4d/a00620.html#aef662bcdf98102a3b70f00aa1fb80922" title="Returns arguments for Form mode." alt="" coords="193,75,400,119"/>
+<area shape="rect" id="node4" href="$dc/d4d/a00620.html#aadba8c6a2c4c94f621db548b539cc18f" title="Returns arguments for Reform mode." alt="" coords="193,144,400,189"/>
+<area shape="rect" id="node5" href="$d0/d8d/a00612.html#ad1239ca09fddf150d1584cdf26baf7f3" title="Sends given QByteArray to socket." alt="" coords="193,213,400,258"/>
+</map>

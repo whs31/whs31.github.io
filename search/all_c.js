@@ -1,10 +1,10 @@
 var searchData=
 [
-  ['navip_0',['navIP',['../d9/d21/a00240.html#aa9f58cbedfcdde939083775c3a77ef6e',1,'Config::Config']]],
-  ['network_1',['Network',['../d9/de6/a00404.html',1,'Networking']]],
-  ['networkcommand_2',['NetworkCommand',['../d9/d95/a00400.html#a8dd47094c7079ec1fcbd5df9870c486e',1,'Networking::Enums']]],
-  ['networkdelay_3',['networkDelay',['../d9/de6/a00404.html#a63f66fcc8a0220c01c1ec7500446286f',1,'Networking::Network']]],
-  ['networking_4',['Networking',['../da/d31/a00234.html',1,'']]],
-  ['nx_5',['nx',['../d6/de1/a00233.html#a31a74a81efd0ba14cbc4853f7fce3af0',1,'Map::StripFormatMetadata']]],
-  ['ny_6',['ny',['../d6/de1/a00233.html#a9696b3729bc7ba3effc41ee585be5b27',1,'Map::StripFormatMetadata']]]
+  ['map_0',['Map',['../de/df8/a00440.html',1,'']]],
+  ['mapconfig_1',['mapConfig',['../d4/d4b/a00471.html#a6b7ef6fd7aab00bbfb99d54ea405be33',1,'Config::Paths']]],
+  ['marker_2',['marker',['../d2/df5/a00137.html#a51bdee9eea878b90b917afc0f8c99435',1,'marker():&#160;imagemetadata.h'],['../d9/d69/a00451.html#a0ea604dd26c415c8f380323b91bdba56',1,'QuasarSDK::Datagrams::TelemetryRequest::marker()'],['../d9/d69/a00451.html#a0ea604dd26c415c8f380323b91bdba56',1,'QuasarSDK::Datagrams::TelemetryDatagram::marker()'],['../d9/d69/a00451.html#a0ea604dd26c415c8f380323b91bdba56',1,'QuasarSDK::Datagrams::PlannerResponseDatagram::marker()'],['../d9/d69/a00451.html#a0ea604dd26c415c8f380323b91bdba56',1,'QuasarSDK::Datagrams::PlannerRemoveDatagram::marker()'],['../d9/d69/a00451.html#a0ea604dd26c415c8f380323b91bdba56',1,'QuasarSDK::Datagrams::PlannerAppendDatagram::marker()'],['../db/d77/a00683.html#a0ea604dd26c415c8f380323b91bdba56',1,'Networking::TelemetryRequest::marker()'],['../d2/d85/a00679.html#a0ea604dd26c415c8f380323b91bdba56',1,'Networking::TelemetryDatagram::marker()'],['../d8/d13/a00671.html#a0ea604dd26c415c8f380323b91bdba56',1,'Networking::PlannerResponseDatagram::marker()'],['../d2/d6e/a00667.html#a0ea604dd26c415c8f380323b91bdba56',1,'Networking::PlannerRemoveDatagram::marker()'],['../d7/d5f/a00663.html#a0ea604dd26c415c8f380323b91bdba56',1,'Networking::PlannerAppendDatagram::marker()'],['../de/df8/a00440.html#a51bdee9eea878b90b917afc0f8c99435',1,'Map::StripHeaderMetadata::marker()']]],
+  ['meta_5fmarker_3',['meta_marker',['../de/df8/a00440.html#a1ef68cababe80d680337efbc77524812',1,'Map::ImageMetaHeader']]],
+  ['meta_5fsize_4',['meta_size',['../de/df8/a00440.html#afc253a7e3aa01efe133353d8c6034f4b',1,'Map::ImageMetaHeader']]],
+  ['metrics_5',['metrics',['../d5/d68/a00747.html#a563a67ebf5e4d8ba152045a7c51fd604',1,'QuasarSDK::BaseUDPSocket::metrics()'],['../d3/d95/a00779.html#a7af680d6ad6bcfd92da53b320c9c9236',1,'QuasarSDK::TCPServer::metrics()']]],
+  ['mode_6',['mode',['../de/df8/a00440.html#a37e90f5e3bd99fac2021fb3a326607d4',1,'Map::ImageMetadata']]]
 ];

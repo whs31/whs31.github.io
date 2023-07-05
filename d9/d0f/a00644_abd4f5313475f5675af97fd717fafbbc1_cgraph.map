@@ -1,0 +1,4 @@
+<map id="startServer" name="startServer">
+<area shape="rect" id="node1" title="Starts socket on given address." alt="" coords="5,14,99,42"/>
+<area shape="rect" id="node2" href="$d0/d8d/a00612.html#a6aac8bbc4a1ac6c37d4c9f0564256fbd" title="Returns current socket port." alt="" coords="147,5,354,50"/>
+</map>

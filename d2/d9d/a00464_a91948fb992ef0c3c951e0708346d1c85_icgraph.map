@@ -1,0 +1,9 @@
+<map id="imageCache" name="imageCache">
+<area shape="rect" id="node1" title="Returns cache directory." alt="" coords="548,91,651,118"/>
+<area shape="rect" id="node2" href="$d2/d9d/a00464.html#a302e70bd6e9c041eee58143363ab1475" title="Erases image and TCP&#45;IP cache from disk." alt="" coords="5,40,140,68"/>
+<area shape="rect" id="node3" href="$d2/d9d/a00464.html#a1979f13990bd009fe15969804f0e30bf" title="Creates and setups image cache." alt="" coords="228,100,371,128"/>
+<area shape="rect" id="node4" href="$d9/dc5/a00480.html#aa5a5adb0e730b9b703d52015ee744bca" title="Searches for image files in application TCP&#45;IO cache directory." alt="" coords="188,152,411,180"/>
+<area shape="rect" id="node5" href="$d2/d9d/a00464.html#ac4c96993778b59c29057bef3144fb4d0" title="Returns specified LOD directory." alt="" coords="459,91,500,118"/>
+<area shape="rect" id="node7" href="$d2/d9d/a00464.html#a7560631e1c9c5f4f885c206a7dc3342c" title="Returns TCP&#45;IP cache directory." alt="" coords="459,143,500,170"/>
+<area shape="rect" id="node6" href="$d9/dc5/a00480.html#a5d4d76eadea546e4017593a46362f383" title="Searches for image files in application cache directory." alt="" coords="199,31,400,76"/>
+</map>

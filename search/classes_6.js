@@ -1,8 +1,5 @@
 var searchData=
 [
-  ['paths_0',['Paths',['../dd/dd7/a00248.html',1,'Config']]],
-  ['pinger_1',['Pinger',['../d4/d82/a00436.html',1,'Networking']]],
-  ['plannerappenddatagram_2',['PlannerAppendDatagram',['../dd/dea/a00408.html',1,'Networking']]],
-  ['plannerremovedatagram_3',['PlannerRemoveDatagram',['../d9/d72/a00412.html',1,'Networking']]],
-  ['plannerresponsedatagram_4',['PlannerResponseDatagram',['../df/d15/a00416.html',1,'Networking']]]
+  ['imagemetadata_0',['ImageMetadata',['../de/df8/a00440.html#d8/d75/a00555',1,'Map']]],
+  ['imagemetaheader_1',['ImageMetaHeader',['../de/df8/a00440.html#d9/d87/a00551',1,'Map']]]
 ];

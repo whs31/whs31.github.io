@@ -25,8 +25,14 @@
 var NAVTREE =
 [
   [ "QuaSAR", "index.html", [
+    [ "Список устаревших определений и описаний", "df/d70/a00431.html", null ],
+    [ "Список задач", "d9/dd5/a00432.html", null ],
     [ "Пространства имен", "namespaces.html", [
-      [ "Пространства имен", "namespaces.html", "namespaces_dup" ]
+      [ "Пространства имен", "namespaces.html", "namespaces_dup" ],
+      [ "Члены пространств имен", "namespacemembers.html", [
+        [ "Указатель", "namespacemembers.html", null ],
+        [ "Функции", "namespacemembers_func.html", null ]
+      ] ]
     ] ],
     [ "Классы", "annotated.html", [
       [ "Классы", "annotated.html", "annotated_dup" ],
@@ -40,6 +46,13 @@ var NAVTREE =
         [ "Элементы перечислений", "functions_eval.html", null ],
         [ "Свойства", "functions_prop.html", null ]
       ] ]
+    ] ],
+    [ "Файлы", "files.html", [
+      [ "Файлы", "files.html", "files_dup" ],
+      [ "Список членов всех файлов", "globals.html", [
+        [ "Указатель", "globals.html", null ],
+        [ "Переменные", "globals_vars.html", null ]
+      ] ]
     ] ]
   ] ]
 ];
@@ -47,7 +60,10 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"dc/df3/a00424.html#a1d3228afa3a1d6773954f40c1e519eb9"
+"d3/da3/a00627.html#a001ba3c908f034c311bfb072d592173a",
+"d8/d2d/a00815.html#a26cd5c2531deeff8b716e740ddc8e469a98cb58869380e6582c793dcd0e86598c",
+"dc/d91/a00659.html#a990679eb6ce0d30a198cdbc346429535",
+"dir_40386f8e9d1c7fc56eb501866b4e09f9.html"
 ];
 
 var SYNCONMSG = 'нажмите на выключить для синхронизации панелей';

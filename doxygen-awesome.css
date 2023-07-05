@@ -1,32 +1,3 @@
-/**
-
-Doxygen Awesome
-https://github.com/jothepro/doxygen-awesome-css
-
-MIT License
-
-Copyright (c) 2021 - 2023 jothepro
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-
-*/
-
 html {
     /* primary theme color. This will affect the entire websites color scheme: links, arrows, labels, ... */
     --primary-color: #df8e1d;
@@ -185,11 +156,11 @@ html {
     html:not(.light-mode) {
         color-scheme: dark;
 
-        --primary-color: #1982d2;
-        --primary-dark-color: #86a9c4;
-        --primary-light-color: #4779ac;
+        --primary-color: #7661b3;
+        --primary-dark-color: #ae9ed6;
+        --primary-light-color: #2a2536;
 
-        --box-shadow: 0 2px 8px 0 rgba(0,0,0,.35);
+        --box-shadow: 0 8px 8px 0 rgba(0,0,0,.35);
 
         --odd-color: rgba(100,100,100,.06);
 
@@ -208,21 +179,21 @@ html {
         --blockquote-background: #222325;
         --blockquote-foreground: #7e8c92;
 
-        --warning-color: #2e1917;
-        --warning-color-dark: #ad2617;
-        --warning-color-darker: #f5b1aa;
-        --note-color: #3b2e04;
-        --note-color-dark: #f1b602;
-        --note-color-darker: #ceb670;
-        --todo-color: #163750;
-        --todo-color-dark: #1982D2;
-        --todo-color-darker: #dcf0fa;
+        --warning-color: #3b2e04;
+        --warning-color-dark: #f1b602;
+        --warning-color-darker: #ceb670;
+        --note-color: #163750;
+        --note-color-dark: #1982D2;
+        --note-color-darker: #dcf0fa;
+        --todo-color: #2e323b;
+        --todo-color-dark: #738396;
+        --todo-color-darker: #abb0bd;
         --deprecated-color: #2e323b;
         --deprecated-color-dark: #738396;
         --deprecated-color-darker: #abb0bd;
-        --bug-color: #2a2536;
-        --bug-color-dark: #7661b3;
-        --bug-color-darker: #ae9ed6;
+        --bug-color: #2e1917;
+        --bug-color-dark: #ad2617;
+        --bug-color-darker: #f5b1aa;
         --invariant-color: #303a35;
         --invariant-color-dark: #76ce96;
         --invariant-color-darker: #cceed5;

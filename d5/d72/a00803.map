@@ -1,0 +1,6 @@
+<map id="TelemetrySocket" name="TelemetrySocket">
+<area shape="rect" id="node1" title="Класс для работы с сервисом navd2 на РЛС." alt="" coords="46,191,175,218"/>
+<area shape="rect" id="node2" href="$d1/d79/a00745.html" title="Базовый класс для сокетов, работающих по протоколу UDP." alt="" coords="5,98,130,126"/>
+<area shape="rect" id="node3" href="$d4/dd7/a00793.html" title="Класс&#45;хранилище для текущей телеметрии РЛС." alt="" coords="154,98,240,126"/>
+<area shape="rect" id="node4" href="$de/dfe/a00448.html#da/db8/a00797" title="Датаграмма телеметрии от РЛС к наземке." alt="" coords="121,5,273,33"/>
+</map>

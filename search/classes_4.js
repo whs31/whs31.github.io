@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['imagemetadata_0',['ImageMetadata',['../d6/de1/a00233.html#d5/d0f/a00308',1,'Map']]],
-  ['imagemetaheader_1',['ImageMetaHeader',['../d6/de1/a00233.html#d8/d17/a00304',1,'Map']]]
+  ['feedbacksocket_0',['FeedbackSocket',['../d4/d10/a00635.html',1,'Networking']]],
+  ['filesystem_1',['Filesystem',['../dd/d9c/a00487.html',1,'OS']]]
 ];

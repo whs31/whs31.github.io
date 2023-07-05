@@ -1,0 +1,6 @@
+<map id="connect" name="connect">
+<area shape="rect" id="node1" title="Binds this socket to specified address." alt="" coords="263,83,335,111"/>
+<area shape="rect" id="node2" href="$d3/dd6/a00624.html#a958f448ca262fd5e96958cbfeec13676" title="Starts socket on given address." alt="" coords="17,5,203,50"/>
+<area shape="rect" id="node3" href="$d1/d51/a00628.html#a958f448ca262fd5e96958cbfeec13676" title="Starts socket on given address." alt="" coords="5,75,215,119"/>
+<area shape="rect" id="node4" href="$dc/d62/a00640.html#a958f448ca262fd5e96958cbfeec13676" title="Starts socket on given address." alt="" coords="21,144,199,189"/>
+</map>

@@ -3,9 +3,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.7"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuaSAR: Исходный файл src/c++/network/utils/ping.c++</title>
+<title>QuaSAR: Исходный файл sdkchartbase.c++</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -29,14 +29,14 @@
   <td id="projectalign">
    <div id="projectname">QuaSAR<span id="projectnumber">&#160;2.12.0</span>
    </div>
-   <div id="projectbrief">СПО для РЛС &quot;Квазар&quot;</div>
+   <div id="projectbrief">SAR control software</div>
   </td>
  </tr>
  </tbody>
 </table>
 </div>
 <!-- end header part -->
-<!-- Создано системой Doxygen 1.9.7 -->
+<!-- Создано системой Doxygen 1.9.6 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 var searchBox = new SearchBox("searchBox", "../../search/",'.html');
@@ -92,87 +92,72 @@ $(document).ready(function(){initNavTree('d3/de5/a00209_source.html','../../'); 
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">ping.c++</div></div>
+  <div class="headertitle"><div class="title">sdkchartbase.c++</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;ping.h&quot;</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &lt;stdexcept&gt;</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;QtCore/QProcess&gt;</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;QtCore/QTimer&gt;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;QtCore/QDebug&gt;</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;network/netenums.h&quot;</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../da/d31/a00234.html">Networking</a></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>{</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="../../d4/d82/a00436.html#a26212be9cfb26a7569a0834dbd5123d5">   11</a></span><a class="code hl_function" href="../../d4/d82/a00436.html#a26212be9cfb26a7569a0834dbd5123d5">Pinger::Pinger</a>(QObject *parent)</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    : QObject{parent}</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    , t(new QTimer(this))</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    , ch(new QProcess(this))</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    , addr(<span class="stringliteral">&quot;127.0.0.1&quot;</span>)</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    , m_args(<span class="stringliteral">&quot;&quot;</span>)</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>{</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    ch-&gt;setProcessChannelMode(QProcess::MergedChannels);</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    connect(ch, &amp;QProcess::readyRead, <span class="keyword">this</span>, &amp;Pinger::recv);</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    connect(t, &amp;QTimer::timeout, <span class="keyword">this</span>, &amp;Pinger::ping);</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>}</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>Pinger::~Pinger() { ch-&gt;terminate(); }</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="../../d4/d82/a00436.html#a56578afa8732577b57258898ddc7de58">   25</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="../../d4/d82/a00436.html#a56578afa8732577b57258898ddc7de58">Pinger::start</a>(uint32_t interval, <span class="keyword">const</span> QString&amp; address, <span class="keyword">const</span> vector&lt;QString&gt; args)</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>{</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keywordflow">if</span>(address.split(<span class="charliteral">&#39;.&#39;</span>).size() != 4)</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <span class="keywordflow">throw</span> std::invalid_argument(<span class="stringliteral">&quot;Invalid address is provided to ping&quot;</span>);</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    addr = address;</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span>&amp; arg : args)</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        m_args += QString(arg);</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keywordflow">if</span>(interval == 0)</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        ping();</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        t-&gt;start(interval);</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>}</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="../../d4/d82/a00436.html#aba28ee97ffe6d508e26f534ec7e62f8f">   41</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="../../d4/d82/a00436.html#aba28ee97ffe6d508e26f534ec7e62f8f">Pinger::stop</a>() noexcept { t-&gt;stop(); }</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="keywordtype">void</span> Pinger::ping()</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>{</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="preprocessor">    #ifdef Q_OS_WIN</span></div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        ch-&gt;start(<span class="stringliteral">&quot;ping&quot;</span>, QStringList(<span class="stringliteral">&quot;-t&quot;</span>) &lt;&lt; QString(addr) );</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="preprocessor">    #else</span></div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        ch-&gt;start(<span class="stringliteral">&quot;ping&quot;</span>, QStringList() &lt;&lt; QString(addr) );</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="preprocessor">    #endif</span></div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    qDebug().noquote() &lt;&lt; <span class="stringliteral">&quot;[PING] Starting ping at&quot;</span> &lt;&lt; addr;</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>}</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="keywordtype">void</span> Pinger::recv()</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>{</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keyword">auto</span> data = ch-&gt;readAll();</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keywordtype">bool</span> success = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="preprocessor">    #ifdef Q_OS_WIN</span></div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        success = data.contains(<span class="stringliteral">&quot;TTL=&quot;</span>);</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="preprocessor">    #else</span></div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        success = data.contains(<span class="stringliteral">&quot;time=&quot;</span>);</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="preprocessor">    #endif</span></div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    emit <a class="code hl_signal" href="../../d4/d82/a00436.html#aec41dea9a34ffd7275acc4b59ba16c1c">result</a>(success ? (<span class="keywordtype">int</span>)<a class="code hl_enumvalue" href="../../d9/d95/a00400.html#a26cd5c2531deeff8b716e740ddc8e469afdfbdf3247bd36a1f17270d5cec74c9c">Enums::PingStatus::Success</a> : (int)Enums::PingStatus::Timeout);</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>}</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>} <span class="comment">// Network</span></div>
-<div class="ttc" id="aa00234_html"><div class="ttname"><a href="../../da/d31/a00234.html">Networking</a></div><div class="ttdoc">Пространство имен для работы с сетевыми подключениями к РЛС.</div><div class="ttdef"><b>Definition</b> <a href="../../d2/df5/a00137_source.html#l00006">abstractudpsocket.h:7</a></div></div>
-<div class="ttc" id="aa00400_html_a26cd5c2531deeff8b716e740ddc8e469afdfbdf3247bd36a1f17270d5cec74c9c"><div class="ttname"><a href="../../d9/d95/a00400.html#a26cd5c2531deeff8b716e740ddc8e469afdfbdf3247bd36a1f17270d5cec74c9c">Networking::Enums::Success</a></div><div class="ttdeci">@ Success</div><div class="ttdoc">Успешное выполнение команды ping.</div><div class="ttdef"><b>Definition</b> <a href="../../d5/de9/a00176_source.html#l00022">netenums.h:22</a></div></div>
-<div class="ttc" id="aa00436_html_a26212be9cfb26a7569a0834dbd5123d5"><div class="ttname"><a href="../../d4/d82/a00436.html#a26212be9cfb26a7569a0834dbd5123d5">Networking::Pinger::Pinger</a></div><div class="ttdeci">Pinger(QObject *parent=nullptr)</div><div class="ttdoc">Constructs new Pinger object with given parent.</div><div class="ttdef"><b>Definition</b> <a href="../../d3/de5/a00209_source.html#l00011">ping.c++:11</a></div></div>
-<div class="ttc" id="aa00436_html_a56578afa8732577b57258898ddc7de58"><div class="ttname"><a href="../../d4/d82/a00436.html#a56578afa8732577b57258898ddc7de58">Networking::Pinger::start</a></div><div class="ttdeci">void start(uint32_t interval, const QString &amp;address, const vector&lt; QString &gt; args={})</div><div class="ttdoc">Starts pinging given address, until Pinger is not destroyed or stopped.</div><div class="ttdef"><b>Definition</b> <a href="../../d3/de5/a00209_source.html#l00025">ping.c++:25</a></div></div>
-<div class="ttc" id="aa00436_html_aba28ee97ffe6d508e26f534ec7e62f8f"><div class="ttname"><a href="../../d4/d82/a00436.html#aba28ee97ffe6d508e26f534ec7e62f8f">Networking::Pinger::stop</a></div><div class="ttdeci">void stop() noexcept</div><div class="ttdoc">Stops pinging address.</div><div class="ttdef"><b>Definition</b> <a href="../../d3/de5/a00209_source.html#l00041">ping.c++:41</a></div></div>
-<div class="ttc" id="aa00436_html_aec41dea9a34ffd7275acc4b59ba16c1c"><div class="ttname"><a href="../../d4/d82/a00436.html#aec41dea9a34ffd7275acc4b59ba16c1c">Networking::Pinger::result</a></div><div class="ttdeci">void result(int status)</div><div class="ttdoc">Emitted when ping is finished.</div></div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;sdkchartbase.h&quot;</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">namespace </span>SDK::Quick</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span>{</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>  ChartBase::ChartBase(QQuickItem* parent)</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>      : QQuickItem(parent)</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>      , m_backgroundColor(<span class="stringliteral">&quot;black&quot;</span>)</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>      , m_foregroundColor(<span class="stringliteral">&quot;white&quot;</span>)</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>      , m_plottingColor(<span class="stringliteral">&quot;purple&quot;</span>)</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>      , m_drawBackground(true)</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>  {</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    this-&gt;setFlags(ItemHasContents);</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>  }</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>  <span class="keywordtype">void</span> ChartBase::forceUpdate() noexcept { this-&gt;update(); }</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>  QString ChartBase::backgroundColor()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_backgroundColor; }</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>  <span class="keywordtype">void</span> ChartBase::setBackgroundColor(<span class="keyword">const</span> QString&amp; o) {</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keywordflow">if</span> (m_backgroundColor == o)</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>      <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    m_backgroundColor = o;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    emit backgroundColorChanged();</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    this-&gt;update();</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>  }</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>  QString ChartBase::foregroundColor()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_foregroundColor; }</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>  <span class="keywordtype">void</span> ChartBase::setForegroundColor(<span class="keyword">const</span> QString&amp; o) {</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keywordflow">if</span> (m_foregroundColor == o)</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>      <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    m_foregroundColor = o;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    emit foregroundColorChanged();</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    this-&gt;update();</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>  }</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>  QString ChartBase::plottingColor()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_plottingColor; }</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>  <span class="keywordtype">void</span> ChartBase::setPlottingColor(<span class="keyword">const</span> QString&amp; o) {</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keywordflow">if</span> (m_plottingColor == o)</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>      <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    m_plottingColor = o;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    emit plottingColorChanged();</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    this-&gt;update();</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>  }</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>  <span class="keywordtype">bool</span> ChartBase::drawBackground()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_drawBackground; }</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>  <span class="keywordtype">void</span> ChartBase::setDrawBackground(<span class="keywordtype">bool</span> o) {</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keywordflow">if</span> (m_drawBackground == o)</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>      <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    m_drawBackground = o;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    emit drawBackgroundChanged();</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    this-&gt;update();</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>  }</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>} <span class="comment">// SDK::Quick</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="../../dir_fcb2a60e1810a51543a3cc3a113d0956.html">c++</a></li><li class="navelem"><a class="el" href="../../dir_2658f57a99a735e2e16983d97ef2d726.html">network</a></li><li class="navelem"><a class="el" href="../../dir_60755ab0f925e32d4971f456ca5fc601.html">utils</a></li><li class="navelem"><b>ping.c++</b></li>
-    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7 </li>
+    <li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="../../dir_fcb2a60e1810a51543a3cc3a113d0956.html">c++</a></li><li class="navelem"><a class="el" href="../../dir_5eaa9160e914aa78085dedce4b00e66f.html">sdk</a></li><li class="navelem"><a class="el" href="../../dir_72207ca2e38c1e1375ea23aa1480da49.html">src</a></li><li class="navelem"><a class="el" href="../../dir_b12f37765c7b1079f990cb4c3776fe72.html">quick</a></li><li class="navelem"><b>sdkchartbase.c++</b></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
   </ul>
 </div>
 </body>

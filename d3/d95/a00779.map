@@ -1,0 +1,4 @@
+<map id="Telemetry" name="Telemetry">
+<area shape="rect" id="node1" title="Базовый класс для UDP сокетов, требующих целостность датаграммы." alt="" coords="24,81,111,109"/>
+<area shape="rect" id="node2" href="$dd/db2/a00737.html" title="Базовый класс для сокетов, работающих по протоколу UDP." alt="" coords="5,5,130,33"/>
+</map>

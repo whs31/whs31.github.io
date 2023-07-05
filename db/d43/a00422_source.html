@@ -1,0 +1,163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>QuaSAR: Исходный файл quasarsdk_baseudpsocket.h</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="../../icon.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">QuaSAR<span id="projectnumber">&#160;2.12.0</span>
+   </div>
+   <div id="projectbrief">SAR control software</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.6 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('db/d43/a00422_source.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">quasarsdk_baseudpsocket.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="../../db/d43/a00422.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;QtNetwork/QUdpSocket&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d9/d10/a00449.html">QuasarSDK</a></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>{</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="../../d5/d68/a00747.html">   14</a></span>  <span class="keyword">class </span><a class="code hl_class" href="../../d5/d68/a00747.html">BaseUDPSocket</a> : <span class="keyword">public</span> QUdpSocket</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>  {</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    Q_OBJECT</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>      <span class="keyword">explicit</span> <a class="code hl_class" href="../../d5/d68/a00747.html">BaseUDPSocket</a>(QObject* parent = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>      <a class="code hl_function" href="../../d5/d68/a00747.html#a8d9883122ea68f3982da0a6820e31ca5">~BaseUDPSocket</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>      [[nodiscard]] QString <a class="code hl_function" href="../../d5/d68/a00747.html#a85e6ea749496bfaa328adc586fe00c87">name</a>() <span class="keyword">const</span>; <span class="keywordtype">void</span> <a class="code hl_function" href="../../d5/d68/a00747.html#a18af9712714a5c702f50537ae560a69d">setName</a>(<span class="keyword">const</span> QString&amp;) <span class="keyword">noexcept</span>;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>      <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d5/d68/a00747.html#a958f448ca262fd5e96958cbfeec13676">start</a>(<span class="keyword">const</span> QString&amp; address);</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>      <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d5/d68/a00747.html#aba28ee97ffe6d508e26f534ec7e62f8f">stop</a>() <span class="keyword">noexcept</span>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>      <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d5/d68/a00747.html#a5ff727bb24a856b41e03e5c2da1b7970">send</a>(<span class="keyword">const</span> QByteArray&amp; data) <span class="keyword">noexcept</span>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>      [[nodiscard]] QString <a class="code hl_function" href="../../d5/d68/a00747.html#a3c07e52a7dd282bbffe449aaca5b4604">addressString</a>() <span class="keyword">const</span> <span class="keyword">noexcept</span>;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>      [[nodiscard]] QHostAddress <a class="code hl_function" href="../../d5/d68/a00747.html#aa72de19e524866d67eac108348a7141a">hostAddress</a>() <span class="keyword">const</span> <span class="keyword">noexcept</span>;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>      [[nodiscard]] QString <a class="code hl_function" href="../../d5/d68/a00747.html#aa28fa3e334a61f326e74a170334fce3b">hostAddressString</a>() <span class="keyword">const</span> <span class="keyword">noexcept</span>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>      [[nodiscard]] uint16_t <a class="code hl_function" href="../../d5/d68/a00747.html#a6aac8bbc4a1ac6c37d4c9f0564256fbd">port</a>() <span class="keyword">const</span> <span class="keyword">noexcept</span>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    signals:</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="../../d5/d68/a00747.html#a3eb63c5af67a44fb60ba731d3da7a56d">   36</a></span>      <span class="keywordtype">void</span> <a class="code hl_signal" href="../../d5/d68/a00747.html#a3eb63c5af67a44fb60ba731d3da7a56d">received</a>(QByteArray data);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="../../d5/d68/a00747.html#a563a67ebf5e4d8ba152045a7c51fd604">   56</a></span>      <span class="keywordtype">void</span> <a class="code hl_signal" href="../../d5/d68/a00747.html#a563a67ebf5e4d8ba152045a7c51fd604">metrics</a>(<span class="keyword">const</span> QString&amp; data, <span class="keywordtype">int</span> data_size, <span class="keywordtype">bool</span> out);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>      Q_SLOT <span class="keyword">virtual</span> <span class="keywordtype">void</span> readSocket() noexcept;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    private:</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>      QString m_socketname;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>      QHostAddress m_address;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>      uint16_t m_port;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>  };</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>} <span class="comment">// QuasarSDK</span></div>
+<div class="ttc" id="aa00449_html"><div class="ttname"><a href="../../d9/d10/a00449.html">QuasarSDK</a></div><div class="ttdoc">Пространство имен комплекта разработчика РЛС &quot;Квазар&quot;.</div></div>
+<div class="ttc" id="aa00747_html"><div class="ttname"><a href="../../d5/d68/a00747.html">QuasarSDK::BaseUDPSocket</a></div><div class="ttdoc">Базовый класс для сокетов, работающих по протоколу UDP.</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d43/a00422_source.html#l00014">quasarsdk_baseudpsocket.h:15</a></div></div>
+<div class="ttc" id="aa00747_html_a18af9712714a5c702f50537ae560a69d"><div class="ttname"><a href="../../d5/d68/a00747.html#a18af9712714a5c702f50537ae560a69d">QuasarSDK::BaseUDPSocket::setName</a></div><div class="ttdeci">void setName(const QString &amp;) noexcept</div><div class="ttdoc">Задает отладочное название сокета.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d29/a00419_source.html#l00037">quasarsdk_baseudpsocket.c++:37</a></div></div>
+<div class="ttc" id="aa00747_html_a3c07e52a7dd282bbffe449aaca5b4604"><div class="ttname"><a href="../../d5/d68/a00747.html#a3c07e52a7dd282bbffe449aaca5b4604">QuasarSDK::BaseUDPSocket::addressString</a></div><div class="ttdeci">QString addressString() const noexcept</div><div class="ttdoc">Возвращает текущий адрес сокета в виде строки.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d29/a00419_source.html#l00119">quasarsdk_baseudpsocket.c++:119</a></div></div>
+<div class="ttc" id="aa00747_html_a3eb63c5af67a44fb60ba731d3da7a56d"><div class="ttname"><a href="../../d5/d68/a00747.html#a3eb63c5af67a44fb60ba731d3da7a56d">QuasarSDK::BaseUDPSocket::received</a></div><div class="ttdeci">void received(QByteArray data)</div><div class="ttdoc">Срабатывает, когда сокет принимает датаграмму.</div></div>
+<div class="ttc" id="aa00747_html_a563a67ebf5e4d8ba152045a7c51fd604"><div class="ttname"><a href="../../d5/d68/a00747.html#a563a67ebf5e4d8ba152045a7c51fd604">QuasarSDK::BaseUDPSocket::metrics</a></div><div class="ttdeci">void metrics(const QString &amp;data, int data_size, bool out)</div><div class="ttdoc">Предоставляет отладочные метрики сокета.</div></div>
+<div class="ttc" id="aa00747_html_a5ff727bb24a856b41e03e5c2da1b7970"><div class="ttname"><a href="../../d5/d68/a00747.html#a5ff727bb24a856b41e03e5c2da1b7970">QuasarSDK::BaseUDPSocket::send</a></div><div class="ttdeci">virtual void send(const QByteArray &amp;data) noexcept</div><div class="ttdoc">Посылает в сокет данные.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d29/a00419_source.html#l00107">quasarsdk_baseudpsocket.c++:107</a></div></div>
+<div class="ttc" id="aa00747_html_a6aac8bbc4a1ac6c37d4c9f0564256fbd"><div class="ttname"><a href="../../d5/d68/a00747.html#a6aac8bbc4a1ac6c37d4c9f0564256fbd">QuasarSDK::BaseUDPSocket::port</a></div><div class="ttdeci">uint16_t port() const noexcept</div><div class="ttdoc">Возвращает текущий порт сокета в виде uint16.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d29/a00419_source.html#l00116">quasarsdk_baseudpsocket.c++:116</a></div></div>
+<div class="ttc" id="aa00747_html_a85e6ea749496bfaa328adc586fe00c87"><div class="ttname"><a href="../../d5/d68/a00747.html#a85e6ea749496bfaa328adc586fe00c87">QuasarSDK::BaseUDPSocket::name</a></div><div class="ttdeci">QString name() const</div><div class="ttdoc">Возвращает отладочное название сокета.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d29/a00419_source.html#l00034">quasarsdk_baseudpsocket.c++:34</a></div></div>
+<div class="ttc" id="aa00747_html_a8d9883122ea68f3982da0a6820e31ca5"><div class="ttname"><a href="../../d5/d68/a00747.html#a8d9883122ea68f3982da0a6820e31ca5">QuasarSDK::BaseUDPSocket::~BaseUDPSocket</a></div><div class="ttdeci">~BaseUDPSocket() override</div><div class="ttdoc">Вызывает метод QUdpSocket::disconnect() и удаляет объект.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d29/a00419_source.html#l00031">quasarsdk_baseudpsocket.c++:31</a></div></div>
+<div class="ttc" id="aa00747_html_a958f448ca262fd5e96958cbfeec13676"><div class="ttname"><a href="../../d5/d68/a00747.html#a958f448ca262fd5e96958cbfeec13676">QuasarSDK::BaseUDPSocket::start</a></div><div class="ttdeci">virtual void start(const QString &amp;address)</div><div class="ttdoc">Производит попытку подключения к указанному адресу.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d29/a00419_source.html#l00061">quasarsdk_baseudpsocket.c++:61</a></div></div>
+<div class="ttc" id="aa00747_html_aa28fa3e334a61f326e74a170334fce3b"><div class="ttname"><a href="../../d5/d68/a00747.html#aa28fa3e334a61f326e74a170334fce3b">QuasarSDK::BaseUDPSocket::hostAddressString</a></div><div class="ttdeci">QString hostAddressString() const noexcept</div><div class="ttdoc">Возвращает текущий QHostAddress сокета в виде строки.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d29/a00419_source.html#l00125">quasarsdk_baseudpsocket.c++:125</a></div></div>
+<div class="ttc" id="aa00747_html_aa72de19e524866d67eac108348a7141a"><div class="ttname"><a href="../../d5/d68/a00747.html#aa72de19e524866d67eac108348a7141a">QuasarSDK::BaseUDPSocket::hostAddress</a></div><div class="ttdeci">QHostAddress hostAddress() const noexcept</div><div class="ttdoc">Возвращает текущий QHostAddress сокета.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d29/a00419_source.html#l00122">quasarsdk_baseudpsocket.c++:122</a></div></div>
+<div class="ttc" id="aa00747_html_aba28ee97ffe6d508e26f534ec7e62f8f"><div class="ttname"><a href="../../d5/d68/a00747.html#aba28ee97ffe6d508e26f534ec7e62f8f">QuasarSDK::BaseUDPSocket::stop</a></div><div class="ttdeci">virtual void stop() noexcept</div><div class="ttdoc">Отключает сокет от адреса, если он был подключен.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d29/a00419_source.html#l00090">quasarsdk_baseudpsocket.c++:90</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_6719ab1f1f7655efc2fa43f7eb574fd1.html">libs</a></li><li class="navelem"><a class="el" href="../../dir_c5d4018c0fe90f1660bca3f6235e9876.html">libquasarsdk</a></li><li class="navelem"><a class="el" href="../../dir_0f9d83d35d962a1c6c5b739b964daf6d.html">src</a></li><li class="navelem"><a class="el" href="../../dir_4cd9bb01dd5ff2baf10feb838ba082e1.html">private</a></li><li class="navelem"><a class="el" href="../../db/d43/a00422.html">quasarsdk_baseudpsocket.h</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
+</body>
+</html>

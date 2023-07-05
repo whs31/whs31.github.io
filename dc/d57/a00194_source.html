@@ -3,9 +3,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.7"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuaSAR: Исходный файл src/c++/network/telemetry/telemetrydatagram.h</title>
+<title>QuaSAR: Исходный файл sdkcrc16.c++</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -29,14 +29,14 @@
   <td id="projectalign">
    <div id="projectname">QuaSAR<span id="projectnumber">&#160;2.12.0</span>
    </div>
-   <div id="projectbrief">СПО для РЛС &quot;Квазар&quot;</div>
+   <div id="projectbrief">SAR control software</div>
   </td>
  </tr>
  </tbody>
 </table>
 </div>
 <!-- end header part -->
-<!-- Создано системой Doxygen 1.9.7 -->
+<!-- Создано системой Doxygen 1.9.6 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 var searchBox = new SearchBox("searchBox", "../../search/",'.html');
@@ -92,174 +92,99 @@ $(document).ready(function(){initNavTree('dc/d57/a00194_source.html','../../'); 
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">telemetrydatagram.h</div></div>
+  <div class="headertitle"><div class="title">sdkcrc16.c++</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">Telemetry Datagram in Rust</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"></span> </div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">#[repr(C, packed)]</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">#[derive(Serialize)]</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">pub struct Datagram</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">{</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">    marker : u32,</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">    version : u8,</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">    lat : f64,</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">    lon : f64,</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">    ele : f64,</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">    velocity_course : f64,</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment">    velocity_east : f64,</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment">    velocity_north : f64,</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">    velocity_vertical : f64,</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">    pitch : f64,</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">    roll : f64,</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">    yaw : f64,</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">    course : f64,</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">    time : u64,</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment">    valid : bool,</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment">    crc : u16</span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="comment">}</span></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment">*/</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;cstdint&gt;</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#include &lt;QtCore/QDataStream&gt;</span></div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../da/d31/a00234.html">Networking</a></div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>{</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="../../dc/df3/a00424.html">   35</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="../../dc/df3/a00424.html">TelemetryDatagram</a></div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    {</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="../../dc/df3/a00424.html#a0ea604dd26c415c8f380323b91bdba56">   37</a></span>        uint32_t <a class="code hl_variable" href="../../dc/df3/a00424.html#a0ea604dd26c415c8f380323b91bdba56">marker</a> = 0x0;              </div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="../../dc/df3/a00424.html#ab22abc2906422da61885ac6c8e6a1a59">   38</a></span>        uint8_t <a class="code hl_variable" href="../../dc/df3/a00424.html#ab22abc2906422da61885ac6c8e6a1a59">version</a> = 0x0;              </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="../../dc/df3/a00424.html#a76714bdbc5c536fa77dfb14533ff82a9">   39</a></span>        <span class="keywordtype">double</span> <a class="code hl_variable" href="../../dc/df3/a00424.html#a76714bdbc5c536fa77dfb14533ff82a9">latitude</a> = 0;                </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="../../dc/df3/a00424.html#ac155e35fdeebafc89723a51520fb9fe6">   40</a></span>        <span class="keywordtype">double</span> <a class="code hl_variable" href="../../dc/df3/a00424.html#ac155e35fdeebafc89723a51520fb9fe6">longitude</a> = 0;               </div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="../../dc/df3/a00424.html#a2b13d276aee0d9fd646c8fa3647e869b">   41</a></span>        <span class="keywordtype">double</span> <a class="code hl_variable" href="../../dc/df3/a00424.html#a2b13d276aee0d9fd646c8fa3647e869b">altitude</a> = 0;                </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="../../dc/df3/a00424.html#a1cc3289ef7b73c8e162d430e00c7f5ef">   42</a></span>        <span class="keywordtype">double</span> <a class="code hl_variable" href="../../dc/df3/a00424.html#a1cc3289ef7b73c8e162d430e00c7f5ef">velocity_course</a> = 0;         </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="../../dc/df3/a00424.html#a968a00cf20306de6c97d362b509abefe">   43</a></span>        <span class="keywordtype">double</span> <a class="code hl_variable" href="../../dc/df3/a00424.html#a968a00cf20306de6c97d362b509abefe">velocity_east</a> = 0;           </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="../../dc/df3/a00424.html#a5dfe7d6fa7d6ccc819aa45ee3ebfbb56">   44</a></span>        <span class="keywordtype">double</span> <a class="code hl_variable" href="../../dc/df3/a00424.html#a5dfe7d6fa7d6ccc819aa45ee3ebfbb56">velocity_north</a> = 0;          </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="../../dc/df3/a00424.html#aeb6f0994320a1acbcb6aaff582c8ee42">   45</a></span>        <span class="keywordtype">double</span> <a class="code hl_variable" href="../../dc/df3/a00424.html#aeb6f0994320a1acbcb6aaff582c8ee42">velocity_vertical</a> = 0;       </div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="../../dc/df3/a00424.html#a34c057a0378030db67bd6a129f37d938">   46</a></span>        <span class="keywordtype">double</span> <a class="code hl_variable" href="../../dc/df3/a00424.html#a34c057a0378030db67bd6a129f37d938">pitch</a> = 0;                   </div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="../../dc/df3/a00424.html#a1d3228afa3a1d6773954f40c1e519eb9">   47</a></span>        <span class="keywordtype">double</span> <a class="code hl_variable" href="../../dc/df3/a00424.html#a1d3228afa3a1d6773954f40c1e519eb9">roll</a> = 0;                    </div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="../../dc/df3/a00424.html#a21cd490f6191f66678f55b4c242a10cf">   48</a></span>        <span class="keywordtype">double</span> <a class="code hl_variable" href="../../dc/df3/a00424.html#a21cd490f6191f66678f55b4c242a10cf">yaw</a> = 0;                     </div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="../../dc/df3/a00424.html#acaa2fde7e3fad7df8f5755347603d17b">   49</a></span>        <span class="keywordtype">double</span> <a class="code hl_variable" href="../../dc/df3/a00424.html#acaa2fde7e3fad7df8f5755347603d17b">course</a> = 0;                  </div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="../../dc/df3/a00424.html#a35486a245cee06695e814e1bcac83aac">   50</a></span>        quint64 <a class="code hl_variable" href="../../dc/df3/a00424.html#a35486a245cee06695e814e1bcac83aac">time</a> = 0;                   </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="../../dc/df3/a00424.html#aa306fbda3e6f642c3668c299361d25d0">   51</a></span>        uint8_t <a class="code hl_variable" href="../../dc/df3/a00424.html#aa306fbda3e6f642c3668c299361d25d0">satellites</a> = 0;             </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="../../dc/df3/a00424.html#a4438e0df9f58b1861feb3fc659f52534">   52</a></span>        uint16_t <a class="code hl_variable" href="../../dc/df3/a00424.html#a4438e0df9f58b1861feb3fc659f52534">crc16</a> = 0x0;               </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <span class="keyword">friend</span> QDataStream&amp; operator &lt;&lt; (QDataStream&amp; dataStream, <span class="keyword">const</span> <a class="code hl_struct" href="../../dc/df3/a00424.html">TelemetryDatagram</a>&amp; data);</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <span class="keyword">friend</span> QDataStream&amp; operator &gt;&gt; (QDataStream&amp; dataStream, <a class="code hl_struct" href="../../dc/df3/a00424.html">TelemetryDatagram</a>&amp; data);</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    };</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="../../d4/dd3/a00428.html">   59</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="../../d4/dd3/a00428.html">TelemetryRequest</a></div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    {</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="../../d4/dd3/a00428.html#a0ea604dd26c415c8f380323b91bdba56">   61</a></span>        uint32_t <a class="code hl_variable" href="../../d4/dd3/a00428.html#a0ea604dd26c415c8f380323b91bdba56">marker</a> = 0x55bb55bb;       </div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="../../d4/dd3/a00428.html#a210e06aa846736988dbee1b9f1bb4464">   62</a></span>        uint8_t <a class="code hl_variable" href="../../d4/dd3/a00428.html#a210e06aa846736988dbee1b9f1bb4464">init_flag</a> = 0x00;           </div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="../../d4/dd3/a00428.html#a8e0798404bf2cf5dabb84c5ba9a4f236">   63</a></span>        uint16_t <a class="code hl_variable" href="../../d4/dd3/a00428.html#a8e0798404bf2cf5dabb84c5ba9a4f236">port</a> = 0;                  </div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="../../d4/dd3/a00428.html#a90ade0bc499be730c6d20696fffaf4f7">   64</a></span>        uint32_t <a class="code hl_variable" href="../../d4/dd3/a00428.html#a90ade0bc499be730c6d20696fffaf4f7">interval_ms</a> = 0;           </div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="../../d4/dd3/a00428.html#a4438e0df9f58b1861feb3fc659f52534">   65</a></span>        uint16_t <a class="code hl_variable" href="../../d4/dd3/a00428.html#a4438e0df9f58b1861feb3fc659f52534">crc16</a> = 0x0;               </div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        <span class="keyword">friend</span> QDataStream&amp; operator &lt;&lt; (QDataStream&amp; dataStream, <span class="keyword">const</span> <a class="code hl_struct" href="../../d4/dd3/a00428.html">TelemetryRequest</a>&amp; data);</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        <span class="keyword">friend</span> QDataStream&amp; operator &gt;&gt; (QDataStream&amp; dataStream, <a class="code hl_struct" href="../../d4/dd3/a00428.html">TelemetryRequest</a>&amp; data);</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    };</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="keyword">inline</span> QDataStream &amp;operator &lt;&lt;(QDataStream &amp;dataStream, <span class="keyword">const</span> <a class="code hl_struct" href="../../dc/df3/a00424.html">TelemetryDatagram</a> &amp;data)</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    {</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        dataStream &lt;&lt; data.<a class="code hl_variable" href="../../dc/df3/a00424.html#a0ea604dd26c415c8f380323b91bdba56">marker</a>;</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        dataStream &lt;&lt; data.<a class="code hl_variable" href="../../dc/df3/a00424.html#ab22abc2906422da61885ac6c8e6a1a59">version</a>;</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        dataStream &lt;&lt; data.<a class="code hl_variable" href="../../dc/df3/a00424.html#a76714bdbc5c536fa77dfb14533ff82a9">latitude</a>;</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        dataStream &lt;&lt; data.<a class="code hl_variable" href="../../dc/df3/a00424.html#ac155e35fdeebafc89723a51520fb9fe6">longitude</a>;</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        dataStream &lt;&lt; data.<a class="code hl_variable" href="../../dc/df3/a00424.html#a2b13d276aee0d9fd646c8fa3647e869b">altitude</a>;</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        dataStream &lt;&lt; data.<a class="code hl_variable" href="../../dc/df3/a00424.html#a1cc3289ef7b73c8e162d430e00c7f5ef">velocity_course</a>;</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        dataStream &lt;&lt; data.<a class="code hl_variable" href="../../dc/df3/a00424.html#a968a00cf20306de6c97d362b509abefe">velocity_east</a>;</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        dataStream &lt;&lt; data.<a class="code hl_variable" href="../../dc/df3/a00424.html#a5dfe7d6fa7d6ccc819aa45ee3ebfbb56">velocity_north</a>;</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        dataStream &lt;&lt; data.<a class="code hl_variable" href="../../dc/df3/a00424.html#aeb6f0994320a1acbcb6aaff582c8ee42">velocity_vertical</a>;</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        dataStream &lt;&lt; data.<a class="code hl_variable" href="../../dc/df3/a00424.html#a34c057a0378030db67bd6a129f37d938">pitch</a>;</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        dataStream &lt;&lt; data.<a class="code hl_variable" href="../../dc/df3/a00424.html#a1d3228afa3a1d6773954f40c1e519eb9">roll</a>;</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        dataStream &lt;&lt; data.<a class="code hl_variable" href="../../dc/df3/a00424.html#a21cd490f6191f66678f55b4c242a10cf">yaw</a>;</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        dataStream &lt;&lt; data.<a class="code hl_variable" href="../../dc/df3/a00424.html#acaa2fde7e3fad7df8f5755347603d17b">course</a>;</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        dataStream &lt;&lt; data.<a class="code hl_variable" href="../../dc/df3/a00424.html#a35486a245cee06695e814e1bcac83aac">time</a>;</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        dataStream &lt;&lt; data.<a class="code hl_variable" href="../../dc/df3/a00424.html#aa306fbda3e6f642c3668c299361d25d0">satellites</a>;</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        dataStream &lt;&lt; data.<a class="code hl_variable" href="../../dc/df3/a00424.html#a4438e0df9f58b1861feb3fc659f52534">crc16</a>;</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        <span class="keywordflow">return</span> dataStream;</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    }</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="keyword">inline</span> QDataStream &amp;operator &gt;&gt;(QDataStream &amp;dataStream, TelemetryDatagram &amp;data)</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    {</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        dataStream &gt;&gt; data.marker;</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        dataStream &gt;&gt; data.version;</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        dataStream &gt;&gt; data.latitude;</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        dataStream &gt;&gt; data.longitude;</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        dataStream &gt;&gt; data.altitude;</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        dataStream &gt;&gt; data.velocity_course;</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        dataStream &gt;&gt; data.velocity_east;</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        dataStream &gt;&gt; data.velocity_north;</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        dataStream &gt;&gt; data.velocity_vertical;</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        dataStream &gt;&gt; data.pitch;</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        dataStream &gt;&gt; data.roll;</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        dataStream &gt;&gt; data.yaw;</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        dataStream &gt;&gt; data.course;</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        dataStream &gt;&gt; data.time;</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        dataStream &gt;&gt; data.satellites;</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        dataStream &gt;&gt; data.crc16;</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        <span class="keywordflow">return</span> dataStream;</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    }</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    <span class="keyword">inline</span> QDataStream &amp;operator &lt;&lt;(QDataStream &amp;dataStream, <span class="keyword">const</span> TelemetryRequest &amp;data)</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    {</div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        dataStream &lt;&lt; data.marker;</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        dataStream &lt;&lt; data.init_flag;</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>        dataStream &lt;&lt; data.port;</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>        dataStream &lt;&lt; data.interval_ms;</div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>        dataStream &lt;&lt; data.crc16;</div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span> </div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>        <span class="keywordflow">return</span> dataStream;</div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    }</div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    <span class="keyword">inline</span> QDataStream &amp;operator &gt;&gt;(QDataStream &amp;dataStream, TelemetryRequest &amp;data)</div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    {</div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>        dataStream &gt;&gt; data.marker;</div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>        dataStream &gt;&gt; data.init_flag;</div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>        dataStream &gt;&gt; data.port;</div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>        dataStream &gt;&gt; data.interval_ms;</div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>        dataStream &gt;&gt; data.crc16;</div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span> </div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>        <span class="keywordflow">return</span> dataStream;</div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    }</div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>} <span class="comment">// namespace Network;</span></div>
-<div class="ttc" id="aa00234_html"><div class="ttname"><a href="../../da/d31/a00234.html">Networking</a></div><div class="ttdoc">Пространство имен для работы с сетевыми подключениями к РЛС.</div><div class="ttdef"><b>Definition</b> <a href="../../d2/df5/a00137_source.html#l00006">abstractudpsocket.h:7</a></div></div>
-<div class="ttc" id="aa00424_html"><div class="ttname"><a href="../../dc/df3/a00424.html">Networking::TelemetryDatagram</a></div><div class="ttdoc">Датаграма телеметрии от РЛС к наземке. Сериализована в Big Endian.</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d57/a00194_source.html#l00035">telemetrydatagram.h:36</a></div></div>
-<div class="ttc" id="aa00424_html_a0ea604dd26c415c8f380323b91bdba56"><div class="ttname"><a href="../../dc/df3/a00424.html#a0ea604dd26c415c8f380323b91bdba56">Networking::TelemetryDatagram::marker</a></div><div class="ttdeci">uint32_t marker</div><div class="ttdoc">Маркер сообщения.</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d57/a00194_source.html#l00037">telemetrydatagram.h:37</a></div></div>
-<div class="ttc" id="aa00424_html_a1cc3289ef7b73c8e162d430e00c7f5ef"><div class="ttname"><a href="../../dc/df3/a00424.html#a1cc3289ef7b73c8e162d430e00c7f5ef">Networking::TelemetryDatagram::velocity_course</a></div><div class="ttdeci">double velocity_course</div><div class="ttdoc">Путевая скорость в м/с.</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d57/a00194_source.html#l00042">telemetrydatagram.h:42</a></div></div>
-<div class="ttc" id="aa00424_html_a1d3228afa3a1d6773954f40c1e519eb9"><div class="ttname"><a href="../../dc/df3/a00424.html#a1d3228afa3a1d6773954f40c1e519eb9">Networking::TelemetryDatagram::roll</a></div><div class="ttdeci">double roll</div><div class="ttdoc">Крен БПЛА в радианах.</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d57/a00194_source.html#l00047">telemetrydatagram.h:47</a></div></div>
-<div class="ttc" id="aa00424_html_a21cd490f6191f66678f55b4c242a10cf"><div class="ttname"><a href="../../dc/df3/a00424.html#a21cd490f6191f66678f55b4c242a10cf">Networking::TelemetryDatagram::yaw</a></div><div class="ttdeci">double yaw</div><div class="ttdoc">Рыскание БПЛА в радианах.</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d57/a00194_source.html#l00048">telemetrydatagram.h:48</a></div></div>
-<div class="ttc" id="aa00424_html_a2b13d276aee0d9fd646c8fa3647e869b"><div class="ttname"><a href="../../dc/df3/a00424.html#a2b13d276aee0d9fd646c8fa3647e869b">Networking::TelemetryDatagram::altitude</a></div><div class="ttdeci">double altitude</div><div class="ttdoc">Высота в метрах.</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d57/a00194_source.html#l00041">telemetrydatagram.h:41</a></div></div>
-<div class="ttc" id="aa00424_html_a34c057a0378030db67bd6a129f37d938"><div class="ttname"><a href="../../dc/df3/a00424.html#a34c057a0378030db67bd6a129f37d938">Networking::TelemetryDatagram::pitch</a></div><div class="ttdeci">double pitch</div><div class="ttdoc">Тангаж БПЛА в радианах.</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d57/a00194_source.html#l00046">telemetrydatagram.h:46</a></div></div>
-<div class="ttc" id="aa00424_html_a35486a245cee06695e814e1bcac83aac"><div class="ttname"><a href="../../dc/df3/a00424.html#a35486a245cee06695e814e1bcac83aac">Networking::TelemetryDatagram::time</a></div><div class="ttdeci">quint64 time</div><div class="ttdoc">Unix-time на борту.</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d57/a00194_source.html#l00050">telemetrydatagram.h:50</a></div></div>
-<div class="ttc" id="aa00424_html_a4438e0df9f58b1861feb3fc659f52534"><div class="ttname"><a href="../../dc/df3/a00424.html#a4438e0df9f58b1861feb3fc659f52534">Networking::TelemetryDatagram::crc16</a></div><div class="ttdeci">uint16_t crc16</div><div class="ttdoc">Контрольная сумма датаграмы CRC16_CCIT.</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d57/a00194_source.html#l00052">telemetrydatagram.h:52</a></div></div>
-<div class="ttc" id="aa00424_html_a5dfe7d6fa7d6ccc819aa45ee3ebfbb56"><div class="ttname"><a href="../../dc/df3/a00424.html#a5dfe7d6fa7d6ccc819aa45ee3ebfbb56">Networking::TelemetryDatagram::velocity_north</a></div><div class="ttdeci">double velocity_north</div><div class="ttdoc">Скорость на север в м/с.</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d57/a00194_source.html#l00044">telemetrydatagram.h:44</a></div></div>
-<div class="ttc" id="aa00424_html_a76714bdbc5c536fa77dfb14533ff82a9"><div class="ttname"><a href="../../dc/df3/a00424.html#a76714bdbc5c536fa77dfb14533ff82a9">Networking::TelemetryDatagram::latitude</a></div><div class="ttdeci">double latitude</div><div class="ttdoc">Широта в градусах.</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d57/a00194_source.html#l00039">telemetrydatagram.h:39</a></div></div>
-<div class="ttc" id="aa00424_html_a968a00cf20306de6c97d362b509abefe"><div class="ttname"><a href="../../dc/df3/a00424.html#a968a00cf20306de6c97d362b509abefe">Networking::TelemetryDatagram::velocity_east</a></div><div class="ttdeci">double velocity_east</div><div class="ttdoc">Скорость на восток в м/с.</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d57/a00194_source.html#l00043">telemetrydatagram.h:43</a></div></div>
-<div class="ttc" id="aa00424_html_aa306fbda3e6f642c3668c299361d25d0"><div class="ttname"><a href="../../dc/df3/a00424.html#aa306fbda3e6f642c3668c299361d25d0">Networking::TelemetryDatagram::satellites</a></div><div class="ttdeci">uint8_t satellites</div><div class="ttdoc">Текущее количество спутников навигации.</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d57/a00194_source.html#l00051">telemetrydatagram.h:51</a></div></div>
-<div class="ttc" id="aa00424_html_ab22abc2906422da61885ac6c8e6a1a59"><div class="ttname"><a href="../../dc/df3/a00424.html#ab22abc2906422da61885ac6c8e6a1a59">Networking::TelemetryDatagram::version</a></div><div class="ttdeci">uint8_t version</div><div class="ttdoc">Версия протокола.</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d57/a00194_source.html#l00038">telemetrydatagram.h:38</a></div></div>
-<div class="ttc" id="aa00424_html_ac155e35fdeebafc89723a51520fb9fe6"><div class="ttname"><a href="../../dc/df3/a00424.html#ac155e35fdeebafc89723a51520fb9fe6">Networking::TelemetryDatagram::longitude</a></div><div class="ttdeci">double longitude</div><div class="ttdoc">Долгота в градусах.</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d57/a00194_source.html#l00040">telemetrydatagram.h:40</a></div></div>
-<div class="ttc" id="aa00424_html_acaa2fde7e3fad7df8f5755347603d17b"><div class="ttname"><a href="../../dc/df3/a00424.html#acaa2fde7e3fad7df8f5755347603d17b">Networking::TelemetryDatagram::course</a></div><div class="ttdeci">double course</div><div class="ttdoc">Курс (азимут) БПЛА в радианах.</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d57/a00194_source.html#l00049">telemetrydatagram.h:49</a></div></div>
-<div class="ttc" id="aa00424_html_aeb6f0994320a1acbcb6aaff582c8ee42"><div class="ttname"><a href="../../dc/df3/a00424.html#aeb6f0994320a1acbcb6aaff582c8ee42">Networking::TelemetryDatagram::velocity_vertical</a></div><div class="ttdeci">double velocity_vertical</div><div class="ttdoc">Вертикальная скорость в м/с.</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d57/a00194_source.html#l00045">telemetrydatagram.h:45</a></div></div>
-<div class="ttc" id="aa00428_html"><div class="ttname"><a href="../../d4/dd3/a00428.html">Networking::TelemetryRequest</a></div><div class="ttdoc">Датаграма запроса телеметрии от наземки к РЛС. Сериализована в Big Endian.</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d57/a00194_source.html#l00059">telemetrydatagram.h:60</a></div></div>
-<div class="ttc" id="aa00428_html_a0ea604dd26c415c8f380323b91bdba56"><div class="ttname"><a href="../../d4/dd3/a00428.html#a0ea604dd26c415c8f380323b91bdba56">Networking::TelemetryRequest::marker</a></div><div class="ttdeci">uint32_t marker</div><div class="ttdoc">Маркер сообщения.</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d57/a00194_source.html#l00061">telemetrydatagram.h:61</a></div></div>
-<div class="ttc" id="aa00428_html_a210e06aa846736988dbee1b9f1bb4464"><div class="ttname"><a href="../../d4/dd3/a00428.html#a210e06aa846736988dbee1b9f1bb4464">Networking::TelemetryRequest::init_flag</a></div><div class="ttdeci">uint8_t init_flag</div><div class="ttdoc">Тип команды.</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d57/a00194_source.html#l00062">telemetrydatagram.h:62</a></div></div>
-<div class="ttc" id="aa00428_html_a4438e0df9f58b1861feb3fc659f52534"><div class="ttname"><a href="../../d4/dd3/a00428.html#a4438e0df9f58b1861feb3fc659f52534">Networking::TelemetryRequest::crc16</a></div><div class="ttdeci">uint16_t crc16</div><div class="ttdoc">Контрольная сумма датаграмы CRC16_CCIT.</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d57/a00194_source.html#l00065">telemetrydatagram.h:65</a></div></div>
-<div class="ttc" id="aa00428_html_a8e0798404bf2cf5dabb84c5ba9a4f236"><div class="ttname"><a href="../../d4/dd3/a00428.html#a8e0798404bf2cf5dabb84c5ba9a4f236">Networking::TelemetryRequest::port</a></div><div class="ttdeci">uint16_t port</div><div class="ttdoc">Порт для обратной связи.</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d57/a00194_source.html#l00063">telemetrydatagram.h:63</a></div></div>
-<div class="ttc" id="aa00428_html_a90ade0bc499be730c6d20696fffaf4f7"><div class="ttname"><a href="../../d4/dd3/a00428.html#a90ade0bc499be730c6d20696fffaf4f7">Networking::TelemetryRequest::interval_ms</a></div><div class="ttdeci">uint32_t interval_ms</div><div class="ttdoc">Интервал передачи телеметрии в мс.</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d57/a00194_source.html#l00064">telemetrydatagram.h:64</a></div></div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;sdkcrc16.h&quot;</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &lt;QtCore/QString&gt;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">constexpr</span> <span class="keyword">const</span> uint16_t CRC16_TABLE[256] = {</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>    0x0000, 0x1021, 0x2042, 0x3063, 0x4084, 0x50A5, 0x60C6, 0x70E7</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>    , 0x8108, 0x9129, 0xA14A, 0xB16B, 0xC18C, 0xD1AD, 0xE1CE, 0xF1EF</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>    , 0x1231, 0x0210, 0x3273, 0x2252, 0x52B5, 0x4294, 0x72F7, 0x62D6</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    , 0x9339, 0x8318, 0xB37B, 0xA35A, 0xD3BD, 0xC39C, 0xF3FF, 0xE3DE</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    , 0x2462, 0x3443, 0x0420, 0x1401, 0x64E6, 0x74C7, 0x44A4, 0x5485</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    , 0xA56A, 0xB54B, 0x8528, 0x9509, 0xE5EE, 0xF5CF, 0xC5AC, 0xD58D</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    , 0x3653, 0x2672, 0x1611, 0x0630, 0x76D7, 0x66F6, 0x5695, 0x46B4</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    , 0xB75B, 0xA77A, 0x9719, 0x8738, 0xF7DF, 0xE7FE, 0xD79D, 0xC7BC</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    , 0x48C4, 0x58E5, 0x6886, 0x78A7, 0x0840, 0x1861, 0x2802, 0x3823</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    , 0xC9CC, 0xD9ED, 0xE98E, 0xF9AF, 0x8948, 0x9969, 0xA90A, 0xB92B</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    , 0x5AF5, 0x4AD4, 0x7AB7, 0x6A96, 0x1A71, 0x0A50, 0x3A33, 0x2A12</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    , 0xDBFD, 0xCBDC, 0xFBBF, 0xEB9E, 0x9B79, 0x8B58, 0xBB3B, 0xAB1A</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    , 0x6CA6, 0x7C87, 0x4CE4, 0x5CC5, 0x2C22, 0x3C03, 0x0C60, 0x1C41</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    , 0xEDAE, 0xFD8F, 0xCDEC, 0xDDCD, 0xAD2A, 0xBD0B, 0x8D68, 0x9D49</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    , 0x7E97, 0x6EB6, 0x5ED5, 0x4EF4, 0x3E13, 0x2E32, 0x1E51, 0x0E70</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    , 0xFF9F, 0xEFBE, 0xDFDD, 0xCFFC, 0xBF1B, 0xAF3A, 0x9F59, 0x8F78</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    , 0x9188, 0x81A9, 0xB1CA, 0xA1EB, 0xD10C, 0xC12D, 0xF14E, 0xE16F</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    , 0x1080, 0x00A1, 0x30C2, 0x20E3, 0x5004, 0x4025, 0x7046, 0x6067</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    , 0x83B9, 0x9398, 0xA3FB, 0xB3DA, 0xC33D, 0xD31C, 0xE37F, 0xF35E</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    , 0x02B1, 0x1290, 0x22F3, 0x32D2, 0x4235, 0x5214, 0x6277, 0x7256</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    , 0xB5EA, 0xA5CB, 0x95A8, 0x8589, 0xF56E, 0xE54F, 0xD52C, 0xC50D</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    , 0x34E2, 0x24C3, 0x14A0, 0x0481, 0x7466, 0x6447, 0x5424, 0x4405</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    , 0xA7DB, 0xB7FA, 0x8799, 0x97B8, 0xE75F, 0xF77E, 0xC71D, 0xD73C</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    , 0x26D3, 0x36F2, 0x0691, 0x16B0, 0x6657, 0x7676, 0x4615, 0x5634</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    , 0xD94C, 0xC96D, 0xF90E, 0xE92F, 0x99C8, 0x89E9, 0xB98A, 0xA9AB</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    , 0x5844, 0x4865, 0x7806, 0x6827, 0x18C0, 0x08E1, 0x3882, 0x28A3</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    , 0xCB7D, 0xDB5C, 0xEB3F, 0xFB1E, 0x8BF9, 0x9BD8, 0xABBB, 0xBB9A</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    , 0x4A75, 0x5A54, 0x6A37, 0x7A16, 0x0AF1, 0x1AD0, 0x2AB3, 0x3A92</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    , 0xFD2E, 0xED0F, 0xDD6C, 0xCD4D, 0xBDAA, 0xAD8B, 0x9DE8, 0x8DC9</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    , 0x7C26, 0x6C07, 0x5C64, 0x4C45, 0x3CA2, 0x2C83, 0x1CE0, 0x0CC1</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    , 0xEF1F, 0xFF3E, 0xCF5D, 0xDF7C, 0xAF9B, 0xBFBA, 0x8FD9, 0x9FF8</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    , 0x6E17, 0x7E36, 0x4E55, 0x5E74, 0x2E93, 0x3EB2, 0x0ED1, 0x1EF0</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>};</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="keyword">namespace </span>SDK::Crypto</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>{</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>  uint16_t crc16(<span class="keywordtype">char</span>* data, <span class="keywordtype">int</span> <a class="code hl_variable" href="../../d2/df5/a00137.html#aaba88b24a21a6c70c895c0d55f4a69a0">size</a>) <span class="keyword">noexcept</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>  {</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    uint16_t crc = 0xFFFF;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keywordflow">for</span>(<span class="keywordtype">size_t</span> i = 0; i &lt; <a class="code hl_variable" href="../../d2/df5/a00137.html#aaba88b24a21a6c70c895c0d55f4a69a0">size</a>; i++)</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    {</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>      crc ^= (uint16_t)data[i];</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>      <span class="keywordflow">for</span>(<span class="keywordtype">size_t</span> j = 0; j &lt; 8; j++)</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>      {</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <span class="keywordflow">if</span>((crc &amp; 0x0001))</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        {</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>          crc &gt;&gt;= 1;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>          crc ^= 0xA001;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        }</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>          crc &gt;&gt;= 1;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>      }</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    }</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="keywordflow">return</span> crc;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>  }</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>  uint16_t crc16_ccitt(<span class="keyword">const</span> <span class="keywordtype">char</span>* data, <span class="keywordtype">int</span> <a class="code hl_variable" href="../../d2/df5/a00137.html#aaba88b24a21a6c70c895c0d55f4a69a0">size</a>) <span class="keyword">noexcept</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>  {</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keyword">const</span> <span class="keyword">auto</span>* udata = <span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span><span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(data);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    uint16_t crc = 0xFFFF;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keywordflow">while</span>(<a class="code hl_variable" href="../../d2/df5/a00137.html#aaba88b24a21a6c70c895c0d55f4a69a0">size</a>--)</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>      crc = (crc &lt;&lt; 8) ^ CRC16_TABLE[(crc &gt;&gt; 8) ^* data++];</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="keywordflow">return</span> crc;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>  }</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>  uint16_t crc16_alt(<span class="keyword">const</span> <span class="keywordtype">char</span>* data, uint16_t <a class="code hl_variable" href="../../d2/df5/a00137.html#aaba88b24a21a6c70c895c0d55f4a69a0">size</a>) <span class="keyword">noexcept</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>  {</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="keyword">const</span> <span class="keyword">auto</span>* d = <span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span><span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(data);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    uint16_t crc = 0xffff;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="keywordflow">while</span>(<a class="code hl_variable" href="../../d2/df5/a00137.html#aaba88b24a21a6c70c895c0d55f4a69a0">size</a>--)</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>      crc = (crc &lt;&lt; 8) ^ CRC16_TABLE[(crc &gt;&gt; 8) ^* (d++)];</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="keywordflow">return</span> crc;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>  }</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>  <span class="keywordtype">char</span>* str_data(<span class="keyword">const</span> QString&amp; str) <span class="keyword">noexcept</span> { <span class="keywordflow">return</span> str.toLocal8Bit().data(); }</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>} <span class="comment">// SDK::Crypto</span></div>
+<div class="ttc" id="aa00137_html_aaba88b24a21a6c70c895c0d55f4a69a0"><div class="ttname"><a href="../../d2/df5/a00137.html#aaba88b24a21a6c70c895c0d55f4a69a0">size</a></div><div class="ttdeci">uint16_t size</div><div class="ttdoc">Размер пакета в байтах, включая заголовок.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/df5/a00137_source.html#l00002">imagemetadata.h:2</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="../../dir_fcb2a60e1810a51543a3cc3a113d0956.html">c++</a></li><li class="navelem"><a class="el" href="../../dir_2658f57a99a735e2e16983d97ef2d726.html">network</a></li><li class="navelem"><a class="el" href="../../dir_3dd779012d603974b3147e6dab239616.html">telemetry</a></li><li class="navelem"><b>telemetrydatagram.h</b></li>
-    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7 </li>
+    <li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="../../dir_fcb2a60e1810a51543a3cc3a113d0956.html">c++</a></li><li class="navelem"><a class="el" href="../../dir_5eaa9160e914aa78085dedce4b00e66f.html">sdk</a></li><li class="navelem"><a class="el" href="../../dir_72207ca2e38c1e1375ea23aa1480da49.html">src</a></li><li class="navelem"><a class="el" href="../../dir_bb2bcd1ae4be61eb87860e92161ea1c8.html">crypto</a></li><li class="navelem"><b>sdkcrc16.c++</b></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
   </ul>
 </div>
 </body>

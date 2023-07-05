@@ -1,0 +1,8 @@
+<map id="Network" name="Network">
+<area shape="rect" id="node1" title="Класс&#45;синглтон, отвечающий за связь с РЛС." alt="" coords="222,175,299,203"/>
+<area shape="rect" id="node2" href="$dc/db1/a00621.html" title="Class for execd service interactions." alt="" coords="5,82,108,110"/>
+<area shape="rect" id="node3" href="$db/d3f/a00609.html" title="Base class for handling UDP connections." alt="" coords="173,5,297,33"/>
+<area shape="rect" id="node4" href="$d2/d34/a00625.html" title="Class for receiving feedback from SAR." alt="" coords="132,82,258,110"/>
+<area shape="rect" id="node5" href="$db/d3a/a00641.html" title="Class for receiving large files from SAR via TCP." alt="" coords="283,82,371,110"/>
+<area shape="rect" id="node6" href="$de/dbb/a00637.html" title="Class for receiving large files from SAR via UDP." alt="" coords="396,82,490,110"/>
+</map>

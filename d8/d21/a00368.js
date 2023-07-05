@@ -1,10 +1,29 @@
 var a00368 =
 [
-    [ "connect", "d8/d21/a00368.html#a01948d8cb99ea51677e34382c9e2c8aa", null ],
-    [ "disconnect", "d8/d21/a00368.html#a960705de531a20389fb29928d43258c3", null ],
-    [ "send", "d8/d21/a00368.html#ad1239ca09fddf150d1584cdf26baf7f3", null ],
-    [ "port", "d8/d21/a00368.html#a6aac8bbc4a1ac6c37d4c9f0564256fbd", null ],
-    [ "received", "d8/d21/a00368.html#a3eb63c5af67a44fb60ba731d3da7a56d", null ],
-    [ "socketDisconnected", "d8/d21/a00368.html#a270b32a7b4f3d08e655807d4101acbd7", null ],
-    [ "socketMetrics", "d8/d21/a00368.html#a58d7e2b4c7d46a5ae4041d122b03b584", null ]
+    [ "PlannerAppendDatagram", "d9/d69/a00451.html#dc/d0c/a00783", [
+      [ "marker", "d9/d69/a00451.html#a0ea604dd26c415c8f380323b91bdba56", null ],
+      [ "id", "d9/d69/a00451.html#a4fc3a0c58dfbd1e68224521185cb9384", null ],
+      [ "r", "d9/d69/a00451.html#acfb1795eb860b37ae4a0cf5007525b11", null ],
+      [ "ip", "d9/d69/a00451.html#a69ddb9c845da426f636d9dd0dbed4e7e", null ],
+      [ "port", "d9/d69/a00451.html#a8e0798404bf2cf5dabb84c5ba9a4f236", null ],
+      [ "lat", "d9/d69/a00451.html#a7972334534f68166121a6e51b0aac2d6", null ],
+      [ "lon", "d9/d69/a00451.html#aa96391e04b5977c50b96d77bea86a01d", null ],
+      [ "cnt", "d9/d69/a00451.html#ae1d905c6ac1a0c9b96dca16153917334", null ],
+      [ "len", "d9/d69/a00451.html#a8aed22e2c7b283705ec82e0120515618", null ],
+      [ "command", "d9/d69/a00451.html#af161fc144504ebd2d6a3a287a47efcc0", null ]
+    ] ],
+    [ "PlannerRemoveDatagram", "d9/d69/a00451.html#d8/d7f/a00787", [
+      [ "marker", "d9/d69/a00451.html#a0ea604dd26c415c8f380323b91bdba56", null ],
+      [ "id", "d9/d69/a00451.html#a4fc3a0c58dfbd1e68224521185cb9384", null ],
+      [ "r", "d9/d69/a00451.html#acfb1795eb860b37ae4a0cf5007525b11", null ],
+      [ "lat", "d9/d69/a00451.html#a7972334534f68166121a6e51b0aac2d6", null ],
+      [ "lon", "d9/d69/a00451.html#aa96391e04b5977c50b96d77bea86a01d", null ],
+      [ "cnt", "d9/d69/a00451.html#ae1d905c6ac1a0c9b96dca16153917334", null ],
+      [ "len", "d9/d69/a00451.html#a8aed22e2c7b283705ec82e0120515618", null ]
+    ] ],
+    [ "PlannerResponseDatagram", "d9/d69/a00451.html#d4/d45/a00791", [
+      [ "marker", "d9/d69/a00451.html#a0ea604dd26c415c8f380323b91bdba56", null ],
+      [ "id", "d9/d69/a00451.html#a4fc3a0c58dfbd1e68224521185cb9384", null ],
+      [ "cnt", "d9/d69/a00451.html#ae1d905c6ac1a0c9b96dca16153917334", null ]
+    ] ]
 ];
