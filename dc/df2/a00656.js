@@ -1,23 +1,26 @@
 var a00656 =
 [
-    [ "get", "dc/df2/a00656.html#a4375ce843b59746a5d8b99050c076f30", null ],
-    [ "begin", "dc/df2/a00656.html#a17a7f03dd32842103249af4605177f73", null ],
-    [ "stop", "dc/df2/a00656.html#aba28ee97ffe6d508e26f534ec7e62f8f", null ],
-    [ "executeCommand", "dc/df2/a00656.html#a990679eb6ce0d30a198cdbc346429535", null ],
-    [ "executeString", "dc/df2/a00656.html#a0dba7557530f13c7b7a5f1e56539ffc0", null ],
-    [ "argument", "dc/df2/a00656.html#a0a2a2a80222d19f8d0dd722265840d94", null ],
-    [ "setArgument", "dc/df2/a00656.html#ab357e9a1d68adf2551d856a55c988bf9", null ],
-    [ "stringifyIP", "dc/df2/a00656.html#a1e2e61d85577271603fbafece3302047", null ],
-    [ "telemetrySocketMetrics", "dc/df2/a00656.html#a494c9269792068b8e0ecff130f346a8e", null ],
-    [ "telemetrySocket", "dc/df2/a00656.html#a36725a20adc2566be1e4384c6bcaf697", null ],
-    [ "execdSocket", "dc/df2/a00656.html#a8c85ae3d115e40f62c4eb23af9f5c768", null ],
-    [ "feedbackSocket", "dc/df2/a00656.html#ad927e18ce2220f666989021d6ea80dd9", null ],
-    [ "tcpSocket", "dc/df2/a00656.html#a266668c89035af8614ce74e924bb0804", null ],
-    [ "stripSocket", "dc/df2/a00656.html#adecab7763678b2af974ae7342db28bd1", null ],
-    [ "telemetry", "dc/df2/a00656.html#a7caa83797f2f419d1201b652b1970ef9", null ],
-    [ "remoteData", "dc/df2/a00656.html#adb04ff50a6cb7d881917b6b52dcd00f2", null ],
-    [ "networkDelay", "dc/df2/a00656.html#a63f66fcc8a0220c01c1ec7500446286f", null ],
-    [ "tcpProgress", "dc/df2/a00656.html#a7e724b1b3184f524aa488b9bf25d4ff6", null ],
-    [ "connected", "dc/df2/a00656.html#a0d28f70b9b7238e7de23f1128d858d39", null ],
-    [ "recording", "dc/df2/a00656.html#a36ef6d49cc707cf4382ea5bf9221623e", null ]
+    [ "PingStatus", "dc/df2/a00656.html#a26cd5c2531deeff8b716e740ddc8e469", [
+      [ "Success", "dc/df2/a00656.html#a26cd5c2531deeff8b716e740ddc8e469afdfbdf3247bd36a1f17270d5cec74c9c", null ],
+      [ "DelayedSuccess", "dc/df2/a00656.html#a26cd5c2531deeff8b716e740ddc8e469a2c7a898b13c2c0e0cf81a4dad1ad112b", null ],
+      [ "Timeout", "dc/df2/a00656.html#a26cd5c2531deeff8b716e740ddc8e469a98cb58869380e6582c793dcd0e86598c", null ],
+      [ "Idle", "dc/df2/a00656.html#a26cd5c2531deeff8b716e740ddc8e469ad3fa9ae9431d6cb1772f9d9df48cab19", null ]
+    ] ],
+    [ "ArgumentCategory", "dc/df2/a00656.html#a19451e9aa738da7e4404cf614b4c9e09", [
+      [ "Form", "dc/df2/a00656.html#a19451e9aa738da7e4404cf614b4c9e09afdd6bb1a793bfa4502ad03cee614638f", null ],
+      [ "Focus", "dc/df2/a00656.html#a19451e9aa738da7e4404cf614b4c9e09ace9aabd8e13c884472588325a665e44e", null ],
+      [ "Reform", "dc/df2/a00656.html#a19451e9aa738da7e4404cf614b4c9e09aa8d76445d1381f9e8af31e5f225dbfe6", null ]
+    ] ],
+    [ "NetworkCommand", "dc/df2/a00656.html#a8dd47094c7079ec1fcbd5df9870c486e", [
+      [ "FormImage", "dc/df2/a00656.html#a8dd47094c7079ec1fcbd5df9870c486ea4712813eafc5945074b22fe2e4655434", null ],
+      [ "FocusImage", "dc/df2/a00656.html#a8dd47094c7079ec1fcbd5df9870c486ea29db7d56a39efc080425bc86be966a1f", null ],
+      [ "SimpleStrip", "dc/df2/a00656.html#a8dd47094c7079ec1fcbd5df9870c486eaad121ef388237d1b0c748a2e68448dc9", null ],
+      [ "StartStrip", "dc/df2/a00656.html#a8dd47094c7079ec1fcbd5df9870c486ea52d160cbef15ba645c2d5ea8e4e46e57", null ],
+      [ "StopStrip", "dc/df2/a00656.html#a8dd47094c7079ec1fcbd5df9870c486ead660847171555aaa4cc2c693f4b9b18c", null ],
+      [ "ReformImage", "dc/df2/a00656.html#a8dd47094c7079ec1fcbd5df9870c486eae63d5e0d6f7ad5820b84c5db3d34ee08", null ],
+      [ "RemoteStorageStatus", "dc/df2/a00656.html#a8dd47094c7079ec1fcbd5df9870c486eab852b7dd27a86b98629f1502e1392386", null ],
+      [ "ClearRemoteStorage", "dc/df2/a00656.html#a8dd47094c7079ec1fcbd5df9870c486ea2bcce22d62ab5e5ce2590c13529b7e64", null ],
+      [ "Reboot", "dc/df2/a00656.html#a8dd47094c7079ec1fcbd5df9870c486eaa49f6a8953e091ee4209d9b2c4019ff7", null ],
+      [ "Poweroff", "dc/df2/a00656.html#a8dd47094c7079ec1fcbd5df9870c486ea5fbdc735bed4e23b9d19caeacffa73c6", null ]
+    ] ]
 ];

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.6"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuaSAR: Cписок членов класса</title>
+<title>QuaSAR: Класс QuasarAPI</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -66,7 +66,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('d6/da7/a00822.html','../../'); initResizable(); });
+$(document).ready(function(){initNavTree('d7/d4f/a00819.html','../../'); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -92,22 +92,1215 @@ $(document).ready(function(){initNavTree('d6/da7/a00822.html','../../'); initRes
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">OutputRedirectServer Cписок членов класса</div></div>
+  <div class="summary">
+<a href="#signals">Сигналы</a> &#124;
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-static-methods">Открытые статические члены</a> &#124;
+<a href="#properties">Свойства</a> &#124;
+<a href="#pri-methods">Закрытые члены</a> &#124;
+<a href="../../d7/d60/a00816.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Класс QuasarAPI</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Полный список членов класса <a class="el" href="../../d6/da7/a00822.html">OutputRedirectServer</a>, включая наследуемые из базового класса</p>
-<table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="../../d6/da7/a00822.html#a998b60d68b42b365b6248073502e9ff7">OutputRedirectServer</a>(QObject *parent=nullptr)</td><td class="entry"><a class="el" href="../../d6/da7/a00822.html">OutputRedirectServer</a></td><td class="entry"><span class="mlabel">explicit</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="../../d6/da7/a00822.html#ad9f50d5dc30f2e0482b19a5f0eba0e2e">push</a>(const QByteArray &amp;data) noexcept</td><td class="entry"><a class="el" href="../../d6/da7/a00822.html">OutputRedirectServer</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="../../d6/da7/a00822.html#a28ca97829e1fcdc9073ca1c651e08ffa">start</a>(const QString &amp;address) noexcept</td><td class="entry"><a class="el" href="../../d6/da7/a00822.html">OutputRedirectServer</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="../../d6/da7/a00822.html#aba28ee97ffe6d508e26f534ec7e62f8f">stop</a>() noexcept</td><td class="entry"><a class="el" href="../../d6/da7/a00822.html">OutputRedirectServer</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="../../d6/da7/a00822.html#afccfb74379bac9eb8631f93431cabbf3">~OutputRedirectServer</a>() override</td><td class="entry"><a class="el" href="../../d6/da7/a00822.html">OutputRedirectServer</a></td><td class="entry"></td></tr>
-</table></div><!-- contents -->
+<p><code>#include &lt;<a class="el" href="../../dd/db5/a00365_source.html">QuasarSDK/API</a>&gt;</code></p>
+
+<p>Базовые классы:QObject.</p>
+<div class="dynheader">
+Граф связей класса QuasarAPI:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dc/d5e/a00817.png" border="0" usemap="#aQuasarAPI_coll__map" alt="Collaboration graph"/></div>
+<map name="aQuasarAPI_coll__map" id="aQuasarAPI_coll__map">
+<area shape="rect" title="Публичный интерфейс для работы с сетевой составляющей РЛС &quot;Квазар&quot;." alt="" coords="960,290,1048,317"/>
+<area shape="rect" href="../../dd/d7a/a00795.html" title="Класс&#45;хранилище для текущей телеметрии РЛС." alt="" coords="338,163,425,191"/>
+<area shape="rect" href="../../df/dc7/a00807.html" title="Класс для работы с сервисом navd2 на РЛС." alt="" coords="631,351,761,379"/>
+<area shape="rect" href="../../d9/d69/a00451.html#d0/d7d/a00799" title="Датаграмма телеметрии от РЛС к наземке." alt="" coords="11,163,163,191"/>
+<area shape="rect" href="../../dd/de5/a00771.html" title="Класс&#45;хранилище для данных, связанных с РЛС." alt="" coords="644,94,748,122"/>
+<area shape="rect" href="../../dc/d1b/a00827.html" title="Класс для постоянной проверки выбранного адреса на доступность." alt="" coords="652,183,740,211"/>
+<area shape="rect" href="../../d3/db4/a00823.html" title="Класс для перенаправления вывода РЛС в отдельный Telnet сервер." alt="" coords="615,235,777,263"/>
+<area shape="rect" href="../../d5/d68/a00747.html" title="Базовый класс для сокетов, работающих по протоколу UDP." alt="" coords="25,369,149,396"/>
+<area shape="rect" href="../../d3/de3/a00763.html" title="Сокет для отправки команд на РЛС." alt="" coords="330,482,433,510"/>
+<area shape="rect" href="../../d5/dae/a00767.html" title="Сокет для приема и обработки вывода с РЛС." alt="" coords="483,292,591,320"/>
+<area shape="rect" href="../../da/df2/a00751.html" title="Базовый класс для UDP сокетов, требующих целостность датаграммы." alt="" coords="304,403,459,431"/>
+<area shape="rect" href="../../d2/d87/a00759.html" title="Класс для хранения и обработки аргументов команд сервиса execd." alt="" coords="5,482,169,510"/>
+<area shape="rect" href="../../d3/d95/a00779.html" title="Класс для приема больших файлов с РЛС по протоколу TCP&#45;IP." alt="" coords="652,455,740,483"/>
+<area shape="rect" href="../../dc/d5d/a00775.html" title="Класс для приема больших файлов с РЛС по протоколу UDP." alt="" coords="649,403,743,431"/>
+</map>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">см. легенду</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="signals" name="signals"></a>
+Сигналы</h2></td></tr>
+<tr class="memitem:a66b4d57572f1d20d0023a2992c24532c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d4f/a00819.html#a66b4d57572f1d20d0023a2992c24532c">tcpDataReceived</a> (QByteArray data)</td></tr>
+<tr class="separator:a66b4d57572f1d20d0023a2992c24532c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d40009ab772b628305cadb77e4490c7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d4f/a00819.html#a2d40009ab772b628305cadb77e4490c7">udpDataReceived</a> (QByteArray data)</td></tr>
+<tr class="separator:a2d40009ab772b628305cadb77e4490c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a494c9269792068b8e0ecff130f346a8e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d4f/a00819.html#a494c9269792068b8e0ecff130f346a8e">telemetrySocketMetrics</a> (const QString &amp;data, int size_bytes, bool out)</td></tr>
+<tr class="separator:a494c9269792068b8e0ecff130f346a8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c7be2f1298e09c11e7629889a53d722"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d4f/a00819.html#a8c7be2f1298e09c11e7629889a53d722">execdSocketMetrics</a> (const QString &amp;data, int size_bytes, bool out)</td></tr>
+<tr class="separator:a8c7be2f1298e09c11e7629889a53d722"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1c378bc3ccf4c8b1619d3f5406a484e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d4f/a00819.html#ae1c378bc3ccf4c8b1619d3f5406a484e">lfsSocketMetrics</a> (const QString &amp;msg, int size_bytes, bool out)</td></tr>
+<tr class="separator:ae1c378bc3ccf4c8b1619d3f5406a484e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0eaca412515be45380dcecc70304b996"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d4f/a00819.html#a0eaca412515be45380dcecc70304b996">stripSocketMetrics</a> (const QString &amp;msg, int size_bytes, bool out)</td></tr>
+<tr class="separator:a0eaca412515be45380dcecc70304b996"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a45ef9e3d873a8bf404fcfba1a4d0909d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/dc7/a00807.html">TelemetrySocket</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d4f/a00819.html#a45ef9e3d873a8bf404fcfba1a4d0909d">telemetrySocket</a> ()</td></tr>
+<tr class="separator:a45ef9e3d873a8bf404fcfba1a4d0909d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac753844b28c8f5332d5cfd79b9fa036b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d3/de3/a00763.html">ExecdSocket</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d4f/a00819.html#ac753844b28c8f5332d5cfd79b9fa036b">execdSocket</a> ()</td></tr>
+<tr class="separator:ac753844b28c8f5332d5cfd79b9fa036b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a291f6bb2ace013b35d249897694143d4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/dae/a00767.html">OutputSocket</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d4f/a00819.html#a291f6bb2ace013b35d249897694143d4">outputSocket</a> ()</td></tr>
+<tr class="separator:a291f6bb2ace013b35d249897694143d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e0308f944d7d98fd86913cd6a0b4bed"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d3/d95/a00779.html">TCPServer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d4f/a00819.html#a2e0308f944d7d98fd86913cd6a0b4bed">tcpServer</a> ()</td></tr>
+<tr class="separator:a2e0308f944d7d98fd86913cd6a0b4bed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47cc80adf9cdc5cd663ab4d1a2908c73"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d5d/a00775.html">StripSocket</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d4f/a00819.html#a47cc80adf9cdc5cd663ab4d1a2908c73">stripSocket</a> ()</td></tr>
+<tr class="separator:a47cc80adf9cdc5cd663ab4d1a2908c73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51447fee38e270ee93a514b408ca01e3"><td class="memItemLeft" align="right" valign="top">Q_INVOKABLE void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d4f/a00819.html#a51447fee38e270ee93a514b408ca01e3">start</a> (const QString &amp;telemetry_request_address, const QString &amp;telemetry_receive_address, float telemetry_frequency, const QString &amp;execd_address, const QString &amp;feedback_address, const QString &amp;tcp_lfs_address, const QString &amp;udp_lfs_address) noexcept</td></tr>
+<tr class="separator:a51447fee38e270ee93a514b408ca01e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13b02c5d4d8aa656dcfbc2b567845df4"><td class="memItemLeft" align="right" valign="top">Q_INVOKABLE void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d4f/a00819.html#a13b02c5d4d8aa656dcfbc2b567845df4">startPings</a> () noexcept</td></tr>
+<tr class="separator:a13b02c5d4d8aa656dcfbc2b567845df4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba28ee97ffe6d508e26f534ec7e62f8f"><td class="memItemLeft" align="right" valign="top">Q_INVOKABLE void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d4f/a00819.html#aba28ee97ffe6d508e26f534ec7e62f8f">stop</a> () noexcept</td></tr>
+<tr class="separator:aba28ee97ffe6d508e26f534ec7e62f8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17df331fe378da15eb4b56bad7dbf174"><td class="memItemLeft" align="right" valign="top">Q_INVOKABLE void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d4f/a00819.html#a17df331fe378da15eb4b56bad7dbf174">execute</a> (<a class="el" href="../../d8/d2d/a00815.html#a8dd47094c7079ec1fcbd5df9870c486e">QuasarSDK::Enums::NetworkCommand</a> command) noexcept</td></tr>
+<tr class="separator:a17df331fe378da15eb4b56bad7dbf174"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d7ed416a5bfbe867fbdd612720d6869"><td class="memItemLeft" align="right" valign="top">Q_INVOKABLE void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d4f/a00819.html#a2d7ed416a5bfbe867fbdd612720d6869">execute</a> (const QString &amp;command) noexcept</td></tr>
+<tr class="separator:a2d7ed416a5bfbe867fbdd612720d6869"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3543a6879806206a3ec067d1c712cfa"><td class="memItemLeft" align="right" valign="top">Q_INVOKABLE QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d4f/a00819.html#af3543a6879806206a3ec067d1c712cfa">argument</a> (const QString &amp;key, <a class="el" href="../../d8/d2d/a00815.html#a19451e9aa738da7e4404cf614b4c9e09">QuasarSDK::Enums::ArgumentCategory</a> category) noexcept</td></tr>
+<tr class="separator:af3543a6879806206a3ec067d1c712cfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51be026891b678d621cb1947a3ed1fe6"><td class="memItemLeft" align="right" valign="top">Q_INVOKABLE void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d4f/a00819.html#a51be026891b678d621cb1947a3ed1fe6">setArgument</a> (const QString &amp;key, const QVariant &amp;value, <a class="el" href="../../d8/d2d/a00815.html#a19451e9aa738da7e4404cf614b4c9e09">QuasarSDK::Enums::ArgumentCategory</a> category) noexcept</td></tr>
+<tr class="separator:a51be026891b678d621cb1947a3ed1fe6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb92116f8fe3d1e119ac63d132efdd5f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d4f/a00819.html#acb92116f8fe3d1e119ac63d132efdd5f">setRemoteAddressList</a> (const std::array&lt; QString, 2 &gt; &amp;list) noexcept</td></tr>
+<tr class="separator:acb92116f8fe3d1e119ac63d132efdd5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa083206e6391e3e8d664e7696d716c4f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d4f/a00819.html#aa083206e6391e3e8d664e7696d716c4f">setPingAddressList</a> (const std::array&lt; QString, 5 &gt; &amp;list) noexcept</td></tr>
+<tr class="separator:aa083206e6391e3e8d664e7696d716c4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33670415719976b873d92b877de75669"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d4f/a00819.html#a33670415719976b873d92b877de75669">enableRedirect</a> (const QString &amp;address) noexcept</td></tr>
+<tr class="separator:a33670415719976b873d92b877de75669"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5919211a0de475695e1ecc0eac7b2983"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d4f/a00819.html#a5919211a0de475695e1ecc0eac7b2983">disableRedirect</a> () noexcept</td></tr>
+<tr class="separator:a5919211a0de475695e1ecc0eac7b2983"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Открытые статические члены</h2></td></tr>
+<tr class="memitem:a1a9a51c7c1a2b93d3c127d1ab06982d6"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d7/d4f/a00819.html">QuasarAPI</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d4f/a00819.html#a1a9a51c7c1a2b93d3c127d1ab06982d6">get</a> ()</td></tr>
+<tr class="separator:a1a9a51c7c1a2b93d3c127d1ab06982d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a964934b2654b053b60d0a69d7234b581"><td class="memItemLeft" align="right" valign="top">static Q_INVOKABLE QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d4f/a00819.html#a964934b2654b053b60d0a69d7234b581">stringify</a> (const QString &amp;ip, const QString &amp;port)</td></tr>
+<tr class="separator:a964934b2654b053b60d0a69d7234b581"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="properties" name="properties"></a>
+Свойства</h2></td></tr>
+<tr class="memitem:a7caa83797f2f419d1201b652b1970ef9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/d7a/a00795.html">Telemetry</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d4f/a00819.html#a7caa83797f2f419d1201b652b1970ef9">telemetry</a></td></tr>
+<tr class="separator:a7caa83797f2f419d1201b652b1970ef9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9efe0b9a30d46f7613978ab954918f3d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/de5/a00771.html">RemoteData</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d4f/a00819.html#a9efe0b9a30d46f7613978ab954918f3d">remote</a></td></tr>
+<tr class="separator:a9efe0b9a30d46f7613978ab954918f3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e564e4120f565a5137596d39293ec88"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d4f/a00819.html#a7e564e4120f565a5137596d39293ec88">isConnected</a></td></tr>
+<tr class="separator:a7e564e4120f565a5137596d39293ec88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0af2bd852f5ddf3a39df72fb1eb329dd"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d4f/a00819.html#a0af2bd852f5ddf3a39df72fb1eb329dd">currentNetworkDelay</a></td></tr>
+<tr class="separator:a0af2bd852f5ddf3a39df72fb1eb329dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Закрытые члены</h2></td></tr>
+<tr class="memitem:ac5bbf2e7a30c04d0f42fb824aba0ca84"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d4f/a00819.html#ac5bbf2e7a30c04d0f42fb824aba0ca84">processFeedback</a> (QByteArray) noexcept</td></tr>
+<tr class="separator:ac5bbf2e7a30c04d0f42fb824aba0ca84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Публичный интерфейс для работы с сетевой составляющей РЛС "Квазар". </p>
+<p>Представляет из себя класс-синглтон, содержащий набор функций для взаимодействия с РЛС "Квазар". Большая часть функций и свойств доступна в движке QML.</p>
+<p>Класс автоматически регистрирует себя и <a class="el" href="../../d8/d2d/a00815.html" title="Класс-обёртка для общих перечислений SDK РЛС &quot;Квазар&quot;.">QuasarSDK::Enums</a> в QML при первом вызове функции <a class="el" href="../../d7/d4f/a00819.html#a1a9a51c7c1a2b93d3c127d1ab06982d6" title="Возвращает указатель на уникальный экземпляр класса QuasarAPI.">get()</a>. </p><dl class="todo"><dt><b><a class="el" href="../../d9/dd5/a00432.html#_todo000002">Необходимо сделать:</a></b></dt><dd>Дополнить документацию</dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d9/de6/a00404_source.html">quasarsdk_quasarinterface.h</a> строка <a class="el" href="../../d9/de6/a00404_source.html#l00028">28</a></p>
+</div><h2 class="groupheader">Методы</h2>
+<a id="a1a9a51c7c1a2b93d3c127d1ab06982d6" name="a1a9a51c7c1a2b93d3c127d1ab06982d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a9a51c7c1a2b93d3c127d1ab06982d6">&#9670;&#160;</a></span>get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d7/d4f/a00819.html">QuasarAPI</a> * get </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Возвращает указатель на уникальный экземпляр класса <a class="el" href="../../d7/d4f/a00819.html" title="Публичный интерфейс для работы с сетевой составляющей РЛС &quot;Квазар&quot;.">QuasarAPI</a>. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Указатель на экземпляр <a class="el" href="../../d7/d4f/a00819.html" title="Публичный интерфейс для работы с сетевой составляющей РЛС &quot;Квазар&quot;.">QuasarAPI</a>. </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/d9c/a00413_source.html">quasarsdk_quasarinterface.c++</a> строка <a class="el" href="../../da/d9c/a00413_source.html#l00036">36</a></p>
+
+</div>
+</div>
+<a id="a45ef9e3d873a8bf404fcfba1a4d0909d" name="a45ef9e3d873a8bf404fcfba1a4d0909d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45ef9e3d873a8bf404fcfba1a4d0909d">&#9670;&#160;</a></span>telemetrySocket()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../df/dc7/a00807.html">TelemetrySocket</a> * telemetrySocket </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возвращает указатель на сокет телеметрии. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Ненулевой указатель на <a class="el" href="../../df/dc7/a00807.html" title="Класс для работы с сервисом navd2 на РЛС.">TelemetrySocket</a>. </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/d9c/a00413_source.html">quasarsdk_quasarinterface.c++</a> строка <a class="el" href="../../da/d9c/a00413_source.html#l00186">186</a></p>
+
+</div>
+</div>
+<a id="ac753844b28c8f5332d5cfd79b9fa036b" name="ac753844b28c8f5332d5cfd79b9fa036b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac753844b28c8f5332d5cfd79b9fa036b">&#9670;&#160;</a></span>execdSocket()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d3/de3/a00763.html">ExecdSocket</a> * execdSocket </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возвращает указатель на сокет <code>execd</code>. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Ненулевой указатель на <a class="el" href="../../d3/de3/a00763.html" title="Сокет для отправки команд на РЛС.">ExecdSocket</a>. </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/d9c/a00413_source.html">quasarsdk_quasarinterface.c++</a> строка <a class="el" href="../../da/d9c/a00413_source.html#l00192">192</a></p>
+
+</div>
+</div>
+<a id="a291f6bb2ace013b35d249897694143d4" name="a291f6bb2ace013b35d249897694143d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a291f6bb2ace013b35d249897694143d4">&#9670;&#160;</a></span>outputSocket()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d5/dae/a00767.html">OutputSocket</a> * outputSocket </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возвращает указатель на сокет обратной связи. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Ненулевой указатель на <a class="el" href="../../d5/dae/a00767.html" title="Сокет для приема и обработки вывода с РЛС.">OutputSocket</a>. </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/d9c/a00413_source.html">quasarsdk_quasarinterface.c++</a> строка <a class="el" href="../../da/d9c/a00413_source.html#l00198">198</a></p>
+
+</div>
+</div>
+<a id="a2e0308f944d7d98fd86913cd6a0b4bed" name="a2e0308f944d7d98fd86913cd6a0b4bed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e0308f944d7d98fd86913cd6a0b4bed">&#9670;&#160;</a></span>tcpServer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d3/d95/a00779.html">TCPServer</a> * tcpServer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возвращает указатель на сервер TCP-IP для сервиса <code>fsend</code>. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Ненулевой указатель на <a class="el" href="../../d3/d95/a00779.html" title="Класс для приема больших файлов с РЛС по протоколу TCP-IP.">TCPServer</a>. </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/d9c/a00413_source.html">quasarsdk_quasarinterface.c++</a> строка <a class="el" href="../../da/d9c/a00413_source.html#l00204">204</a></p>
+
+</div>
+</div>
+<a id="a47cc80adf9cdc5cd663ab4d1a2908c73" name="a47cc80adf9cdc5cd663ab4d1a2908c73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47cc80adf9cdc5cd663ab4d1a2908c73">&#9670;&#160;</a></span>stripSocket()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/d5d/a00775.html">StripSocket</a> * stripSocket </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возвращает указатель на сокет для полосовых изображений (UDP). </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Ненулевой указатель на <a class="el" href="../../dc/d5d/a00775.html" title="Класс для приема больших файлов с РЛС по протоколу UDP.">StripSocket</a>. </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/d9c/a00413_source.html">quasarsdk_quasarinterface.c++</a> строка <a class="el" href="../../da/d9c/a00413_source.html#l00210">210</a></p>
+
+</div>
+</div>
+<a id="a51447fee38e270ee93a514b408ca01e3" name="a51447fee38e270ee93a514b408ca01e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51447fee38e270ee93a514b408ca01e3">&#9670;&#160;</a></span>start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void start </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>telemetry_request_address</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>telemetry_receive_address</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>telemetry_frequency</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>execd_address</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>feedback_address</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>tcp_lfs_address</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>udp_lfs_address</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Производит попытку подключения к РЛС по указанным адресам. </p>
+<p>Функция запускает все дочерние сокеты с выбранными параметрами и адресами. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">telemetry_request_address</td><td>- IP-адрес для запросов телеметрии в формате <code>192.168.1.0:5555</code>. </td></tr>
+    <tr><td class="paramname">telemetry_receive_address</td><td>- IP-адрес для получения телеметрии. </td></tr>
+    <tr><td class="paramname">telemetry_frequency</td><td>- интервал в секундах между пакетами телеметрии. </td></tr>
+    <tr><td class="paramname">execd_address</td><td>- IP-адрес для команд в сервис <b>execd</b> на РЛС. </td></tr>
+    <tr><td class="paramname">feedback_address</td><td>- IP-адрес для приема потока <b>stdout</b> с РЛС. </td></tr>
+    <tr><td class="paramname">tcp_lfs_address</td><td>- IP-адрес для сервера TCP-IP. </td></tr>
+    <tr><td class="paramname">udp_lfs_address</td><td>- IP-адрес для сокета полосовых изображений. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Может быть вызвана из QML через мета-объектную систему. </dd></dl>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="../../d7/d4f/a00819.html#aba28ee97ffe6d508e26f534ec7e62f8f" title="Производит отключение от РЛС.">stop</a> </dd>
+<dd>
+<a class="el" href="../../d7/d4f/a00819.html#a13b02c5d4d8aa656dcfbc2b567845df4" title="Начинает проверку 5-ти выбранных адресов на доступность.">startPings</a> </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/d9c/a00413_source.html">quasarsdk_quasarinterface.c++</a> строка <a class="el" href="../../da/d9c/a00413_source.html#l00227">227</a></p>
+
+</div>
+</div>
+<a id="a13b02c5d4d8aa656dcfbc2b567845df4" name="a13b02c5d4d8aa656dcfbc2b567845df4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13b02c5d4d8aa656dcfbc2b567845df4">&#9670;&#160;</a></span>startPings()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void startPings </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Начинает проверку 5-ти выбранных адресов на доступность. </p>
+<p>После вызова этой функции будут запущены 5 хостов консоли с командой <code>ping</code>, которые будут проверять на доступность адреса, заданные функцией setPingAddressList. </p><dl class="section note"><dt>Заметки</dt><dd>Может быть вызвана из QML через мета-объектную систему. </dd></dl>
+<dl class="section warning"><dt>Предупреждения</dt><dd>Эта функция должна быть вызвана после того, как будут заданы адреса для проверки. </dd></dl>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="../../d7/d4f/a00819.html#aa083206e6391e3e8d664e7696d716c4f" title="Задает список адресов для проверки на доступность.">setPingAddressList</a> </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/d9c/a00413_source.html">quasarsdk_quasarinterface.c++</a> строка <a class="el" href="../../da/d9c/a00413_source.html#l00252">252</a></p>
+
+</div>
+</div>
+<a id="aba28ee97ffe6d508e26f534ec7e62f8f" name="aba28ee97ffe6d508e26f534ec7e62f8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba28ee97ffe6d508e26f534ec7e62f8f">&#9670;&#160;</a></span>stop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void stop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Производит отключение от РЛС. </p>
+<p>Функция останавливает все дочерние сокеты и устанавливает состояние подключения и задержку. </p><dl class="section note"><dt>Заметки</dt><dd>Может быть вызвана из QML через мета-объектную систему. </dd></dl>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="../../d7/d4f/a00819.html#a51447fee38e270ee93a514b408ca01e3" title="Производит попытку подключения к РЛС по указанным адресам.">start</a> </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/d9c/a00413_source.html">quasarsdk_quasarinterface.c++</a> строка <a class="el" href="../../da/d9c/a00413_source.html#l00268">268</a></p>
+
+</div>
+</div>
+<a id="a17df331fe378da15eb4b56bad7dbf174" name="a17df331fe378da15eb4b56bad7dbf174"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17df331fe378da15eb4b56bad7dbf174">&#9670;&#160;</a></span>execute() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void execute </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d8/d2d/a00815.html#a8dd47094c7079ec1fcbd5df9870c486e">QuasarSDK::Enums::NetworkCommand</a>&#160;</td>
+          <td class="paramname"><em>command</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Выполняет встроенную команду сервиса <b>execd</b>. </p>
+<p>Функция посылает в сервис <b>execd</b> выбранную встроенную команду из списка команд (см. <a class="el" href="../../d8/d2d/a00815.html" title="Класс-обёртка для общих перечислений SDK РЛС &quot;Квазар&quot;.">QuasarSDK::Enums</a>). Если команда требует дополнительных аргументов, то они будут добавлены автоматически. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">command</td><td>- выбранная команда. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Может быть вызвана из QML через мета-объектную систему. </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/d9c/a00413_source.html">quasarsdk_quasarinterface.c++</a> строка <a class="el" href="../../da/d9c/a00413_source.html#l00286">286</a></p>
+
+</div>
+</div>
+<a id="a2d7ed416a5bfbe867fbdd612720d6869" name="a2d7ed416a5bfbe867fbdd612720d6869"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d7ed416a5bfbe867fbdd612720d6869">&#9670;&#160;</a></span>execute() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void execute </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>command</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Выполняет произвольную команду сервиса <b>execd</b>. </p>
+<p>Функция конвертирует выбранную строку в команду сервиса <b>execd</b> и отправляет ее на РЛС. Если команда валидна, то она будет выполнена. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">command</td><td>- строка для выполнения. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Может быть вызвана из QML через мета-объектную систему. </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="../../d9/dd5/a00432.html#_todo000003">Необходимо сделать:</a></b></dt><dd>Интеграция с терминалом VT100. </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/d9c/a00413_source.html">quasarsdk_quasarinterface.c++</a> строка <a class="el" href="../../da/d9c/a00413_source.html#l00319">319</a></p>
+
+</div>
+</div>
+<a id="af3543a6879806206a3ec067d1c712cfa" name="af3543a6879806206a3ec067d1c712cfa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3543a6879806206a3ec067d1c712cfa">&#9670;&#160;</a></span>argument()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString argument </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d8/d2d/a00815.html#a19451e9aa738da7e4404cf614b4c9e09">QuasarSDK::Enums::ArgumentCategory</a>&#160;</td>
+          <td class="paramname"><em>category</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Возвращает аргумент из списка сервиса <b>execd</b>. </p>
+<p>Функция возвращает константный аргумент по заданному ключу и категории аргументов. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>- ключ (например, <code>"--x0"</code>). </td></tr>
+    <tr><td class="paramname">category</td><td>- категория аргумента (см. <a class="el" href="../../d8/d2d/a00815.html#a19451e9aa738da7e4404cf614b4c9e09" title="Перечисление категорий аргументов параметров формирования.">QuasarSDK::Enums::ArgumentCategory</a>). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Может быть вызвана из QML через мета-объектную систему. </dd></dl>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="../../d7/d4f/a00819.html#a51be026891b678d621cb1947a3ed1fe6" title="Устанавливает аргумент из списка сервиса execd.">setArgument</a> </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/d9c/a00413_source.html">quasarsdk_quasarinterface.c++</a> строка <a class="el" href="../../da/d9c/a00413_source.html#l00334">334</a></p>
+
+</div>
+</div>
+<a id="a51be026891b678d621cb1947a3ed1fe6" name="a51be026891b678d621cb1947a3ed1fe6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51be026891b678d621cb1947a3ed1fe6">&#9670;&#160;</a></span>setArgument()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setArgument </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QVariant &amp;&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d8/d2d/a00815.html#a19451e9aa738da7e4404cf614b4c9e09">QuasarSDK::Enums::ArgumentCategory</a>&#160;</td>
+          <td class="paramname"><em>category</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Устанавливает аргумент из списка сервиса <b>execd</b>. </p>
+<p>Функция устанавливает выбранный аргумент в приватный список аргументов сервиса <b>execd</b> и выбранную категорию. Значение аргумента будет автоматически приведено к корректному виду (<code>int</code>, <code>float</code>, <code>string</code>). </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>- ключ (например, <code>"--x0"</code>). </td></tr>
+    <tr><td class="paramname">value</td><td>- новое значение аргумента. </td></tr>
+    <tr><td class="paramname">category</td><td>- категория аргумента (см. <a class="el" href="../../d8/d2d/a00815.html#a19451e9aa738da7e4404cf614b4c9e09" title="Перечисление категорий аргументов параметров формирования.">QuasarSDK::Enums::ArgumentCategory</a>). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Может быть вызвана из QML через мета-объектную систему. </dd></dl>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="../../d7/d4f/a00819.html#af3543a6879806206a3ec067d1c712cfa" title="Возвращает аргумент из списка сервиса execd.">argument</a> </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/d9c/a00413_source.html">quasarsdk_quasarinterface.c++</a> строка <a class="el" href="../../da/d9c/a00413_source.html#l00356">356</a></p>
+
+</div>
+</div>
+<a id="a964934b2654b053b60d0a69d7234b581" name="a964934b2654b053b60d0a69d7234b581"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a964934b2654b053b60d0a69d7234b581">&#9670;&#160;</a></span>stringify()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString stringify </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>ip</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>port</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Конвертирует IP-адрес и порт в общую строку. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ip</td><td>- IP-адрес (например, <code>"192.168.1.10"</code>). </td></tr>
+    <tr><td class="paramname">port</td><td>- порт в виде строки (например, <code>"9955"</code>). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Строка с IP-адресом и портом (например, <code>"192.168.1.10:9955"</code>). </dd></dl>
+<dl class="section note"><dt>Заметки</dt><dd>Может быть вызвана из QML через мета-объектную систему. </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/d9c/a00413_source.html">quasarsdk_quasarinterface.c++</a> строка <a class="el" href="../../da/d9c/a00413_source.html#l00375">375</a></p>
+
+</div>
+</div>
+<a id="acb92116f8fe3d1e119ac63d132efdd5f" name="acb92116f8fe3d1e119ac63d132efdd5f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb92116f8fe3d1e119ac63d132efdd5f">&#9670;&#160;</a></span>setRemoteAddressList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setRemoteAddressList </td>
+          <td>(</td>
+          <td class="paramtype">const std::array&lt; QString, 2 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>list</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Задает адреса для обратной связи сервиса <code>fsend</code>. </p>
+<p>Порядок адресов следующий:</p><ul>
+<li>TCP-IP сервер (например, <code>192.168.1.10:10000</code></li>
+<li>UDP сокет для полосовых изображений (например, <code>192.168.1.10:48455</code> <dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">list</td><td>- массив из двух адресов. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section warning"><dt>Предупреждения</dt><dd>Функция должна быть вызвана перед вызовом метода start. </dd></dl>
+</li>
+</ul>
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/d9c/a00413_source.html">quasarsdk_quasarinterface.c++</a> строка <a class="el" href="../../da/d9c/a00413_source.html#l00395">395</a></p>
+
+</div>
+</div>
+<a id="aa083206e6391e3e8d664e7696d716c4f" name="aa083206e6391e3e8d664e7696d716c4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa083206e6391e3e8d664e7696d716c4f">&#9670;&#160;</a></span>setPingAddressList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setPingAddressList </td>
+          <td>(</td>
+          <td class="paramtype">const std::array&lt; QString, 5 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>list</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Задает список адресов для проверки на доступность. </p>
+<p>Порядок адресов следующий:</p><ul>
+<li>IP-адрес DE10-NANO</li>
+<li>IP-адрес NVidia Jetson</li>
+<li>IP-адрес бортовой навигации</li>
+<li>IP-адрес коммутатора антенн</li>
+<li>IP-адрес коммутатора питания Адреса должны предоставляться без портов (напр. <code>127.0.0.1</code>). <dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">list</td><td>- массив из пяти адресов. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section warning"><dt>Предупреждения</dt><dd>Функция должна быть вызвана перед вызовом метода startPings. </dd></dl>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="../../d7/d4f/a00819.html#a13b02c5d4d8aa656dcfbc2b567845df4" title="Начинает проверку 5-ти выбранных адресов на доступность.">startPings</a> </dd></dl>
+</li>
+</ul>
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/d9c/a00413_source.html">quasarsdk_quasarinterface.c++</a> строка <a class="el" href="../../da/d9c/a00413_source.html#l00413">413</a></p>
+
+</div>
+</div>
+<a id="a33670415719976b873d92b877de75669" name="a33670415719976b873d92b877de75669"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33670415719976b873d92b877de75669">&#9670;&#160;</a></span>enableRedirect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void enableRedirect </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>address</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Включает перенаправление вывода РЛС на указанный адрес. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">address</td><td>- IPv4-адрес и порт для перенаправления. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/d9c/a00413_source.html">quasarsdk_quasarinterface.c++</a> строка <a class="el" href="../../da/d9c/a00413_source.html#l00422">422</a></p>
+
+</div>
+</div>
+<a id="a5919211a0de475695e1ecc0eac7b2983" name="a5919211a0de475695e1ecc0eac7b2983"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5919211a0de475695e1ecc0eac7b2983">&#9670;&#160;</a></span>disableRedirect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void disableRedirect </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Выключает перенаправление вывода РЛС. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/d9c/a00413_source.html">quasarsdk_quasarinterface.c++</a> строка <a class="el" href="../../da/d9c/a00413_source.html#l00429">429</a></p>
+
+</div>
+</div>
+<a id="a66b4d57572f1d20d0023a2992c24532c" name="a66b4d57572f1d20d0023a2992c24532c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66b4d57572f1d20d0023a2992c24532c">&#9670;&#160;</a></span>tcpDataReceived</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void tcpDataReceived </td>
+          <td>(</td>
+          <td class="paramtype">QByteArray&#160;</td>
+          <td class="paramname"><em>data</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Срабатывает, когда сервер TCP-IP завершает приём данных. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>- данные, полученные сервером. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a2d40009ab772b628305cadb77e4490c7" name="a2d40009ab772b628305cadb77e4490c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d40009ab772b628305cadb77e4490c7">&#9670;&#160;</a></span>udpDataReceived</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void udpDataReceived </td>
+          <td>(</td>
+          <td class="paramtype">QByteArray&#160;</td>
+          <td class="paramname"><em>data</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Срабатывает, когда сокет UDP для полосовых РЛИ получает данные. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>- данные, полученные сокетом. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a494c9269792068b8e0ecff130f346a8e" name="a494c9269792068b8e0ecff130f346a8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a494c9269792068b8e0ecff130f346a8e">&#9670;&#160;</a></span>telemetrySocketMetrics</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void telemetrySocketMetrics </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>size_bytes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>out</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Метрики сокета телеметрии. </p>
+<p>Предоставляет отладочную информацию о данных, проходящих через сокет в обоих направлениях. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>- данные, приведенные к виду строки. </td></tr>
+    <tr><td class="paramname">size_bytes</td><td>- размер данных в байтах. </td></tr>
+    <tr><td class="paramname">out</td><td>- направление движения данных: <code>true</code> означает выходной поток, <code>false</code> - входной. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8c7be2f1298e09c11e7629889a53d722" name="a8c7be2f1298e09c11e7629889a53d722"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c7be2f1298e09c11e7629889a53d722">&#9670;&#160;</a></span>execdSocketMetrics</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void execdSocketMetrics </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>size_bytes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>out</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Метрики сокета выполнения команд. </p>
+<p>Предоставляет отладочную информацию о данных, проходящих через сокет в обоих направлениях. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>- данные, приведенные к виду строки. </td></tr>
+    <tr><td class="paramname">size_bytes</td><td>- размер данных в байтах. </td></tr>
+    <tr><td class="paramname">out</td><td>- направление движения данных: <code>true</code> означает выходной поток, <code>false</code> - входной. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae1c378bc3ccf4c8b1619d3f5406a484e" name="ae1c378bc3ccf4c8b1619d3f5406a484e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1c378bc3ccf4c8b1619d3f5406a484e">&#9670;&#160;</a></span>lfsSocketMetrics</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lfsSocketMetrics </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>msg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>size_bytes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>out</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Метрики сервера TCP-IP. </p>
+<p>Предоставляет отладочную информацию о данных, проходящих через сокет в обоих направлениях. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>- данные, приведенные к виду строки. </td></tr>
+    <tr><td class="paramname">size_bytes</td><td>- размер данных в байтах. </td></tr>
+    <tr><td class="paramname">out</td><td>- направление движения данных: <code>true</code> означает выходной поток, <code>false</code> - входной. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0eaca412515be45380dcecc70304b996" name="a0eaca412515be45380dcecc70304b996"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0eaca412515be45380dcecc70304b996">&#9670;&#160;</a></span>stripSocketMetrics</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void stripSocketMetrics </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>msg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>size_bytes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>out</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Метрики сокета для приема больших данных. </p>
+<p>Предоставляет отладочную информацию о данных, проходящих через сокет в обоих направлениях. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>- данные, приведенные к виду строки. </td></tr>
+    <tr><td class="paramname">size_bytes</td><td>- размер данных в байтах. </td></tr>
+    <tr><td class="paramname">out</td><td>- направление движения данных: <code>true</code> означает выходной поток, <code>false</code> - входной. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac5bbf2e7a30c04d0f42fb824aba0ca84" name="ac5bbf2e7a30c04d0f42fb824aba0ca84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5bbf2e7a30c04d0f42fb824aba0ca84">&#9670;&#160;</a></span>processFeedback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void processFeedback </td>
+          <td>(</td>
+          <td class="paramtype">QByteArray&#160;</td>
+          <td class="paramname"><em>data</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="todo"><dt><b><a class="el" href="../../d9/dd5/a00432.html#_todo000004">Необходимо сделать:</a></b></dt><dd>Интеграция с терминалом VT100. </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="../../da/d9c/a00413_source.html">quasarsdk_quasarinterface.c++</a> строка <a class="el" href="../../da/d9c/a00413_source.html#l00378">378</a></p>
+
+</div>
+</div>
+<h2 class="groupheader">Полный список свойств</h2>
+<a id="a7caa83797f2f419d1201b652b1970ef9" name="a7caa83797f2f419d1201b652b1970ef9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7caa83797f2f419d1201b652b1970ef9">&#9670;&#160;</a></span>telemetry</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">telemetry</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Предоставляет доступ к текущей телеметрии БПЛА. </p>
+<p>Свойство доступно только для чтения. </p><dl class="section see"><dt>См. также</dt><dd><a class="el" href="../../dd/d7a/a00795.html" title="Класс-хранилище для текущей телеметрии РЛС.">QuasarSDK::Telemetry</a> </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d9/de6/a00404_source.html">quasarsdk_quasarinterface.h</a> строка <a class="el" href="../../d9/de6/a00404_source.html#l00001">1</a></p>
+
+</div>
+</div>
+<a id="a9efe0b9a30d46f7613978ab954918f3d" name="a9efe0b9a30d46f7613978ab954918f3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9efe0b9a30d46f7613978ab954918f3d">&#9670;&#160;</a></span>remote</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">remote</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Предоставляет доступ к набору состояний, связанных с РЛС. </p>
+<p>Свойство доступно только для чтения. </p><dl class="section see"><dt>См. также</dt><dd><a class="el" href="../../dd/de5/a00771.html" title="Класс-хранилище для данных, связанных с РЛС.">QuasarSDK::RemoteData</a> </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d9/de6/a00404_source.html">quasarsdk_quasarinterface.h</a> строка <a class="el" href="../../d9/de6/a00404_source.html#l00001">1</a></p>
+
+</div>
+</div>
+<a id="a7e564e4120f565a5137596d39293ec88" name="a7e564e4120f565a5137596d39293ec88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e564e4120f565a5137596d39293ec88">&#9670;&#160;</a></span>isConnected</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">isConnected</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">write</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Предоставляет текущее состояния подключения к РЛС. </p>
+<p>Свойство доступно для чтения и записи. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d9/de6/a00404_source.html">quasarsdk_quasarinterface.h</a> строка <a class="el" href="../../d9/de6/a00404_source.html#l00001">1</a></p>
+
+</div>
+</div>
+<a id="a0af2bd852f5ddf3a39df72fb1eb329dd" name="a0af2bd852f5ddf3a39df72fb1eb329dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0af2bd852f5ddf3a39df72fb1eb329dd">&#9670;&#160;</a></span>currentNetworkDelay</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">currentNetworkDelay</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">write</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Предоставляет текущее значение задержки между пакетами РЛС. </p>
+<p>Свойство доступно для чтения и записи. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d9/de6/a00404_source.html">quasarsdk_quasarinterface.h</a> строка <a class="el" href="../../d9/de6/a00404_source.html#l00001">1</a></p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li><a class="el" href="../../d9/de6/a00404_source.html">quasarsdk_quasarinterface.h</a></li>
+<li><a class="el" href="../../da/d9c/a00413_source.html">quasarsdk_quasarinterface.c++</a></li>
+</ul>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
+    <li class="navelem"><a class="el" href="../../d9/d10/a00449.html">QuasarSDK</a></li><li class="navelem"><a class="el" href="../../d7/d4f/a00819.html">QuasarAPI</a></li>
     <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
   </ul>
 </div>

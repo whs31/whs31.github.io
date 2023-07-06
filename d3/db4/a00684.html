@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.6"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuaSAR: Класс Pinger</title>
+<title>QuaSAR: Структура TelemetryRequest</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -93,182 +93,133 @@ $(document).ready(function(){initNavTree('d3/db4/a00684.html','../../'); initRes
 
 <div class="header">
   <div class="summary">
-<a href="#signals">Сигналы</a> &#124;
-<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-attribs">Открытые атрибуты</a> &#124;
 <a href="../../d8/dba/a00681.html">Полный список членов класса</a>  </div>
-  <div class="headertitle"><div class="title">Класс Pinger</div></div>
+  <div class="headertitle"><div class="title">Структура TelemetryRequest</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="../../de/de1/a00065_source.html">ping.h</a>&gt;</code></p>
-
-<p>Базовые классы:QObject.</p>
+<p><code>#include &lt;<a class="el" href="../../d8/d41/a00038_source.html">telemetrydatagram.h</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="signals" name="signals"></a>
-Сигналы</h2></td></tr>
-<tr class="memitem:aec41dea9a34ffd7275acc4b59ba16c1c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/db4/a00684.html#aec41dea9a34ffd7275acc4b59ba16c1c">result</a> (int status)</td></tr>
-<tr class="separator:aec41dea9a34ffd7275acc4b59ba16c1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
-Открытые члены</h2></td></tr>
-<tr class="memitem:a26212be9cfb26a7569a0834dbd5123d5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/db4/a00684.html#a26212be9cfb26a7569a0834dbd5123d5">Pinger</a> (QObject *parent=nullptr)</td></tr>
-<tr class="separator:a26212be9cfb26a7569a0834dbd5123d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aee01bed59a8eba3e2c8a864b2414b9f1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/db4/a00684.html#aee01bed59a8eba3e2c8a864b2414b9f1">start</a> (uint32_t interval, const QString &amp;address, const vector&lt; QString &gt; &amp;args={})</td></tr>
-<tr class="separator:aee01bed59a8eba3e2c8a864b2414b9f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aba28ee97ffe6d508e26f534ec7e62f8f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/db4/a00684.html#aba28ee97ffe6d508e26f534ec7e62f8f">stop</a> () noexcept</td></tr>
-<tr class="separator:aba28ee97ffe6d508e26f534ec7e62f8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Открытые атрибуты</h2></td></tr>
+<tr class="memitem:a0ea604dd26c415c8f380323b91bdba56"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/db4/a00684.html#a0ea604dd26c415c8f380323b91bdba56">marker</a> = 0x55bb55bb</td></tr>
+<tr class="separator:a0ea604dd26c415c8f380323b91bdba56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a210e06aa846736988dbee1b9f1bb4464"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/db4/a00684.html#a210e06aa846736988dbee1b9f1bb4464">init_flag</a> = 0x00</td></tr>
+<tr class="separator:a210e06aa846736988dbee1b9f1bb4464"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e0798404bf2cf5dabb84c5ba9a4f236"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/db4/a00684.html#a8e0798404bf2cf5dabb84c5ba9a4f236">port</a> = 0</td></tr>
+<tr class="separator:a8e0798404bf2cf5dabb84c5ba9a4f236"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90ade0bc499be730c6d20696fffaf4f7"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/db4/a00684.html#a90ade0bc499be730c6d20696fffaf4f7">interval_ms</a> = 0</td></tr>
+<tr class="separator:a90ade0bc499be730c6d20696fffaf4f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4438e0df9f58b1861feb3fc659f52534"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/db4/a00684.html#a4438e0df9f58b1861feb3fc659f52534">crc16</a> = 0x0</td></tr>
+<tr class="separator:a4438e0df9f58b1861feb3fc659f52534"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
-<div class="textblock"><p>Class for checking connection to specified IPv4 address via ICMP. </p>
+<div class="textblock"><p>Датаграма запроса телеметрии от наземки к РЛС. Сериализована в Big Endian. </p>
 
-<p class="definition">См. определение в файле <a class="el" href="../../de/de1/a00065_source.html">ping.h</a> строка <a class="el" href="../../de/de1/a00065_source.html#l00016">16</a></p>
-</div><h2 class="groupheader">Конструктор(ы)</h2>
-<a id="a26212be9cfb26a7569a0834dbd5123d5" name="a26212be9cfb26a7569a0834dbd5123d5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a26212be9cfb26a7569a0834dbd5123d5">&#9670;&#160;</a></span>Pinger()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../d3/db4/a00684.html">Pinger</a> </td>
-          <td>(</td>
-          <td class="paramtype">QObject *&#160;</td>
-          <td class="paramname"><em>parent</em> = <code>nullptr</code></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Constructs new <a class="el" href="../../d3/db4/a00684.html" title="Class for checking connection to specified IPv4 address via ICMP.">Pinger</a> object with given parent. </p>
-
-<p class="definition">См. определение в файле <a class="el" href="../../df/d03/a00062_source.html">ping.c++</a> строка <a class="el" href="../../df/d03/a00062_source.html#l00011">11</a></p>
-
-</div>
-</div>
-<h2 class="groupheader">Методы</h2>
-<a id="aee01bed59a8eba3e2c8a864b2414b9f1" name="aee01bed59a8eba3e2c8a864b2414b9f1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aee01bed59a8eba3e2c8a864b2414b9f1">&#9670;&#160;</a></span>start()</h2>
+<p class="definition">См. определение в файле <a class="el" href="../../d8/d41/a00038_source.html">telemetrydatagram.h</a> строка <a class="el" href="../../d8/d41/a00038_source.html#l00033">33</a></p>
+</div><h2 class="groupheader">Данные класса</h2>
+<a id="a0ea604dd26c415c8f380323b91bdba56" name="a0ea604dd26c415c8f380323b91bdba56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ea604dd26c415c8f380323b91bdba56">&#9670;&#160;</a></span>marker</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void start </td>
-          <td>(</td>
-          <td class="paramtype">uint32_t&#160;</td>
-          <td class="paramname"><em>interval</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const QString &amp;&#160;</td>
-          <td class="paramname"><em>address</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const vector&lt; QString &gt; &amp;&#160;</td>
-          <td class="paramname"><em>args</em> = <code>{}</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="memname">uint32_t marker = 0x55bb55bb</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Starts pinging given address, until <a class="el" href="../../d3/db4/a00684.html" title="Class for checking connection to specified IPv4 address via ICMP.">Pinger</a> is not destroyed or stopped. </p>
-<dl class="params"><dt>Аргументы</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">interval</td><td>- ms interval between pings. 0 means auto. </td></tr>
-    <tr><td class="paramname">address</td><td>- IPv4 address to ping. </td></tr>
-    <tr><td class="paramname">args</td><td>- ping command line arguments. </td></tr>
-  </table>
-  </dd>
-</dl>
+<p>Маркер сообщения. </p>
+<p>Равен <code>0x55BB55BB</code>. </p>
 
-<p class="definition">См. определение в файле <a class="el" href="../../df/d03/a00062_source.html">ping.c++</a> строка <a class="el" href="../../df/d03/a00062_source.html#l00025">25</a></p>
+<p class="definition">См. определение в файле <a class="el" href="../../d8/d41/a00038_source.html">telemetrydatagram.h</a> строка <a class="el" href="../../d8/d41/a00038_source.html#l00035">35</a></p>
 
 </div>
 </div>
-<a id="aba28ee97ffe6d508e26f534ec7e62f8f" name="aba28ee97ffe6d508e26f534ec7e62f8f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aba28ee97ffe6d508e26f534ec7e62f8f">&#9670;&#160;</a></span>stop()</h2>
+<a id="a210e06aa846736988dbee1b9f1bb4464" name="a210e06aa846736988dbee1b9f1bb4464"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a210e06aa846736988dbee1b9f1bb4464">&#9670;&#160;</a></span>init_flag</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void stop </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td class="memname">uint8_t init_flag = 0x00</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Stops pinging address. </p>
+<p>Тип команды. </p>
+<p><code>0x00</code> завершает передачу, <code>0х01</code> - начинает. </p>
 
-<p class="definition">См. определение в файле <a class="el" href="../../df/d03/a00062_source.html">ping.c++</a> строка <a class="el" href="../../df/d03/a00062_source.html#l00041">41</a></p>
+<p class="definition">См. определение в файле <a class="el" href="../../d8/d41/a00038_source.html">telemetrydatagram.h</a> строка <a class="el" href="../../d8/d41/a00038_source.html#l00036">36</a></p>
 
 </div>
 </div>
-<a id="aec41dea9a34ffd7275acc4b59ba16c1c" name="aec41dea9a34ffd7275acc4b59ba16c1c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aec41dea9a34ffd7275acc4b59ba16c1c">&#9670;&#160;</a></span>result</h2>
+<a id="a8e0798404bf2cf5dabb84c5ba9a4f236" name="a8e0798404bf2cf5dabb84c5ba9a4f236"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e0798404bf2cf5dabb84c5ba9a4f236">&#9670;&#160;</a></span>port</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void result </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>status</em></td><td>)</td>
-          <td></td>
+          <td class="memname">uint16_t port = 0</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">signal</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Emitted when ping is finished. </p>
-<dl class="params"><dt>Аргументы</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">status</td><td>- Network::PingStatus result code. </td></tr>
-  </table>
-  </dd>
-</dl>
+<p>Порт для обратной связи. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d8/d41/a00038_source.html">telemetrydatagram.h</a> строка <a class="el" href="../../d8/d41/a00038_source.html#l00037">37</a></p>
 
 </div>
 </div>
+<a id="a90ade0bc499be730c6d20696fffaf4f7" name="a90ade0bc499be730c6d20696fffaf4f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90ade0bc499be730c6d20696fffaf4f7">&#9670;&#160;</a></span>interval_ms</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t interval_ms = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Интервал передачи телеметрии в мс. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d8/d41/a00038_source.html">telemetrydatagram.h</a> строка <a class="el" href="../../d8/d41/a00038_source.html#l00038">38</a></p>
+
+</div>
+</div>
+<a id="a4438e0df9f58b1861feb3fc659f52534" name="a4438e0df9f58b1861feb3fc659f52534"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4438e0df9f58b1861feb3fc659f52534">&#9670;&#160;</a></span>crc16</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t crc16 = 0x0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Контрольная сумма датаграммы <code>CRC16_CCIT</code>. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d8/d41/a00038_source.html">telemetrydatagram.h</a> строка <a class="el" href="../../d8/d41/a00038_source.html#l00039">39</a></p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов структуры находятся в файле:<ul>
+<li><a class="el" href="../../d8/d41/a00038_source.html">telemetrydatagram.h</a></li>
+</ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../df/d70/a00431.html">Networking</a></li><li class="navelem"><a class="el" href="../../d3/db4/a00684.html">Pinger</a></li>
+    <li class="navelem"><a class="el" href="../../d4/da8/a00437.html">Networking</a></li><li class="navelem"><a class="el" href="../../d3/db4/a00684.html">TelemetryRequest</a></li>
     <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
   </ul>
 </div>

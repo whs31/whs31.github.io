@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['jetsonip_0',['jetsonIP',['../d2/d91/a00459.html#a75af3a7370fd6e32995373d2dbbf1f81',1,'Config::Config']]],
-  ['jetsonping_1',['jetsonping',['../dd/db6/a00639.html#afd38636f9b028739b2bc560f0dd308fb',1,'Networking::RemoteData']]]
+  ['isconnected_0',['isConnected',['../d7/d4f/a00819.html#a7e564e4120f565a5137596d39293ec88',1,'QuasarSDK::QuasarAPI']]],
+  ['isrecordingstrip_1',['isRecordingStrip',['../dd/de5/a00771.html#a087cca4afecc1dbdd07adabb7e26ac61',1,'QuasarSDK::RemoteData']]]
 ];

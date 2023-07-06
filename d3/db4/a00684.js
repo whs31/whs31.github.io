@@ -1,7 +1,8 @@
 var a00684 =
 [
-    [ "Pinger", "d3/db4/a00684.html#a26212be9cfb26a7569a0834dbd5123d5", null ],
-    [ "start", "d3/db4/a00684.html#aee01bed59a8eba3e2c8a864b2414b9f1", null ],
-    [ "stop", "d3/db4/a00684.html#aba28ee97ffe6d508e26f534ec7e62f8f", null ],
-    [ "result", "d3/db4/a00684.html#aec41dea9a34ffd7275acc4b59ba16c1c", null ]
+    [ "marker", "d3/db4/a00684.html#a0ea604dd26c415c8f380323b91bdba56", null ],
+    [ "init_flag", "d3/db4/a00684.html#a210e06aa846736988dbee1b9f1bb4464", null ],
+    [ "port", "d3/db4/a00684.html#a8e0798404bf2cf5dabb84c5ba9a4f236", null ],
+    [ "interval_ms", "d3/db4/a00684.html#a90ade0bc499be730c6d20696fffaf4f7", null ],
+    [ "crc16", "d3/db4/a00684.html#a4438e0df9f58b1861feb3fc659f52534", null ]
 ];

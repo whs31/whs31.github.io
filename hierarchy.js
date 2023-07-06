@@ -31,6 +31,7 @@ var hierarchy =
     [ "PlannerRemoveDatagram", "d9/d69/a00451.html#d8/d7f/a00787", null ],
     [ "PlannerResponseDatagram", "d8/d13/a00671.html", null ],
     [ "PlannerResponseDatagram", "d9/d69/a00451.html#d4/d45/a00791", null ],
+    [ "QuasarAPI", "d7/d4f/a00819.html", null ],
     [ "RemoteData", "dd/db6/a00639.html", null ],
     [ "RemoteData", "dd/de5/a00771.html", null ],
     [ "StripFormatMetadata", "de/df8/a00440.html#d2/dd7/a00567", null ],

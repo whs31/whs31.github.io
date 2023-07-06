@@ -12,9 +12,10 @@ var searchData=
   ['quasarsdk_5foutputsocket_2eh_9',['quasarsdk_outputsocket.h',['../de/d55/a00323.html',1,'']]],
   ['quasarsdk_5fpingtester_2eh_10',['quasarsdk_pingtester.h',['../da/dee/a00383.html',1,'']]],
   ['quasarsdk_5fplannerdatagram_2eh_11',['quasarsdk_plannerdatagram.h',['../d8/d21/a00368.html',1,'']]],
-  ['quasarsdk_5fremotedata_2eh_12',['quasarsdk_remotedata.h',['../dc/d84/a00338.html',1,'']]],
-  ['quasarsdk_5fstripsocket_2eh_13',['quasarsdk_stripsocket.h',['../d1/dc6/a00347.html',1,'']]],
-  ['quasarsdk_5ftcpserver_2eh_14',['quasarsdk_tcpserver.h',['../db/ddc/a00353.html',1,'']]],
-  ['quasarsdk_5ftelemetry_2eh_15',['quasarsdk_telemetry.h',['../dd/db5/a00365.html',1,'']]],
-  ['quasarsdk_5ftelemetrydatagram_2eh_16',['quasarsdk_telemetrydatagram.h',['../d4/d13/a00377.html',1,'']]]
+  ['quasarsdk_5fquasarinterface_2eh_12',['quasarsdk_quasarinterface.h',['../d9/de6/a00404.html',1,'']]],
+  ['quasarsdk_5fremotedata_2eh_13',['quasarsdk_remotedata.h',['../dc/d84/a00338.html',1,'']]],
+  ['quasarsdk_5fstripsocket_2eh_14',['quasarsdk_stripsocket.h',['../d1/dc6/a00347.html',1,'']]],
+  ['quasarsdk_5ftcpserver_2eh_15',['quasarsdk_tcpserver.h',['../db/ddc/a00353.html',1,'']]],
+  ['quasarsdk_5ftelemetry_2eh_16',['quasarsdk_telemetry.h',['../dd/db5/a00365.html',1,'']]],
+  ['quasarsdk_5ftelemetrydatagram_2eh_17',['quasarsdk_telemetrydatagram.h',['../d4/d13/a00377.html',1,'']]]
 ];

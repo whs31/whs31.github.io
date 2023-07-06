@@ -1,10 +1,6 @@
 var a00648 =
 [
-    [ "TCPSocket", "dd/d1f/a00648.html#a3617f52d9bcbc6bdd7aa3a47c2ab4c7c", null ],
-    [ "startServer", "dd/d1f/a00648.html#abd4f5313475f5675af97fd717fafbbc1", null ],
-    [ "stopServer", "dd/d1f/a00648.html#ac1e551c19cd6ce8d7da8b13d1f290863", null ],
-    [ "progress", "dd/d1f/a00648.html#a4f0aa3afbd6ac7dd9cb856b55e889141", null ],
-    [ "receivingFinished", "dd/d1f/a00648.html#a009d42df202b2b5f7001ae737d92efd6", null ],
-    [ "progressChanged", "dd/d1f/a00648.html#a4b33200464fba1e0b425162610ce251e", null ],
-    [ "socketMetrics", "dd/d1f/a00648.html#a58d7e2b4c7d46a5ae4041d122b03b584", null ]
+    [ "StripSocket", "dd/d1f/a00648.html#a1dc0347f6e97ffd1f34ed614272dbb47", null ],
+    [ "start", "dd/d1f/a00648.html#a958f448ca262fd5e96958cbfeec13676", null ],
+    [ "stop", "dd/d1f/a00648.html#a8c528baf37154d347366083f0f816846", null ]
 ];

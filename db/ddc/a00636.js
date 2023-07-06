@@ -1,10 +1,8 @@
 var a00636 =
 [
-    [ "RemoteData", "db/ddc/a00636.html#aaa72d856aabec940cd92b5a4a4c96c37", null ],
-    [ "storageSpace", "db/ddc/a00636.html#a66f2ebfeb3e0e823b05351f875ec8639", null ],
-    [ "de10ping", "db/ddc/a00636.html#a6c497150928852749b119505b1459c23", null ],
-    [ "jetsonping", "db/ddc/a00636.html#afd38636f9b028739b2bc560f0dd308fb", null ],
-    [ "navping", "db/ddc/a00636.html#a2544bdcfc5359dca927e785963cd3f73", null ],
-    [ "utl1ping", "db/ddc/a00636.html#a69bac30bb5ebdbb94aede5da963f1a92", null ],
-    [ "utl2ping", "db/ddc/a00636.html#a227c93f9e46608d7af529f7f89fc8042", null ]
+    [ "FeedbackSocket", "db/ddc/a00636.html#aab5c038baa1b44dcc1a4acf4e6b0b4b2", null ],
+    [ "start", "db/ddc/a00636.html#a958f448ca262fd5e96958cbfeec13676", null ],
+    [ "stop", "db/ddc/a00636.html#a8c528baf37154d347366083f0f816846", null ],
+    [ "textReceived", "db/ddc/a00636.html#a37c1fb9b5186582b3c01135c1b28f8c0", null ],
+    [ "diskSpaceReceived", "db/ddc/a00636.html#ae7259e99451bbab025d71c8683d73676", null ]
 ];

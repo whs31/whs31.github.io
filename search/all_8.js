@@ -11,5 +11,7 @@ var searchData=
   ['integer_8',['Integer',['../df/d6f/a00623.html#aa15f3f718db408445afc1b93c12294c5a1e2f89e867cd91c3de2ea9fbd2ef96a3',1,'Networking::ExecdArgument::Integer()'],['../d2/ddd/a00755.html#aa15f3f718db408445afc1b93c12294c5a1e2f89e867cd91c3de2ea9fbd2ef96a3',1,'QuasarSDK::ExecdArgument::Integer()']]],
   ['interval_5fms_9',['interval_ms',['../db/d77/a00683.html#a90ade0bc499be730c6d20696fffaf4f7',1,'Networking::TelemetryRequest::interval_ms()'],['../d9/d69/a00451.html#a90ade0bc499be730c6d20696fffaf4f7',1,'QuasarSDK::Datagrams::TelemetryRequest::interval_ms()']]],
   ['ip_10',['ip',['../d7/d5f/a00663.html#a69ddb9c845da426f636d9dd0dbed4e7e',1,'Networking::PlannerAppendDatagram::ip()'],['../d9/d69/a00451.html#a69ddb9c845da426f636d9dd0dbed4e7e',1,'QuasarSDK::Datagrams::PlannerAppendDatagram::ip()']]],
-  ['isnan_11',['isNaN',['../de/df4/a00450.html#aaf0578b9d15d85ab4e18cee1256ff1e7',1,'QuasarSDK::Utils']]]
+  ['isconnected_11',['isConnected',['../d7/d4f/a00819.html#a7e564e4120f565a5137596d39293ec88',1,'QuasarSDK::QuasarAPI']]],
+  ['isnan_12',['isNaN',['../de/df4/a00450.html#aaf0578b9d15d85ab4e18cee1256ff1e7',1,'QuasarSDK::Utils']]],
+  ['isrecordingstrip_13',['isRecordingStrip',['../dd/de5/a00771.html#a087cca4afecc1dbdd07adabb7e26ac61',1,'QuasarSDK::RemoteData']]]
 ];

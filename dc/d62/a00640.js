@@ -1,10 +1,10 @@
 var a00640 =
 [
-    [ "HTTPDownloader", "dc/d62/a00640.html#a8df39362cf4d9df8172121d4e52845a2", null ],
-    [ "download", "dc/d62/a00640.html#ab34ce209fa9eff78d4cf6656a5d4b3e1", null ],
-    [ "cache", "dc/d62/a00640.html#a58c9cb26b18c19f45f218accf9833eb3", null ],
-    [ "downloadFinished", "dc/d62/a00640.html#a575676c0aa3e5bcc74bc9be7a053e0d5", null ],
-    [ "progress", "dc/d62/a00640.html#a991fd2c404665f13f536fc7791e53504", null ],
-    [ "downloadedBytes", "dc/d62/a00640.html#aaf17bf5a5fe2080b85e3d146e6a8706b", null ],
-    [ "totalBytes", "dc/d62/a00640.html#a8516f594751b78c18e2515d724c2db82", null ]
+    [ "RemoteData", "dc/d62/a00640.html#aaa72d856aabec940cd92b5a4a4c96c37", null ],
+    [ "storageSpace", "dc/d62/a00640.html#a66f2ebfeb3e0e823b05351f875ec8639", null ],
+    [ "de10ping", "dc/d62/a00640.html#a6c497150928852749b119505b1459c23", null ],
+    [ "jetsonping", "dc/d62/a00640.html#afd38636f9b028739b2bc560f0dd308fb", null ],
+    [ "navping", "dc/d62/a00640.html#a2544bdcfc5359dca927e785963cd3f73", null ],
+    [ "utl1ping", "dc/d62/a00640.html#a69bac30bb5ebdbb94aede5da963f1a92", null ],
+    [ "utl2ping", "dc/d62/a00640.html#a227c93f9e46608d7af529f7f89fc8042", null ]
 ];

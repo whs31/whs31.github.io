@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.6"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuaSAR: Структура PlannerRemoveDatagram</title>
+<title>QuaSAR: Класс TCPServer</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -93,170 +93,260 @@ $(document).ready(function(){initNavTree('de/d42/a00780.html','../../'); initRes
 
 <div class="header">
   <div class="summary">
-<a href="#pub-attribs">Открытые атрибуты</a> &#124;
+<a href="#signals">Сигналы</a> &#124;
+<a href="#pub-methods">Открытые члены</a> &#124;
 <a href="../../d2/d02/a00777.html">Полный список членов класса</a>  </div>
-  <div class="headertitle"><div class="title">Структура PlannerRemoveDatagram</div></div>
+  <div class="headertitle"><div class="title">Класс TCPServer</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="../../d8/d21/a00368_source.html">QuasarSDK/Telemetry/PlannerDatagram</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="../../db/ddc/a00353_source.html">QuasarSDK/FSend/TCP</a>&gt;</code></p>
+
+<p>Базовые классы:QObject.</p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
-Открытые атрибуты</h2></td></tr>
-<tr class="memitem:a0ea604dd26c415c8f380323b91bdba56"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d42/a00780.html#a0ea604dd26c415c8f380323b91bdba56">marker</a></td></tr>
-<tr class="separator:a0ea604dd26c415c8f380323b91bdba56"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4fc3a0c58dfbd1e68224521185cb9384"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d42/a00780.html#a4fc3a0c58dfbd1e68224521185cb9384">id</a></td></tr>
-<tr class="separator:a4fc3a0c58dfbd1e68224521185cb9384"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acfb1795eb860b37ae4a0cf5007525b11"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d42/a00780.html#acfb1795eb860b37ae4a0cf5007525b11">r</a> = 0</td></tr>
-<tr class="separator:acfb1795eb860b37ae4a0cf5007525b11"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7972334534f68166121a6e51b0aac2d6"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d42/a00780.html#a7972334534f68166121a6e51b0aac2d6">lat</a> = 0</td></tr>
-<tr class="separator:a7972334534f68166121a6e51b0aac2d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa96391e04b5977c50b96d77bea86a01d"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d42/a00780.html#aa96391e04b5977c50b96d77bea86a01d">lon</a> = 0</td></tr>
-<tr class="separator:aa96391e04b5977c50b96d77bea86a01d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae1d905c6ac1a0c9b96dca16153917334"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d42/a00780.html#ae1d905c6ac1a0c9b96dca16153917334">cnt</a> = 0</td></tr>
-<tr class="separator:ae1d905c6ac1a0c9b96dca16153917334"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8aed22e2c7b283705ec82e0120515618"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d42/a00780.html#a8aed22e2c7b283705ec82e0120515618">len</a> = 0</td></tr>
-<tr class="separator:a8aed22e2c7b283705ec82e0120515618"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="signals" name="signals"></a>
+Сигналы</h2></td></tr>
+<tr class="memitem:a3eb63c5af67a44fb60ba731d3da7a56d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d42/a00780.html#a3eb63c5af67a44fb60ba731d3da7a56d">received</a> (QByteArray data)</td></tr>
+<tr class="separator:a3eb63c5af67a44fb60ba731d3da7a56d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b33200464fba1e0b425162610ce251e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d42/a00780.html#a4b33200464fba1e0b425162610ce251e">progressChanged</a> (float progress)</td></tr>
+<tr class="separator:a4b33200464fba1e0b425162610ce251e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7af680d6ad6bcfd92da53b320c9c9236"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d42/a00780.html#a7af680d6ad6bcfd92da53b320c9c9236">metrics</a> (const QString &amp;data, int size_bytes, bool out)</td></tr>
+<tr class="separator:a7af680d6ad6bcfd92da53b320c9c9236"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:aae83f860fbaa08693629478bba2b0ae0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d42/a00780.html#aae83f860fbaa08693629478bba2b0ae0">TCPServer</a> (QObject *parent=nullptr)</td></tr>
+<tr class="separator:aae83f860fbaa08693629478bba2b0ae0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28ca97829e1fcdc9073ca1c651e08ffa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d42/a00780.html#a28ca97829e1fcdc9073ca1c651e08ffa">start</a> (const QString &amp;address) noexcept</td></tr>
+<tr class="separator:a28ca97829e1fcdc9073ca1c651e08ffa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba28ee97ffe6d508e26f534ec7e62f8f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d42/a00780.html#aba28ee97ffe6d508e26f534ec7e62f8f">stop</a> () noexcept</td></tr>
+<tr class="separator:aba28ee97ffe6d508e26f534ec7e62f8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
-<div class="textblock"><p>Структура удаления точки из полётного задания. </p>
-<p>Точки удаляются автоматически при достижении cnt = 0; При очередном достижении зоны события счетчик cnt уменьшается на 1. Для ручного удаления точки необходимо передать <a class="el" href="../../de/d42/a00780.html" title="Структура удаления точки из полётного задания.">PlannerRemoveDatagram</a>. </p><dl class="section note"><dt>Заметки</dt><dd>Сериализована в Big Endian. </dd></dl>
+<div class="textblock"><p>Класс для приема больших файлов с РЛС по протоколу TCP-IP. </p>
+<p>Используется для приема цельных пакетов с телескопическими и полосовыми изображениями с РЛС, а также для приёма .zip-архивов.</p>
+<p>Предоставляет отладочные метрики по аналогии с классами-наследниками <a class="el" href="../../de/d3d/a00748.html" title="Базовый класс для сокетов, работающих по протоколу UDP.">BaseUDPSocket</a>. </p>
 
-<p class="definition">См. определение в файле <a class="el" href="../../d8/d21/a00368_source.html">quasarsdk_plannerdatagram.h</a> строка <a class="el" href="../../d8/d21/a00368_source.html#l00054">54</a></p>
-</div><h2 class="groupheader">Данные класса</h2>
-<a id="a0ea604dd26c415c8f380323b91bdba56" name="a0ea604dd26c415c8f380323b91bdba56"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0ea604dd26c415c8f380323b91bdba56">&#9670;&#160;</a></span>marker</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint32_t marker</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Маркер датаграммы. </p>
-<p>Всегда равен <code>0x55DD55DD</code>. </p>
-
-<p class="definition">См. определение в файле <a class="el" href="../../d8/d21/a00368_source.html">quasarsdk_plannerdatagram.h</a> строка <a class="el" href="../../d8/d21/a00368_source.html#l00056">56</a></p>
-
-</div>
-</div>
-<a id="a4fc3a0c58dfbd1e68224521185cb9384" name="a4fc3a0c58dfbd1e68224521185cb9384"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4fc3a0c58dfbd1e68224521185cb9384">&#9670;&#160;</a></span>id</h2>
+<p class="definition">См. определение в файле <a class="el" href="../../db/ddc/a00353_source.html">quasarsdk_tcpserver.h</a> строка <a class="el" href="../../db/ddc/a00353_source.html#l00018">18</a></p>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="aae83f860fbaa08693629478bba2b0ae0" name="aae83f860fbaa08693629478bba2b0ae0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae83f860fbaa08693629478bba2b0ae0">&#9670;&#160;</a></span>TCPServer()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">uint16_t id</td>
+          <td class="memname"><a class="el" href="../../de/d42/a00780.html">TCPServer</a> </td>
+          <td>(</td>
+          <td class="paramtype">QObject *&#160;</td>
+          <td class="paramname"><em>parent</em> = <code>nullptr</code></td><td>)</td>
+          <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Номер точки для удаления. </p>
+<p>Создает новый объект <a class="el" href="../../de/d42/a00780.html" title="Класс для приема больших файлов с РЛС по протоколу TCP-IP.">TCPServer</a> с указанным родителем. </p>
 
-<p class="definition">См. определение в файле <a class="el" href="../../d8/d21/a00368_source.html">quasarsdk_plannerdatagram.h</a> строка <a class="el" href="../../d8/d21/a00368_source.html#l00057">57</a></p>
+<p class="definition">См. определение в файле <a class="el" href="../../d6/de1/a00356_source.html">quasarsdk_tcpserver.c++</a> строка <a class="el" href="../../d6/de1/a00356_source.html#l00021">21</a></p>
 
 </div>
 </div>
-<a id="acfb1795eb860b37ae4a0cf5007525b11" name="acfb1795eb860b37ae4a0cf5007525b11"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acfb1795eb860b37ae4a0cf5007525b11">&#9670;&#160;</a></span>r</h2>
+<h2 class="groupheader">Методы</h2>
+<a id="a28ca97829e1fcdc9073ca1c651e08ffa" name="a28ca97829e1fcdc9073ca1c651e08ffa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28ca97829e1fcdc9073ca1c651e08ffa">&#9670;&#160;</a></span>start()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">uint16_t r = 0</td>
+          <td class="memname">void start </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>address</em></td><td>)</td>
+          <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Всегда равен 0. </p>
+<p>Запускает TCP-IP сервер на указанном адресе. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">address</td><td>- строка адреса в формате <code>192.168.1.10:10000</code>. </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">См. определение в файле <a class="el" href="../../d8/d21/a00368_source.html">quasarsdk_plannerdatagram.h</a> строка <a class="el" href="../../d8/d21/a00368_source.html#l00058">58</a></p>
+<p class="definition">См. определение в файле <a class="el" href="../../d6/de1/a00356_source.html">quasarsdk_tcpserver.c++</a> строка <a class="el" href="../../d6/de1/a00356_source.html#l00038">38</a></p>
 
 </div>
 </div>
-<a id="a7972334534f68166121a6e51b0aac2d6" name="a7972334534f68166121a6e51b0aac2d6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7972334534f68166121a6e51b0aac2d6">&#9670;&#160;</a></span>lat</h2>
+<a id="aba28ee97ffe6d508e26f534ec7e62f8f" name="aba28ee97ffe6d508e26f534ec7e62f8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba28ee97ffe6d508e26f534ec7e62f8f">&#9670;&#160;</a></span>stop()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">double lat = 0</td>
+          <td class="memname">void stop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Всегда равен 0. </p>
+<p>Останавливает запущенный TCP-IP сервер. </p>
 
-<p class="definition">См. определение в файле <a class="el" href="../../d8/d21/a00368_source.html">quasarsdk_plannerdatagram.h</a> строка <a class="el" href="../../d8/d21/a00368_source.html#l00059">59</a></p>
+<p class="definition">См. определение в файле <a class="el" href="../../d6/de1/a00356_source.html">quasarsdk_tcpserver.c++</a> строка <a class="el" href="../../d6/de1/a00356_source.html#l00058">58</a></p>
 
 </div>
 </div>
-<a id="aa96391e04b5977c50b96d77bea86a01d" name="aa96391e04b5977c50b96d77bea86a01d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa96391e04b5977c50b96d77bea86a01d">&#9670;&#160;</a></span>lon</h2>
+<a id="a3eb63c5af67a44fb60ba731d3da7a56d" name="a3eb63c5af67a44fb60ba731d3da7a56d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3eb63c5af67a44fb60ba731d3da7a56d">&#9670;&#160;</a></span>received</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">double lon = 0</td>
+          <td class="memname">void received </td>
+          <td>(</td>
+          <td class="paramtype">QByteArray&#160;</td>
+          <td class="paramname"><em>data</em></td><td>)</td>
+          <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">signal</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Всегда равен 0. </p>
-
-<p class="definition">См. определение в файле <a class="el" href="../../d8/d21/a00368_source.html">quasarsdk_plannerdatagram.h</a> строка <a class="el" href="../../d8/d21/a00368_source.html#l00060">60</a></p>
+<p>Срабатывает, когда сервер завершает прием данных от клиента. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>- массив байт с данными. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
-<a id="ae1d905c6ac1a0c9b96dca16153917334" name="ae1d905c6ac1a0c9b96dca16153917334"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae1d905c6ac1a0c9b96dca16153917334">&#9670;&#160;</a></span>cnt</h2>
+<a id="a4b33200464fba1e0b425162610ce251e" name="a4b33200464fba1e0b425162610ce251e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b33200464fba1e0b425162610ce251e">&#9670;&#160;</a></span>progressChanged</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">uint16_t cnt = 0</td>
+          <td class="memname">void progressChanged </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>progress</em></td><td>)</td>
+          <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">signal</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Всегда равен 0. </p>
-
-<p class="definition">См. определение в файле <a class="el" href="../../d8/d21/a00368_source.html">quasarsdk_plannerdatagram.h</a> строка <a class="el" href="../../d8/d21/a00368_source.html#l00061">61</a></p>
+<p>Срабатывает во время изменения прогресса загрузки файла. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">progress</td><td>- процент загрузки (от 0 до 100). </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
-<a id="a8aed22e2c7b283705ec82e0120515618" name="a8aed22e2c7b283705ec82e0120515618"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8aed22e2c7b283705ec82e0120515618">&#9670;&#160;</a></span>len</h2>
+<a id="a7af680d6ad6bcfd92da53b320c9c9236" name="a7af680d6ad6bcfd92da53b320c9c9236"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7af680d6ad6bcfd92da53b320c9c9236">&#9670;&#160;</a></span>metrics</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">uint16_t len = 0</td>
+          <td class="memname">void metrics </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>size_bytes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>out</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">signal</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Всегда равен 0. </p>
-
-<p class="definition">См. определение в файле <a class="el" href="../../d8/d21/a00368_source.html">quasarsdk_plannerdatagram.h</a> строка <a class="el" href="../../d8/d21/a00368_source.html#l00062">62</a></p>
+<p>Отладочные метрики сокета, аналогичные <a class="el" href="../../de/d3d/a00748.html#a563a67ebf5e4d8ba152045a7c51fd604" title="Предоставляет отладочные метрики сокета.">BaseUDPSocket::metrics</a>. </p>
 
 </div>
 </div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li><a class="el" href="../../db/ddc/a00353_source.html">quasarsdk_tcpserver.h</a></li>
+<li><a class="el" href="../../d6/de1/a00356_source.html">quasarsdk_tcpserver.c++</a></li>
+</ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../de/d84/a00447.html">QuasarSDK</a></li><li class="navelem"><a class="el" href="../../de/d42/a00780.html">PlannerRemoveDatagram</a></li>
+    <li class="navelem"><a class="el" href="../../de/df4/a00450.html">QuasarSDK</a></li><li class="navelem"><a class="el" href="../../de/d42/a00780.html">TCPServer</a></li>
     <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
   </ul>
 </div>

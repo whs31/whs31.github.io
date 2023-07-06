@@ -1,8 +1,10 @@
 var a00632 =
 [
-    [ "FeedbackSocket", "d4/d2a/a00632.html#aab5c038baa1b44dcc1a4acf4e6b0b4b2", null ],
+    [ "ExecdSocket", "d4/d2a/a00632.html#aa88751a63390d47bdbd43c98c9dcf181", null ],
     [ "start", "d4/d2a/a00632.html#a958f448ca262fd5e96958cbfeec13676", null ],
     [ "stop", "d4/d2a/a00632.html#a8c528baf37154d347366083f0f816846", null ],
-    [ "textReceived", "d4/d2a/a00632.html#a37c1fb9b5186582b3c01135c1b28f8c0", null ],
-    [ "diskSpaceReceived", "d4/d2a/a00632.html#ae7259e99451bbab025d71c8683d73676", null ]
+    [ "executeCommand", "d4/d2a/a00632.html#aca9a6b4dd04cee4d035855754cdfc8ee", null ],
+    [ "executeCommand", "d4/d2a/a00632.html#a17d8eb18cc25d019db6e8a621ee5dc4b", null ],
+    [ "ping", "d4/d2a/a00632.html#ad8136df344f340b0653c27e3317c08f5", null ],
+    [ "wrap", "d4/d2a/a00632.html#a819a8ba75b78e43068e3b08c03fad152", null ]
 ];

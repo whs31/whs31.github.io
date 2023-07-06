@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['remotedata_0',['RemoteData',['../dd/db6/a00639.html',1,'RemoteData'],['../dd/de5/a00771.html',1,'RemoteData']]]
+  ['quasarapi_0',['QuasarAPI',['../d7/d4f/a00819.html',1,'QuasarSDK']]]
 ];

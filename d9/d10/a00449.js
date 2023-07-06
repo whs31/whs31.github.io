@@ -19,6 +19,7 @@ var a00449 =
     [ "OutputRedirectServer", "d3/db4/a00823.html", "d3/db4/a00823" ],
     [ "OutputSocket", "d5/dae/a00767.html", "d5/dae/a00767" ],
     [ "PingTester", "dc/d1b/a00827.html", "dc/d1b/a00827" ],
+    [ "QuasarAPI", "d7/d4f/a00819.html", "d7/d4f/a00819" ],
     [ "RemoteData", "dd/de5/a00771.html", "dd/de5/a00771" ],
     [ "SeamlessUDPSocket", "da/df2/a00751.html", "da/df2/a00751" ],
     [ "StripSocket", "dc/d5d/a00775.html", "dc/d5d/a00775" ],

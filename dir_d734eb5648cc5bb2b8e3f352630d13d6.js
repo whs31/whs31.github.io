@@ -8,5 +8,5 @@ var dir_d734eb5648cc5bb2b8e3f352630d13d6 =
     [ "quasarsdk_config.h", "d4/def/a00359.html", null ],
     [ "quasarsdk_enums.h", "d8/d91/a00410.html", "d8/d91/a00410" ],
     [ "quasarsdk_quasarinterface.c++", "da/d9c/a00413_source.html", null ],
-    [ "quasarsdk_quasarinterface.h", "d9/de6/a00404_source.html", null ]
+    [ "quasarsdk_quasarinterface.h", "d9/de6/a00404.html", "d9/de6/a00404" ]
 ];
