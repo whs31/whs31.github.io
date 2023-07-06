@@ -1,4 +1,4 @@
 var a00086 =
 [
-    [ "TCPSocket", "de/d33/a00651.html", "de/d33/a00651" ]
+    [ "ArrayReader< T >", "d7/d84/a00535.html", "d7/d84/a00535" ]
 ];

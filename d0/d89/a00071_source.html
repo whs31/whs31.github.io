@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.6"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuaSAR: Исходный файл redirectserver.h</title>
+<title>QuaSAR: Исходный файл route.h</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -92,45 +92,57 @@ $(document).ready(function(){initNavTree('d0/d89/a00071_source.html','../../'); 
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">redirectserver.h</div></div>
+  <div class="headertitle"><div class="title">route.h</div></div>
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;QtCore/QObject&gt;</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">class </span>QTcpServer;</div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">class </span>QTcpSocket;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;QtCore/QVariantList&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">class </span>QGeoCoordinate;</div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d4/d82/a00436.html">Networking</a></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../db/ddc/a00353.html">Map</a></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>{</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>  <span class="keyword">class </span>RedirectServer : <span class="keyword">public</span> QObject</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>  {</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    Q_OBJECT</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>      <span class="keyword">explicit</span> RedirectServer(QObject* parent = <span class="keyword">nullptr</span>);</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>      ~RedirectServer() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>  <span class="keyword">class </span>RouteLogger;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>  <span class="keyword">class </span>Route : <span class="keyword">public</span> QObject</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>  {</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    Q_OBJECT</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>      Q_PROPERTY(QVariantList fullRoute READ fullRoute WRITE setFullRoute NOTIFY fullRouteChanged)</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>      Q_PROPERTY(QVariantList recentRoute READ recentRoute WRITE setRecentRoute NOTIFY recentRouteChanged)</div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>      <span class="keywordtype">void</span> start(<span class="keyword">const</span> QString&amp; address) <span class="keyword">noexcept</span>;</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>      <span class="keywordtype">void</span> stop() noexcept;</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>      <span class="keywordtype">void</span> push(const QByteArray&amp; data) noexcept;</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    private slots:</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>      <span class="keywordtype">void</span> clientConnected();</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    private:</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>      QTcpServer* server;</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>      QTcpSocket* socket;</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>  };</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>} <span class="comment">// Networking</span></div>
-<div class="ttc" id="aa00436_html"><div class="ttname"><a href="../../d4/d82/a00436.html">Networking</a></div><div class="ttdoc">Пространство имен для работы с сетевыми подключениями к РЛС.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d03/a00254_source.html#l00010">entry.h:11</a></div></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>      <span class="keyword">constexpr</span> <span class="keyword">static</span> <span class="keywordtype">int</span> RECENT_ROUTE_SIZE = 1000;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>      <span class="keyword">explicit</span> Route(QObject* parent = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>      ~Route() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>      Q_INVOKABLE <span class="keywordtype">void</span> append(<span class="keyword">const</span> QGeoCoordinate&amp; coord, <span class="keywordtype">float</span> speed = -1, <span class="keywordtype">int</span> satellites = -1);</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>      Q_INVOKABLE <span class="keywordtype">void</span> clear();</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>      [[nodiscard]] QVariantList fullRoute() <span class="keyword">const</span>; <span class="keywordtype">void</span> setFullRoute(<span class="keyword">const</span> QVariantList&amp;);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>      [[nodiscard]] QVariantList recentRoute() <span class="keyword">const</span>; <span class="keywordtype">void</span> setRecentRoute(<span class="keyword">const</span> QVariantList&amp;);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    signals:</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>      <span class="keywordtype">void</span> fullRouteChanged();</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>      <span class="keywordtype">void</span> recentRouteChanged();</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>      QVariantList m_fullRoute;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>      QVariantList m_recentRoute;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>      RouteLogger* logger;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>  };</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>} <span class="comment">// namespace Map</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="ttc" id="aa00353_html"><div class="ttname"><a href="../../db/ddc/a00353.html">Map</a></div><div class="ttdoc">Пространство имен для классов и функций, связанных с картографией.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d09/a00077_source.html#l00007">clickhandler.c++:8</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="../../dir_fcb2a60e1810a51543a3cc3a113d0956.html">c++</a></li><li class="navelem"><a class="el" href="../../dir_2658f57a99a735e2e16983d97ef2d726.html">network</a></li><li class="navelem"><a class="el" href="../../dir_60755ab0f925e32d4971f456ca5fc601.html">utils</a></li><li class="navelem"><b>redirectserver.h</b></li>
+    <li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="../../dir_fcb2a60e1810a51543a3cc3a113d0956.html">c++</a></li><li class="navelem"><a class="el" href="../../dir_d88003ba6281a9447bd5134cfe1c08c9.html">map</a></li><li class="navelem"><b>route.h</b></li>
     <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
   </ul>
 </div>

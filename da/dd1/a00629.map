@@ -1,5 +1,4 @@
-<map id="ExecdSocket" name="ExecdSocket">
-<area shape="rect" id="node1" title="Class for execd service interactions." alt="" coords="96,98,199,126"/>
-<area shape="rect" id="node2" href="$d6/d6a/a00619.html" title="Base class for handling UDP connections." alt="" coords="5,5,130,33"/>
-<area shape="rect" id="node3" href="$d3/da3/a00627.html" title="Class for storing and processing execd arguments." alt="" coords="154,5,301,33"/>
+<map id="Telemetry" name="Telemetry">
+<area shape="rect" id="node1" title="Класс&#45;хранилище для текущей телеметрии РЛС." alt="" coords="38,98,124,126"/>
+<area shape="rect" id="node2" href="$d9/d9b/a00363.html#d4/d10/a00635" title="Датаграмма телеметрии от РЛС к наземке." alt="" coords="5,5,157,33"/>
 </map>

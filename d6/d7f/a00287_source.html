@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.6"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuaSAR: Исходный файл warningsmodel.c++</title>
+<title>QuaSAR: Исходный файл quasarsdk_telemetry.c++</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -92,115 +92,85 @@ $(document).ready(function(){initNavTree('d6/d7f/a00287_source.html','../../'); 
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">warningsmodel.c++</div></div>
+  <div class="headertitle"><div class="title">quasarsdk_telemetry.c++</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;warningsmodel.h&quot;</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &lt;QtCore/QDebug&gt;</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">namespace </span>GUI</div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>{</div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>  WarningsModel* WarningsModel::get() { <span class="keyword">static</span> WarningsModel instance; <span class="keywordflow">return</span> &amp;instance; }</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>  WarningsModel::WarningsModel(QObject* parent)</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    : QAbstractListModel(parent)</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>  {}</div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="../../dc/d5d/a00278.html">quasarsdk_telemetry.h</a>&quot;</span></div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>  QHash&lt;int, QByteArray&gt; WarningsModel::roleNames()<span class="keyword"> const</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">  </span>{</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    QHash&lt;int, QByteArray&gt; roles;</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    roles[Index] = <span class="stringliteral">&quot;index&quot;</span>;</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    roles[Message] = <span class="stringliteral">&quot;message&quot;</span>;</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    roles[Major] = <span class="stringliteral">&quot;major&quot;</span>;</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keywordflow">return</span> roles;</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>  }</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d7/ddb/a00361.html">QuasarSDK</a></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>{</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="../../d5/de3/a00631.html#ab425a6f0d34227288593ce62079f254c">   15</a></span>  <a class="code hl_function" href="../../d5/de3/a00631.html#ab425a6f0d34227288593ce62079f254c">Telemetry::Telemetry</a>(QObject* parent)</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>      : QObject(parent)</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>      , m_datagram({})</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>      , m_seaLevel(0)</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>  {}</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>  <span class="keywordtype">int</span> WarningsModel::rowCount(<span class="keyword">const</span> QModelIndex&amp; parent)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> storage.size(); }</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>  QVariant WarningsModel::data(<span class="keyword">const</span> QModelIndex&amp; index, <span class="keywordtype">int</span> role)<span class="keyword"> const</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keyword">  </span>{</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keywordflow">if</span>(not index.isValid())</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>      <span class="keywordflow">return</span> QVariant();</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keywordflow">switch</span> (role)</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    {</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>      <span class="keywordflow">case</span> Index: <span class="keywordflow">return</span> index.row();</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>      <span class="keywordflow">case</span> Message: <span class="keywordflow">return</span> QVariant::fromValue(storage[index.row()].msg);</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>      <span class="keywordflow">case</span> Major: <span class="keywordflow">return</span> QVariant::fromValue(storage[index.row()].is_major);</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>      <span class="keywordflow">default</span>: <span class="keywordflow">return</span> <span class="stringliteral">&quot;Error reading from model&quot;</span>;</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    }</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>  }</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>  <span class="keywordtype">bool</span> WarningsModel::setData(<span class="keyword">const</span> QModelIndex&amp; index, <span class="keyword">const</span> QVariant&amp; value, <span class="keywordtype">int</span> role)</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>  {</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keywordflow">if</span> (data(index, role) != value) {</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>      <span class="keywordflow">switch</span> (role)</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>      {</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <span class="keywordflow">case</span> Index: <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <span class="keywordflow">case</span> Message: storage[index.row()].msg = value.toString(); <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keywordflow">case</span> Major: storage[index.row()].is_major = value.toBool(); <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <span class="keywordflow">default</span>: <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>      }</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>      emit dataChanged(index, index, {role});</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>      <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    }</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>  }</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>  <span class="keywordtype">void</span> WarningsModel::append(<span class="keywordtype">int</span> <a class="code hl_variable" href="../../d2/df5/a00137.html#acb5cfd209ba75c853d03f701e7f91679">type</a>, <span class="keyword">const</span> QString&amp; message, <span class="keywordtype">bool</span> is_major)</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>  {</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span>&amp; notification : storage)</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>      <span class="keywordflow">if</span>(notification.type == <a class="code hl_variable" href="../../d2/df5/a00137.html#acb5cfd209ba75c853d03f701e7f91679">type</a>)</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    beginInsertRows(QModelIndex(), rowCount(), rowCount());</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    storage.push_back({<a class="code hl_variable" href="../../d2/df5/a00137.html#acb5cfd209ba75c853d03f701e7f91679">type</a>, message, is_major});</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    endInsertRows();</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    qDebug() &lt;&lt; <span class="stringliteral">&quot;[NOTIFICATIONS] Warning added: &quot;</span> &lt;&lt; storage.size();</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>  }</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>  <span class="keywordtype">void</span> WarningsModel::remove(<span class="keywordtype">int</span> <a class="code hl_variable" href="../../d2/df5/a00137.html#acb5cfd209ba75c853d03f701e7f91679">type</a>) <span class="keyword">noexcept</span></div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>  {</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="keywordtype">int</span> index = -1;</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="keywordtype">int</span> i = 0;</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span>&amp; notification : storage)</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    {</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>      <span class="keywordflow">if</span>(notification.type == <a class="code hl_variable" href="../../d2/df5/a00137.html#acb5cfd209ba75c853d03f701e7f91679">type</a>) {</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        index = i;</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>      }</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>      i++;</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    }</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="keywordflow">if</span>(index &lt; 0 or index &gt;= storage.size())</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>      <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="../../d5/de3/a00631.html#acb8623ef07d16610f0989c5d2a80f378">   25</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="../../d5/de3/a00631.html#acb8623ef07d16610f0989c5d2a80f378">Telemetry::setDatagram</a>(<span class="keyword">const</span> <a class="code hl_struct" href="../../d9/d9b/a00363.html#d4/d10/a00635">Datagrams::TelemetryDatagram</a>&amp; datagram) <span class="keyword">noexcept</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>  {</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    m_datagram = datagram;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    emit positionChanged();</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    emit velocityChanged();</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    emit eulerAxesChanged();</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    emit satellitesChanged();</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    emit seaLevelChanged();</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>  }</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>  QGeoCoordinate <a class="code hl_property" href="../../d5/de3/a00631.html#a7130b1618285588513fd1ff97884b9d9">Telemetry::position</a>()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="keyword">  </span>{</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keywordflow">return</span> {m_datagram.<a class="code hl_variable" href="../../d9/d9b/a00363.html#a76714bdbc5c536fa77dfb14533ff82a9">latitude</a>, m_datagram.<a class="code hl_variable" href="../../d9/d9b/a00363.html#ac155e35fdeebafc89723a51520fb9fe6">longitude</a>, m_datagram.<a class="code hl_variable" href="../../d9/d9b/a00363.html#a2b13d276aee0d9fd646c8fa3647e869b">altitude</a>};</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>  }</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>  QVector2D <a class="code hl_property" href="../../d5/de3/a00631.html#aecfeca1289d00fbe5fc76a8dd5295913">Telemetry::velocity</a>()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="keyword">  </span>{</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keywordflow">return</span> {<span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(m_datagram.<a class="code hl_variable" href="../../d9/d9b/a00363.html#a1cc3289ef7b73c8e162d430e00c7f5ef">velocity_course</a>), <span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(m_datagram.<a class="code hl_variable" href="../../d9/d9b/a00363.html#aeb6f0994320a1acbcb6aaff582c8ee42">velocity_vertical</a>)};</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>  }</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>  QVector3D <a class="code hl_property" href="../../d5/de3/a00631.html#a60fc48f2db24801506aef6fb17f97ea0">Telemetry::eulerAxes</a>()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="keyword">  </span>{</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="keywordflow">return</span> {<span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(m_datagram.<a class="code hl_variable" href="../../d9/d9b/a00363.html#a34c057a0378030db67bd6a129f37d938">pitch</a>), <span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(m_datagram.<a class="code hl_variable" href="../../d9/d9b/a00363.html#a21cd490f6191f66678f55b4c242a10cf">yaw</a>), <span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(m_datagram.<a class="code hl_variable" href="../../d9/d9b/a00363.html#a1d3228afa3a1d6773954f40c1e519eb9">roll</a>)};</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>  }</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>  <span class="keywordtype">int</span> <a class="code hl_property" href="../../d5/de3/a00631.html#a4d90ddb43bcba374ebe4e8738faafed1">Telemetry::satellites</a>()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="keyword">  </span>{</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="keywordflow">return</span> m_datagram.<a class="code hl_variable" href="../../d9/d9b/a00363.html#aa306fbda3e6f642c3668c299361d25d0">satellites</a>;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>  }</div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    beginRemoveRows(QModelIndex(), index, index);</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    storage.erase(storage.begin() + index);</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    endRemoveRows();</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    qDebug() &lt;&lt; <span class="stringliteral">&quot;[NOTIFICATIONS] Warning removed: &quot;</span> &lt;&lt; storage.size();</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>  }</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>  <span class="keywordtype">void</span> WarningsModel::clear()</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>  {</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    beginRemoveRows(QModelIndex(), 0, rowCount() - 1);</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    storage.clear();</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    endRemoveRows();</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>  }</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>} <span class="comment">// GUI</span></div>
-<div class="ttc" id="aa00137_html_acb5cfd209ba75c853d03f701e7f91679"><div class="ttname"><a href="../../d2/df5/a00137.html#acb5cfd209ba75c853d03f701e7f91679">type</a></div><div class="ttdeci">uint16_t type</div><div class="ttdoc">Идентификатор типа сообщения.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/df5/a00137_source.html#l00005">imagemetadata.h:5</a></div></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>  <span class="keywordtype">float</span> <a class="code hl_property" href="../../d5/de3/a00631.html#aa65c033c3e64f540f4b9833c74a0887e">Telemetry::seaLevel</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_seaLevel; }</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>  <span class="keywordtype">void</span> Telemetry::setSeaLevel(<span class="keywordtype">float</span> o)</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>  {</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    <span class="keywordflow">if</span>(m_seaLevel == o)</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>      <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    m_seaLevel = o;</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    emit seaLevelChanged();</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>  }</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>} <span class="comment">// QuasarSDK</span></div>
+<div class="ttc" id="aa00278_html"><div class="ttname"><a href="../../dc/d5d/a00278.html">quasarsdk_telemetry.h</a></div></div>
+<div class="ttc" id="aa00361_html"><div class="ttname"><a href="../../d7/ddb/a00361.html">QuasarSDK</a></div><div class="ttdoc">Пространство имен комплекта разработчика РЛС &quot;Квазар&quot;.</div></div>
+<div class="ttc" id="aa00363_html_a1cc3289ef7b73c8e162d430e00c7f5ef"><div class="ttname"><a href="../../d9/d9b/a00363.html#a1cc3289ef7b73c8e162d430e00c7f5ef">QuasarSDK::Datagrams::TelemetryDatagram::velocity_course</a></div><div class="ttdeci">double velocity_course</div><div class="ttdoc">Путевая скорость в м/с.</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d25/a00290_source.html#l00051">quasarsdk_telemetrydatagram.h:51</a></div></div>
+<div class="ttc" id="aa00363_html_a1d3228afa3a1d6773954f40c1e519eb9"><div class="ttname"><a href="../../d9/d9b/a00363.html#a1d3228afa3a1d6773954f40c1e519eb9">QuasarSDK::Datagrams::TelemetryDatagram::roll</a></div><div class="ttdeci">double roll</div><div class="ttdoc">Крен БПЛА в радианах.</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d25/a00290_source.html#l00056">quasarsdk_telemetrydatagram.h:56</a></div></div>
+<div class="ttc" id="aa00363_html_a21cd490f6191f66678f55b4c242a10cf"><div class="ttname"><a href="../../d9/d9b/a00363.html#a21cd490f6191f66678f55b4c242a10cf">QuasarSDK::Datagrams::TelemetryDatagram::yaw</a></div><div class="ttdeci">double yaw</div><div class="ttdoc">Рыскание БПЛА в радианах.</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d25/a00290_source.html#l00057">quasarsdk_telemetrydatagram.h:57</a></div></div>
+<div class="ttc" id="aa00363_html_a2b13d276aee0d9fd646c8fa3647e869b"><div class="ttname"><a href="../../d9/d9b/a00363.html#a2b13d276aee0d9fd646c8fa3647e869b">QuasarSDK::Datagrams::TelemetryDatagram::altitude</a></div><div class="ttdeci">double altitude</div><div class="ttdoc">Высота в метрах.</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d25/a00290_source.html#l00050">quasarsdk_telemetrydatagram.h:50</a></div></div>
+<div class="ttc" id="aa00363_html_a34c057a0378030db67bd6a129f37d938"><div class="ttname"><a href="../../d9/d9b/a00363.html#a34c057a0378030db67bd6a129f37d938">QuasarSDK::Datagrams::TelemetryDatagram::pitch</a></div><div class="ttdeci">double pitch</div><div class="ttdoc">Тангаж БПЛА в радианах.</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d25/a00290_source.html#l00055">quasarsdk_telemetrydatagram.h:55</a></div></div>
+<div class="ttc" id="aa00363_html_a76714bdbc5c536fa77dfb14533ff82a9"><div class="ttname"><a href="../../d9/d9b/a00363.html#a76714bdbc5c536fa77dfb14533ff82a9">QuasarSDK::Datagrams::TelemetryDatagram::latitude</a></div><div class="ttdeci">double latitude</div><div class="ttdoc">Широта в радианах.</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d25/a00290_source.html#l00048">quasarsdk_telemetrydatagram.h:48</a></div></div>
+<div class="ttc" id="aa00363_html_aa306fbda3e6f642c3668c299361d25d0"><div class="ttname"><a href="../../d9/d9b/a00363.html#aa306fbda3e6f642c3668c299361d25d0">QuasarSDK::Datagrams::TelemetryDatagram::satellites</a></div><div class="ttdeci">uint8_t satellites</div><div class="ttdoc">Текущее количество спутников навигации.</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d25/a00290_source.html#l00060">quasarsdk_telemetrydatagram.h:60</a></div></div>
+<div class="ttc" id="aa00363_html_ac155e35fdeebafc89723a51520fb9fe6"><div class="ttname"><a href="../../d9/d9b/a00363.html#ac155e35fdeebafc89723a51520fb9fe6">QuasarSDK::Datagrams::TelemetryDatagram::longitude</a></div><div class="ttdeci">double longitude</div><div class="ttdoc">Долгота в радианах.</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d25/a00290_source.html#l00049">quasarsdk_telemetrydatagram.h:49</a></div></div>
+<div class="ttc" id="aa00363_html_aeb6f0994320a1acbcb6aaff582c8ee42"><div class="ttname"><a href="../../d9/d9b/a00363.html#aeb6f0994320a1acbcb6aaff582c8ee42">QuasarSDK::Datagrams::TelemetryDatagram::velocity_vertical</a></div><div class="ttdeci">double velocity_vertical</div><div class="ttdoc">Вертикальная скорость в м/с.</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d25/a00290_source.html#l00054">quasarsdk_telemetrydatagram.h:54</a></div></div>
+<div class="ttc" id="aa00363_html_d4/d10/a00635"><div class="ttname"><a href="../../d9/d9b/a00363.html#d4/d10/a00635">QuasarSDK::Datagrams::TelemetryDatagram</a></div><div class="ttdoc">Датаграмма телеметрии от РЛС к наземке.</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d25/a00290_source.html#l00044">quasarsdk_telemetrydatagram.h:45</a></div></div>
+<div class="ttc" id="aa00631_html_a4d90ddb43bcba374ebe4e8738faafed1"><div class="ttname"><a href="../../d5/de3/a00631.html#a4d90ddb43bcba374ebe4e8738faafed1">QuasarSDK::Telemetry::satellites</a></div><div class="ttdeci">int satellites</div><div class="ttdoc">Предоставляет текущее количество спутников навигации.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d5d/a00278_source.html#l00001">quasarsdk_telemetry.h:25</a></div></div>
+<div class="ttc" id="aa00631_html_a60fc48f2db24801506aef6fb17f97ea0"><div class="ttname"><a href="../../d5/de3/a00631.html#a60fc48f2db24801506aef6fb17f97ea0">QuasarSDK::Telemetry::eulerAxes</a></div><div class="ttdeci">QVector3D eulerAxes</div><div class="ttdoc">Предоставляет углы поворота БПЛА в связанной системе координат.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d5d/a00278_source.html#l00001">quasarsdk_telemetry.h:24</a></div></div>
+<div class="ttc" id="aa00631_html_a7130b1618285588513fd1ff97884b9d9"><div class="ttname"><a href="../../d5/de3/a00631.html#a7130b1618285588513fd1ff97884b9d9">QuasarSDK::Telemetry::position</a></div><div class="ttdeci">QGeoCoordinate position</div><div class="ttdoc">Предоставляет географическую позицию БПЛА.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d5d/a00278_source.html#l00001">quasarsdk_telemetry.h:22</a></div></div>
+<div class="ttc" id="aa00631_html_aa65c033c3e64f540f4b9833c74a0887e"><div class="ttname"><a href="../../d5/de3/a00631.html#aa65c033c3e64f540f4b9833c74a0887e">QuasarSDK::Telemetry::seaLevel</a></div><div class="ttdeci">float seaLevel</div><div class="ttdoc">Предоставляет текущее значение высоты земной поверхности.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d5d/a00278_source.html#l00001">quasarsdk_telemetry.h:26</a></div></div>
+<div class="ttc" id="aa00631_html_ab425a6f0d34227288593ce62079f254c"><div class="ttname"><a href="../../d5/de3/a00631.html#ab425a6f0d34227288593ce62079f254c">QuasarSDK::Telemetry::Telemetry</a></div><div class="ttdeci">Telemetry(QObject *parent=nullptr)</div><div class="ttdoc">Создает новый объект Telemetry с указанным родителем.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d7f/a00287_source.html#l00015">quasarsdk_telemetry.c++:15</a></div></div>
+<div class="ttc" id="aa00631_html_acb8623ef07d16610f0989c5d2a80f378"><div class="ttname"><a href="../../d5/de3/a00631.html#acb8623ef07d16610f0989c5d2a80f378">QuasarSDK::Telemetry::setDatagram</a></div><div class="ttdeci">void setDatagram(const Datagrams::TelemetryDatagram &amp;datagram) noexcept</div><div class="ttdoc">Задает новую датаграмму телеметрии в класс.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d7f/a00287_source.html#l00025">quasarsdk_telemetry.c++:25</a></div></div>
+<div class="ttc" id="aa00631_html_aecfeca1289d00fbe5fc76a8dd5295913"><div class="ttname"><a href="../../d5/de3/a00631.html#aecfeca1289d00fbe5fc76a8dd5295913">QuasarSDK::Telemetry::velocity</a></div><div class="ttdeci">QVector2D velocity</div><div class="ttdoc">Предоставляет вектор скорости БПЛА.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d5d/a00278_source.html#l00001">quasarsdk_telemetry.h:23</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="../../dir_fcb2a60e1810a51543a3cc3a113d0956.html">c++</a></li><li class="navelem"><a class="el" href="../../dir_26318e8bd4be45baf98311c3e5c1a731.html">gui</a></li><li class="navelem"><b>warningsmodel.c++</b></li>
+    <li class="navelem"><a class="el" href="../../dir_6719ab1f1f7655efc2fa43f7eb574fd1.html">libs</a></li><li class="navelem"><a class="el" href="../../dir_c5d4018c0fe90f1660bca3f6235e9876.html">libquasarsdk</a></li><li class="navelem"><a class="el" href="../../dir_0f9d83d35d962a1c6c5b739b964daf6d.html">src</a></li><li class="navelem"><a class="el" href="../../dir_d734eb5648cc5bb2b8e3f352630d13d6.html">public</a></li><li class="navelem"><a class="el" href="../../dir_5ae3da6fa5f3b01d46a11cfe65fb85bc.html">navd2</a></li><li class="navelem"><b>quasarsdk_telemetry.c++</b></li>
     <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
   </ul>
 </div>

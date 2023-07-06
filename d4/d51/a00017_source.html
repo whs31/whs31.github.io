@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.6"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuaSAR: Исходный файл execdargumentlist.c++</title>
+<title>QuaSAR: Исходный файл markermodel.c++</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -92,137 +92,116 @@ $(document).ready(function(){initNavTree('d4/d51/a00017_source.html','../../'); 
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">execdargumentlist.c++</div></div>
+  <div class="headertitle"><div class="title">markermodel.c++</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;<a class="code" href="../../d2/de7/a00014.html">execdargumentlist.h</a>&quot;</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &lt;QtCore/QVariant&gt;</span></div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;markermodel.h&quot;</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &lt;QtCore/QDebug&gt;</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d4/d82/a00436.html">Networking</a></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../db/ddc/a00353.html">Map</a></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>{</div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="../../df/d6f/a00623.html#ac4b6acf611caeda82cabffa2c4fa3262">    7</a></span>  <a class="code hl_function" href="../../df/d6f/a00623.html#ac4b6acf611caeda82cabffa2c4fa3262">ExecdArgument::ExecdArgument</a>()</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    : value(<span class="stringliteral">&quot;Error&quot;</span>)</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    , <a class="code hl_variable" href="../../d2/df5/a00137.html#acb5cfd209ba75c853d03f701e7f91679">type</a>(String)</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>  {}</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="../../df/d6f/a00623.html#a07326e2c81da9de7b0844cabaca94150">   12</a></span>  <a class="code hl_function" href="../../df/d6f/a00623.html#ac4b6acf611caeda82cabffa2c4fa3262">ExecdArgument::ExecdArgument</a>(<span class="keywordtype">int</span> i)</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    : value(QString::number(i))</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    , <a class="code hl_variable" href="../../d2/df5/a00137.html#acb5cfd209ba75c853d03f701e7f91679">type</a>(Integer)</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>  {}</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="../../df/d6f/a00623.html#a796e03a55b20feca95798810188b64aa">   17</a></span>  <a class="code hl_function" href="../../df/d6f/a00623.html#ac4b6acf611caeda82cabffa2c4fa3262">ExecdArgument::ExecdArgument</a>(<span class="keywordtype">float</span> f)</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    : value(QString::number(f, <span class="stringliteral">&#39;f&#39;</span>, FLOATING_POINT_PRECISION))</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    , <a class="code hl_variable" href="../../d2/df5/a00137.html#acb5cfd209ba75c853d03f701e7f91679">type</a>(Float)</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>  {}</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="../../df/d6f/a00623.html#a60514ba9570e608dfbc302e125aad34e">   22</a></span>  <a class="code hl_function" href="../../df/d6f/a00623.html#ac4b6acf611caeda82cabffa2c4fa3262">ExecdArgument::ExecdArgument</a>(QString s)</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    : value(s)</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    , <a class="code hl_variable" href="../../d2/df5/a00137.html#acb5cfd209ba75c853d03f701e7f91679">type</a>(String)</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>  {}</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="../../df/d6f/a00623.html#a31d6169bed77d2623b89a30a5931e24d">   27</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="../../df/d6f/a00623.html#a31d6169bed77d2623b89a30a5931e24d">ExecdArgument::set</a>(<span class="keyword">const</span> QVariant&amp; v)</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>  {</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keywordflow">switch</span> (<a class="code hl_variable" href="../../df/d6f/a00623.html#ab47e2ea14e436a96c033b7cb01d825a4">type</a>)</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    {</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>      <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="../../df/d6f/a00623.html#aa15f3f718db408445afc1b93c12294c5ad67b0ee7230dcecb610254e4e5e589cd">Float</a>: <a class="code hl_variable" href="../../df/d6f/a00623.html#a0c0d1b18d3033cb858562e5e8636c18f">value</a> = QString::number(v.toFloat(), <span class="charliteral">&#39;f&#39;</span>, <a class="code hl_variable" href="../../df/d6f/a00623.html#a0ce34266d9f2cd3afca36ac08587c945">FLOATING_POINT_PRECISION</a>); <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>      <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="../../df/d6f/a00623.html#aa15f3f718db408445afc1b93c12294c5a1e2f89e867cd91c3de2ea9fbd2ef96a3">Integer</a>: <a class="code hl_variable" href="../../df/d6f/a00623.html#a0c0d1b18d3033cb858562e5e8636c18f">value</a> = QString::number(v.toInt()); <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>      <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="../../df/d6f/a00623.html#aa15f3f718db408445afc1b93c12294c5ade17ec82ff106e0c2b4417f5ca231eae">String</a>: <a class="code hl_variable" href="../../df/d6f/a00623.html#a0c0d1b18d3033cb858562e5e8636c18f">value</a> = v.toString(); <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>      <span class="keywordflow">default</span>: <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    }</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>  }</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="../../d3/da3/a00627.html#a0ff072a16b432ca2c3fca3a18bab05b6">   38</a></span>  <a class="code hl_function" href="../../d3/da3/a00627.html#a0ff072a16b432ca2c3fca3a18bab05b6">ExecdArgumentList::ExecdArgumentList</a>(QObject* parent)</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    : QObject{parent}</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>  {}</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="../../d3/da3/a00627.html#aef662bcdf98102a3b70f00aa1fb80922">   42</a></span>  QString <a class="code hl_function" href="../../d3/da3/a00627.html#aef662bcdf98102a3b70f00aa1fb80922">ExecdArgumentList::getFormArguments</a>() const noexcept</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>  {</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    QString ret = <span class="stringliteral">&quot;(&quot;</span>;</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keywordtype">bool</span> nospace = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span>&amp; key : <a class="code hl_variable" href="../../d3/da3/a00627.html#a2407873c0bcb27639ae2496c360dda93">argument_list</a>.keys())</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>  MarkerModel::MarkerModel(QObject* parent)</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    : QAbstractListModel(parent)</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>  {}</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>  QHash&lt;int, QByteArray&gt; MarkerModel::roleNames()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">  </span>{</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    QHash&lt;int, QByteArray&gt; roles;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    roles[Index] = <span class="stringliteral">&quot;index&quot;</span>;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    roles[Latitude] = <span class="stringliteral">&quot;latitude&quot;</span>;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    roles[Longitude] = <span class="stringliteral">&quot;longitude&quot;</span>;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    roles[MarkerName] = <span class="stringliteral">&quot;marker_name&quot;</span>;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    roles[MarkerColor] = <span class="stringliteral">&quot;marker_color&quot;</span>;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    roles[MarkerIcon] = <span class="stringliteral">&quot;marker_icon&quot;</span>;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keywordflow">return</span> roles;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>  }</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>  <span class="keywordtype">int</span> MarkerModel::rowCount(<span class="keyword">const</span> QModelIndex&amp; parent)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keyword">  </span>{ <span class="keywordflow">return</span> storage.size(); }</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>  QVariant MarkerModel::data(<span class="keyword">const</span> QModelIndex&amp; index, <span class="keywordtype">int</span> role)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keyword">  </span>{</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keywordflow">if</span>(not index.isValid())</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>      <span class="keywordflow">return</span> QVariant();</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keywordflow">switch</span>(role)</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    {</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>      <span class="keywordflow">case</span> Index: <span class="keywordflow">return</span> index.row();</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>      <span class="keywordflow">case</span> Latitude: <span class="keywordflow">return</span> QVariant::fromValue(storage[index.row()].latitude);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>      <span class="keywordflow">case</span> Longitude: <span class="keywordflow">return</span> QVariant::fromValue(storage[index.row()].longitude);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>      <span class="keywordflow">case</span> MarkerName: <span class="keywordflow">return</span> QVariant::fromValue(storage[index.row()].name);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>      <span class="keywordflow">case</span> MarkerColor: <span class="keywordflow">return</span> QVariant::fromValue(storage[index.row()].color);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>      <span class="keywordflow">case</span> MarkerIcon: <span class="keywordflow">return</span> QVariant::fromValue(storage[index.row()].icon);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>      <span class="keywordflow">default</span>: <span class="keywordflow">return</span> <span class="stringliteral">&quot;Error reading from model&quot;</span>;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    }</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>  }</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>  <span class="keywordtype">bool</span> MarkerModel::setData(<span class="keyword">const</span> QModelIndex&amp; index, <span class="keyword">const</span> QVariant&amp; value, <span class="keywordtype">int</span> role)</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>  {</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keywordflow">if</span>(data(index, role) != value)</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    {</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>      <span class="keywordflow">if</span>(<a class="code hl_variable" href="../../d3/da3/a00627.html#a2407873c0bcb27639ae2496c360dda93">argument_list</a>.value(key).value != <a class="code hl_variable" href="../../d3/da3/a00627.html#ac99a24b573f07ab3a24e7e644453f3e2">defaults</a>.value(key).value)</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>      {</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="keywordflow">if</span>(nospace) {</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>          ret += (key + <span class="stringliteral">&quot; &quot;</span> + <a class="code hl_variable" href="../../d3/da3/a00627.html#a2407873c0bcb27639ae2496c360dda93">argument_list</a>.value(key).value);</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>          nospace = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        }</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>          ret += (<span class="stringliteral">&quot; &quot;</span> + key + <span class="stringliteral">&quot; &quot;</span> + <a class="code hl_variable" href="../../d3/da3/a00627.html#a2407873c0bcb27639ae2496c360dda93">argument_list</a>.value(key).value);</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>      }</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    }</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    ret += <span class="stringliteral">&quot;)&quot;</span>;</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="keywordflow">return</span> ret;</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>  }</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="../../d3/da3/a00627.html#aadba8c6a2c4c94f621db548b539cc18f">   62</a></span>  QString <a class="code hl_function" href="../../d3/da3/a00627.html#aadba8c6a2c4c94f621db548b539cc18f">ExecdArgumentList::getReformArguments</a>() const noexcept</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>  {</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    QString ret = <span class="stringliteral">&quot;(&quot;</span>;</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keywordtype">bool</span> nospace = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span>&amp; key : <a class="code hl_variable" href="../../d3/da3/a00627.html#a19b6d5dfbd653b1c016059e727139a3e">reform_argument_list</a>.keys())</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    {</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>      <span class="keywordflow">if</span>(<a class="code hl_variable" href="../../d3/da3/a00627.html#a19b6d5dfbd653b1c016059e727139a3e">reform_argument_list</a>.value(key).value != <a class="code hl_variable" href="../../d3/da3/a00627.html#ac99a24b573f07ab3a24e7e644453f3e2">defaults</a>.value(key).value)</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>      {</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        <span class="keywordflow">if</span>(nospace) {</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>          ret += (key + <span class="stringliteral">&quot; &quot;</span> + <a class="code hl_variable" href="../../d3/da3/a00627.html#a19b6d5dfbd653b1c016059e727139a3e">reform_argument_list</a>.value(key).value);</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>          nospace = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        }</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>          ret += (<span class="stringliteral">&quot; &quot;</span> + key + <span class="stringliteral">&quot; &quot;</span> + <a class="code hl_variable" href="../../d3/da3/a00627.html#a19b6d5dfbd653b1c016059e727139a3e">reform_argument_list</a>.value(key).value);</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>      }</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    }</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    ret += <span class="stringliteral">&quot;)&quot;</span>;</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="keywordflow">return</span> ret;</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>  }</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="../../d3/da3/a00627.html#a78fe1baa942e1f462b98f844883ee06b">   82</a></span>  QString <a class="code hl_function" href="../../d3/da3/a00627.html#a78fe1baa942e1f462b98f844883ee06b">ExecdArgumentList::getFocusArguments</a>() const noexcept</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>  {</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    QString ret = <span class="stringliteral">&quot;(&quot;</span>;</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="keywordtype">bool</span> nospace = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span>&amp; key : <a class="code hl_variable" href="../../d3/da3/a00627.html#a001ba3c908f034c311bfb072d592173a">focus_argument_list</a>.keys())</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    {</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>      <span class="keywordflow">if</span>(<a class="code hl_variable" href="../../d3/da3/a00627.html#a001ba3c908f034c311bfb072d592173a">focus_argument_list</a>.value(key).value != <a class="code hl_variable" href="../../d3/da3/a00627.html#a91efacb394ec81844ceca98fb30220c2">focus_defaults</a>.value(key).value)</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>      {</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        <span class="keywordflow">if</span>(nospace) {</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>          ret += (key + <span class="stringliteral">&quot; &quot;</span> + <a class="code hl_variable" href="../../d3/da3/a00627.html#a001ba3c908f034c311bfb072d592173a">focus_argument_list</a>.value(key).value);</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>          nospace = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        }</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>          ret += (<span class="stringliteral">&quot; &quot;</span> + key + <span class="stringliteral">&quot; &quot;</span> + <a class="code hl_variable" href="../../d3/da3/a00627.html#a001ba3c908f034c311bfb072d592173a">focus_argument_list</a>.value(key).value);</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>      }</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    }</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    ret += <span class="stringliteral">&quot;)&quot;</span>;</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <span class="keywordflow">return</span> ret;</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>  }</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>} <span class="comment">// Networking</span></div>
-<div class="ttc" id="aa00014_html"><div class="ttname"><a href="../../d2/de7/a00014.html">execdargumentlist.h</a></div></div>
-<div class="ttc" id="aa00137_html_acb5cfd209ba75c853d03f701e7f91679"><div class="ttname"><a href="../../d2/df5/a00137.html#acb5cfd209ba75c853d03f701e7f91679">type</a></div><div class="ttdeci">uint16_t type</div><div class="ttdoc">Идентификатор типа сообщения.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/df5/a00137_source.html#l00005">imagemetadata.h:5</a></div></div>
-<div class="ttc" id="aa00436_html"><div class="ttname"><a href="../../d4/d82/a00436.html">Networking</a></div><div class="ttdoc">Пространство имен для работы с сетевыми подключениями к РЛС.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d03/a00254_source.html#l00010">entry.h:11</a></div></div>
-<div class="ttc" id="aa00623_html_a0c0d1b18d3033cb858562e5e8636c18f"><div class="ttname"><a href="../../df/d6f/a00623.html#a0c0d1b18d3033cb858562e5e8636c18f">Networking::ExecdArgument::value</a></div><div class="ttdeci">QString value</div><div class="ttdoc">Current string value of argument type.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/de7/a00014_source.html#l00057">execdargumentlist.h:57</a></div></div>
-<div class="ttc" id="aa00623_html_a0ce34266d9f2cd3afca36ac08587c945"><div class="ttname"><a href="../../df/d6f/a00623.html#a0ce34266d9f2cd3afca36ac08587c945">Networking::ExecdArgument::FLOATING_POINT_PRECISION</a></div><div class="ttdeci">static constexpr const int FLOATING_POINT_PRECISION</div><div class="ttdoc">Constant describing how many numbers will remain in float after point.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/de7/a00014_source.html#l00026">execdargumentlist.h:26</a></div></div>
-<div class="ttc" id="aa00623_html_a31d6169bed77d2623b89a30a5931e24d"><div class="ttname"><a href="../../df/d6f/a00623.html#a31d6169bed77d2623b89a30a5931e24d">Networking::ExecdArgument::set</a></div><div class="ttdeci">void set(const QVariant &amp;v)</div><div class="ttdoc">Sets value to argument.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d51/a00017_source.html#l00027">execdargumentlist.c++:27</a></div></div>
-<div class="ttc" id="aa00623_html_aa15f3f718db408445afc1b93c12294c5a1e2f89e867cd91c3de2ea9fbd2ef96a3"><div class="ttname"><a href="../../df/d6f/a00623.html#aa15f3f718db408445afc1b93c12294c5a1e2f89e867cd91c3de2ea9fbd2ef96a3">Networking::ExecdArgument::Integer</a></div><div class="ttdeci">@ Integer</div><div class="ttdoc">Integer type.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/de7/a00014_source.html#l00032">execdargumentlist.h:32</a></div></div>
-<div class="ttc" id="aa00623_html_aa15f3f718db408445afc1b93c12294c5ad67b0ee7230dcecb610254e4e5e589cd"><div class="ttname"><a href="../../df/d6f/a00623.html#aa15f3f718db408445afc1b93c12294c5ad67b0ee7230dcecb610254e4e5e589cd">Networking::ExecdArgument::Float</a></div><div class="ttdeci">@ Float</div><div class="ttdoc">Floating-point type.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/de7/a00014_source.html#l00031">execdargumentlist.h:31</a></div></div>
-<div class="ttc" id="aa00623_html_aa15f3f718db408445afc1b93c12294c5ade17ec82ff106e0c2b4417f5ca231eae"><div class="ttname"><a href="../../df/d6f/a00623.html#aa15f3f718db408445afc1b93c12294c5ade17ec82ff106e0c2b4417f5ca231eae">Networking::ExecdArgument::String</a></div><div class="ttdeci">@ String</div><div class="ttdoc">String type.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/de7/a00014_source.html#l00034">execdargumentlist.h:33</a></div></div>
-<div class="ttc" id="aa00623_html_ab47e2ea14e436a96c033b7cb01d825a4"><div class="ttname"><a href="../../df/d6f/a00623.html#ab47e2ea14e436a96c033b7cb01d825a4">Networking::ExecdArgument::type</a></div><div class="ttdeci">ArgumentType type</div><div class="ttdoc">Type of argument, assigned on it's construction.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/de7/a00014_source.html#l00060">execdargumentlist.h:60</a></div></div>
-<div class="ttc" id="aa00623_html_ac4b6acf611caeda82cabffa2c4fa3262"><div class="ttname"><a href="../../df/d6f/a00623.html#ac4b6acf611caeda82cabffa2c4fa3262">Networking::ExecdArgument::ExecdArgument</a></div><div class="ttdeci">ExecdArgument()</div><div class="ttdoc">Constructs empty argument with ArgumentType::String.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d51/a00017_source.html#l00007">execdargumentlist.c++:7</a></div></div>
-<div class="ttc" id="aa00627_html_a001ba3c908f034c311bfb072d592173a"><div class="ttname"><a href="../../d3/da3/a00627.html#a001ba3c908f034c311bfb072d592173a">Networking::ExecdArgumentList::focus_argument_list</a></div><div class="ttdeci">QMap&lt; QString, ExecdArgument &gt; focus_argument_list</div><div class="ttdoc">Container for arguments in Focus mode.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/de7/a00014_source.html#l00193">execdargumentlist.h:193</a></div></div>
-<div class="ttc" id="aa00627_html_a0ff072a16b432ca2c3fca3a18bab05b6"><div class="ttname"><a href="../../d3/da3/a00627.html#a0ff072a16b432ca2c3fca3a18bab05b6">Networking::ExecdArgumentList::ExecdArgumentList</a></div><div class="ttdeci">ExecdArgumentList(QObject *parent=nullptr)</div><div class="ttdoc">Constructs new instance of ExecdArgumentList with given parent.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d51/a00017_source.html#l00038">execdargumentlist.c++:38</a></div></div>
-<div class="ttc" id="aa00627_html_a19b6d5dfbd653b1c016059e727139a3e"><div class="ttname"><a href="../../d3/da3/a00627.html#a19b6d5dfbd653b1c016059e727139a3e">Networking::ExecdArgumentList::reform_argument_list</a></div><div class="ttdeci">QMap&lt; QString, ExecdArgument &gt; reform_argument_list</div><div class="ttdoc">Container for arguments in Reform mode.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/de7/a00014_source.html#l00190">execdargumentlist.h:190</a></div></div>
-<div class="ttc" id="aa00627_html_a2407873c0bcb27639ae2496c360dda93"><div class="ttname"><a href="../../d3/da3/a00627.html#a2407873c0bcb27639ae2496c360dda93">Networking::ExecdArgumentList::argument_list</a></div><div class="ttdeci">QMap&lt; QString, ExecdArgument &gt; argument_list</div><div class="ttdoc">Container for arguments in Form mode.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/de7/a00014_source.html#l00187">execdargumentlist.h:187</a></div></div>
-<div class="ttc" id="aa00627_html_a78fe1baa942e1f462b98f844883ee06b"><div class="ttname"><a href="../../d3/da3/a00627.html#a78fe1baa942e1f462b98f844883ee06b">Networking::ExecdArgumentList::getFocusArguments</a></div><div class="ttdeci">QString getFocusArguments() const noexcept</div><div class="ttdoc">Returns arguments for Focus mode.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d51/a00017_source.html#l00082">execdargumentlist.c++:82</a></div></div>
-<div class="ttc" id="aa00627_html_a91efacb394ec81844ceca98fb30220c2"><div class="ttname"><a href="../../d3/da3/a00627.html#a91efacb394ec81844ceca98fb30220c2">Networking::ExecdArgumentList::focus_defaults</a></div><div class="ttdeci">QMap&lt; QString, ExecdArgument &gt; focus_defaults</div><div class="ttdoc">Значения аргументов фокусировки execd по умолчанию</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/de7/a00014_source.html#l00141">execdargumentlist.h:141</a></div></div>
-<div class="ttc" id="aa00627_html_aadba8c6a2c4c94f621db548b539cc18f"><div class="ttname"><a href="../../d3/da3/a00627.html#aadba8c6a2c4c94f621db548b539cc18f">Networking::ExecdArgumentList::getReformArguments</a></div><div class="ttdeci">QString getReformArguments() const noexcept</div><div class="ttdoc">Returns arguments for Reform mode.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d51/a00017_source.html#l00062">execdargumentlist.c++:62</a></div></div>
-<div class="ttc" id="aa00627_html_ac99a24b573f07ab3a24e7e644453f3e2"><div class="ttname"><a href="../../d3/da3/a00627.html#ac99a24b573f07ab3a24e7e644453f3e2">Networking::ExecdArgumentList::defaults</a></div><div class="ttdeci">QMap&lt; QString, ExecdArgument &gt; defaults</div><div class="ttdoc">Default values for forming mode in execd service.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/de7/a00014_source.html#l00112">execdargumentlist.h:112</a></div></div>
-<div class="ttc" id="aa00627_html_aef662bcdf98102a3b70f00aa1fb80922"><div class="ttname"><a href="../../d3/da3/a00627.html#aef662bcdf98102a3b70f00aa1fb80922">Networking::ExecdArgumentList::getFormArguments</a></div><div class="ttdeci">QString getFormArguments() const noexcept</div><div class="ttdoc">Returns arguments for Form mode.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d51/a00017_source.html#l00042">execdargumentlist.c++:42</a></div></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>      <span class="keywordflow">switch</span>(role)</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>      {</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <span class="keywordflow">case</span> Index: <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <span class="keywordflow">case</span> Latitude: storage[index.row()].latitude = value.toDouble();</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>          <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <span class="keywordflow">case</span> Longitude: storage[index.row()].longitude = value.toDouble();</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>          <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <span class="keywordflow">case</span> MarkerName: storage[index.row()].name = value.toString();</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>          <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        <span class="keywordflow">case</span> MarkerColor: storage[index.row()].color = value.toString();</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>          <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <span class="keywordflow">case</span> MarkerIcon: storage[index.row()].icon = value.toString();</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>          <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        <span class="keywordflow">default</span>: <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>      }</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>      emit dataChanged(index, index, {role});</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>      <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    }</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>  }</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>  <span class="keywordtype">void</span> MarkerModel::add(<span class="keyword">const</span> Marker&amp; image)</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>  {</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    beginInsertRows(QModelIndex(), rowCount(), rowCount());</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    storage.push_back(image);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    endInsertRows();</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    emit added();</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    qDebug() &lt;&lt; <span class="stringliteral">&quot;[MARKER] Model received new marker. Now it contains&quot;</span> &lt;&lt; rowCount() &lt;&lt; <span class="stringliteral">&quot;markers&quot;</span>;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>  }</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>  <span class="keywordtype">void</span> MarkerModel::remove(<span class="keywordtype">int</span> index)</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>  {</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    beginRemoveRows(QModelIndex(), index, index);</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    storage.remove(index);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    endRemoveRows();</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    qDebug() &lt;&lt; <span class="stringliteral">&quot;[MARKER] Model lost an marker. Now it contains&quot;</span> &lt;&lt; rowCount() &lt;&lt; <span class="stringliteral">&quot;markers&quot;</span>;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>  }</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>  <span class="keywordtype">void</span> MarkerModel::clear()</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>  {</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    beginRemoveRows(QModelIndex(), 0, rowCount() - 1);</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    storage.clear();</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    endRemoveRows();</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    qDebug() &lt;&lt; <span class="stringliteral">&quot;[MARKER] Model cleared&quot;</span>;</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>  }</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>} <span class="comment">// Map</span></div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
+<div class="ttc" id="aa00353_html"><div class="ttname"><a href="../../db/ddc/a00353.html">Map</a></div><div class="ttdoc">Пространство имен для классов и функций, связанных с картографией.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d09/a00077_source.html#l00007">clickhandler.c++:8</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="../../dir_fcb2a60e1810a51543a3cc3a113d0956.html">c++</a></li><li class="navelem"><a class="el" href="../../dir_2658f57a99a735e2e16983d97ef2d726.html">network</a></li><li class="navelem"><a class="el" href="../../dir_6ef7e0ae247fe3f6196a2ffc3d436052.html">execd</a></li><li class="navelem"><b>execdargumentlist.c++</b></li>
+    <li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="../../dir_fcb2a60e1810a51543a3cc3a113d0956.html">c++</a></li><li class="navelem"><a class="el" href="../../dir_d88003ba6281a9447bd5134cfe1c08c9.html">map</a></li><li class="navelem"><a class="el" href="../../dir_6a25e9731697d35532c6c56646dc8806.html">models</a></li><li class="navelem"><b>markermodel.c++</b></li>
     <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
   </ul>
 </div>

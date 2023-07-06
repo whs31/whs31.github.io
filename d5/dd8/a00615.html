@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.6"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuaSAR: Cписок членов класса</title>
+<title>QuaSAR: Класс TCPServer</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -66,7 +66,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('de/d85/a00618.html','../../'); initResizable(); });
+$(document).ready(function(){initNavTree('d5/dd8/a00615.html','../../'); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -92,25 +92,261 @@ $(document).ready(function(){initNavTree('de/d85/a00618.html','../../'); initRes
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">UDPSocketBase Cписок членов класса</div></div>
+  <div class="summary">
+<a href="#signals">Сигналы</a> &#124;
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="../../d0/d8d/a00612.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Класс TCPServer</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Полный список членов класса <a class="el" href="../../de/d85/a00618.html">UDPSocketBase</a>, включая наследуемые из базового класса</p>
-<table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="../../de/d85/a00618.html#a01948d8cb99ea51677e34382c9e2c8aa">connect</a>(const QString &amp;address)</td><td class="entry"><a class="el" href="../../de/d85/a00618.html">UDPSocketBase</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="../../de/d85/a00618.html#a960705de531a20389fb29928d43258c3">disconnect</a>()</td><td class="entry"><a class="el" href="../../de/d85/a00618.html">UDPSocketBase</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="../../de/d85/a00618.html#a6aac8bbc4a1ac6c37d4c9f0564256fbd">port</a>() const noexcept</td><td class="entry"><a class="el" href="../../de/d85/a00618.html">UDPSocketBase</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="../../de/d85/a00618.html#a3eb63c5af67a44fb60ba731d3da7a56d">received</a>(QByteArray data)</td><td class="entry"><a class="el" href="../../de/d85/a00618.html">UDPSocketBase</a></td><td class="entry"><span class="mlabel">signal</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="../../de/d85/a00618.html#ad1239ca09fddf150d1584cdf26baf7f3">send</a>(QByteArray data)</td><td class="entry"><a class="el" href="../../de/d85/a00618.html">UDPSocketBase</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="../../de/d85/a00618.html#a270b32a7b4f3d08e655807d4101acbd7">socketDisconnected</a>()</td><td class="entry"><a class="el" href="../../de/d85/a00618.html">UDPSocketBase</a></td><td class="entry"><span class="mlabel">signal</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="../../de/d85/a00618.html#a58d7e2b4c7d46a5ae4041d122b03b584">socketMetrics</a>(const QString &amp;data, int size_bytes, bool out)</td><td class="entry"><a class="el" href="../../de/d85/a00618.html">UDPSocketBase</a></td><td class="entry"><span class="mlabel">signal</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="../../de/d85/a00618.html#a011e2f4b901dd5ac2c8b9f3cf56d4fa3">UDPSocketBase</a>(QObject *parent=nullptr)</td><td class="entry"><a class="el" href="../../de/d85/a00618.html">UDPSocketBase</a></td><td class="entry"><span class="mlabel">explicit</span></td></tr>
-</table></div><!-- contents -->
+<p><code>#include &lt;<a class="el" href="../../d5/d35/a00266_source.html">QuasarSDK/FSend/TCP</a>&gt;</code></p>
+
+<p>Базовые классы:QObject.</p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="signals" name="signals"></a>
+Сигналы</h2></td></tr>
+<tr class="memitem:a3eb63c5af67a44fb60ba731d3da7a56d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/dd8/a00615.html#a3eb63c5af67a44fb60ba731d3da7a56d">received</a> (QByteArray data)</td></tr>
+<tr class="separator:a3eb63c5af67a44fb60ba731d3da7a56d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b33200464fba1e0b425162610ce251e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/dd8/a00615.html#a4b33200464fba1e0b425162610ce251e">progressChanged</a> (float progress)</td></tr>
+<tr class="separator:a4b33200464fba1e0b425162610ce251e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7af680d6ad6bcfd92da53b320c9c9236"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/dd8/a00615.html#a7af680d6ad6bcfd92da53b320c9c9236">metrics</a> (const QString &amp;data, int size_bytes, bool out)</td></tr>
+<tr class="separator:a7af680d6ad6bcfd92da53b320c9c9236"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:aae83f860fbaa08693629478bba2b0ae0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/dd8/a00615.html#aae83f860fbaa08693629478bba2b0ae0">TCPServer</a> (QObject *parent=nullptr)</td></tr>
+<tr class="separator:aae83f860fbaa08693629478bba2b0ae0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28ca97829e1fcdc9073ca1c651e08ffa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/dd8/a00615.html#a28ca97829e1fcdc9073ca1c651e08ffa">start</a> (const QString &amp;address) noexcept</td></tr>
+<tr class="separator:a28ca97829e1fcdc9073ca1c651e08ffa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba28ee97ffe6d508e26f534ec7e62f8f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/dd8/a00615.html#aba28ee97ffe6d508e26f534ec7e62f8f">stop</a> () noexcept</td></tr>
+<tr class="separator:aba28ee97ffe6d508e26f534ec7e62f8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Класс для приема больших файлов с РЛС по протоколу TCP-IP. </p>
+<p>Используется для приема цельных пакетов с телескопическими и полосовыми изображениями с РЛС, а также для приёма .zip-архивов.</p>
+<p>Предоставляет отладочные метрики по аналогии с классами-наследниками <a class="el" href="../../d5/d80/a00583.html" title="Базовый класс для сокетов, работающих по протоколу UDP.">BaseUDPSocket</a>. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d5/d35/a00266_source.html">quasarsdk_tcpserver.h</a> строка <a class="el" href="../../d5/d35/a00266_source.html#l00018">18</a></p>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="aae83f860fbaa08693629478bba2b0ae0" name="aae83f860fbaa08693629478bba2b0ae0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae83f860fbaa08693629478bba2b0ae0">&#9670;&#160;</a></span>TCPServer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d5/dd8/a00615.html">TCPServer</a> </td>
+          <td>(</td>
+          <td class="paramtype">QObject *&#160;</td>
+          <td class="paramname"><em>parent</em> = <code>nullptr</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Создает новый объект <a class="el" href="../../d5/dd8/a00615.html" title="Класс для приема больших файлов с РЛС по протоколу TCP-IP.">TCPServer</a> с указанным родителем. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d5/d42/a00269_source.html">quasarsdk_tcpserver.c++</a> строка <a class="el" href="../../d5/d42/a00269_source.html#l00021">21</a></p>
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a28ca97829e1fcdc9073ca1c651e08ffa" name="a28ca97829e1fcdc9073ca1c651e08ffa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28ca97829e1fcdc9073ca1c651e08ffa">&#9670;&#160;</a></span>start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void start </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>address</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Запускает TCP-IP сервер на указанном адресе. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">address</td><td>- строка адреса в формате <code>192.168.1.10:10000</code>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d5/d42/a00269_source.html">quasarsdk_tcpserver.c++</a> строка <a class="el" href="../../d5/d42/a00269_source.html#l00038">38</a></p>
+
+</div>
+</div>
+<a id="aba28ee97ffe6d508e26f534ec7e62f8f" name="aba28ee97ffe6d508e26f534ec7e62f8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba28ee97ffe6d508e26f534ec7e62f8f">&#9670;&#160;</a></span>stop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void stop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Останавливает запущенный TCP-IP сервер. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d5/d42/a00269_source.html">quasarsdk_tcpserver.c++</a> строка <a class="el" href="../../d5/d42/a00269_source.html#l00058">58</a></p>
+
+</div>
+</div>
+<a id="a3eb63c5af67a44fb60ba731d3da7a56d" name="a3eb63c5af67a44fb60ba731d3da7a56d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3eb63c5af67a44fb60ba731d3da7a56d">&#9670;&#160;</a></span>received</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void received </td>
+          <td>(</td>
+          <td class="paramtype">QByteArray&#160;</td>
+          <td class="paramname"><em>data</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Срабатывает, когда сервер завершает прием данных от клиента. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>- массив байт с данными. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a4b33200464fba1e0b425162610ce251e" name="a4b33200464fba1e0b425162610ce251e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b33200464fba1e0b425162610ce251e">&#9670;&#160;</a></span>progressChanged</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void progressChanged </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>progress</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Срабатывает во время изменения прогресса загрузки файла. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">progress</td><td>- процент загрузки (от 0 до 100). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a7af680d6ad6bcfd92da53b320c9c9236" name="a7af680d6ad6bcfd92da53b320c9c9236"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7af680d6ad6bcfd92da53b320c9c9236">&#9670;&#160;</a></span>metrics</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void metrics </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>size_bytes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>out</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Отладочные метрики сокета, аналогичные <a class="el" href="../../d5/d80/a00583.html#a563a67ebf5e4d8ba152045a7c51fd604" title="Предоставляет отладочные метрики сокета.">BaseUDPSocket::metrics</a>. </p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li><a class="el" href="../../d5/d35/a00266_source.html">quasarsdk_tcpserver.h</a></li>
+<li><a class="el" href="../../d5/d42/a00269_source.html">quasarsdk_tcpserver.c++</a></li>
+</ul>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
+    <li class="navelem"><a class="el" href="../../d7/ddb/a00361.html">QuasarSDK</a></li><li class="navelem"><a class="el" href="../../d5/dd8/a00615.html">TCPServer</a></li>
     <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
   </ul>
 </div>

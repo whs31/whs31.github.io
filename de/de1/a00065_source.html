@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.6"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuaSAR: Исходный файл ping.h</title>
+<title>QuaSAR: Исходный файл offlinetileloader.h</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -92,60 +92,77 @@ $(document).ready(function(){initNavTree('de/de1/a00065_source.html','../../'); 
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">ping.h</div></div>
+  <div class="headertitle"><div class="title">offlinetileloader.h</div></div>
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;QtCore/QObject&gt;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;QtCore/QStringList&gt;</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">class </span>QTimer;</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">class </span>QProcess;</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">using </span>std::vector;</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d4/d82/a00436.html">Networking</a></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>{</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="../../db/dde/a00691.html">   16</a></span>  <span class="keyword">class </span><a class="code hl_class" href="../../db/dde/a00691.html">Pinger</a> : <span class="keyword">public</span> QObject</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>  {</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    Q_OBJECT</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>      <span class="keyword">explicit</span> <a class="code hl_class" href="../../db/dde/a00691.html">Pinger</a>(QObject* parent = <span class="keyword">nullptr</span>);</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>      <a class="code hl_class" href="../../db/dde/a00691.html">~Pinger</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;QtCore/QObject&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;QtCore/QQueue&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">class </span>QGeoPolygon;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">class </span>QNetworkAccessManager;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../db/ddc/a00353.html">Map</a></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>{</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>  <span class="keyword">class </span>OfflineTileLoader : <span class="keyword">public</span> QObject</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>  {</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    Q_OBJECT</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>      <span class="keyword">static</span> OfflineTileLoader* get();</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>      <span class="keywordtype">void</span> download(uint8_t zoom, uint32_t x, uint32_t <a class="code hl_variable" href="../../d5/de0/a00050.html#af77b1a54442f2443cf64a4766f916bcd">y</a>);</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>      <span class="keywordtype">void</span> download(<span class="keyword">const</span> QGeoPolygon&amp; polygon, <span class="keywordtype">int</span> maximum_zoom = 18);</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>      Q_INVOKABLE <span class="keywordtype">void</span> download(<span class="keyword">const</span> QVariantList&amp; list, <span class="keywordtype">int</span> maximum_zoom = 18);</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>      Q_INVOKABLE <span class="keywordtype">int</span> estimateTileCount(<span class="keyword">const</span> QVariantList&amp; list, <span class="keywordtype">int</span> maximum_zoom = 18) noexcept;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>      <span class="keywordtype">void</span> setServerUrl(const QString&amp; url);</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>      <span class="keywordtype">void</span> setStoragePath(const QString&amp; path);</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>      <span class="keywordtype">void</span> <a class="code hl_function" href="../../db/dde/a00691.html#aee01bed59a8eba3e2c8a864b2414b9f1">start</a>(uint32_t interval, <span class="keyword">const</span> QString&amp; address, <span class="keyword">const</span> vector&lt;QString&gt;&amp; args = {});</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>      <span class="keywordtype">void</span> <a class="code hl_function" href="../../db/dde/a00691.html#aba28ee97ffe6d508e26f534ec7e62f8f">stop</a>() <span class="keyword">noexcept</span>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>      QByteArray tile(uint8_t zoom, uint32_t x, uint32_t <a class="code hl_variable" href="../../d5/de0/a00050.html#af77b1a54442f2443cf64a4766f916bcd">y</a>);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    signals:</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>      <span class="keywordtype">void</span> progress(<span class="keywordtype">int</span> percent);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    private:</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>      explicit OfflineTileLoader(QObject* parent = <span class="keywordtype">nullptr</span>);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>      OfflineTileLoader(const OfflineTileLoader&amp;);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>      OfflineTileLoader&amp; operator=(const OfflineTileLoader&amp;);</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    signals:</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="../../db/dde/a00691.html#aec41dea9a34ffd7275acc4b59ba16c1c">   39</a></span>      <span class="keywordtype">void</span> <a class="code hl_signal" href="../../db/dde/a00691.html#aec41dea9a34ffd7275acc4b59ba16c1c">result</a>(<span class="keywordtype">int</span> status);</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keyword">private</span> slots:</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>      <span class="keywordtype">void</span> ping();</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>      <span class="keywordtype">void</span> recv();</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>      QProcess* ch;</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>      QTimer* t;</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>      QString addr;</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>      QStringList m_args;</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>  };</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>} <span class="comment">// Network</span></div>
-<div class="ttc" id="aa00436_html"><div class="ttname"><a href="../../d4/d82/a00436.html">Networking</a></div><div class="ttdoc">Пространство имен для работы с сетевыми подключениями к РЛС.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d03/a00254_source.html#l00010">entry.h:11</a></div></div>
-<div class="ttc" id="aa00691_html"><div class="ttname"><a href="../../db/dde/a00691.html">Networking::Pinger</a></div><div class="ttdoc">Class for checking connection to specified IPv4 address via ICMP.</div><div class="ttdef"><b>Definition:</b> <a href="../../de/de1/a00065_source.html#l00016">ping.h:17</a></div></div>
-<div class="ttc" id="aa00691_html_aba28ee97ffe6d508e26f534ec7e62f8f"><div class="ttname"><a href="../../db/dde/a00691.html#aba28ee97ffe6d508e26f534ec7e62f8f">Networking::Pinger::stop</a></div><div class="ttdeci">void stop() noexcept</div><div class="ttdoc">Stops pinging address.</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d03/a00062_source.html#l00041">ping.c++:41</a></div></div>
-<div class="ttc" id="aa00691_html_aec41dea9a34ffd7275acc4b59ba16c1c"><div class="ttname"><a href="../../db/dde/a00691.html#aec41dea9a34ffd7275acc4b59ba16c1c">Networking::Pinger::result</a></div><div class="ttdeci">void result(int status)</div><div class="ttdoc">Emitted when ping is finished.</div></div>
-<div class="ttc" id="aa00691_html_aee01bed59a8eba3e2c8a864b2414b9f1"><div class="ttname"><a href="../../db/dde/a00691.html#aee01bed59a8eba3e2c8a864b2414b9f1">Networking::Pinger::start</a></div><div class="ttdeci">void start(uint32_t interval, const QString &amp;address, const vector&lt; QString &gt; &amp;args={})</div><div class="ttdoc">Starts pinging given address, until Pinger is not destroyed or stopped.</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d03/a00062_source.html#l00025">ping.c++:25</a></div></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>      <span class="keywordtype">void</span> processDownload();</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    private:</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>      struct TileItem</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>      {</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        TileItem(uint8_t zoom, uint32_t x, uint32_t <a class="code hl_variable" href="../../d5/de0/a00050.html#af77b1a54442f2443cf64a4766f916bcd">y</a>)</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>          : zoom(zoom)</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>          , x(x)</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>          , <a class="code hl_variable" href="../../d5/de0/a00050.html#af77b1a54442f2443cf64a4766f916bcd">y</a>(<a class="code hl_variable" href="../../d5/de0/a00050.html#af77b1a54442f2443cf64a4766f916bcd">y</a>)</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        {}</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        uint8_t zoom;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        uint32_t x;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        uint32_t <a class="code hl_variable" href="../../d5/de0/a00050.html#af77b1a54442f2443cf64a4766f916bcd">y</a>;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>      };</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>      QNetworkAccessManager* m_netaccs;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>      uint64_t m_totalTiles;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>      uint64_t m_loadedTiles;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>      QQueue&lt;TileItem&gt; m_tilesQueue;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>      uint8_t m_parallelLoadedCount;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>      QString m_serverUrl;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>      QString m_storagePath;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>  };</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>} <span class="comment">// Map5</span></div>
+<div class="ttc" id="aa00050_html_af77b1a54442f2443cf64a4766f916bcd"><div class="ttname"><a href="../../d5/de0/a00050.html#af77b1a54442f2443cf64a4766f916bcd">y</a></div><div class="ttdeci">int16_t y</div><div class="ttdoc">Смещение по Y в метрах / 10.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de0/a00050_source.html#l00007">imagemetadata.h:7</a></div></div>
+<div class="ttc" id="aa00353_html"><div class="ttname"><a href="../../db/ddc/a00353.html">Map</a></div><div class="ttdoc">Пространство имен для классов и функций, связанных с картографией.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d09/a00077_source.html#l00007">clickhandler.c++:8</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="../../dir_fcb2a60e1810a51543a3cc3a113d0956.html">c++</a></li><li class="navelem"><a class="el" href="../../dir_2658f57a99a735e2e16983d97ef2d726.html">network</a></li><li class="navelem"><a class="el" href="../../dir_60755ab0f925e32d4971f456ca5fc601.html">utils</a></li><li class="navelem"><b>ping.h</b></li>
+    <li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="../../dir_fcb2a60e1810a51543a3cc3a113d0956.html">c++</a></li><li class="navelem"><a class="el" href="../../dir_d88003ba6281a9447bd5134cfe1c08c9.html">map</a></li><li class="navelem"><a class="el" href="../../dir_11930aa8d0a7c7302d7157dda08c92ef.html">tools</a></li><li class="navelem"><b>offlinetileloader.h</b></li>
     <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
   </ul>
 </div>

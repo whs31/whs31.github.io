@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.6"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuaSAR: Исходный файл remotedata.h</title>
+<title>QuaSAR: Исходный файл stripmodel.c++</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -92,69 +92,167 @@ $(document).ready(function(){initNavTree('d5/d16/a00029_source.html','../../'); 
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">remotedata.h</div></div>
+  <div class="headertitle"><div class="title">stripmodel.c++</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="../../d5/d16/a00029.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno"><a class="line" href="../../dd/db6/a00639.html#a6c497150928852749b119505b1459c23">    1</a></span> </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#pragma once</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;QtCore/QObject&gt;</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="../../db/dab/a00089.html">network/netenums.h</a>&quot;</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d4/d82/a00436.html">Networking</a></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>{</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="../../dd/db6/a00639.html">   21</a></span>  <span class="keyword">class </span><a class="code hl_class" href="../../dd/db6/a00639.html">RemoteData</a> : <span class="keyword">public</span> QObject</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>  {</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    Q_OBJECT</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>      Q_PROPERTY(<span class="keywordtype">float</span> <a class="code hl_property" href="../../dd/db6/a00639.html#a66f2ebfeb3e0e823b05351f875ec8639">storageSpace</a> READ <a class="code hl_property" href="../../dd/db6/a00639.html#a66f2ebfeb3e0e823b05351f875ec8639">storageSpace</a> WRITE setStorageSpace NOTIFY storageSpaceChanged)</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>      Q_PROPERTY(<span class="keywordtype">int</span> <a class="code hl_property" href="../../dd/db6/a00639.html#a6c497150928852749b119505b1459c23">de10ping</a> READ <a class="code hl_property" href="../../dd/db6/a00639.html#a6c497150928852749b119505b1459c23">de10ping</a> WRITE setDe10ping NOTIFY de10pingChanged)</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>      Q_PROPERTY(<span class="keywordtype">int</span> <a class="code hl_property" href="../../dd/db6/a00639.html#afd38636f9b028739b2bc560f0dd308fb">jetsonping</a> READ <a class="code hl_property" href="../../dd/db6/a00639.html#afd38636f9b028739b2bc560f0dd308fb">jetsonping</a> WRITE setJetsonping NOTIFY jetsonpingChanged)</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>      Q_PROPERTY(<span class="keywordtype">int</span> <a class="code hl_property" href="../../dd/db6/a00639.html#a2544bdcfc5359dca927e785963cd3f73">navping</a> READ <a class="code hl_property" href="../../dd/db6/a00639.html#a2544bdcfc5359dca927e785963cd3f73">navping</a> WRITE setNavping NOTIFY navpingChanged)</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>      Q_PROPERTY(<span class="keywordtype">int</span> <a class="code hl_property" href="../../dd/db6/a00639.html#a69bac30bb5ebdbb94aede5da963f1a92">utl1ping</a> READ <a class="code hl_property" href="../../dd/db6/a00639.html#a69bac30bb5ebdbb94aede5da963f1a92">utl1ping</a> WRITE setUtl1ping NOTIFY utl1pingChanged)</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>      Q_PROPERTY(<span class="keywordtype">int</span> <a class="code hl_property" href="../../dd/db6/a00639.html#a227c93f9e46608d7af529f7f89fc8042">utl2ping</a> READ <a class="code hl_property" href="../../dd/db6/a00639.html#a227c93f9e46608d7af529f7f89fc8042">utl2ping</a> WRITE setUtl2ping NOTIFY utl2pingChanged)</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>      <span class="keyword">explicit</span> <a class="code hl_class" href="../../dd/db6/a00639.html">RemoteData</a>(QObject* parent = <span class="keyword">nullptr</span>);</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>      [[nodiscard]] <span class="keywordtype">float</span> <a class="code hl_property" href="../../dd/db6/a00639.html#a66f2ebfeb3e0e823b05351f875ec8639">storageSpace</a>() <span class="keyword">const</span>; <span class="keywordtype">void</span> setStorageSpace(<span class="keywordtype">float</span>);</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>      [[nodiscard]] <span class="keywordtype">int</span> <a class="code hl_property" href="../../dd/db6/a00639.html#a6c497150928852749b119505b1459c23">de10ping</a>() <span class="keyword">const</span>; <span class="keywordtype">void</span> setDe10ping(<span class="keywordtype">int</span>);</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>      [[nodiscard]] <span class="keywordtype">int</span> <a class="code hl_property" href="../../dd/db6/a00639.html#afd38636f9b028739b2bc560f0dd308fb">jetsonping</a>() <span class="keyword">const</span>; <span class="keywordtype">void</span> setJetsonping(<span class="keywordtype">int</span>);</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>      [[nodiscard]] <span class="keywordtype">int</span> <a class="code hl_property" href="../../dd/db6/a00639.html#a2544bdcfc5359dca927e785963cd3f73">navping</a>() <span class="keyword">const</span>; <span class="keywordtype">void</span> setNavping(<span class="keywordtype">int</span>);</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>      [[nodiscard]] <span class="keywordtype">int</span> <a class="code hl_property" href="../../dd/db6/a00639.html#a69bac30bb5ebdbb94aede5da963f1a92">utl1ping</a>() <span class="keyword">const</span>; <span class="keywordtype">void</span> setUtl1ping(<span class="keywordtype">int</span>);</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>      [[nodiscard]] <span class="keywordtype">int</span> <a class="code hl_property" href="../../dd/db6/a00639.html#a227c93f9e46608d7af529f7f89fc8042">utl2ping</a>() <span class="keyword">const</span>; <span class="keywordtype">void</span> setUtl2ping(<span class="keywordtype">int</span>);</div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;stripmodel.h&quot;</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &lt;QtCore/QDebug&gt;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../db/ddc/a00353.html">Map</a></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>{</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>  StripModel::StripModel(QObject* parent)</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>      : QAbstractListModel(parent)</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>  {}</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>  QHash&lt;int, QByteArray&gt; StripModel::roleNames()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">  </span>{</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    QHash&lt;int, QByteArray&gt; roles;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    roles[Index] = <span class="stringliteral">&quot;index&quot;</span>;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    roles[Filename] = <span class="stringliteral">&quot;filename&quot;</span>;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    roles[Latitude] = <span class="stringliteral">&quot;latitude&quot;</span>;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    roles[Longitude] = <span class="stringliteral">&quot;longitude&quot;</span>;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    roles[DX] = <span class="stringliteral">&quot;dx&quot;</span>;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    roles[Azimuth] = <span class="stringliteral">&quot;azimuth&quot;</span>;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    roles[LX] = <span class="stringliteral">&quot;lx&quot;</span>;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    roles[LY] = <span class="stringliteral">&quot;ly&quot;</span>;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    roles[OffsetX] = <span class="stringliteral">&quot;offset_x&quot;</span>;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    roles[OffsetY] = <span class="stringliteral">&quot;offset_y&quot;</span>;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    roles[Valid] = <span class="stringliteral">&quot;valid&quot;</span>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    roles[LOD1FilePath] = <span class="stringliteral">&quot;lod1&quot;</span>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    roles[LOD0FilePath] = <span class="stringliteral">&quot;lod0&quot;</span>;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    roles[Transparency] = <span class="stringliteral">&quot;transparency&quot;</span>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    roles[Shown] = <span class="stringliteral">&quot;shown&quot;</span>;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    roles[MercatorZoomLevel] = <span class="stringliteral">&quot;mercator_zoom_level&quot;</span>;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    roles[MarkedForExport] = <span class="stringliteral">&quot;marked_for_export&quot;</span>;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keywordflow">return</span> roles;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>  }</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>  <span class="keywordtype">int</span> StripModel::rowCount(<span class="keyword">const</span> QModelIndex&amp; parent)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="keyword">  </span>{</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keywordflow">return</span> storage.size();</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>  }</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>  QVariant StripModel::data(<span class="keyword">const</span> QModelIndex&amp; index, <span class="keywordtype">int</span> role)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="keyword">  </span>{</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keywordflow">if</span>(not index.isValid())</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>      <span class="keywordflow">return</span> {};</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keywordflow">switch</span>(role)</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    {</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>      <span class="keywordflow">case</span> Index: <span class="keywordflow">return</span> index.row();</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>      <span class="keywordflow">case</span> Filename: <span class="keywordflow">return</span> QVariant::fromValue(storage[index.row()].filename);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>      <span class="keywordflow">case</span> Latitude: <span class="keywordflow">return</span> QVariant::fromValue(storage[index.row()].coordinate.latitude());</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>      <span class="keywordflow">case</span> Longitude: <span class="keywordflow">return</span> QVariant::fromValue(storage[index.row()].coordinate.longitude());</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>      <span class="keywordflow">case</span> DX: <span class="keywordflow">return</span> QVariant::fromValue(storage[index.row()].dx);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>      <span class="keywordflow">case</span> Azimuth: <span class="keywordflow">return</span> QVariant::fromValue(storage[index.row()].azimuth);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>      <span class="keywordflow">case</span> LX: <span class="keywordflow">return</span> QVariant::fromValue(storage[index.row()].lx);</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>      <span class="keywordflow">case</span> LY: <span class="keywordflow">return</span> QVariant::fromValue(storage[index.row()].ly);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>      <span class="keywordflow">case</span> OffsetX: <span class="keywordflow">return</span> QVariant::fromValue(storage[index.row()].offset_x);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>      <span class="keywordflow">case</span> OffsetY: <span class="keywordflow">return</span> QVariant::fromValue(storage[index.row()].offset_y);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>      <span class="keywordflow">case</span> Valid: <span class="keywordflow">return</span> QVariant::fromValue(storage[index.row()].valid);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>      <span class="keywordflow">case</span> LOD1FilePath: <span class="keywordflow">return</span> QVariant::fromValue(storage[index.row()].path.second);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>      <span class="keywordflow">case</span> LOD0FilePath: <span class="keywordflow">return</span> QVariant::fromValue(storage[index.row()].path.first);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>      <span class="keywordflow">case</span> Transparency: <span class="keywordflow">return</span> QVariant::fromValue(storage[index.row()].opacity);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>      <span class="keywordflow">case</span> Shown: <span class="keywordflow">return</span> QVariant::fromValue(storage[index.row()].shown);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>      <span class="keywordflow">case</span> MercatorZoomLevel: <span class="keywordflow">return</span> QVariant::fromValue(storage[index.row()].mercator_zoom_level);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>      <span class="keywordflow">case</span> MarkedForExport: <span class="keywordflow">return</span> QVariant::fromValue(storage[index.row()].marked_for_export);</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>      <span class="keywordflow">default</span>: <span class="keywordflow">return</span> <span class="stringliteral">&quot;Error reading from model&quot;</span>;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    }</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>  }</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    signals:</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>      <span class="keywordtype">void</span> storageSpaceChanged();</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>      <span class="keywordtype">void</span> de10pingChanged();</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>      <span class="keywordtype">void</span> jetsonpingChanged();</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>      <span class="keywordtype">void</span> navpingChanged();</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>      <span class="keywordtype">void</span> utl1pingChanged();</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>      <span class="keywordtype">void</span> utl2pingChanged();</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>      <span class="keywordtype">float</span> m_storageSpace;</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>      <span class="keywordtype">int</span> m_de10ping;</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>      <span class="keywordtype">int</span> m_jetsonping;</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>      <span class="keywordtype">int</span> m_navping;</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>      <span class="keywordtype">int</span> m_utl1ping;</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>      <span class="keywordtype">int</span> m_utl2ping;</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>  };</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>} <span class="comment">// namespace Network;</span></div>
-<div class="ttc" id="aa00089_html"><div class="ttname"><a href="../../db/dab/a00089.html">netenums.h</a></div></div>
-<div class="ttc" id="aa00436_html"><div class="ttname"><a href="../../d4/d82/a00436.html">Networking</a></div><div class="ttdoc">Пространство имен для работы с сетевыми подключениями к РЛС.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d03/a00254_source.html#l00010">entry.h:11</a></div></div>
-<div class="ttc" id="aa00639_html"><div class="ttname"><a href="../../dd/db6/a00639.html">Networking::RemoteData</a></div><div class="ttdoc">Class for storing SAR-related data.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d16/a00029_source.html#l00021">remotedata.h:22</a></div></div>
-<div class="ttc" id="aa00639_html_a227c93f9e46608d7af529f7f89fc8042"><div class="ttname"><a href="../../dd/db6/a00639.html#a227c93f9e46608d7af529f7f89fc8042">Networking::RemoteData::utl2ping</a></div><div class="ttdeci">int utl2ping</div><div class="ttdoc">Ping status for power commutator module as Enums::PingStatus.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d16/a00029_source.html#l00001">remotedata.h:55</a></div></div>
-<div class="ttc" id="aa00639_html_a2544bdcfc5359dca927e785963cd3f73"><div class="ttname"><a href="../../dd/db6/a00639.html#a2544bdcfc5359dca927e785963cd3f73">Networking::RemoteData::navping</a></div><div class="ttdeci">int navping</div><div class="ttdoc">Ping status for navigation module as Enums::PingStatus.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d16/a00029_source.html#l00001">remotedata.h:53</a></div></div>
-<div class="ttc" id="aa00639_html_a66f2ebfeb3e0e823b05351f875ec8639"><div class="ttname"><a href="../../dd/db6/a00639.html#a66f2ebfeb3e0e823b05351f875ec8639">Networking::RemoteData::storageSpace</a></div><div class="ttdeci">float storageSpace</div><div class="ttdoc">Remote storage status (normalized percentage).</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d16/a00029_source.html#l00001">remotedata.h:50</a></div></div>
-<div class="ttc" id="aa00639_html_a69bac30bb5ebdbb94aede5da963f1a92"><div class="ttname"><a href="../../dd/db6/a00639.html#a69bac30bb5ebdbb94aede5da963f1a92">Networking::RemoteData::utl1ping</a></div><div class="ttdeci">int utl1ping</div><div class="ttdoc">Ping status for antenna commutator module as Enums::PingStatus.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d16/a00029_source.html#l00001">remotedata.h:54</a></div></div>
-<div class="ttc" id="aa00639_html_a6c497150928852749b119505b1459c23"><div class="ttname"><a href="../../dd/db6/a00639.html#a6c497150928852749b119505b1459c23">Networking::RemoteData::de10ping</a></div><div class="ttdeci">int de10ping</div><div class="ttdoc">Ping status for DE10 module as Enums::PingStatus.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d16/a00029_source.html#l00001">remotedata.h:51</a></div></div>
-<div class="ttc" id="aa00639_html_afd38636f9b028739b2bc560f0dd308fb"><div class="ttname"><a href="../../dd/db6/a00639.html#afd38636f9b028739b2bc560f0dd308fb">Networking::RemoteData::jetsonping</a></div><div class="ttdeci">int jetsonping</div><div class="ttdoc">Ping status for Jetson module as Enums::PingStatus.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d16/a00029_source.html#l00001">remotedata.h:52</a></div></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>  <span class="keywordtype">bool</span> StripModel::setData(<span class="keyword">const</span> QModelIndex&amp; index, <span class="keyword">const</span> QVariant&amp; value, <span class="keywordtype">int</span> role)</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>  {</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="keywordflow">if</span>(data(index, role) != value)</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    {</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>      <span class="keywordflow">switch</span>(role)</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>      {</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        <span class="keywordflow">case</span> Index: <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <span class="keywordflow">case</span> Filename: storage[index.row()].filename = value.toString(); <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        <span class="keywordflow">case</span> Latitude: storage[index.row()].coordinate.setLatitude(value.toDouble()); <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        <span class="keywordflow">case</span> Longitude: storage[index.row()].coordinate.setLongitude(value.toDouble()); <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        <span class="keywordflow">case</span> DX: storage[index.row()].dx = value.toFloat(); <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        <span class="keywordflow">case</span> Azimuth: storage[index.row()].azimuth = value.toFloat(); <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        <span class="keywordflow">case</span> LX: storage[index.row()].lx = value.toFloat(); <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        <span class="keywordflow">case</span> LY: storage[index.row()].ly = value.toFloat(); <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        <span class="keywordflow">case</span> OffsetX: storage[index.row()].offset_x = value.toFloat(); <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        <span class="keywordflow">case</span> OffsetY: storage[index.row()].offset_y = value.toFloat(); <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        <span class="keywordflow">case</span> Valid: storage[index.row()].valid = value.toBool(); <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        <span class="keywordflow">case</span> LOD1FilePath: storage[index.row()].path.second = value.toString(); <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        <span class="keywordflow">case</span> LOD0FilePath: storage[index.row()].path.first = value.toString(); <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        <span class="keywordflow">case</span> Transparency: storage[index.row()].opacity = value.toFloat(); <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        <span class="keywordflow">case</span> Shown: storage[index.row()].shown = value.toBool(); <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        <span class="keywordflow">case</span> MercatorZoomLevel: storage[index.row()].mercator_zoom_level = value.toDouble(); <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        <span class="keywordflow">case</span> MarkedForExport: storage[index.row()].marked_for_export = value.toBool();<span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        <span class="keywordflow">default</span>: <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>      }</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>      emit dataChanged(index, index, {role});</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>      <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    }</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>  }</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>  <span class="keywordtype">void</span> StripModel::add(<span class="keyword">const</span> StripImage&amp; image)</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>  {</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    beginInsertRows(QModelIndex(), rowCount(), rowCount());</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    storage.push_back(image);</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    endInsertRows();</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    qDebug() &lt;&lt; <span class="stringliteral">&quot;[STRIP MODEL] Model received new image. Now it contains&quot;</span> &lt;&lt; rowCount() &lt;&lt; <span class="stringliteral">&quot;images&quot;</span>;</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>  }</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>  <span class="keywordtype">void</span> StripModel::remove(<span class="keywordtype">int</span> index)</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>  {</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    beginRemoveRows(QModelIndex(), index, index);</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    storage.remove(index);</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    endRemoveRows();</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    qDebug() &lt;&lt; <span class="stringliteral">&quot;[STRIP MODEL] Model lost an image. Now it contains&quot;</span> &lt;&lt; rowCount() &lt;&lt; <span class="stringliteral">&quot;images&quot;</span>;</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>  }</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>  <span class="keywordtype">void</span> StripModel::clear()</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>  {</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    beginRemoveRows(QModelIndex(), 0, rowCount() - 1);</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    storage.clear();</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    endRemoveRows();</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    qDebug() &lt;&lt; <span class="stringliteral">&quot;[STRIP MODEL] Model cleared&quot;</span>;</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>  }</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>  <span class="keywordtype">bool</span> StripModel::exportSelectedImages(<span class="keyword">const</span> QString&amp; target) <span class="keyword">noexcept</span></div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>  {</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    QList&lt;QString&gt; res;</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span>&amp; image: qAsConst(storage))</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    {</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>      <span class="keywordflow">if</span>(image.marked_for_export)</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>        res.push_back(image.path.first);</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    }</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span> </div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    <span class="keywordflow">if</span>(not res.empty())</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    {</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>      qInfo() &lt;&lt; <span class="stringliteral">&quot;[STRIP MODEL] Marked&quot;</span> &lt;&lt; res.size() &lt;&lt; <span class="stringliteral">&quot;images for export. Exporting...&quot;</span>;</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>      emit markedForExport(res, target);</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>      <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    }</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>    {</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>      qWarning() &lt;&lt; <span class="stringliteral">&quot;[STRIP MODEL] No images marked for export&quot;</span>;</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    }</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>  }</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span> </div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>  QVector&lt;StripImage&gt;* StripModel::direct() { <span class="keywordflow">return</span> &amp;storage; }</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span> </div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>} <span class="comment">// Map</span></div>
+<div class="ttc" id="aa00353_html"><div class="ttname"><a href="../../db/ddc/a00353.html">Map</a></div><div class="ttdoc">Пространство имен для классов и функций, связанных с картографией.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d09/a00077_source.html#l00007">clickhandler.c++:8</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="../../dir_fcb2a60e1810a51543a3cc3a113d0956.html">c++</a></li><li class="navelem"><a class="el" href="../../dir_2658f57a99a735e2e16983d97ef2d726.html">network</a></li><li class="navelem"><a class="el" href="../../dir_6ef7e0ae247fe3f6196a2ffc3d436052.html">execd</a></li><li class="navelem"><a class="el" href="../../d5/d16/a00029.html">remotedata.h</a></li>
+    <li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="../../dir_fcb2a60e1810a51543a3cc3a113d0956.html">c++</a></li><li class="navelem"><a class="el" href="../../dir_d88003ba6281a9447bd5134cfe1c08c9.html">map</a></li><li class="navelem"><a class="el" href="../../dir_6a25e9731697d35532c6c56646dc8806.html">models</a></li><li class="navelem"><b>stripmodel.c++</b></li>
     <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
   </ul>
 </div>

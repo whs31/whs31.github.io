@@ -103,15 +103,7 @@ var menudata={children:[
 {text:"x",url:"functions_vars.html#index_x"},
 {text:"y",url:"functions_vars.html#index_y"}]},
 {text:"Перечисления",url:"functions_enum.html"},
-{text:"Элементы перечислений",url:"functions_eval.html",children:[
-{text:"c",url:"functions_eval.html#index_c"},
-{text:"d",url:"functions_eval.html#index_d"},
-{text:"f",url:"functions_eval.html#index_f"},
-{text:"i",url:"functions_eval.html#index_i"},
-{text:"p",url:"functions_eval.html#index_p"},
-{text:"r",url:"functions_eval.html#index_r"},
-{text:"s",url:"functions_eval.html#index_s"},
-{text:"t",url:"functions_eval.html#index_t"}]},
+{text:"Элементы перечислений",url:"functions_eval.html"},
 {text:"Свойства",url:"functions_prop.html",children:[
 {text:"a",url:"functions_prop.html#index_a"},
 {text:"c",url:"functions_prop.html#index_c"},

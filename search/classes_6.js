@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['imagemetadata_0',['ImageMetadata',['../de/df8/a00440.html#d8/d75/a00555',1,'Map']]],
-  ['imagemetaheader_1',['ImageMetaHeader',['../de/df8/a00440.html#d9/d87/a00551',1,'Map']]]
+  ['imagemetadata_0',['ImageMetadata',['../db/ddc/a00353.html#d7/d5e/a00467',1,'Map']]],
+  ['imagemetaheader_1',['ImageMetaHeader',['../db/ddc/a00353.html#d3/d5d/a00463',1,'Map']]]
 ];

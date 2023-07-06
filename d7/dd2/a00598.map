@@ -1,0 +1,4 @@
+<map id="ExecdSocket" name="ExecdSocket">
+<area shape="rect" id="node1" title="Сокет для отправки команд на РЛС." alt="" coords="16,81,119,109"/>
+<area shape="rect" id="node2" href="$d5/d80/a00583.html" title="Базовый класс для сокетов, работающих по протоколу UDP." alt="" coords="5,5,130,33"/>
+</map>

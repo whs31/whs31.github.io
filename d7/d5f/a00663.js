@@ -1,13 +1,8 @@
 var a00663 =
 [
-    [ "marker", "d7/d5f/a00663.html#a0ea604dd26c415c8f380323b91bdba56", null ],
-    [ "id", "d7/d5f/a00663.html#a4fc3a0c58dfbd1e68224521185cb9384", null ],
-    [ "r", "d7/d5f/a00663.html#acfb1795eb860b37ae4a0cf5007525b11", null ],
-    [ "ip", "d7/d5f/a00663.html#a69ddb9c845da426f636d9dd0dbed4e7e", null ],
-    [ "port", "d7/d5f/a00663.html#a8e0798404bf2cf5dabb84c5ba9a4f236", null ],
-    [ "lat", "d7/d5f/a00663.html#a7972334534f68166121a6e51b0aac2d6", null ],
-    [ "lon", "d7/d5f/a00663.html#aa96391e04b5977c50b96d77bea86a01d", null ],
-    [ "cnt", "d7/d5f/a00663.html#ae1d905c6ac1a0c9b96dca16153917334", null ],
-    [ "len", "d7/d5f/a00663.html#a8aed22e2c7b283705ec82e0120515618", null ],
-    [ "command", "d7/d5f/a00663.html#af161fc144504ebd2d6a3a287a47efcc0", null ]
+    [ "PingTester", "d7/d5f/a00663.html#a9bc32f421394a81fc7a63bf771b4041d", null ],
+    [ "~PingTester", "d7/d5f/a00663.html#a1536c93dfb1f242946cf133d92df8985", null ],
+    [ "start", "d7/d5f/a00663.html#a5ddebc72addc87883c9112ea98c4c517", null ],
+    [ "stop", "d7/d5f/a00663.html#aba28ee97ffe6d508e26f534ec7e62f8f", null ],
+    [ "result", "d7/d5f/a00663.html#a3ec8bbafe23004823fbd69165109d0fc", null ]
 ];

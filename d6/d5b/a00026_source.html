@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.6"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuaSAR: Исходный файл execdsocket.h</title>
+<title>QuaSAR: Исходный файл markermodel.h</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -92,67 +92,63 @@ $(document).ready(function(){initNavTree('d6/d5b/a00026_source.html','../../'); 
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">execdsocket.h</div></div>
+  <div class="headertitle"><div class="title">markermodel.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="../../d6/d5b/a00026.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#pragma once</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="../../dc/dee/a00053.html">network/base/udpsocketbase.h</a>&quot;</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="../../db/dab/a00089.html">network/netenums.h</a>&quot;</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d4/d82/a00436.html">Networking</a></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>{</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>  <span class="keyword">class </span>ExecdArgumentList;</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="../../d5/de3/a00631.html">   27</a></span>  <span class="keyword">class </span><a class="code hl_class" href="../../d5/de3/a00631.html">ExecdSocket</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../d6/d6a/a00619.html">UDPSocketBase</a></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>  {</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    Q_OBJECT</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>      <span class="keyword">explicit</span> <a class="code hl_class" href="../../d5/de3/a00631.html">ExecdSocket</a>(QObject* parent = <span class="keyword">nullptr</span>);</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>      <span class="keywordtype">void</span> <a class="code hl_function" href="../../d5/de3/a00631.html#a958f448ca262fd5e96958cbfeec13676">start</a>(<span class="keyword">const</span> QString&amp; address);</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>      <span class="keywordtype">void</span> <a class="code hl_function" href="../../d5/de3/a00631.html#a8c528baf37154d347366083f0f816846">stop</a>();</div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;QtCore/QObject&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;QtCore/QAbstractListModel&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;QtCore/QVector&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;QtPositioning/QGeoCoordinate&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;map/entities/marker.h&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../db/ddc/a00353.html">Map</a></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>{</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>  <span class="keyword">class </span>MarkerModel : <span class="keyword">public</span> QAbstractListModel</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>  {</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    Q_OBJECT</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>      <span class="keyword">enum</span> ModelRoles</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>      {</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        Index = Qt::UserRole + 1,</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        Latitude,</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        Longitude,</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        MarkerName,</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        MarkerColor,</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        MarkerIcon</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>      };</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>      <span class="keyword">explicit</span> MarkerModel(QObject* parent = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>      <span class="keywordtype">int</span> rowCount(<span class="keyword">const</span> QModelIndex&amp; parent = QModelIndex()) <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>      QVariant data(<span class="keyword">const</span> QModelIndex&amp; index, <span class="keywordtype">int</span> role) <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>      <span class="keywordtype">bool</span> setData(<span class="keyword">const</span> QModelIndex&amp; index, <span class="keyword">const</span> QVariant&amp; value, <span class="keywordtype">int</span> role) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>      Q_INVOKABLE <span class="keywordtype">void</span> add(<span class="keyword">const</span> Map::Marker&amp; image);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>      Q_INVOKABLE <span class="keywordtype">void</span> remove(<span class="keywordtype">int</span> index);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>      Q_INVOKABLE <span class="keywordtype">void</span> clear();</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    signals:</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>      <span class="keywordtype">void</span> added();</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>      QHash&lt;int, QByteArray&gt; roleNames() <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>      QVector&lt;Marker&gt; storage;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>  };</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>} <span class="comment">// namespace Map;</span></div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>      <span class="keywordtype">void</span> <a class="code hl_function" href="../../d5/de3/a00631.html#aca9a6b4dd04cee4d035855754cdfc8ee">executeCommand</a>(<span class="keyword">const</span> QString&amp; command);</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>      <span class="keywordtype">void</span> <a class="code hl_function" href="../../d5/de3/a00631.html#aca9a6b4dd04cee4d035855754cdfc8ee">executeCommand</a>(<a class="code hl_enumeration" href="../../d8/ddc/a00655.html#a8dd47094c7079ec1fcbd5df9870c486e">Enums::NetworkCommand</a> command);</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>      <a class="code hl_class" href="../../d3/da3/a00627.html">ExecdArgumentList</a>* list() <span class="keyword">const</span> <span class="keyword">noexcept</span>;</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    signals:</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="../../d5/de3/a00631.html#ad8136df344f340b0653c27e3317c08f5">   70</a></span>      <span class="keywordtype">void</span> <a class="code hl_signal" href="../../d5/de3/a00631.html#ad8136df344f340b0653c27e3317c08f5">ping</a>();</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>      QByteArray <a class="code hl_function" href="../../d5/de3/a00631.html#a819a8ba75b78e43068e3b08c03fad152">wrap</a>(<span class="keyword">const</span> QString&amp; <span class="keywordtype">string</span>);</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <span class="keyword">private</span> slots:</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>      <span class="keywordtype">void</span> processResult(QByteArray data);</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>      <a class="code hl_class" href="../../d3/da3/a00627.html">ExecdArgumentList</a>* args;</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>      uint16_t message_uid;</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>  };</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>}</div>
-<div class="ttc" id="aa00053_html"><div class="ttname"><a href="../../dc/dee/a00053.html">udpsocketbase.h</a></div></div>
-<div class="ttc" id="aa00089_html"><div class="ttname"><a href="../../db/dab/a00089.html">netenums.h</a></div></div>
-<div class="ttc" id="aa00436_html"><div class="ttname"><a href="../../d4/d82/a00436.html">Networking</a></div><div class="ttdoc">Пространство имен для работы с сетевыми подключениями к РЛС.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d03/a00254_source.html#l00010">entry.h:11</a></div></div>
-<div class="ttc" id="aa00619_html"><div class="ttname"><a href="../../d6/d6a/a00619.html">Networking::UDPSocketBase</a></div><div class="ttdoc">Base class for handling UDP connections.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dee/a00053_source.html#l00024">udpsocketbase.h:25</a></div></div>
-<div class="ttc" id="aa00627_html"><div class="ttname"><a href="../../d3/da3/a00627.html">Networking::ExecdArgumentList</a></div><div class="ttdoc">Class for storing and processing execd arguments.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/de7/a00014_source.html#l00104">execdargumentlist.h:105</a></div></div>
-<div class="ttc" id="aa00631_html"><div class="ttname"><a href="../../d5/de3/a00631.html">Networking::ExecdSocket</a></div><div class="ttdoc">Class for execd service interactions.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d5b/a00026_source.html#l00027">execdsocket.h:28</a></div></div>
-<div class="ttc" id="aa00631_html_a819a8ba75b78e43068e3b08c03fad152"><div class="ttname"><a href="../../d5/de3/a00631.html#a819a8ba75b78e43068e3b08c03fad152">Networking::ExecdSocket::wrap</a></div><div class="ttdeci">QByteArray wrap(const QString &amp;string)</div><div class="ttdoc">Wraps given string to execd format.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dee/a00008_source.html#l00089">execdsocket.c++:89</a></div></div>
-<div class="ttc" id="aa00631_html_a8c528baf37154d347366083f0f816846"><div class="ttname"><a href="../../d5/de3/a00631.html#a8c528baf37154d347366083f0f816846">Networking::ExecdSocket::stop</a></div><div class="ttdeci">void stop()</div><div class="ttdoc">Stops socket.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dee/a00008_source.html#l00022">execdsocket.c++:22</a></div></div>
-<div class="ttc" id="aa00631_html_a958f448ca262fd5e96958cbfeec13676"><div class="ttname"><a href="../../d5/de3/a00631.html#a958f448ca262fd5e96958cbfeec13676">Networking::ExecdSocket::start</a></div><div class="ttdeci">void start(const QString &amp;address)</div><div class="ttdoc">Starts socket on given address.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dee/a00008_source.html#l00016">execdsocket.c++:16</a></div></div>
-<div class="ttc" id="aa00631_html_aca9a6b4dd04cee4d035855754cdfc8ee"><div class="ttname"><a href="../../d5/de3/a00631.html#aca9a6b4dd04cee4d035855754cdfc8ee">Networking::ExecdSocket::executeCommand</a></div><div class="ttdeci">void executeCommand(const QString &amp;command)</div><div class="ttdoc">Executes any command in execd service.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dee/a00008_source.html#l00028">execdsocket.c++:28</a></div></div>
-<div class="ttc" id="aa00631_html_ad8136df344f340b0653c27e3317c08f5"><div class="ttname"><a href="../../d5/de3/a00631.html#ad8136df344f340b0653c27e3317c08f5">Networking::ExecdSocket::ping</a></div><div class="ttdeci">void ping()</div><div class="ttdoc">Emitted when socket receives any data from SAR.</div></div>
-<div class="ttc" id="aa00655_html_a8dd47094c7079ec1fcbd5df9870c486e"><div class="ttname"><a href="../../d8/ddc/a00655.html#a8dd47094c7079ec1fcbd5df9870c486e">Networking::Enums::NetworkCommand</a></div><div class="ttdeci">NetworkCommand</div><div class="ttdoc">Перечисление встроенных в приложение команд.</div><div class="ttdef"><b>Definition:</b> <a href="../../db/dab/a00089_source.html#l00037">netenums.h:38</a></div></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>Q_DECLARE_METATYPE(Map::MarkerModel*)</div>
+<div class="ttc" id="aa00353_html"><div class="ttname"><a href="../../db/ddc/a00353.html">Map</a></div><div class="ttdoc">Пространство имен для классов и функций, связанных с картографией.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d09/a00077_source.html#l00007">clickhandler.c++:8</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="../../dir_fcb2a60e1810a51543a3cc3a113d0956.html">c++</a></li><li class="navelem"><a class="el" href="../../dir_2658f57a99a735e2e16983d97ef2d726.html">network</a></li><li class="navelem"><a class="el" href="../../dir_6ef7e0ae247fe3f6196a2ffc3d436052.html">execd</a></li><li class="navelem"><a class="el" href="../../d6/d5b/a00026.html">execdsocket.h</a></li>
+    <li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="../../dir_fcb2a60e1810a51543a3cc3a113d0956.html">c++</a></li><li class="navelem"><a class="el" href="../../dir_d88003ba6281a9447bd5134cfe1c08c9.html">map</a></li><li class="navelem"><a class="el" href="../../dir_6a25e9731697d35532c6c56646dc8806.html">models</a></li><li class="navelem"><b>markermodel.h</b></li>
     <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
   </ul>
 </div>
