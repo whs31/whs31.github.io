@@ -1,6 +1,8 @@
 var a00670 =
 [
-    [ "marker", "d1/d97/a00670.html#a0ea604dd26c415c8f380323b91bdba56", null ],
-    [ "id", "d1/d97/a00670.html#a4fc3a0c58dfbd1e68224521185cb9384", null ],
-    [ "cnt", "d1/d97/a00670.html#ae1d905c6ac1a0c9b96dca16153917334", null ]
+    [ "PingTester", "d1/d97/a00670.html#a9bc32f421394a81fc7a63bf771b4041d", null ],
+    [ "~PingTester", "d1/d97/a00670.html#a1536c93dfb1f242946cf133d92df8985", null ],
+    [ "start", "d1/d97/a00670.html#a5ddebc72addc87883c9112ea98c4c517", null ],
+    [ "stop", "d1/d97/a00670.html#aba28ee97ffe6d508e26f534ec7e62f8f", null ],
+    [ "result", "d1/d97/a00670.html#a3ec8bbafe23004823fbd69165109d0fc", null ]
 ];

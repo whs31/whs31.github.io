@@ -133,7 +133,7 @@ $(document).ready(function(){initNavTree('de/d79/a00203_source.html','../../'); 
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    this-&gt;scanThemes();</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    this-&gt;apply();</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    connect(<a class="code hl_function" href="../../d6/d80/a00371.html#aab4f0df3041b8a7fb08052df350ebcbd">Config::Config::get</a>(), &amp;Config::Config::themeChanged, <span class="keyword">this</span>, &amp;ColorTheme::apply);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    connect(<a class="code hl_function" href="../../d5/db5/a00374.html#aab4f0df3041b8a7fb08052df350ebcbd">Config::Config::get</a>(), &amp;Config::Config::themeChanged, <span class="keyword">this</span>, &amp;ColorTheme::apply);</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>  }</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>  <span class="keywordtype">void</span> ColorTheme::set(<span class="keyword">const</span> std::map&lt;internal::ColorThemeWrapper::Color, QString&gt;&amp; dict) <span class="keyword">noexcept</span></div>
@@ -144,7 +144,7 @@ $(document).ready(function(){initNavTree('de/d79/a00203_source.html','../../'); 
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>  <span class="keywordtype">void</span> ColorTheme::scanThemes() noexcept</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>  {</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    QDir folder(<a class="code hl_function" href="../../da/dee/a00383.html#addc33e2f765b93f743cb8eaae7089ebb">Config::Paths::themes</a>(), <span class="stringliteral">&quot;*.json&quot;</span>, QDir::Name | QDir::IgnoreCase, QDir::Files);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    QDir folder(<a class="code hl_function" href="../../dd/df5/a00386.html#addc33e2f765b93f743cb8eaae7089ebb">Config::Paths::themes</a>(), <span class="stringliteral">&quot;*.json&quot;</span>, QDir::Name | QDir::IgnoreCase, QDir::Files);</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    QList&lt;QFileInfo&gt; files = folder.entryInfoList();</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    m_themeList.clear();</div>
@@ -228,8 +228,8 @@ $(document).ready(function(){initNavTree('de/d79/a00203_source.html','../../'); 
 <div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>  }</div>
 <div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>} <span class="comment">// GUI</span></div>
 <div class="ttc" id="aa00179_html"><div class="ttname"><a href="../../db/dd9/a00179.html">config.h</a></div></div>
-<div class="ttc" id="aa00371_html_aab4f0df3041b8a7fb08052df350ebcbd"><div class="ttname"><a href="../../d6/d80/a00371.html#aab4f0df3041b8a7fb08052df350ebcbd">Config::Config::get</a></div><div class="ttdeci">static Config * get()</div><div class="ttdoc">Возвращает указатель на статический экземпляр класса.</div><div class="ttdef"><b>Definition:</b> <a href="../../de/db1/a00197_source.html#l00009">config.c++:9</a></div></div>
-<div class="ttc" id="aa00383_html_addc33e2f765b93f743cb8eaae7089ebb"><div class="ttname"><a href="../../da/dee/a00383.html#addc33e2f765b93f743cb8eaae7089ebb">Config::Paths::themes</a></div><div class="ttdeci">static Q_INVOKABLE QString themes()</div><div class="ttdoc">Returns themes directory.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d25/a00182_source.html#l00056">paths.c++:56</a></div></div>
+<div class="ttc" id="aa00374_html_aab4f0df3041b8a7fb08052df350ebcbd"><div class="ttname"><a href="../../d5/db5/a00374.html#aab4f0df3041b8a7fb08052df350ebcbd">Config::Config::get</a></div><div class="ttdeci">static Config * get()</div><div class="ttdoc">Возвращает указатель на статический экземпляр класса.</div><div class="ttdef"><b>Definition:</b> <a href="../../de/db1/a00197_source.html#l00009">config.c++:9</a></div></div>
+<div class="ttc" id="aa00386_html_addc33e2f765b93f743cb8eaae7089ebb"><div class="ttname"><a href="../../dd/df5/a00386.html#addc33e2f765b93f743cb8eaae7089ebb">Config::Paths::themes</a></div><div class="ttdeci">static Q_INVOKABLE QString themes()</div><div class="ttdoc">Returns themes directory.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d25/a00182_source.html#l00056">paths.c++:56</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

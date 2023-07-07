@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.6"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuaSAR: Исходный файл quasarsdk_crc16.c++</title>
+<title>QuaSAR: Исходный файл quasarsdk_common.h</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -92,94 +92,34 @@ $(document).ready(function(){initNavTree('d3/d07/a00305_source.html','../../'); 
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">quasarsdk_crc16.c++</div></div>
+  <div class="headertitle"><div class="title">quasarsdk_common.h</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;<a class="code" href="../../d0/d39/a00314.html">quasarsdk_crc16.h</a>&quot;</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &lt;QtCore/QString&gt;</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">constexpr</span> <span class="keyword">const</span> uint16_t CRC16_TABLE[256] =</div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>{</div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>      0x0000, 0x1021, 0x2042, 0x3063, 0x4084, 0x50A5, 0x60C6, 0x70E7</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>    , 0x8108, 0x9129, 0xA14A, 0xB16B, 0xC18C, 0xD1AD, 0xE1CE, 0xF1EF</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    , 0x1231, 0x0210, 0x3273, 0x2252, 0x52B5, 0x4294, 0x72F7, 0x62D6</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    , 0x9339, 0x8318, 0xB37B, 0xA35A, 0xD3BD, 0xC39C, 0xF3FF, 0xE3DE</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    , 0x2462, 0x3443, 0x0420, 0x1401, 0x64E6, 0x74C7, 0x44A4, 0x5485</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    , 0xA56A, 0xB54B, 0x8528, 0x9509, 0xE5EE, 0xF5CF, 0xC5AC, 0xD58D</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    , 0x3653, 0x2672, 0x1611, 0x0630, 0x76D7, 0x66F6, 0x5695, 0x46B4</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    , 0xB75B, 0xA77A, 0x9719, 0x8738, 0xF7DF, 0xE7FE, 0xD79D, 0xC7BC</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    , 0x48C4, 0x58E5, 0x6886, 0x78A7, 0x0840, 0x1861, 0x2802, 0x3823</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    , 0xC9CC, 0xD9ED, 0xE98E, 0xF9AF, 0x8948, 0x9969, 0xA90A, 0xB92B</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    , 0x5AF5, 0x4AD4, 0x7AB7, 0x6A96, 0x1A71, 0x0A50, 0x3A33, 0x2A12</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    , 0xDBFD, 0xCBDC, 0xFBBF, 0xEB9E, 0x9B79, 0x8B58, 0xBB3B, 0xAB1A</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    , 0x6CA6, 0x7C87, 0x4CE4, 0x5CC5, 0x2C22, 0x3C03, 0x0C60, 0x1C41</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    , 0xEDAE, 0xFD8F, 0xCDEC, 0xDDCD, 0xAD2A, 0xBD0B, 0x8D68, 0x9D49</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    , 0x7E97, 0x6EB6, 0x5ED5, 0x4EF4, 0x3E13, 0x2E32, 0x1E51, 0x0E70</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    , 0xFF9F, 0xEFBE, 0xDFDD, 0xCFFC, 0xBF1B, 0xAF3A, 0x9F59, 0x8F78</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    , 0x9188, 0x81A9, 0xB1CA, 0xA1EB, 0xD10C, 0xC12D, 0xF14E, 0xE16F</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    , 0x1080, 0x00A1, 0x30C2, 0x20E3, 0x5004, 0x4025, 0x7046, 0x6067</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    , 0x83B9, 0x9398, 0xA3FB, 0xB3DA, 0xC33D, 0xD31C, 0xE37F, 0xF35E</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    , 0x02B1, 0x1290, 0x22F3, 0x32D2, 0x4235, 0x5214, 0x6277, 0x7256</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    , 0xB5EA, 0xA5CB, 0x95A8, 0x8589, 0xF56E, 0xE54F, 0xD52C, 0xC50D</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    , 0x34E2, 0x24C3, 0x14A0, 0x0481, 0x7466, 0x6447, 0x5424, 0x4405</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    , 0xA7DB, 0xB7FA, 0x8799, 0x97B8, 0xE75F, 0xF77E, 0xC71D, 0xD73C</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    , 0x26D3, 0x36F2, 0x0691, 0x16B0, 0x6657, 0x7676, 0x4615, 0x5634</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    , 0xD94C, 0xC96D, 0xF90E, 0xE92F, 0x99C8, 0x89E9, 0xB98A, 0xA9AB</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    , 0x5844, 0x4865, 0x7806, 0x6827, 0x18C0, 0x08E1, 0x3882, 0x28A3</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    , 0xCB7D, 0xDB5C, 0xEB3F, 0xFB1E, 0x8BF9, 0x9BD8, 0xABBB, 0xBB9A</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    , 0x4A75, 0x5A54, 0x6A37, 0x7A16, 0x0AF1, 0x1AD0, 0x2AB3, 0x3A92</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    , 0xFD2E, 0xED0F, 0xDD6C, 0xCD4D, 0xBDAA, 0xAD8B, 0x9DE8, 0x8DC9</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    , 0x7C26, 0x6C07, 0x5C64, 0x4C45, 0x3CA2, 0x2C83, 0x1CE0, 0x0CC1</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    , 0xEF1F, 0xFF3E, 0xCF5D, 0xDF7C, 0xAF9B, 0xBFBA, 0x8FD9, 0x9FF8</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    , 0x6E17, 0x7E36, 0x4E55, 0x5E74, 0x2E93, 0x3EB2, 0x0ED1, 0x1EF0</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>};</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../de/dd7/a00362.html">QuasarSDK::Utils</a></div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>{</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="../../de/dd7/a00362.html#a097cfb084605da99a62a9eeac5020848">   51</a></span>  uint16_t <a class="code hl_function" href="../../de/dd7/a00362.html#a097cfb084605da99a62a9eeac5020848">crc16</a>(<span class="keywordtype">char</span>* data, <span class="keywordtype">int</span> <a class="code hl_variable" href="../../d5/de0/a00050.html#aaba88b24a21a6c70c895c0d55f4a69a0">size</a>) <span class="keyword">noexcept</span></div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>  {</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    uint16_t crc = 0xFFFF;</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keywordflow">for</span>(<span class="keywordtype">size_t</span> i = 0; i &lt; <a class="code hl_variable" href="../../d5/de0/a00050.html#aaba88b24a21a6c70c895c0d55f4a69a0">size</a>; i++)</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    {</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>      crc ^= (uint16_t)data[i];</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>      <span class="keywordflow">for</span>(<span class="keywordtype">size_t</span> j = 0; j &lt; 8; j++)</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>      {</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <span class="keywordflow">if</span>((crc &amp; 0x0001))</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        {</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>          crc &gt;&gt;= 1;</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>          crc ^= 0xA001;</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        }</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>          crc &gt;&gt;= 1;</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>      }</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    }</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="keywordflow">return</span> crc;</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>  }</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="../../de/dd7/a00362.html#a15a9ef310fea932c75d1cfee9d7dc1d4">   79</a></span>  uint16_t <a class="code hl_function" href="../../de/dd7/a00362.html#a15a9ef310fea932c75d1cfee9d7dc1d4">crc16_ccitt</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* data, <span class="keywordtype">int</span> <a class="code hl_variable" href="../../d5/de0/a00050.html#aaba88b24a21a6c70c895c0d55f4a69a0">size</a>) <span class="keyword">noexcept</span></div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>  {</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="keyword">const</span> <span class="keyword">auto</span>* d = <span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span><span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(data);</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    uint16_t crc = 0xffff;</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <span class="keywordflow">while</span>(<a class="code hl_variable" href="../../d5/de0/a00050.html#aaba88b24a21a6c70c895c0d55f4a69a0">size</a>--)</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>      crc = (crc &lt;&lt; 8) ^ CRC16_TABLE[(crc &gt;&gt; 8) ^* (d++)];</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="keywordflow">return</span> crc;</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>  }</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="../../de/dd7/a00362.html#a8e767ae01022414bd64c54dbc1337bfa">   93</a></span>  <span class="keywordtype">char</span>* <a class="code hl_function" href="../../de/dd7/a00362.html#a8e767ae01022414bd64c54dbc1337bfa">str_data</a>(<span class="keyword">const</span> QString&amp; str) <span class="keyword">noexcept</span> { <span class="keywordflow">return</span> str.toLocal8Bit().data(); }</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>} <span class="comment">// QuasarSDK::Utils</span></div>
-<div class="ttc" id="aa00050_html_aaba88b24a21a6c70c895c0d55f4a69a0"><div class="ttname"><a href="../../d5/de0/a00050.html#aaba88b24a21a6c70c895c0d55f4a69a0">size</a></div><div class="ttdeci">uint16_t size</div><div class="ttdoc">Размер пакета в байтах, включая заголовок.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de0/a00050_source.html#l00002">imagemetadata.h:2</a></div></div>
-<div class="ttc" id="aa00314_html"><div class="ttname"><a href="../../d0/d39/a00314.html">quasarsdk_crc16.h</a></div></div>
-<div class="ttc" id="aa00362_html"><div class="ttname"><a href="../../de/dd7/a00362.html">QuasarSDK::Utils</a></div><div class="ttdoc">Пространство имен для вспомогательных функций комплекта разработчика.</div></div>
-<div class="ttc" id="aa00362_html_a097cfb084605da99a62a9eeac5020848"><div class="ttname"><a href="../../de/dd7/a00362.html#a097cfb084605da99a62a9eeac5020848">QuasarSDK::Utils::crc16</a></div><div class="ttdeci">uint16_t crc16(char *data, int size) noexcept</div><div class="ttdoc">Вычисляет контрольную сумму CRC16.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d07/a00305_source.html#l00051">quasarsdk_crc16.c++:51</a></div></div>
-<div class="ttc" id="aa00362_html_a15a9ef310fea932c75d1cfee9d7dc1d4"><div class="ttname"><a href="../../de/dd7/a00362.html#a15a9ef310fea932c75d1cfee9d7dc1d4">QuasarSDK::Utils::crc16_ccitt</a></div><div class="ttdeci">uint16_t crc16_ccitt(const char *data, int size) noexcept</div><div class="ttdoc">Вычисляет контрольную сумму CRC16 по алгоритму CCITT.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d07/a00305_source.html#l00079">quasarsdk_crc16.c++:79</a></div></div>
-<div class="ttc" id="aa00362_html_a8e767ae01022414bd64c54dbc1337bfa"><div class="ttname"><a href="../../de/dd7/a00362.html#a8e767ae01022414bd64c54dbc1337bfa">QuasarSDK::Utils::str_data</a></div><div class="ttdeci">char * str_data(const QString &amp;str) noexcept</div><div class="ttdoc">Конвертирует QString в указатель на char.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d07/a00305_source.html#l00093">quasarsdk_crc16.c++:93</a></div></div>
+<a href="../../d3/d07/a00305.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../dd/db5/a00365.html">QuasarSDK::Utils</a></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>{</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>  <span class="keywordtype">double</span> <a class="code hl_function" href="../../dd/db5/a00365.html#a3877486db4acc07f2a3d9e980d9866a5">log</a>(<span class="keywordtype">double</span> base, <span class="keywordtype">double</span> value) <span class="keyword">noexcept</span>;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>  <span class="keywordtype">double</span> <a class="code hl_function" href="../../dd/db5/a00365.html#a06edcf94eff0754b506f72abfa78e29f">deg2rad</a>(<span class="keywordtype">double</span> degrees) <span class="keyword">noexcept</span>;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>  <span class="keywordtype">double</span> <a class="code hl_function" href="../../dd/db5/a00365.html#a414e2d36554301965d1d9ae80da08a3f">rad2deg</a>(<span class="keywordtype">double</span> radians) <span class="keyword">noexcept</span>;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>  <span class="keywordtype">double</span> <a class="code hl_function" href="../../dd/db5/a00365.html#a7f02b12a2b2b0b11df4aa991ff354000">NaN</a>() noexcept;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="../../dd/db5/a00365.html#aaf0578b9d15d85ab4e18cee1256ff1e7">isNaN</a>(<span class="keywordtype">double</span> other) noexcept;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>} <span class="comment">// QuasarSDK::Utils</span></div>
+<div class="ttc" id="aa00365_html"><div class="ttname"><a href="../../dd/db5/a00365.html">QuasarSDK::Utils</a></div><div class="ttdoc">Пространство имен для вспомогательных функций комплекта разработчика.</div></div>
+<div class="ttc" id="aa00365_html_a06edcf94eff0754b506f72abfa78e29f"><div class="ttname"><a href="../../dd/db5/a00365.html#a06edcf94eff0754b506f72abfa78e29f">QuasarSDK::Utils::deg2rad</a></div><div class="ttdeci">double deg2rad(double degrees) noexcept</div><div class="ttdoc">Конвертирует значение в градусах в значение в радианах.</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d61/a00302_source.html#l00021">quasarsdk_common.c++:21</a></div></div>
+<div class="ttc" id="aa00365_html_a3877486db4acc07f2a3d9e980d9866a5"><div class="ttname"><a href="../../dd/db5/a00365.html#a3877486db4acc07f2a3d9e980d9866a5">QuasarSDK::Utils::log</a></div><div class="ttdeci">double log(double base, double value) noexcept</div><div class="ttdoc">Возвращает логарифм от числа по основанию.</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d61/a00302_source.html#l00014">quasarsdk_common.c++:14</a></div></div>
+<div class="ttc" id="aa00365_html_a414e2d36554301965d1d9ae80da08a3f"><div class="ttname"><a href="../../dd/db5/a00365.html#a414e2d36554301965d1d9ae80da08a3f">QuasarSDK::Utils::rad2deg</a></div><div class="ttdeci">double rad2deg(double radians) noexcept</div><div class="ttdoc">Конвертирует значение в радианах в значение в градусах.</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d61/a00302_source.html#l00028">quasarsdk_common.c++:28</a></div></div>
+<div class="ttc" id="aa00365_html_a7f02b12a2b2b0b11df4aa991ff354000"><div class="ttname"><a href="../../dd/db5/a00365.html#a7f02b12a2b2b0b11df4aa991ff354000">QuasarSDK::Utils::NaN</a></div><div class="ttdeci">double NaN() noexcept</div><div class="ttdoc">Возвращает NaN.</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d61/a00302_source.html#l00034">quasarsdk_common.c++:34</a></div></div>
+<div class="ttc" id="aa00365_html_aaf0578b9d15d85ab4e18cee1256ff1e7"><div class="ttname"><a href="../../dd/db5/a00365.html#aaf0578b9d15d85ab4e18cee1256ff1e7">QuasarSDK::Utils::isNaN</a></div><div class="ttdeci">bool isNaN(double other) noexcept</div><div class="ttdoc">Проверяет, является ли число NaN.</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d61/a00302_source.html#l00041">quasarsdk_common.c++:41</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_6719ab1f1f7655efc2fa43f7eb574fd1.html">libs</a></li><li class="navelem"><a class="el" href="../../dir_c5d4018c0fe90f1660bca3f6235e9876.html">libquasarsdk</a></li><li class="navelem"><a class="el" href="../../dir_0f9d83d35d962a1c6c5b739b964daf6d.html">src</a></li><li class="navelem"><a class="el" href="../../dir_d734eb5648cc5bb2b8e3f352630d13d6.html">public</a></li><li class="navelem"><a class="el" href="../../dir_6044e2781c4e00bfc2204a54460222f5.html">utl</a></li><li class="navelem"><b>quasarsdk_crc16.c++</b></li>
+    <li class="navelem"><a class="el" href="../../dir_6719ab1f1f7655efc2fa43f7eb574fd1.html">libs</a></li><li class="navelem"><a class="el" href="../../dir_c5d4018c0fe90f1660bca3f6235e9876.html">libquasarsdk</a></li><li class="navelem"><a class="el" href="../../dir_0f9d83d35d962a1c6c5b739b964daf6d.html">src</a></li><li class="navelem"><a class="el" href="../../dir_d734eb5648cc5bb2b8e3f352630d13d6.html">public</a></li><li class="navelem"><a class="el" href="../../dir_6044e2781c4e00bfc2204a54460222f5.html">utl</a></li><li class="navelem"><a class="el" href="../../d3/d07/a00305.html">quasarsdk_common.h</a></li>
     <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
   </ul>
 </div>

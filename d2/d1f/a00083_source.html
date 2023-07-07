@@ -120,14 +120,14 @@ $(document).ready(function(){initNavTree('d2/d1f/a00083_source.html','../../'); 
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &quot;config/internalconfig.h&quot;</span></div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &quot;<a class="code" href="../../da/d2a/a00086.html">arrayreader.h</a>&quot;</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="keyword">using namespace </span><a class="code hl_namespace" href="../../d0/dc3/a00354.html">Processing</a>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="keyword">using namespace </span><a class="code hl_namespace" href="../../df/df1/a00357.html">Processing</a>;</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>ImageProcessing* ImageProcessing::get() { <span class="keyword">static</span> ImageProcessing instance; <span class="keywordflow">return</span> &amp;instance; }</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>ImageProcessing::ImageProcessing(QObject* parent)</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>  : QObject{parent}</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>  , m_model(new <a class="code hl_namespace" href="../../db/ddc/a00353.html">Map</a>::ImageModel(this))</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>  , m_stripModel(new <a class="code hl_namespace" href="../../db/ddc/a00353.html">Map</a>::StripModel(this))</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>  , m_model(new <a class="code hl_namespace" href="../../d6/de1/a00356.html">Map</a>::ImageModel(this))</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>  , m_stripModel(new <a class="code hl_namespace" href="../../d6/de1/a00356.html">Map</a>::StripModel(this))</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>  , m_progress(0)</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>  , m_total(0)</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>  , m_processed(0)</div>
@@ -200,7 +200,7 @@ $(document).ready(function(){initNavTree('d2/d1f/a00083_source.html','../../'); 
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    pool.setMaxThreadCount(ICFG&lt;int&gt;(<span class="stringliteral">&quot;PROCESSING_CONCURRENCY_THREADS_STRIP&quot;</span>));</div>
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    QString filename = <span class="stringliteral">&quot;strip_&quot;</span> + QString::number(QDateTime::currentMSecsSinceEpoch()) + <span class="stringliteral">&quot;.bin&quot;</span>;</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    QFile chunk_file(<a class="code hl_function" href="../../da/dee/a00383.html#ac4c96993778b59c29057bef3144fb4d0">Config::Paths::lod</a>(0) + <span class="stringliteral">&quot;/&quot;</span> + filename);</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    QFile chunk_file(<a class="code hl_function" href="../../dd/df5/a00386.html#ac4c96993778b59c29057bef3144fb4d0">Config::Paths::lod</a>(0) + <span class="stringliteral">&quot;/&quot;</span> + filename);</div>
 <div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    <span class="keywordflow">if</span>(not chunk_file.open(QIODevice::WriteOnly))</div>
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    {</div>
 <div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>      qCritical() &lt;&lt; <span class="stringliteral">&quot;[PROCESSING] Failed to write to temporary file&quot;</span>;</div>
@@ -220,7 +220,7 @@ $(document).ready(function(){initNavTree('d2/d1f/a00083_source.html','../../'); 
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>  Map::TelescopicImage image;</div>
 <div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>  <span class="keywordflow">try</span></div>
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>  {</div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    image = decodeTelescopic(<a class="code hl_function" href="../../da/dee/a00383.html#ac4c96993778b59c29057bef3144fb4d0">Config::Paths::lod</a>(0) + <span class="stringliteral">&quot;/&quot;</span> + filename);</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    image = decodeTelescopic(<a class="code hl_function" href="../../dd/df5/a00386.html#ac4c96993778b59c29057bef3144fb4d0">Config::Paths::lod</a>(0) + <span class="stringliteral">&quot;/&quot;</span> + filename);</div>
 <div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>  }</div>
 <div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>  <span class="keywordflow">catch</span>(<span class="keyword">const</span> std::runtime_error&amp; err)</div>
 <div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>  {</div>
@@ -249,14 +249,14 @@ $(document).ready(function(){initNavTree('d2/d1f/a00083_source.html','../../'); 
 <div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>  <span class="keywordflow">if</span>(CONFIG(cutImage) and image.meta.image_type == 0)</div>
 <div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    image_data = cutImage(image);</div>
 <div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span> </div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>  <span class="keywordtype">bool</span> ret = image_data.save(<a class="code hl_function" href="../../da/dee/a00383.html#ac4c96993778b59c29057bef3144fb4d0">Config::Paths::lod</a>(0) + <span class="stringliteral">&quot;/&quot;</span> + target_filename);</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>  <span class="keywordtype">bool</span> ret = image_data.save(<a class="code hl_function" href="../../dd/df5/a00386.html#ac4c96993778b59c29057bef3144fb4d0">Config::Paths::lod</a>(0) + <span class="stringliteral">&quot;/&quot;</span> + target_filename);</div>
 <div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>  <span class="keywordflow">if</span>(ret)</div>
 <div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>    qInfo() &lt;&lt; <span class="stringliteral">&quot;[PROCESSING] Image saved successfully&quot;</span>;</div>
 <div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>  <span class="keywordflow">else</span></div>
 <div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>    qCritical() &lt;&lt; <span class="stringliteral">&quot;[PROCESSING] Failed to save image&quot;</span>;</div>
 <div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span> </div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>  image.path.first = <a class="code hl_function" href="../../da/dee/a00383.html#ac4c96993778b59c29057bef3144fb4d0">Config::Paths::lod</a>(0) + <span class="stringliteral">&quot;/&quot;</span> + target_filename;</div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>  QFile::remove(<a class="code hl_function" href="../../da/dee/a00383.html#ac4c96993778b59c29057bef3144fb4d0">Config::Paths::lod</a>(0) + <span class="stringliteral">&quot;/&quot;</span> + filename);</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>  image.path.first = <a class="code hl_function" href="../../dd/df5/a00386.html#ac4c96993778b59c29057bef3144fb4d0">Config::Paths::lod</a>(0) + <span class="stringliteral">&quot;/&quot;</span> + target_filename;</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>  QFile::remove(<a class="code hl_function" href="../../dd/df5/a00386.html#ac4c96993778b59c29057bef3144fb4d0">Config::Paths::lod</a>(0) + <span class="stringliteral">&quot;/&quot;</span> + filename);</div>
 <div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span> </div>
 <div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>  emit concurrencyFinished();</div>
 <div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>  emit processImageFinished(image);</div>
@@ -267,17 +267,17 @@ $(document).ready(function(){initNavTree('d2/d1f/a00083_source.html','../../'); 
 <div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> MAX_PACKAGE_SIZE = ICFG&lt;int&gt;(<span class="stringliteral">&quot;PROCESSING_STRIP_PACKAGE_MAX_SIZE&quot;</span>);</div>
 <div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>  Map::StripImage image;</div>
 <div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>  image.filename = filename;</div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>  image.path.first = <a class="code hl_function" href="../../da/dee/a00383.html#ac4c96993778b59c29057bef3144fb4d0">Config::Paths::lod</a>(0) + <span class="stringliteral">&quot;/&quot;</span> + filename;</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>  image.path.first = <a class="code hl_function" href="../../dd/df5/a00386.html#ac4c96993778b59c29057bef3144fb4d0">Config::Paths::lod</a>(0) + <span class="stringliteral">&quot;/&quot;</span> + filename;</div>
 <div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>  QByteArray file = fileToByteArray(image.path.first);</div>
 <div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>  <span class="keyword">const</span> uint8_t* data = <span class="keyword">reinterpret_cast&lt;</span>uint8_t*<span class="keyword">&gt;</span>(file.data());</div>
 <div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>  <span class="keywordtype">int</span> data_size = file.size();</div>
 <div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span> </div>
-<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> header_size = <span class="keyword">sizeof</span>(<a class="code hl_struct" href="../../db/ddc/a00353.html#d4/d4b/a00471">Map::StripHeaderMetadata</a>) + <span class="keyword">sizeof</span>(<a class="code hl_struct" href="../../db/ddc/a00353.html#d9/d4a/a00479">Map::StripFormatMetadata</a>) + <span class="keyword">sizeof</span>(<a class="code hl_struct" href="../../db/ddc/a00353.html#d1/d92/a00475">Map::StripNavigationMetadata</a>);</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> header_size = <span class="keyword">sizeof</span>(<a class="code hl_struct" href="../../d6/de1/a00356.html#d5/d26/a00474">Map::StripHeaderMetadata</a>) + <span class="keyword">sizeof</span>(<a class="code hl_struct" href="../../d6/de1/a00356.html#db/d8e/a00482">Map::StripFormatMetadata</a>) + <span class="keyword">sizeof</span>(<a class="code hl_struct" href="../../d6/de1/a00356.html#d9/dea/a00478">Map::StripNavigationMetadata</a>);</div>
 <div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>  uint8_t header[header_size];</div>
 <div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>  uint8_t buf[MAX_PACKAGE_SIZE - header_size];</div>
 <div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>  <span class="keywordtype">float</span> fbuf[MAX_PACKAGE_SIZE - header_size];</div>
 <div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span> </div>
-<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>  <a class="code hl_class" href="../../d7/d84/a00535.html">ArrayReader&lt;uint8_t&gt;</a> ar((uint8_t*)data);</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>  <a class="code hl_class" href="../../dd/d5a/a00538.html">ArrayReader&lt;uint8_t&gt;</a> ar((uint8_t*)data);</div>
 <div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span> </div>
 <div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>  <span class="keywordtype">int</span> x = 0;</div>
 <div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>  <span class="keywordtype">int</span> <a class="code hl_variable" href="../../d5/de0/a00050.html#af77b1a54442f2443cf64a4766f916bcd">y</a> = 0;</div>
@@ -290,19 +290,19 @@ $(document).ready(function(){initNavTree('d2/d1f/a00083_source.html','../../'); 
 <div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>      <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span> </div>
 <div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>    ar.read(header, header_size);</div>
-<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>    <a class="code hl_class" href="../../d7/d84/a00535.html">ArrayReader&lt;uint8_t&gt;</a>header_reader(header);</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>    <a class="code hl_class" href="../../dd/d5a/a00538.html">ArrayReader&lt;uint8_t&gt;</a>header_reader(header);</div>
 <div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span> </div>
-<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>    <a class="code hl_struct" href="../../db/ddc/a00353.html#d4/d4b/a00471">Map::StripHeaderMetadata</a> head;</div>
-<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>    <a class="code hl_struct" href="../../db/ddc/a00353.html#d1/d92/a00475">Map::StripNavigationMetadata</a> nav;</div>
-<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>    <a class="code hl_struct" href="../../db/ddc/a00353.html#d9/d4a/a00479">Map::StripFormatMetadata</a> img;</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>    <a class="code hl_struct" href="../../d6/de1/a00356.html#d5/d26/a00474">Map::StripHeaderMetadata</a> head;</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>    <a class="code hl_struct" href="../../d6/de1/a00356.html#d9/dea/a00478">Map::StripNavigationMetadata</a> nav;</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>    <a class="code hl_struct" href="../../d6/de1/a00356.html#db/d8e/a00482">Map::StripFormatMetadata</a> img;</div>
 <div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span> </div>
-<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>    header_reader.read((uint8_t*)&amp;head, <span class="keyword">sizeof</span>(<a class="code hl_struct" href="../../db/ddc/a00353.html#d4/d4b/a00471">Map::StripHeaderMetadata</a>));</div>
-<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>    header_reader.read((uint8_t*)&amp;nav, <span class="keyword">sizeof</span>(<a class="code hl_struct" href="../../db/ddc/a00353.html#d1/d92/a00475">Map::StripNavigationMetadata</a>));</div>
-<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>    header_reader.read((uint8_t*)&amp;img, <span class="keyword">sizeof</span>(<a class="code hl_struct" href="../../db/ddc/a00353.html#d9/d4a/a00479">Map::StripFormatMetadata</a>));</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>    header_reader.read((uint8_t*)&amp;head, <span class="keyword">sizeof</span>(<a class="code hl_struct" href="../../d6/de1/a00356.html#d5/d26/a00474">Map::StripHeaderMetadata</a>));</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>    header_reader.read((uint8_t*)&amp;nav, <span class="keyword">sizeof</span>(<a class="code hl_struct" href="../../d6/de1/a00356.html#d9/dea/a00478">Map::StripNavigationMetadata</a>));</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>    header_reader.read((uint8_t*)&amp;img, <span class="keyword">sizeof</span>(<a class="code hl_struct" href="../../d6/de1/a00356.html#db/d8e/a00482">Map::StripFormatMetadata</a>));</div>
 <div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span> </div>
 <div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>    <span class="keywordflow">if</span>(head.cnt == 0)</div>
 <div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>    {</div>
-<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>      x = img.<a class="code hl_variable" href="../../db/ddc/a00353.html#a31a74a81efd0ba14cbc4853f7fce3af0">nx</a>;</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>      x = img.<a class="code hl_variable" href="../../d6/de1/a00356.html#a31a74a81efd0ba14cbc4853f7fce3af0">nx</a>;</div>
 <div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>      <a class="code hl_variable" href="../../d5/de0/a00050.html#af77b1a54442f2443cf64a4766f916bcd">y</a> += img.ny;</div>
 <div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>    }</div>
 <div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span> </div>
@@ -351,7 +351,7 @@ $(document).ready(function(){initNavTree('d2/d1f/a00083_source.html','../../'); 
 <div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span> </div>
 <div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>  <span class="keywordflow">if</span>(ICFG&lt;bool&gt;(<span class="stringliteral">&quot;PROCESSING_DEBUG_SAVE_STRIP_MATRIX&quot;</span>))</div>
 <div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>  {</div>
-<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>    QFile file(<a class="code hl_function" href="../../da/dee/a00383.html#ac4c96993778b59c29057bef3144fb4d0">Config::Paths::lod</a>(0) + <span class="stringliteral">&quot;/matrix_&quot;</span> + filename);</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>    QFile file(<a class="code hl_function" href="../../dd/df5/a00386.html#ac4c96993778b59c29057bef3144fb4d0">Config::Paths::lod</a>(0) + <span class="stringliteral">&quot;/matrix_&quot;</span> + filename);</div>
 <div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>    <span class="keywordflow">if</span>(file.open(QIODevice::WriteOnly))</div>
 <div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>    {</div>
 <div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>      file.write(<span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(out_buf), out_size);</div>
@@ -387,7 +387,7 @@ $(document).ready(function(){initNavTree('d2/d1f/a00083_source.html','../../'); 
 <div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>    }</div>
 <div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>  }</div>
 <div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span> </div>
-<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>  QString result_path = <a class="code hl_function" href="../../da/dee/a00383.html#ac4c96993778b59c29057bef3144fb4d0">Config::Paths::lod</a>(0) + <span class="stringliteral">&quot;/&quot;</span> + filename.chopped(3) + <span class="stringliteral">&quot;png&quot;</span>;</div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>  QString result_path = <a class="code hl_function" href="../../dd/df5/a00386.html#ac4c96993778b59c29057bef3144fb4d0">Config::Paths::lod</a>(0) + <span class="stringliteral">&quot;/&quot;</span> + filename.chopped(3) + <span class="stringliteral">&quot;png&quot;</span>;</div>
 <div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>  strip_result.save(result_path, <span class="stringliteral">&quot;PNG&quot;</span>);</div>
 <div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>  image.path.first = result_path;</div>
 <div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>  image.valid = <span class="keyword">true</span>;</div>
@@ -399,7 +399,7 @@ $(document).ready(function(){initNavTree('d2/d1f/a00083_source.html','../../'); 
 <div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>  image.mercator_zoom_level = SDK::Cartography::mqi_zoom_level(image.coordinate.latitude(), image.dx);</div>
 <div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span> </div>
 <div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>  <span class="keywordflow">if</span>(not ICFG&lt;bool&gt;(<span class="stringliteral">&quot;PROCESSING_DEBUG_PRESERVE_BINARY&quot;</span>))</div>
-<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>    QFile::remove(<a class="code hl_function" href="../../da/dee/a00383.html#ac4c96993778b59c29057bef3144fb4d0">Config::Paths::lod</a>(0) + <span class="stringliteral">&quot;/&quot;</span> + filename);</div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>    QFile::remove(<a class="code hl_function" href="../../dd/df5/a00386.html#ac4c96993778b59c29057bef3144fb4d0">Config::Paths::lod</a>(0) + <span class="stringliteral">&quot;/&quot;</span> + filename);</div>
 <div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span> </div>
 <div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>  emit concurrencyFinished();</div>
 <div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>  emit processStripFinished(image);</div>
@@ -434,7 +434,7 @@ $(document).ready(function(){initNavTree('d2/d1f/a00083_source.html','../../'); 
 <div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>  memcpy(&amp;image.meta, (data_ptr + image.header.JPEG_HEADER_SIZE + <span class="keyword">sizeof</span>(uint32_t)), *meta_size);</div>
 <div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span> </div>
 <div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>  <span class="keywordtype">char</span>* crc_data = (<span class="keywordtype">char</span>*)&amp;image.meta;</div>
-<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>  uint16_t crc16 = SDK::Crypto::crc16(crc_data, <span class="keyword">sizeof</span>(<a class="code hl_struct" href="../../db/ddc/a00353.html#d7/d5e/a00467">Map::ImageMetadata</a>) - <span class="keyword">sizeof</span>(uint16_t));</div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>  uint16_t crc16 = SDK::Crypto::crc16(crc_data, <span class="keyword">sizeof</span>(<a class="code hl_struct" href="../../d6/de1/a00356.html#d0/d29/a00470">Map::ImageMetadata</a>) - <span class="keyword">sizeof</span>(uint16_t));</div>
 <div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span> </div>
 <div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>  image.valid = crc16 == image.meta.crc16;</div>
 <div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>  <span class="keywordflow">if</span>(not image.valid)</div>
@@ -553,15 +553,15 @@ $(document).ready(function(){initNavTree('d2/d1f/a00083_source.html','../../'); 
 <div class="ttc" id="aa00050_html_af77b1a54442f2443cf64a4766f916bcd"><div class="ttname"><a href="../../d5/de0/a00050.html#af77b1a54442f2443cf64a4766f916bcd">y</a></div><div class="ttdeci">int16_t y</div><div class="ttdoc">Смещение по Y в метрах / 10.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de0/a00050_source.html#l00007">imagemetadata.h:7</a></div></div>
 <div class="ttc" id="aa00086_html"><div class="ttname"><a href="../../da/d2a/a00086.html">arrayreader.h</a></div></div>
 <div class="ttc" id="aa00179_html"><div class="ttname"><a href="../../db/dd9/a00179.html">config.h</a></div></div>
-<div class="ttc" id="aa00353_html"><div class="ttname"><a href="../../db/ddc/a00353.html">Map</a></div><div class="ttdoc">Пространство имен для классов и функций, связанных с картографией.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d09/a00077_source.html#l00007">clickhandler.c++:8</a></div></div>
-<div class="ttc" id="aa00353_html_a31a74a81efd0ba14cbc4853f7fce3af0"><div class="ttname"><a href="../../db/ddc/a00353.html#a31a74a81efd0ba14cbc4853f7fce3af0">Map::StripFormatMetadata::nx</a></div><div class="ttdeci">uint16_t nx</div><div class="ttdoc">Общее количество дискрет по дальности.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de0/a00050_source.html#l00092">imagemetadata.h:92</a></div></div>
-<div class="ttc" id="aa00353_html_d1/d92/a00475"><div class="ttname"><a href="../../db/ddc/a00353.html#d1/d92/a00475">Map::StripNavigationMetadata</a></div><div class="ttdoc">Навигационные данные пакета полосового РЛИ.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de0/a00050_source.html#l00069">imagemetadata.h:70</a></div></div>
-<div class="ttc" id="aa00353_html_d4/d4b/a00471"><div class="ttname"><a href="../../db/ddc/a00353.html#d4/d4b/a00471">Map::StripHeaderMetadata</a></div><div class="ttdoc">Заголовок пакета полосового РЛИ.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de0/a00050_source.html#l00058">imagemetadata.h:59</a></div></div>
-<div class="ttc" id="aa00353_html_d7/d5e/a00467"><div class="ttname"><a href="../../db/ddc/a00353.html#d7/d5e/a00467">Map::ImageMetadata</a></div><div class="ttdoc">Тело метаданных телескопического РЛИ.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de0/a00050_source.html#l00030">imagemetadata.h:31</a></div></div>
-<div class="ttc" id="aa00353_html_d9/d4a/a00479"><div class="ttname"><a href="../../db/ddc/a00353.html#d9/d4a/a00479">Map::StripFormatMetadata</a></div><div class="ttdoc">Данные форматирования пакета полосового РЛИ.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de0/a00050_source.html#l00082">imagemetadata.h:83</a></div></div>
-<div class="ttc" id="aa00354_html"><div class="ttname"><a href="../../d0/dc3/a00354.html">Processing</a></div><div class="ttdoc">Пространство имен для низкоуровневого декодирования и обработки данных.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d2a/a00086_source.html#l00014">arrayreader.h:15</a></div></div>
-<div class="ttc" id="aa00383_html_ac4c96993778b59c29057bef3144fb4d0"><div class="ttname"><a href="../../da/dee/a00383.html#ac4c96993778b59c29057bef3144fb4d0">Config::Paths::lod</a></div><div class="ttdeci">static Q_INVOKABLE QString lod(int level)</div><div class="ttdoc">Returns specified LOD directory.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d25/a00182_source.html#l00042">paths.c++:42</a></div></div>
-<div class="ttc" id="aa00535_html"><div class="ttname"><a href="../../d7/d84/a00535.html">Processing::ArrayReader</a></div><div class="ttdoc">Класс для чтения массива данных из указателя.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d2a/a00086_source.html#l00023">arrayreader.h:24</a></div></div>
+<div class="ttc" id="aa00356_html"><div class="ttname"><a href="../../d6/de1/a00356.html">Map</a></div><div class="ttdoc">Пространство имен для классов и функций, связанных с картографией.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d09/a00077_source.html#l00007">clickhandler.c++:8</a></div></div>
+<div class="ttc" id="aa00356_html_a31a74a81efd0ba14cbc4853f7fce3af0"><div class="ttname"><a href="../../d6/de1/a00356.html#a31a74a81efd0ba14cbc4853f7fce3af0">Map::StripFormatMetadata::nx</a></div><div class="ttdeci">uint16_t nx</div><div class="ttdoc">Общее количество дискрет по дальности.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de0/a00050_source.html#l00092">imagemetadata.h:92</a></div></div>
+<div class="ttc" id="aa00356_html_d0/d29/a00470"><div class="ttname"><a href="../../d6/de1/a00356.html#d0/d29/a00470">Map::ImageMetadata</a></div><div class="ttdoc">Тело метаданных телескопического РЛИ.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de0/a00050_source.html#l00030">imagemetadata.h:31</a></div></div>
+<div class="ttc" id="aa00356_html_d5/d26/a00474"><div class="ttname"><a href="../../d6/de1/a00356.html#d5/d26/a00474">Map::StripHeaderMetadata</a></div><div class="ttdoc">Заголовок пакета полосового РЛИ.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de0/a00050_source.html#l00058">imagemetadata.h:59</a></div></div>
+<div class="ttc" id="aa00356_html_d9/dea/a00478"><div class="ttname"><a href="../../d6/de1/a00356.html#d9/dea/a00478">Map::StripNavigationMetadata</a></div><div class="ttdoc">Навигационные данные пакета полосового РЛИ.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de0/a00050_source.html#l00069">imagemetadata.h:70</a></div></div>
+<div class="ttc" id="aa00356_html_db/d8e/a00482"><div class="ttname"><a href="../../d6/de1/a00356.html#db/d8e/a00482">Map::StripFormatMetadata</a></div><div class="ttdoc">Данные форматирования пакета полосового РЛИ.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de0/a00050_source.html#l00082">imagemetadata.h:83</a></div></div>
+<div class="ttc" id="aa00357_html"><div class="ttname"><a href="../../df/df1/a00357.html">Processing</a></div><div class="ttdoc">Пространство имен для низкоуровневого декодирования и обработки данных.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d2a/a00086_source.html#l00014">arrayreader.h:15</a></div></div>
+<div class="ttc" id="aa00386_html_ac4c96993778b59c29057bef3144fb4d0"><div class="ttname"><a href="../../dd/df5/a00386.html#ac4c96993778b59c29057bef3144fb4d0">Config::Paths::lod</a></div><div class="ttdeci">static Q_INVOKABLE QString lod(int level)</div><div class="ttdoc">Returns specified LOD directory.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d25/a00182_source.html#l00042">paths.c++:42</a></div></div>
+<div class="ttc" id="aa00538_html"><div class="ttname"><a href="../../dd/d5a/a00538.html">Processing::ArrayReader</a></div><div class="ttdoc">Класс для чтения массива данных из указателя.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d2a/a00086_source.html#l00023">arrayreader.h:24</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

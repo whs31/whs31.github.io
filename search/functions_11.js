@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['udpdatareceived_0',['udpDataReceived',['../d8/ddc/a00655.html#a2d40009ab772b628305cadb77e4490c7',1,'QuasarSDK::QuasarAPI']]]
+  ['udpdatareceived_0',['udpDataReceived',['../dc/df1/a00662.html#a2d40009ab772b628305cadb77e4490c7',1,'QuasarSDK::QuasarAPI']]]
 ];

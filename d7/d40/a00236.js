@@ -1,4 +1,4 @@
 var a00236 =
 [
-    [ "OutputSocket", "de/d94/a00603.html", "de/d94/a00603" ]
+    [ "IConnectable", "d6/d92/a00586.html", "d6/d92/a00586" ]
 ];

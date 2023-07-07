@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.6"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuaSAR: Cписок членов класса</title>
+<title>QuaSAR: Класс ExecdSocket</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -66,7 +66,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('db/d3f/a00609.html','../../'); initResizable(); });
+$(document).ready(function(){initNavTree('d8/d00/a00606.html','../../'); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -92,25 +92,284 @@ $(document).ready(function(){initNavTree('db/d3f/a00609.html','../../'); initRes
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">UDPSocketBase Cписок членов класса</div></div>
+  <div class="summary">
+<a href="#signals">Сигналы</a> &#124;
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pri-methods">Закрытые члены</a> &#124;
+<a href="../../de/d94/a00603.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Класс ExecdSocket</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Полный список членов класса <a class="el" href="../../db/d3f/a00609.html">UDPSocketBase</a>, включая наследуемые из базового класса</p>
-<table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="../../db/d3f/a00609.html#a01948d8cb99ea51677e34382c9e2c8aa">connect</a>(const QString &amp;address)</td><td class="entry"><a class="el" href="../../db/d3f/a00609.html">UDPSocketBase</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="../../db/d3f/a00609.html#a960705de531a20389fb29928d43258c3">disconnect</a>()</td><td class="entry"><a class="el" href="../../db/d3f/a00609.html">UDPSocketBase</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="../../db/d3f/a00609.html#a6aac8bbc4a1ac6c37d4c9f0564256fbd">port</a>() const noexcept</td><td class="entry"><a class="el" href="../../db/d3f/a00609.html">UDPSocketBase</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="../../db/d3f/a00609.html#a3eb63c5af67a44fb60ba731d3da7a56d">received</a>(QByteArray data)</td><td class="entry"><a class="el" href="../../db/d3f/a00609.html">UDPSocketBase</a></td><td class="entry"><span class="mlabel">signal</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="../../db/d3f/a00609.html#ad1239ca09fddf150d1584cdf26baf7f3">send</a>(QByteArray data)</td><td class="entry"><a class="el" href="../../db/d3f/a00609.html">UDPSocketBase</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="../../db/d3f/a00609.html#a270b32a7b4f3d08e655807d4101acbd7">socketDisconnected</a>()</td><td class="entry"><a class="el" href="../../db/d3f/a00609.html">UDPSocketBase</a></td><td class="entry"><span class="mlabel">signal</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="../../db/d3f/a00609.html#a58d7e2b4c7d46a5ae4041d122b03b584">socketMetrics</a>(const QString &amp;data, int size_bytes, bool out)</td><td class="entry"><a class="el" href="../../db/d3f/a00609.html">UDPSocketBase</a></td><td class="entry"><span class="mlabel">signal</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="../../db/d3f/a00609.html#a011e2f4b901dd5ac2c8b9f3cf56d4fa3">UDPSocketBase</a>(QObject *parent=nullptr)</td><td class="entry"><a class="el" href="../../db/d3f/a00609.html">UDPSocketBase</a></td><td class="entry"><span class="mlabel">explicit</span></td></tr>
-</table></div><!-- contents -->
+<p><code>#include &lt;<a class="el" href="../../d9/d39/a00257_source.html">QuasarSDK/Execd/InSocket</a>&gt;</code></p>
+<div class="dynheader">
+Граф наследования:ExecdSocket:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d0/d1c/a00605.png" border="0" usemap="#aExecdSocket_inherit__map" alt="Inheritance graph"/></div>
+<map name="aExecdSocket_inherit__map" id="aExecdSocket_inherit__map">
+<area shape="rect" title="Сокет для отправки команд на РЛС." alt="" coords="16,157,119,184"/>
+<area shape="rect" href="../../d7/db1/a00590.html" title="Базовый класс для сокетов, работающих по протоколу UDP." alt="" coords="5,81,130,109"/>
+<area shape="rect" href="../../d6/d92/a00586.html" title="Абстрактный интерфейс для классов с функционалом подключения и отключения к сетевому адресу." alt="" coords="14,5,121,33"/>
+</map>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">см. легенду</a>]</span></center></div>
+<div class="dynheader">
+Граф связей класса ExecdSocket:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d6/d75/a00604.png" border="0" usemap="#aExecdSocket_coll__map" alt="Collaboration graph"/></div>
+<map name="aExecdSocket_coll__map" id="aExecdSocket_coll__map">
+<area shape="rect" title="Сокет для отправки команд на РЛС." alt="" coords="100,175,203,203"/>
+<area shape="rect" href="../../d7/db1/a00590.html" title="Базовый класс для сокетов, работающих по протоколу UDP." alt="" coords="5,82,130,110"/>
+<area shape="rect" href="../../d6/d92/a00586.html" title="Абстрактный интерфейс для классов с функционалом подключения и отключения к сетевому адресу." alt="" coords="14,5,121,33"/>
+<area shape="rect" href="../../d5/d0a/a00602.html" title="Класс для хранения и обработки аргументов команд сервиса execd." alt="" coords="154,82,317,110"/>
+</map>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">см. легенду</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="signals" name="signals"></a>
+Сигналы</h2></td></tr>
+<tr class="memitem:ad8136df344f340b0653c27e3317c08f5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d00/a00606.html#ad8136df344f340b0653c27e3317c08f5">ping</a> ()</td></tr>
+<tr class="separator:ad8136df344f340b0653c27e3317c08f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header signals_a00590"><td colspan="2" onclick="javascript:toggleInherit('signals_a00590')"><img src="../../closed.png" alt="-"/>&#160;Сигналы унаследованные от <a class="el" href="../../d7/db1/a00590.html">BaseUDPSocket</a></td></tr>
+<tr class="memitem:a3eb63c5af67a44fb60ba731d3da7a56d inherit signals_a00590"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/db1/a00590.html#a3eb63c5af67a44fb60ba731d3da7a56d">received</a> (QByteArray data)</td></tr>
+<tr class="separator:a3eb63c5af67a44fb60ba731d3da7a56d inherit signals_a00590"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a563a67ebf5e4d8ba152045a7c51fd604 inherit signals_a00590"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/db1/a00590.html#a563a67ebf5e4d8ba152045a7c51fd604">metrics</a> (const QString &amp;data, int data_size, bool out)</td></tr>
+<tr class="separator:a563a67ebf5e4d8ba152045a7c51fd604 inherit signals_a00590"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:aa88751a63390d47bdbd43c98c9dcf181"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d00/a00606.html#aa88751a63390d47bdbd43c98c9dcf181">ExecdSocket</a> (QObject *parent=nullptr)</td></tr>
+<tr class="separator:aa88751a63390d47bdbd43c98c9dcf181"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d7ed416a5bfbe867fbdd612720d6869"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d00/a00606.html#a2d7ed416a5bfbe867fbdd612720d6869">execute</a> (const QString &amp;command) noexcept</td></tr>
+<tr class="separator:a2d7ed416a5bfbe867fbdd612720d6869"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2848e25d6032fa478d93f7ba3ad9421"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d00/a00606.html#ad2848e25d6032fa478d93f7ba3ad9421">execute</a> (<a class="el" href="../../d9/db8/a00658.html#a8dd47094c7079ec1fcbd5df9870c486e">Enums::NetworkCommand</a> command) noexcept</td></tr>
+<tr class="separator:ad2848e25d6032fa478d93f7ba3ad9421"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_a00590"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_a00590')"><img src="../../closed.png" alt="-"/>&#160;Открытые члены унаследованные от <a class="el" href="../../d7/db1/a00590.html">BaseUDPSocket</a></td></tr>
+<tr class="memitem:aa74c6101467f5a492c111453e39d89ea inherit pub_methods_a00590"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/db1/a00590.html#aa74c6101467f5a492c111453e39d89ea">BaseUDPSocket</a> (QObject *parent=nullptr)</td></tr>
+<tr class="separator:aa74c6101467f5a492c111453e39d89ea inherit pub_methods_a00590"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d9883122ea68f3982da0a6820e31ca5 inherit pub_methods_a00590"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/db1/a00590.html#a8d9883122ea68f3982da0a6820e31ca5">~BaseUDPSocket</a> () override</td></tr>
+<tr class="separator:a8d9883122ea68f3982da0a6820e31ca5 inherit pub_methods_a00590"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85e6ea749496bfaa328adc586fe00c87 inherit pub_methods_a00590"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/db1/a00590.html#a85e6ea749496bfaa328adc586fe00c87">name</a> () const</td></tr>
+<tr class="separator:a85e6ea749496bfaa328adc586fe00c87 inherit pub_methods_a00590"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18af9712714a5c702f50537ae560a69d inherit pub_methods_a00590"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/db1/a00590.html#a18af9712714a5c702f50537ae560a69d">setName</a> (const QString &amp;) noexcept</td></tr>
+<tr class="separator:a18af9712714a5c702f50537ae560a69d inherit pub_methods_a00590"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9ba761a38a1a632dc057acba7c1a5ea inherit pub_methods_a00590"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/db1/a00590.html#ab9ba761a38a1a632dc057acba7c1a5ea">start</a> (const QString &amp;address) override</td></tr>
+<tr class="separator:ab9ba761a38a1a632dc057acba7c1a5ea inherit pub_methods_a00590"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6dd2bfebf59a94006c2c8273546a685c inherit pub_methods_a00590"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/db1/a00590.html#a6dd2bfebf59a94006c2c8273546a685c">start</a> (const QHostAddress &amp;address) noexcept final</td></tr>
+<tr class="separator:a6dd2bfebf59a94006c2c8273546a685c inherit pub_methods_a00590"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a840c0d27d0ff00ce555c1a539adf8abf inherit pub_methods_a00590"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/db1/a00590.html#a840c0d27d0ff00ce555c1a539adf8abf">start</a> (const QHostAddress &amp;address, uint16_t <a class="el" href="../../d7/db1/a00590.html#a6aac8bbc4a1ac6c37d4c9f0564256fbd">port</a>) noexcept override</td></tr>
+<tr class="separator:a840c0d27d0ff00ce555c1a539adf8abf inherit pub_methods_a00590"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add3dd658f58b302a080d9d8d6e57812b inherit pub_methods_a00590"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/db1/a00590.html#add3dd658f58b302a080d9d8d6e57812b">stop</a> () noexcept override</td></tr>
+<tr class="separator:add3dd658f58b302a080d9d8d6e57812b inherit pub_methods_a00590"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ff727bb24a856b41e03e5c2da1b7970 inherit pub_methods_a00590"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/db1/a00590.html#a5ff727bb24a856b41e03e5c2da1b7970">send</a> (const QByteArray &amp;data) noexcept</td></tr>
+<tr class="separator:a5ff727bb24a856b41e03e5c2da1b7970 inherit pub_methods_a00590"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c07e52a7dd282bbffe449aaca5b4604 inherit pub_methods_a00590"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/db1/a00590.html#a3c07e52a7dd282bbffe449aaca5b4604">addressString</a> () const noexcept</td></tr>
+<tr class="separator:a3c07e52a7dd282bbffe449aaca5b4604 inherit pub_methods_a00590"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa72de19e524866d67eac108348a7141a inherit pub_methods_a00590"><td class="memItemLeft" align="right" valign="top">QHostAddress&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/db1/a00590.html#aa72de19e524866d67eac108348a7141a">hostAddress</a> () const noexcept</td></tr>
+<tr class="separator:aa72de19e524866d67eac108348a7141a inherit pub_methods_a00590"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa28fa3e334a61f326e74a170334fce3b inherit pub_methods_a00590"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/db1/a00590.html#aa28fa3e334a61f326e74a170334fce3b">hostAddressString</a> () const noexcept</td></tr>
+<tr class="separator:aa28fa3e334a61f326e74a170334fce3b inherit pub_methods_a00590"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6aac8bbc4a1ac6c37d4c9f0564256fbd inherit pub_methods_a00590"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/db1/a00590.html#a6aac8bbc4a1ac6c37d4c9f0564256fbd">port</a> () const noexcept</td></tr>
+<tr class="separator:a6aac8bbc4a1ac6c37d4c9f0564256fbd inherit pub_methods_a00590"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e4a08a21d3f225b03765b409527bb77"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d92/a00586.html#a7e4a08a21d3f225b03765b409527bb77">start</a> (const QString &amp;address)=0</td></tr>
+<tr class="separator:a7e4a08a21d3f225b03765b409527bb77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a242f95d43813c916dff2aad4b347dd43"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d92/a00586.html#a242f95d43813c916dff2aad4b347dd43">start</a> (const QHostAddress &amp;address) noexcept=0</td></tr>
+<tr class="separator:a242f95d43813c916dff2aad4b347dd43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4e3f660e7c998c947c410d10c21982f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d92/a00586.html#ac4e3f660e7c998c947c410d10c21982f">start</a> (const QHostAddress &amp;address, uint16_t port) noexcept=0</td></tr>
+<tr class="separator:ac4e3f660e7c998c947c410d10c21982f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b7e5ca7163374ca49fea010385f3513"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d92/a00586.html#a5b7e5ca7163374ca49fea010385f3513">stop</a> () noexcept=0</td></tr>
+<tr class="separator:a5b7e5ca7163374ca49fea010385f3513"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Закрытые члены</h2></td></tr>
+<tr class="memitem:aa35903adfd1a228e80da2fe26259b398"><td class="memItemLeft" align="right" valign="top">QByteArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d00/a00606.html#aa35903adfd1a228e80da2fe26259b398">wrap</a> (const QString &amp;string) noexcept</td></tr>
+<tr class="separator:aa35903adfd1a228e80da2fe26259b398"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Сокет для отправки команд на РЛС. </p>
+<p>Класс предоставляет функции для выполнения команд на стороне РЛС (как встроенных в программу, так и произвольных строковых команд). Поддерживает автоматический поиск и добавление аргументов для команд, которые требуют этого. Обрабатывает ответы РЛС (статус выполнения команды). Предоставляет отладочные метрики. </p><dl class="todo"><dt><b><a class="el" href="../../df/d03/a00348.html#_todo000001">Необходимо сделать:</a></b></dt><dd><p class="startdd">Обработчик ответов РЛС - в разработке. </p>
+<p class="enddd">Перенос документации по сервису. </p>
+</dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d9/d39/a00257_source.html">quasarsdk_execdsocket.h</a> строка <a class="el" href="../../d9/d39/a00257_source.html#l00016">16</a></p>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="aa88751a63390d47bdbd43c98c9dcf181" name="aa88751a63390d47bdbd43c98c9dcf181"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa88751a63390d47bdbd43c98c9dcf181">&#9670;&#160;</a></span>ExecdSocket()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d8/d00/a00606.html">ExecdSocket</a> </td>
+          <td>(</td>
+          <td class="paramtype">QObject *&#160;</td>
+          <td class="paramname"><em>parent</em> = <code>nullptr</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Создает новый объект <a class="el" href="../../d8/d00/a00606.html" title="Сокет для отправки команд на РЛС.">ExecdSocket</a> с указанным родителем. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d3/d1a/a00251_source.html">quasarsdk_execdsocket.c++</a> строка <a class="el" href="../../d3/d1a/a00251_source.html#l00022">22</a></p>
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a2d7ed416a5bfbe867fbdd612720d6869" name="a2d7ed416a5bfbe867fbdd612720d6869"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d7ed416a5bfbe867fbdd612720d6869">&#9670;&#160;</a></span>execute() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void execute </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>command</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Выполняет произвольную команду в сервисе <code>execd</code>. </p>
+<p>Если команда некорректна, функция ничего не сделает. Функция не добавляет аргументы к команде автоматически: для добавления аргументов необходимо указать их вручную. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">command</td><td>- строка для выполнения. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d3/d1a/a00251_source.html">quasarsdk_execdsocket.c++</a> строка <a class="el" href="../../d3/d1a/a00251_source.html#l00038">38</a></p>
+
+</div>
+</div>
+<a id="ad2848e25d6032fa478d93f7ba3ad9421" name="ad2848e25d6032fa478d93f7ba3ad9421"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2848e25d6032fa478d93f7ba3ad9421">&#9670;&#160;</a></span>execute() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void execute </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d9/db8/a00658.html#a8dd47094c7079ec1fcbd5df9870c486e">Enums::NetworkCommand</a>&#160;</td>
+          <td class="paramname"><em>command</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Выполняет встроенную команду в сервисе <code>execd</code>. </p>
+<p>Функция автоматически добавляет аргументы к команде, если она требует их. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">command</td><td>- тип команды для выполнения. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="../../d9/db8/a00658.html#a8dd47094c7079ec1fcbd5df9870c486e" title="Перечисление встроенных в приложение команд.">Enums::NetworkCommand</a> </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d3/d1a/a00251_source.html">quasarsdk_execdsocket.c++</a> строка <a class="el" href="../../d3/d1a/a00251_source.html#l00053">53</a></p>
+
+</div>
+</div>
+<a id="ad8136df344f340b0653c27e3317c08f5" name="ad8136df344f340b0653c27e3317c08f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8136df344f340b0653c27e3317c08f5">&#9670;&#160;</a></span>ping</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ping </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Срабатывает, когда сокет получает ответ. </p>
+
+</div>
+</div>
+<a id="aa35903adfd1a228e80da2fe26259b398" name="aa35903adfd1a228e80da2fe26259b398"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa35903adfd1a228e80da2fe26259b398">&#9670;&#160;</a></span>wrap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QByteArray wrap </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>string</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Оборачивает строку в формат <code>execd</code>. </p>
+<p>Добавляет уникальный ID, длину строки в шестнадцатеричном формате и контрольную сумму CRC16 к указанной строке, разделяя это символом <code></code>|. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">string</td><td>- строка для оборачивания. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Это приватная функция. </dd></dl>
+<dl class="section return"><dt>Возвращает</dt><dd>UTF-8 данные для отправки в сокет. </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d3/d1a/a00251_source.html">quasarsdk_execdsocket.c++</a> строка <a class="el" href="../../d3/d1a/a00251_source.html#l00134">134</a></p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li><a class="el" href="../../d9/d39/a00257_source.html">quasarsdk_execdsocket.h</a></li>
+<li><a class="el" href="../../d3/d1a/a00251_source.html">quasarsdk_execdsocket.c++</a></li>
+</ul>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
+    <li class="navelem"><a class="el" href="../../dc/d59/a00364.html">QuasarSDK</a></li><li class="navelem"><a class="el" href="../../d8/d00/a00606.html">ExecdSocket</a></li>
     <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
   </ul>
 </div>

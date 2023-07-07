@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.6"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuaSAR: Исходный файл quasarsdk_outputsocket.h</title>
+<title>QuaSAR: Исходный файл quasarsdk_iconnectable.h</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -92,41 +92,41 @@ $(document).ready(function(){initNavTree('d7/d40/a00236_source.html','../../'); 
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">quasarsdk_outputsocket.h</div></div>
+  <div class="headertitle"><div class="title">quasarsdk_iconnectable.h</div></div>
 </div><!--header-->
 <div class="contents">
 <a href="../../d7/d40/a00236.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="../../df/d91/a00335.html">private/quasarsdk_baseudpsocket.h</a>&quot;</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d7/ddb/a00361.html">QuasarSDK</a></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>{</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="../../de/d94/a00603.html">   14</a></span>  <span class="keyword">class </span><a class="code hl_class" href="../../de/d94/a00603.html">OutputSocket</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../d5/d80/a00583.html">BaseUDPSocket</a></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>  {</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    Q_OBJECT</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>      <span class="keyword">explicit</span> <a class="code hl_class" href="../../de/d94/a00603.html">OutputSocket</a>(QObject* parent = <span class="keyword">nullptr</span>);</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    signals:</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="../../de/d94/a00603.html#ae7259e99451bbab025d71c8683d73676">   27</a></span>      <span class="keywordtype">void</span> <a class="code hl_signal" href="../../de/d94/a00603.html#ae7259e99451bbab025d71c8683d73676">diskSpaceReceived</a>(<span class="keywordtype">long</span> free, <span class="keywordtype">long</span> total);</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>      Q_SLOT <span class="keywordtype">void</span> process(QByteArray data) <span class="keyword">noexcept</span>;</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>  };</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>} <span class="comment">// QuasarSDK</span></div>
-<div class="ttc" id="aa00335_html"><div class="ttname"><a href="../../df/d91/a00335.html">quasarsdk_baseudpsocket.h</a></div></div>
-<div class="ttc" id="aa00361_html"><div class="ttname"><a href="../../d7/ddb/a00361.html">QuasarSDK</a></div><div class="ttdoc">Пространство имен комплекта разработчика РЛС &quot;Квазар&quot;.</div></div>
-<div class="ttc" id="aa00583_html"><div class="ttname"><a href="../../d5/d80/a00583.html">QuasarSDK::BaseUDPSocket</a></div><div class="ttdoc">Базовый класс для сокетов, работающих по протоколу UDP.</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d91/a00335_source.html#l00014">quasarsdk_baseudpsocket.h:15</a></div></div>
-<div class="ttc" id="aa00603_html"><div class="ttname"><a href="../../de/d94/a00603.html">QuasarSDK::OutputSocket</a></div><div class="ttdoc">Сокет для приема и обработки вывода с РЛС.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d40/a00236_source.html#l00014">quasarsdk_outputsocket.h:15</a></div></div>
-<div class="ttc" id="aa00603_html_ae7259e99451bbab025d71c8683d73676"><div class="ttname"><a href="../../de/d94/a00603.html#ae7259e99451bbab025d71c8683d73676">QuasarSDK::OutputSocket::diskSpaceReceived</a></div><div class="ttdeci">void diskSpaceReceived(long free, long total)</div><div class="ttdoc">Срабатывает при получении информации о свободном месте на диске в РЛС.</div></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;QtCore/QString&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;QtNetwork/QHostAddress&gt;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../dc/d59/a00364.html">QuasarSDK</a></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>{</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="../../d6/d92/a00586.html">   19</a></span>  <span class="keyword">class </span><a class="code hl_class" href="../../d6/d92/a00586.html">IConnectable</a></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>  {</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="../../d6/d92/a00586.html#a7e4a08a21d3f225b03765b409527bb77">   28</a></span>      <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d6/d92/a00586.html#a7e4a08a21d3f225b03765b409527bb77">start</a>(<span class="keyword">const</span> QString&amp; address) = 0;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="../../d6/d92/a00586.html#a242f95d43813c916dff2aad4b347dd43">   34</a></span>      <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d6/d92/a00586.html#a242f95d43813c916dff2aad4b347dd43">start</a>(<span class="keyword">const</span> QHostAddress&amp; address) <span class="keyword">noexcept</span> = 0;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="../../d6/d92/a00586.html#ac4e3f660e7c998c947c410d10c21982f">   41</a></span>      <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d6/d92/a00586.html#ac4e3f660e7c998c947c410d10c21982f">start</a>(<span class="keyword">const</span> QHostAddress&amp; address, uint16_t port) <span class="keyword">noexcept</span> = 0;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="../../d6/d92/a00586.html#a5b7e5ca7163374ca49fea010385f3513">   44</a></span>      <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d6/d92/a00586.html#a5b7e5ca7163374ca49fea010385f3513">stop</a>() noexcept = 0;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>  };</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>} <span class="comment">// QuasarSDK</span></div>
+<div class="ttc" id="aa00364_html"><div class="ttname"><a href="../../dc/d59/a00364.html">QuasarSDK</a></div><div class="ttdoc">Пространство имен комплекта разработчика РЛС &quot;Квазар&quot;.</div></div>
+<div class="ttc" id="aa00586_html"><div class="ttname"><a href="../../d6/d92/a00586.html">QuasarSDK::IConnectable</a></div><div class="ttdoc">Абстрактный интерфейс для классов с функционалом подключения и отключения к сетевому адресу.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d40/a00236_source.html#l00019">quasarsdk_iconnectable.h:20</a></div></div>
+<div class="ttc" id="aa00586_html_a242f95d43813c916dff2aad4b347dd43"><div class="ttname"><a href="../../d6/d92/a00586.html#a242f95d43813c916dff2aad4b347dd43">QuasarSDK::IConnectable::start</a></div><div class="ttdeci">virtual void start(const QHostAddress &amp;address) noexcept=0</div><div class="ttdoc">Подключается к указанному сетевому адресу (QHostAddress).</div></div>
+<div class="ttc" id="aa00586_html_a5b7e5ca7163374ca49fea010385f3513"><div class="ttname"><a href="../../d6/d92/a00586.html#a5b7e5ca7163374ca49fea010385f3513">QuasarSDK::IConnectable::stop</a></div><div class="ttdeci">virtual void stop() noexcept=0</div><div class="ttdoc">Разрывает существующее соединение.</div></div>
+<div class="ttc" id="aa00586_html_a7e4a08a21d3f225b03765b409527bb77"><div class="ttname"><a href="../../d6/d92/a00586.html#a7e4a08a21d3f225b03765b409527bb77">QuasarSDK::IConnectable::start</a></div><div class="ttdeci">virtual void start(const QString &amp;address)=0</div><div class="ttdoc">Подключается к указанному адресу в виде строки.</div></div>
+<div class="ttc" id="aa00586_html_ac4e3f660e7c998c947c410d10c21982f"><div class="ttname"><a href="../../d6/d92/a00586.html#ac4e3f660e7c998c947c410d10c21982f">QuasarSDK::IConnectable::start</a></div><div class="ttdeci">virtual void start(const QHostAddress &amp;address, uint16_t port) noexcept=0</div><div class="ttdoc">Подключается к указанной паре из QHostAddress и port.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_6719ab1f1f7655efc2fa43f7eb574fd1.html">libs</a></li><li class="navelem"><a class="el" href="../../dir_c5d4018c0fe90f1660bca3f6235e9876.html">libquasarsdk</a></li><li class="navelem"><a class="el" href="../../dir_0f9d83d35d962a1c6c5b739b964daf6d.html">src</a></li><li class="navelem"><a class="el" href="../../dir_d734eb5648cc5bb2b8e3f352630d13d6.html">public</a></li><li class="navelem"><a class="el" href="../../dir_145b38314551441fb379dc11510f6b00.html">execd</a></li><li class="navelem"><a class="el" href="../../d7/d40/a00236.html">quasarsdk_outputsocket.h</a></li>
+    <li class="navelem"><a class="el" href="../../dir_6719ab1f1f7655efc2fa43f7eb574fd1.html">libs</a></li><li class="navelem"><a class="el" href="../../dir_c5d4018c0fe90f1660bca3f6235e9876.html">libquasarsdk</a></li><li class="navelem"><a class="el" href="../../dir_0f9d83d35d962a1c6c5b739b964daf6d.html">src</a></li><li class="navelem"><a class="el" href="../../dir_b3119b0f0bef4116aba67c56aab782e1.html">interfaces</a></li><li class="navelem"><a class="el" href="../../d7/d40/a00236.html">quasarsdk_iconnectable.h</a></li>
     <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
   </ul>
 </div>

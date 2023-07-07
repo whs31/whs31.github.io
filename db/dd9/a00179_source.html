@@ -95,7 +95,7 @@ $(document).ready(function(){initNavTree('db/dd9/a00179_source.html','../../'); 
   <div class="headertitle"><div class="title">config.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="../../db/dd9/a00179.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno"><a class="line" href="../../d6/d80/a00371.html#acc7856ea0497ce886547bd19075f4bcb">    1</a></span> </div>
+<a href="../../db/dd9/a00179.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno"><a class="line" href="../../d5/db5/a00374.html#acc7856ea0497ce886547bd19075f4bcb">    1</a></span> </div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;QtCore/QObject&gt;</span></div>
@@ -106,9 +106,9 @@ $(document).ready(function(){initNavTree('db/dd9/a00179_source.html','../../'); 
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">class </span>QSettings;</div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d1/dc6/a00347.html">Config</a></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../db/d10/a00350.html">Config</a></div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>{</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="../../d6/d80/a00371.html">   47</a></span>  <span class="keyword">class </span><a class="code hl_namespace" href="../../d1/dc6/a00347.html">Config</a> : <span class="keyword">public</span> QObject</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="../../d5/db5/a00374.html">   47</a></span>  <span class="keyword">class </span><a class="code hl_namespace" href="../../db/d10/a00350.html">Config</a> : <span class="keyword">public</span> QObject</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>  {</div>
 <div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>    Q_OBJECT</div>
 <div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span> </div>
@@ -144,9 +144,9 @@ $(document).ready(function(){initNavTree('db/dd9/a00179_source.html','../../'); 
 <div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>      Q_PROPERTY(QString redirectAddress READ redirectAddress WRITE setRedirectAddress NOTIFY redirectAddressChanged)</div>
 <div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span> </div>
 <div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>      <span class="keyword">static</span> <a class="code hl_namespace" href="../../d1/dc6/a00347.html">Config</a>* get();</div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>      <span class="keyword">static</span> <a class="code hl_namespace" href="../../db/d10/a00350.html">Config</a>* get();</div>
 <div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span> </div>
-<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>      <a class="code hl_namespace" href="../../d1/dc6/a00347.html">~Config</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>      <a class="code hl_namespace" href="../../db/d10/a00350.html">~Config</a>() <span class="keyword">override</span>;</div>
 <div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span> </div>
 <div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>      Q_INVOKABLE <span class="keywordtype">void</span> sync();</div>
 <div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span> </div>
@@ -225,9 +225,9 @@ $(document).ready(function(){initNavTree('db/dd9/a00179_source.html','../../'); 
 <div class="line"><a id="l00406" name="l00406"></a><span class="lineno">  406</span>      <span class="keywordtype">void</span> redirectAddressChanged();</div>
 <div class="line"><a id="l00407" name="l00407"></a><span class="lineno">  407</span> </div>
 <div class="line"><a id="l00408" name="l00408"></a><span class="lineno">  408</span>    <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00409" name="l00409"></a><span class="lineno">  409</span>      <span class="keyword">explicit</span> <a class="code hl_namespace" href="../../d1/dc6/a00347.html">Config</a>(QObject* parent = <span class="keyword">nullptr</span>);</div>
-<div class="line"><a id="l00410" name="l00410"></a><span class="lineno">  410</span>      <a class="code hl_namespace" href="../../d1/dc6/a00347.html">Config</a>(<span class="keyword">const</span> <a class="code hl_namespace" href="../../d1/dc6/a00347.html">Config</a> &amp;);</div>
-<div class="line"><a id="l00411" name="l00411"></a><span class="lineno">  411</span>      <a class="code hl_namespace" href="../../d1/dc6/a00347.html">Config</a> &amp;operator=(<span class="keyword">const</span> <a class="code hl_namespace" href="../../d1/dc6/a00347.html">Config</a> &amp;);</div>
+<div class="line"><a id="l00409" name="l00409"></a><span class="lineno">  409</span>      <span class="keyword">explicit</span> <a class="code hl_namespace" href="../../db/d10/a00350.html">Config</a>(QObject* parent = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00410" name="l00410"></a><span class="lineno">  410</span>      <a class="code hl_namespace" href="../../db/d10/a00350.html">Config</a>(<span class="keyword">const</span> <a class="code hl_namespace" href="../../db/d10/a00350.html">Config</a> &amp;);</div>
+<div class="line"><a id="l00411" name="l00411"></a><span class="lineno">  411</span>      <a class="code hl_namespace" href="../../db/d10/a00350.html">Config</a> &amp;operator=(<span class="keyword">const</span> <a class="code hl_namespace" href="../../db/d10/a00350.html">Config</a> &amp;);</div>
 <div class="line"><a id="l00412" name="l00412"></a><span class="lineno">  412</span> </div>
 <div class="line"><a id="l00413" name="l00413"></a><span class="lineno">  413</span>    <span class="keyword">private</span>:</div>
 <div class="line"><a id="l00414" name="l00414"></a><span class="lineno">  414</span>      <span class="keyword">const</span> QMap&lt;QString, QVariant&gt; defaults = {</div>
@@ -298,7 +298,7 @@ $(document).ready(function(){initNavTree('db/dd9/a00179_source.html','../../'); 
 <div class="line"><a id="l00479" name="l00479"></a><span class="lineno">  479</span>  };</div>
 <div class="line"><a id="l00480" name="l00480"></a><span class="lineno">  480</span>} <span class="comment">// namespace Config;</span></div>
 <div class="line"><a id="l00481" name="l00481"></a><span class="lineno">  481</span> </div>
-<div class="ttc" id="aa00347_html"><div class="ttname"><a href="../../d1/dc6/a00347.html">Config</a></div><div class="ttdoc">Пространство имен для данных, сохраняемых между сессиями.</div><div class="ttdef"><b>Definition:</b> <a href="../../de/db1/a00197_source.html#l00123">config.c++:123</a></div></div>
+<div class="ttc" id="aa00350_html"><div class="ttname"><a href="../../db/d10/a00350.html">Config</a></div><div class="ttdoc">Пространство имен для данных, сохраняемых между сессиями.</div><div class="ttdef"><b>Definition:</b> <a href="../../de/db1/a00197_source.html#l00123">config.c++:123</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

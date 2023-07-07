@@ -1,4 +1,5 @@
 var a00350 =
 [
-    [ "Filesystem", "d1/d53/a00399.html", "d1/d53/a00399" ]
+    [ "Config", "d5/db5/a00374.html", "d5/db5/a00374" ],
+    [ "Paths", "dd/df5/a00386.html", "dd/df5/a00386" ]
 ];

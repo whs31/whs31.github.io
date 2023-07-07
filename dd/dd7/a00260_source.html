@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.6"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuaSAR: Исходный файл quasarsdk_stripsocket.h</title>
+<title>QuaSAR: Исходный файл quasarsdk_remotedata.c++</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -92,41 +92,71 @@ $(document).ready(function(){initNavTree('dd/dd7/a00260_source.html','../../'); 
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">quasarsdk_stripsocket.h</div></div>
+  <div class="headertitle"><div class="title">quasarsdk_remotedata.c++</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="../../dd/dd7/a00260.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#pragma once</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="../../dc/d84/a00338.html">private/quasarsdk_lfsudpsocket.h</a>&quot;</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d7/ddb/a00361.html">QuasarSDK</a></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>{</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="../../dd/dc0/a00611.html">   14</a></span>  <span class="keyword">class </span><a class="code hl_class" href="../../dd/dc0/a00611.html">StripSocket</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../de/dde/a00587.html">SeamlessUDPSocket</a></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>  {</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    Q_OBJECT</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>      <span class="keyword">explicit</span> <a class="code hl_class" href="../../dd/dc0/a00611.html">StripSocket</a>(QObject* parent = <span class="keyword">nullptr</span>);</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    signals:</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="../../dd/dc0/a00611.html#ae62d71d8b9f17efe249b34ac5463d24e">   23</a></span>      <span class="keywordtype">void</span> <a class="code hl_signal" href="../../dd/dc0/a00611.html#ae62d71d8b9f17efe249b34ac5463d24e">receivedChunk</a>(QByteArray chunk);</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>      Q_SLOT <span class="keywordtype">void</span> processChunk(<span class="keyword">const</span> QByteArray data) <span class="keyword">noexcept</span>;</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>  };</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>} <span class="comment">// QuasarSDK</span></div>
-<div class="ttc" id="aa00338_html"><div class="ttname"><a href="../../dc/d84/a00338.html">quasarsdk_lfsudpsocket.h</a></div></div>
-<div class="ttc" id="aa00361_html"><div class="ttname"><a href="../../d7/ddb/a00361.html">QuasarSDK</a></div><div class="ttdoc">Пространство имен комплекта разработчика РЛС &quot;Квазар&quot;.</div></div>
-<div class="ttc" id="aa00587_html"><div class="ttname"><a href="../../de/dde/a00587.html">QuasarSDK::SeamlessUDPSocket</a></div><div class="ttdoc">Базовый класс для UDP сокетов, требующих целостность датаграммы.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d84/a00338_source.html#l00014">quasarsdk_lfsudpsocket.h:15</a></div></div>
-<div class="ttc" id="aa00611_html"><div class="ttname"><a href="../../dd/dc0/a00611.html">QuasarSDK::StripSocket</a></div><div class="ttdoc">Класс для приема больших файлов с РЛС по протоколу UDP.</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dd7/a00260_source.html#l00014">quasarsdk_stripsocket.h:15</a></div></div>
-<div class="ttc" id="aa00611_html_ae62d71d8b9f17efe249b34ac5463d24e"><div class="ttname"><a href="../../dd/dc0/a00611.html#ae62d71d8b9f17efe249b34ac5463d24e">QuasarSDK::StripSocket::receivedChunk</a></div><div class="ttdeci">void receivedChunk(QByteArray chunk)</div><div class="ttdoc">Срабатывает при получении чанка полосового РЛИ.</div></div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="../../d7/d03/a00254.html">quasarsdk_remotedata.h</a>&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;QtCore/QMetaType&gt;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../dc/d59/a00364.html">QuasarSDK</a></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>{</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="../../d7/d80/a00614.html#aaa72d856aabec940cd92b5a4a4c96c37">   16</a></span>  <a class="code hl_function" href="../../d7/d80/a00614.html#aaa72d856aabec940cd92b5a4a4c96c37">RemoteData::RemoteData</a>(QObject* parent)</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>      : QObject(parent)</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>      , m_storageSpace(0)</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>      , m_pings({<a class="code hl_enumvalue" href="../../d9/db8/a00658.html#a26cd5c2531deeff8b716e740ddc8e469ad3fa9ae9431d6cb1772f9d9df48cab19">Enums::Idle</a>, <a class="code hl_enumvalue" href="../../d9/db8/a00658.html#a26cd5c2531deeff8b716e740ddc8e469ad3fa9ae9431d6cb1772f9d9df48cab19">Enums::Idle</a>, <a class="code hl_enumvalue" href="../../d9/db8/a00658.html#a26cd5c2531deeff8b716e740ddc8e469ad3fa9ae9431d6cb1772f9d9df48cab19">Enums::Idle</a>, <a class="code hl_enumvalue" href="../../d9/db8/a00658.html#a26cd5c2531deeff8b716e740ddc8e469ad3fa9ae9431d6cb1772f9d9df48cab19">Enums::Idle</a>, <a class="code hl_enumvalue" href="../../d9/db8/a00658.html#a26cd5c2531deeff8b716e740ddc8e469ad3fa9ae9431d6cb1772f9d9df48cab19">Enums::Idle</a>})</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>      , m_downloadProgress(0)</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>      , m_recordingStrip(<span class="keyword">false</span>)</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>  {</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    qRegisterMetaType&lt;Enums::PingStatus&gt;(<span class="stringliteral">&quot;Enums::PingStatus&quot;</span>);</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    qRegisterMetaType&lt;QList&lt;Enums::PingStatus&gt;&gt;(<span class="stringliteral">&quot;QList&lt;Enums::PingStatus&gt;&quot;</span>);</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>  }</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>   <span class="keywordtype">float</span> <a class="code hl_property" href="../../d7/d80/a00614.html#a66f2ebfeb3e0e823b05351f875ec8639">RemoteData::storageSpace</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_storageSpace; }</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>   <span class="keywordtype">void</span> RemoteData::setStorageSpace(<span class="keywordtype">float</span> o) {</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>     <span class="keywordflow">if</span>(m_storageSpace == o)</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>       <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>     m_storageSpace = o;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>     emit storageSpaceChanged();</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>   }</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>   QList&lt;Enums::PingStatus&gt; <a class="code hl_property" href="../../d7/d80/a00614.html#ad66c276310b76da1b17d50be3b75e4c4">RemoteData::pings</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_pings; }</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>   <span class="keywordtype">void</span> RemoteData::setPings(<span class="keyword">const</span> QList&lt;Enums::PingStatus&gt;&amp; o) {</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>     m_pings = o;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>     emit pingsChanged();</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>   }</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>   <span class="keywordtype">float</span> <a class="code hl_property" href="../../d7/d80/a00614.html#a245341f5c68aee26bb424084e9335e27">RemoteData::downloadProgress</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_downloadProgress; }</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>   <span class="keywordtype">void</span> RemoteData::setDownloadProgress(<span class="keywordtype">float</span> o) {</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>     <span class="keywordflow">if</span>(m_downloadProgress == o)</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>       <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>     m_downloadProgress = o;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>     emit downloadProgressChanged();</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>   }</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>   <span class="keywordtype">bool</span> <a class="code hl_property" href="../../d7/d80/a00614.html#a087cca4afecc1dbdd07adabb7e26ac61">RemoteData::isRecordingStrip</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_recordingStrip; }</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>   <span class="keywordtype">void</span> RemoteData::setRecordingStrip(<span class="keywordtype">bool</span> o) {</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>     <span class="keywordflow">if</span>(m_recordingStrip == o)</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>       <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>     m_recordingStrip = o;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>     emit recordingStripChanged();</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>   }</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>} <span class="comment">// QuasarSDK</span></div>
+<div class="ttc" id="aa00254_html"><div class="ttname"><a href="../../d7/d03/a00254.html">quasarsdk_remotedata.h</a></div></div>
+<div class="ttc" id="aa00364_html"><div class="ttname"><a href="../../dc/d59/a00364.html">QuasarSDK</a></div><div class="ttdoc">Пространство имен комплекта разработчика РЛС &quot;Квазар&quot;.</div></div>
+<div class="ttc" id="aa00614_html_a087cca4afecc1dbdd07adabb7e26ac61"><div class="ttname"><a href="../../d7/d80/a00614.html#a087cca4afecc1dbdd07adabb7e26ac61">QuasarSDK::RemoteData::isRecordingStrip</a></div><div class="ttdeci">bool isRecordingStrip</div><div class="ttdoc">Предоставляет состояние записи полосового изображения.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d03/a00254_source.html#l00001">quasarsdk_remotedata.h:22</a></div></div>
+<div class="ttc" id="aa00614_html_a245341f5c68aee26bb424084e9335e27"><div class="ttname"><a href="../../d7/d80/a00614.html#a245341f5c68aee26bb424084e9335e27">QuasarSDK::RemoteData::downloadProgress</a></div><div class="ttdeci">float downloadProgress</div><div class="ttdoc">Предоставляет значение процента загрузки больших данных с РЛС.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d03/a00254_source.html#l00001">quasarsdk_remotedata.h:21</a></div></div>
+<div class="ttc" id="aa00614_html_a66f2ebfeb3e0e823b05351f875ec8639"><div class="ttname"><a href="../../d7/d80/a00614.html#a66f2ebfeb3e0e823b05351f875ec8639">QuasarSDK::RemoteData::storageSpace</a></div><div class="ttdeci">float storageSpace</div><div class="ttdoc">Предоставляет значение свободного места на диске РЛС.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d03/a00254_source.html#l00001">quasarsdk_remotedata.h:19</a></div></div>
+<div class="ttc" id="aa00614_html_aaa72d856aabec940cd92b5a4a4c96c37"><div class="ttname"><a href="../../d7/d80/a00614.html#aaa72d856aabec940cd92b5a4a4c96c37">QuasarSDK::RemoteData::RemoteData</a></div><div class="ttdeci">RemoteData(QObject *parent=nullptr)</div><div class="ttdoc">Создает новый объект RemoteData с указанным родителем.</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dd7/a00260_source.html#l00016">quasarsdk_remotedata.c++:16</a></div></div>
+<div class="ttc" id="aa00614_html_ad66c276310b76da1b17d50be3b75e4c4"><div class="ttname"><a href="../../d7/d80/a00614.html#ad66c276310b76da1b17d50be3b75e4c4">QuasarSDK::RemoteData::pings</a></div><div class="ttdeci">QList&lt; Enums::PingStatus &gt; pings</div><div class="ttdoc">Предоставляет список состояний доступности модулей РЛС.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d03/a00254_source.html#l00001">quasarsdk_remotedata.h:20</a></div></div>
+<div class="ttc" id="aa00658_html_a26cd5c2531deeff8b716e740ddc8e469ad3fa9ae9431d6cb1772f9d9df48cab19"><div class="ttname"><a href="../../d9/db8/a00658.html#a26cd5c2531deeff8b716e740ddc8e469ad3fa9ae9431d6cb1772f9d9df48cab19">QuasarSDK::Enums::Idle</a></div><div class="ttdeci">@ Idle</div><div class="ttdoc">Выполнение команды не было запрошено.</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d23/a00326_source.html#l00035">quasarsdk_enums.h:34</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_6719ab1f1f7655efc2fa43f7eb574fd1.html">libs</a></li><li class="navelem"><a class="el" href="../../dir_c5d4018c0fe90f1660bca3f6235e9876.html">libquasarsdk</a></li><li class="navelem"><a class="el" href="../../dir_0f9d83d35d962a1c6c5b739b964daf6d.html">src</a></li><li class="navelem"><a class="el" href="../../dir_d734eb5648cc5bb2b8e3f352630d13d6.html">public</a></li><li class="navelem"><a class="el" href="../../dir_dbfe41e03248d445ef5c4db290b8a1d0.html">fsend</a></li><li class="navelem"><a class="el" href="../../dd/dd7/a00260.html">quasarsdk_stripsocket.h</a></li>
+    <li class="navelem"><a class="el" href="../../dir_6719ab1f1f7655efc2fa43f7eb574fd1.html">libs</a></li><li class="navelem"><a class="el" href="../../dir_c5d4018c0fe90f1660bca3f6235e9876.html">libquasarsdk</a></li><li class="navelem"><a class="el" href="../../dir_0f9d83d35d962a1c6c5b739b964daf6d.html">src</a></li><li class="navelem"><a class="el" href="../../dir_d734eb5648cc5bb2b8e3f352630d13d6.html">public</a></li><li class="navelem"><a class="el" href="../../dir_145b38314551441fb379dc11510f6b00.html">execd</a></li><li class="navelem"><b>quasarsdk_remotedata.c++</b></li>
     <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
   </ul>
 </div>

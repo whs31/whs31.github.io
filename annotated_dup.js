@@ -1,47 +1,48 @@
 var annotated_dup =
 [
-    [ "Config", "d1/dc6/a00347.html", [
-      [ "Config", "d6/d80/a00371.html", "d6/d80/a00371" ],
-      [ "Paths", "da/dee/a00383.html", "da/dee/a00383" ]
+    [ "Config", "db/d10/a00350.html", [
+      [ "Config", "d5/db5/a00374.html", "d5/db5/a00374" ],
+      [ "Paths", "dd/df5/a00386.html", "dd/df5/a00386" ]
     ] ],
-    [ "Map", "db/ddc/a00353.html", [
-      [ "ImageMetadata", "db/ddc/a00353.html#d7/d5e/a00467", "db/ddc/a00353_d7/d5e/a00467_dup" ],
-      [ "ImageMetaHeader", "db/ddc/a00353.html#d3/d5d/a00463", "db/ddc/a00353_d3/d5d/a00463_dup" ],
-      [ "StripFormatMetadata", "db/ddc/a00353.html#d9/d4a/a00479", "db/ddc/a00353_d9/d4a/a00479_dup" ],
-      [ "StripHeaderMetadata", "db/ddc/a00353.html#d4/d4b/a00471", "db/ddc/a00353_d4/d4b/a00471_dup" ],
-      [ "StripNavigationMetadata", "db/ddc/a00353.html#d1/d92/a00475", "db/ddc/a00353_d1/d92/a00475_dup" ]
+    [ "Map", "d6/de1/a00356.html", [
+      [ "ImageMetadata", "d6/de1/a00356.html#d0/d29/a00470", "d6/de1/a00356_d0/d29/a00470_dup" ],
+      [ "ImageMetaHeader", "d6/de1/a00356.html#db/d2c/a00466", "d6/de1/a00356_db/d2c/a00466_dup" ],
+      [ "StripFormatMetadata", "d6/de1/a00356.html#db/d8e/a00482", "d6/de1/a00356_db/d8e/a00482_dup" ],
+      [ "StripHeaderMetadata", "d6/de1/a00356.html#d5/d26/a00474", "d6/de1/a00356_d5/d26/a00474_dup" ],
+      [ "StripNavigationMetadata", "d6/de1/a00356.html#d9/dea/a00478", "d6/de1/a00356_d9/dea/a00478_dup" ]
     ] ],
     [ "Networking", null, [
-      [ "HTTPDownloader", "d0/d2a/a00531.html", "d0/d2a/a00531" ]
+      [ "HTTPDownloader", "dc/d20/a00534.html", "dc/d20/a00534" ]
     ] ],
-    [ "OS", "db/d10/a00350.html", [
-      [ "Filesystem", "d1/d53/a00399.html", "d1/d53/a00399" ]
+    [ "OS", "db/ddc/a00353.html", [
+      [ "Filesystem", "d4/d6d/a00402.html", "d4/d6d/a00402" ]
     ] ],
-    [ "Processing", "d0/dc3/a00354.html", [
-      [ "ArrayReader", "d7/d84/a00535.html", "d7/d84/a00535" ]
+    [ "Processing", "df/df1/a00357.html", [
+      [ "ArrayReader", "dd/d5a/a00538.html", "dd/d5a/a00538" ]
     ] ],
-    [ "QuasarSDK", "d7/ddb/a00361.html", [
-      [ "Datagrams", "d9/d9b/a00363.html", [
-        [ "PlannerAppendDatagram", "d9/d9b/a00363.html#d6/d6a/a00619", "d9/d9b/a00363_d6/d6a/a00619_dup" ],
-        [ "PlannerRemoveDatagram", "d9/d9b/a00363.html#df/d6f/a00623", "d9/d9b/a00363_df/d6f/a00623_dup" ],
-        [ "PlannerResponseDatagram", "d9/d9b/a00363.html#d3/da3/a00627", "d9/d9b/a00363_d3/da3/a00627_dup" ],
-        [ "TelemetryDatagram", "d9/d9b/a00363.html#d4/d10/a00635", "d9/d9b/a00363_d4/d10/a00635_dup" ],
-        [ "TelemetryRequest", "d9/d9b/a00363.html#dd/db6/a00639", "d9/d9b/a00363_dd/db6/a00639_dup" ]
+    [ "QuasarSDK", "dc/d59/a00364.html", [
+      [ "Datagrams", "d2/d3e/a00366.html", [
+        [ "PlannerAppendDatagram", "d2/d3e/a00366.html#d6/dfa/a00626", "d2/d3e/a00366_d6/dfa/a00626_dup" ],
+        [ "PlannerRemoveDatagram", "d2/d3e/a00366.html#dc/d66/a00630", "d2/d3e/a00366_dc/d66/a00630_dup" ],
+        [ "PlannerResponseDatagram", "d2/d3e/a00366.html#d7/de4/a00634", "d2/d3e/a00366_d7/de4/a00634_dup" ],
+        [ "TelemetryDatagram", "d2/d3e/a00366.html#df/dcf/a00642", "d2/d3e/a00366_df/dcf/a00642_dup" ],
+        [ "TelemetryRequest", "d2/d3e/a00366.html#d6/d08/a00646", "d2/d3e/a00366_d6/d08/a00646_dup" ]
       ] ],
-      [ "BaseUDPSocket", "d5/d80/a00583.html", "d5/d80/a00583" ],
-      [ "Enums", "de/d33/a00651.html", "de/d33/a00651" ],
-      [ "ExecdArgument", "d9/dad/a00591.html", "d9/dad/a00591" ],
-      [ "ExecdArgumentParser", "d8/de9/a00595.html", "d8/de9/a00595" ],
-      [ "ExecdSocket", "d5/d8a/a00599.html", "d5/d8a/a00599" ],
-      [ "OutputRedirectServer", "dc/d91/a00659.html", "dc/d91/a00659" ],
-      [ "OutputSocket", "de/d94/a00603.html", "de/d94/a00603" ],
-      [ "PingTester", "d7/d5f/a00663.html", "d7/d5f/a00663" ],
-      [ "QuasarAPI", "d8/ddc/a00655.html", "d8/ddc/a00655" ],
-      [ "RemoteData", "d9/d07/a00607.html", "d9/d07/a00607" ],
-      [ "SeamlessUDPSocket", "de/dde/a00587.html", "de/dde/a00587" ],
-      [ "StripSocket", "dd/dc0/a00611.html", "dd/dc0/a00611" ],
-      [ "TCPServer", "d5/dd8/a00615.html", "d5/dd8/a00615" ],
-      [ "Telemetry", "d5/de3/a00631.html", "d5/de3/a00631" ],
-      [ "TelemetrySocket", "de/d19/a00643.html", "de/d19/a00643" ]
+      [ "BaseUDPSocket", "d7/db1/a00590.html", "d7/db1/a00590" ],
+      [ "Enums", "d9/db8/a00658.html", "d9/db8/a00658" ],
+      [ "ExecdArgument", "d7/dd2/a00598.html", "d7/dd2/a00598" ],
+      [ "ExecdArgumentParser", "d5/d0a/a00602.html", "d5/d0a/a00602" ],
+      [ "ExecdSocket", "d8/d00/a00606.html", "d8/d00/a00606" ],
+      [ "IConnectable", "d6/d92/a00586.html", "d6/d92/a00586" ],
+      [ "OutputRedirectServer", "d9/d41/a00666.html", "d9/d41/a00666" ],
+      [ "OutputSocket", "da/d6e/a00610.html", "da/d6e/a00610" ],
+      [ "PingTester", "d1/d97/a00670.html", "d1/d97/a00670" ],
+      [ "QuasarAPI", "dc/df1/a00662.html", "dc/df1/a00662" ],
+      [ "RemoteData", "d7/d80/a00614.html", "d7/d80/a00614" ],
+      [ "SeamlessUDPSocket", "da/de4/a00594.html", "da/de4/a00594" ],
+      [ "StripSocket", "de/d85/a00618.html", "de/d85/a00618" ],
+      [ "TCPServer", "d0/db1/a00622.html", "d0/db1/a00622" ],
+      [ "Telemetry", "d1/daa/a00638.html", "d1/daa/a00638" ],
+      [ "TelemetrySocket", "da/d36/a00650.html", "da/d36/a00650" ]
     ] ]
 ];

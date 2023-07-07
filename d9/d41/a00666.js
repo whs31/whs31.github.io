@@ -1,10 +1,8 @@
 var a00666 =
 [
-    [ "marker", "d9/d41/a00666.html#a0ea604dd26c415c8f380323b91bdba56", null ],
-    [ "id", "d9/d41/a00666.html#a4fc3a0c58dfbd1e68224521185cb9384", null ],
-    [ "r", "d9/d41/a00666.html#acfb1795eb860b37ae4a0cf5007525b11", null ],
-    [ "lat", "d9/d41/a00666.html#a7972334534f68166121a6e51b0aac2d6", null ],
-    [ "lon", "d9/d41/a00666.html#aa96391e04b5977c50b96d77bea86a01d", null ],
-    [ "cnt", "d9/d41/a00666.html#ae1d905c6ac1a0c9b96dca16153917334", null ],
-    [ "len", "d9/d41/a00666.html#a8aed22e2c7b283705ec82e0120515618", null ]
+    [ "OutputRedirectServer", "d9/d41/a00666.html#a998b60d68b42b365b6248073502e9ff7", null ],
+    [ "~OutputRedirectServer", "d9/d41/a00666.html#afccfb74379bac9eb8631f93431cabbf3", null ],
+    [ "start", "d9/d41/a00666.html#a28ca97829e1fcdc9073ca1c651e08ffa", null ],
+    [ "stop", "d9/d41/a00666.html#aba28ee97ffe6d508e26f534ec7e62f8f", null ],
+    [ "push", "d9/d41/a00666.html#ad9f50d5dc30f2e0482b19a5f0eba0e2e", null ]
 ];

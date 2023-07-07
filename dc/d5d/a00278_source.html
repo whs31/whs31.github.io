@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.6"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuaSAR: Исходный файл quasarsdk_telemetry.h</title>
+<title>QuaSAR: Исходный файл quasarsdk_telemetrysocket.h</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -92,72 +92,67 @@ $(document).ready(function(){initNavTree('dc/d5d/a00278_source.html','../../'); 
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">quasarsdk_telemetry.h</div></div>
+  <div class="headertitle"><div class="title">quasarsdk_telemetrysocket.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="../../dc/d5d/a00278.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno"><a class="line" href="../../d5/de3/a00631.html#a60fc48f2db24801506aef6fb17f97ea0">    1</a></span> </div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;QtCore/QObject&gt;</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;QtGui/QVector2D&gt;</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;QtGui/QVector3D&gt;</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;QtPositioning/QGeoCoordinate&gt;</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="../../de/d25/a00290.html">quasarsdk_telemetrydatagram.h</a>&quot;</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d7/ddb/a00361.html">QuasarSDK</a></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>{</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="../../d5/de3/a00631.html">   18</a></span>  <span class="keyword">class </span><a class="code hl_class" href="../../d5/de3/a00631.html">Telemetry</a> : <span class="keyword">public</span> QObject</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>  {</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    Q_OBJECT</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    Q_PROPERTY(QGeoCoordinate <a class="code hl_property" href="../../d5/de3/a00631.html#a7130b1618285588513fd1ff97884b9d9">position</a> READ <a class="code hl_property" href="../../d5/de3/a00631.html#a7130b1618285588513fd1ff97884b9d9">position</a> NOTIFY positionChanged)</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    Q_PROPERTY(QVector2D <a class="code hl_property" href="../../d5/de3/a00631.html#aecfeca1289d00fbe5fc76a8dd5295913">velocity</a> READ <a class="code hl_property" href="../../d5/de3/a00631.html#aecfeca1289d00fbe5fc76a8dd5295913">velocity</a> NOTIFY velocityChanged)</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    Q_PROPERTY(QVector3D <a class="code hl_property" href="../../d5/de3/a00631.html#a60fc48f2db24801506aef6fb17f97ea0">eulerAxes</a> READ <a class="code hl_property" href="../../d5/de3/a00631.html#a60fc48f2db24801506aef6fb17f97ea0">eulerAxes</a> NOTIFY eulerAxesChanged)</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    Q_PROPERTY(<span class="keywordtype">int</span> <a class="code hl_property" href="../../d5/de3/a00631.html#a4d90ddb43bcba374ebe4e8738faafed1">satellites</a> READ <a class="code hl_property" href="../../d5/de3/a00631.html#a4d90ddb43bcba374ebe4e8738faafed1">satellites</a> NOTIFY satellitesChanged)</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    Q_PROPERTY(<span class="keywordtype">float</span> <a class="code hl_property" href="../../d5/de3/a00631.html#aa65c033c3e64f540f4b9833c74a0887e">seaLevel</a> READ <a class="code hl_property" href="../../d5/de3/a00631.html#aa65c033c3e64f540f4b9833c74a0887e">seaLevel</a> WRITE setSeaLevel NOTIFY seaLevelChanged)</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>      <span class="keyword">explicit</span> <a class="code hl_class" href="../../d5/de3/a00631.html">Telemetry</a>(QObject* parent = <span class="keyword">nullptr</span>);</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>      <span class="keywordtype">void</span> <a class="code hl_function" href="../../d5/de3/a00631.html#acb8623ef07d16610f0989c5d2a80f378">setDatagram</a>(<span class="keyword">const</span> <a class="code hl_struct" href="../../d9/d9b/a00363.html#d4/d10/a00635">Datagrams::TelemetryDatagram</a>&amp; datagram) <span class="keyword">noexcept</span>;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="../../dc/d84/a00338.html">private/quasarsdk_baseudpsocket.h</a>&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="../../d2/d04/a00281.html">quasarsdk_telemetry.h</a>&quot;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">class </span>QTimer;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../dc/d59/a00364.html">QuasarSDK</a></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>{</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="../../da/d36/a00650.html">   17</a></span>  <span class="keyword">class </span><a class="code hl_class" href="../../da/d36/a00650.html">TelemetrySocket</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../d7/db1/a00590.html">BaseUDPSocket</a></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>  {</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    Q_OBJECT</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>      <span class="keyword">explicit</span> <a class="code hl_class" href="../../da/d36/a00650.html">TelemetrySocket</a>(QObject* parent = <span class="keyword">nullptr</span>, <a class="code hl_class" href="../../d1/daa/a00638.html">Telemetry</a>* output = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>      <span class="keywordtype">void</span> <a class="code hl_function" href="../../da/d36/a00650.html#a23b677bb8d8ff349a72183584dfef999">start2way</a>(<span class="keyword">const</span> QString&amp; address, <span class="keyword">const</span> QString&amp; recv_address) <span class="keyword">noexcept</span>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>      <span class="keywordtype">void</span> <a class="code hl_function" href="../../da/d36/a00650.html#a7dd4a4ce2846754fe0c1f93bcf5d0a86">stop2way</a>() <span class="keyword">noexcept</span>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>      [[nodiscard]] <span class="keywordtype">float</span> <a class="code hl_function" href="../../da/d36/a00650.html#a8e0b885b8423672eec948899b7bb504f">frequency</a>() <span class="keyword">const</span>; <span class="keywordtype">void</span> setFrequency(<span class="keywordtype">float</span>);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>      [[nodiscard]] <span class="keywordtype">bool</span> <a class="code hl_function" href="../../da/d36/a00650.html#a4e364dd16670e0b52593e57472de695c">checkCRC</a>() <span class="keyword">const</span>; <span class="keywordtype">void</span> setCheckCRC(<span class="keywordtype">bool</span>);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    signals:</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="../../da/d36/a00650.html#ad8136df344f340b0653c27e3317c08f5">   31</a></span>      <span class="keywordtype">void</span> <a class="code hl_signal" href="../../da/d36/a00650.html#ad8136df344f340b0653c27e3317c08f5">ping</a>(); </div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>      [[nodiscard]] QGeoCoordinate <a class="code hl_property" href="../../d5/de3/a00631.html#a7130b1618285588513fd1ff97884b9d9">position</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>      [[nodiscard]] QVector2D <a class="code hl_property" href="../../d5/de3/a00631.html#aecfeca1289d00fbe5fc76a8dd5295913">velocity</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>      [[nodiscard]] QVector3D <a class="code hl_property" href="../../d5/de3/a00631.html#a60fc48f2db24801506aef6fb17f97ea0">eulerAxes</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>      [[nodiscard]] <span class="keywordtype">int</span> <a class="code hl_property" href="../../d5/de3/a00631.html#a4d90ddb43bcba374ebe4e8738faafed1">satellites</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>      [[nodiscard]] <span class="keywordtype">float</span> <a class="code hl_property" href="../../d5/de3/a00631.html#aa65c033c3e64f540f4b9833c74a0887e">seaLevel</a>() <span class="keyword">const</span>; <span class="keywordtype">void</span> setSeaLevel(<span class="keywordtype">float</span>);</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    signals:</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>      <span class="keywordtype">void</span> positionChanged();</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>      <span class="keywordtype">void</span> velocityChanged();</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>      <span class="keywordtype">void</span> eulerAxesChanged();</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>      <span class="keywordtype">void</span> satellitesChanged();</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>      <span class="keywordtype">void</span> seaLevelChanged();</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>      <a class="code hl_struct" href="../../d9/d9b/a00363.html#d4/d10/a00635">Datagrams::TelemetryDatagram</a> m_datagram;</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>      <span class="keywordtype">float</span> m_seaLevel;</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>  };</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>} <span class="comment">// QuasarSDK</span></div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="preprocessor">#include &lt;QtCore/QMetaType&gt;</span></div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>Q_DECLARE_METATYPE(<a class="code hl_class" href="../../d5/de3/a00631.html">QuasarSDK::Telemetry</a>*)</div>
-<div class="ttc" id="aa00290_html"><div class="ttname"><a href="../../de/d25/a00290.html">quasarsdk_telemetrydatagram.h</a></div></div>
-<div class="ttc" id="aa00361_html"><div class="ttname"><a href="../../d7/ddb/a00361.html">QuasarSDK</a></div><div class="ttdoc">Пространство имен комплекта разработчика РЛС &quot;Квазар&quot;.</div></div>
-<div class="ttc" id="aa00363_html_d4/d10/a00635"><div class="ttname"><a href="../../d9/d9b/a00363.html#d4/d10/a00635">QuasarSDK::Datagrams::TelemetryDatagram</a></div><div class="ttdoc">Датаграмма телеметрии от РЛС к наземке.</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d25/a00290_source.html#l00044">quasarsdk_telemetrydatagram.h:45</a></div></div>
-<div class="ttc" id="aa00631_html"><div class="ttname"><a href="../../d5/de3/a00631.html">QuasarSDK::Telemetry</a></div><div class="ttdoc">Класс-хранилище для текущей телеметрии РЛС.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d5d/a00278_source.html#l00018">quasarsdk_telemetry.h:19</a></div></div>
-<div class="ttc" id="aa00631_html_a4d90ddb43bcba374ebe4e8738faafed1"><div class="ttname"><a href="../../d5/de3/a00631.html#a4d90ddb43bcba374ebe4e8738faafed1">QuasarSDK::Telemetry::satellites</a></div><div class="ttdeci">int satellites</div><div class="ttdoc">Предоставляет текущее количество спутников навигации.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d5d/a00278_source.html#l00001">quasarsdk_telemetry.h:25</a></div></div>
-<div class="ttc" id="aa00631_html_a60fc48f2db24801506aef6fb17f97ea0"><div class="ttname"><a href="../../d5/de3/a00631.html#a60fc48f2db24801506aef6fb17f97ea0">QuasarSDK::Telemetry::eulerAxes</a></div><div class="ttdeci">QVector3D eulerAxes</div><div class="ttdoc">Предоставляет углы поворота БПЛА в связанной системе координат.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d5d/a00278_source.html#l00001">quasarsdk_telemetry.h:24</a></div></div>
-<div class="ttc" id="aa00631_html_a7130b1618285588513fd1ff97884b9d9"><div class="ttname"><a href="../../d5/de3/a00631.html#a7130b1618285588513fd1ff97884b9d9">QuasarSDK::Telemetry::position</a></div><div class="ttdeci">QGeoCoordinate position</div><div class="ttdoc">Предоставляет географическую позицию БПЛА.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d5d/a00278_source.html#l00001">quasarsdk_telemetry.h:22</a></div></div>
-<div class="ttc" id="aa00631_html_aa65c033c3e64f540f4b9833c74a0887e"><div class="ttname"><a href="../../d5/de3/a00631.html#aa65c033c3e64f540f4b9833c74a0887e">QuasarSDK::Telemetry::seaLevel</a></div><div class="ttdeci">float seaLevel</div><div class="ttdoc">Предоставляет текущее значение высоты земной поверхности.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d5d/a00278_source.html#l00001">quasarsdk_telemetry.h:26</a></div></div>
-<div class="ttc" id="aa00631_html_acb8623ef07d16610f0989c5d2a80f378"><div class="ttname"><a href="../../d5/de3/a00631.html#acb8623ef07d16610f0989c5d2a80f378">QuasarSDK::Telemetry::setDatagram</a></div><div class="ttdeci">void setDatagram(const Datagrams::TelemetryDatagram &amp;datagram) noexcept</div><div class="ttdoc">Задает новую датаграмму телеметрии в класс.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d7f/a00287_source.html#l00025">quasarsdk_telemetry.c++:25</a></div></div>
-<div class="ttc" id="aa00631_html_aecfeca1289d00fbe5fc76a8dd5295913"><div class="ttname"><a href="../../d5/de3/a00631.html#aecfeca1289d00fbe5fc76a8dd5295913">QuasarSDK::Telemetry::velocity</a></div><div class="ttdeci">QVector2D velocity</div><div class="ttdoc">Предоставляет вектор скорости БПЛА.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d5d/a00278_source.html#l00001">quasarsdk_telemetry.h:23</a></div></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>      Q_SLOT <span class="keywordtype">void</span> processTelemetry(QByteArray data);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>      Q_SLOT <span class="keywordtype">void</span> requestTelemetry();</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>      QTimer* m_updateTimer;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>      QUdpSocket* m_requestSocket;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>      <span class="keywordtype">float</span> m_frequency;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>      <a class="code hl_class" href="../../d1/daa/a00638.html">Telemetry</a>* output;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>      QString request_addr;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>      uint16_t request_port;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>      uint16_t recv_port;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>      <span class="keywordtype">bool</span> m_checkCRC;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>  };</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>} <span class="comment">// QuasarSDK</span></div>
+<div class="ttc" id="aa00281_html"><div class="ttname"><a href="../../d2/d04/a00281.html">quasarsdk_telemetry.h</a></div></div>
+<div class="ttc" id="aa00338_html"><div class="ttname"><a href="../../dc/d84/a00338.html">quasarsdk_baseudpsocket.h</a></div></div>
+<div class="ttc" id="aa00364_html"><div class="ttname"><a href="../../dc/d59/a00364.html">QuasarSDK</a></div><div class="ttdoc">Пространство имен комплекта разработчика РЛС &quot;Квазар&quot;.</div></div>
+<div class="ttc" id="aa00590_html"><div class="ttname"><a href="../../d7/db1/a00590.html">QuasarSDK::BaseUDPSocket</a></div><div class="ttdoc">Базовый класс для сокетов, работающих по протоколу UDP.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d84/a00338_source.html#l00015">quasarsdk_baseudpsocket.h:17</a></div></div>
+<div class="ttc" id="aa00638_html"><div class="ttname"><a href="../../d1/daa/a00638.html">QuasarSDK::Telemetry</a></div><div class="ttdoc">Класс-хранилище для текущей телеметрии РЛС.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d04/a00281_source.html#l00018">quasarsdk_telemetry.h:19</a></div></div>
+<div class="ttc" id="aa00650_html"><div class="ttname"><a href="../../da/d36/a00650.html">QuasarSDK::TelemetrySocket</a></div><div class="ttdoc">Класс для работы с сервисом navd2 на РЛС.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d5d/a00278_source.html#l00017">quasarsdk_telemetrysocket.h:18</a></div></div>
+<div class="ttc" id="aa00650_html_a23b677bb8d8ff349a72183584dfef999"><div class="ttname"><a href="../../da/d36/a00650.html#a23b677bb8d8ff349a72183584dfef999">QuasarSDK::TelemetrySocket::start2way</a></div><div class="ttdeci">void start2way(const QString &amp;address, const QString &amp;recv_address) noexcept</div><div class="ttdoc">Начинает процедуру запроса и приема телеметрии с РЛС.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d7f/a00287_source.html#l00050">quasarsdk_telemetrysocket.c++:50</a></div></div>
+<div class="ttc" id="aa00650_html_a4e364dd16670e0b52593e57472de695c"><div class="ttname"><a href="../../da/d36/a00650.html#a4e364dd16670e0b52593e57472de695c">QuasarSDK::TelemetrySocket::checkCRC</a></div><div class="ttdeci">bool checkCRC() const</div><div class="ttdoc">Предоставляет состояние проверки контрольной суммы на входящих пакетах.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d7f/a00287_source.html#l00102">quasarsdk_telemetrysocket.c++:102</a></div></div>
+<div class="ttc" id="aa00650_html_a7dd4a4ce2846754fe0c1f93bcf5d0a86"><div class="ttname"><a href="../../da/d36/a00650.html#a7dd4a4ce2846754fe0c1f93bcf5d0a86">QuasarSDK::TelemetrySocket::stop2way</a></div><div class="ttdeci">void stop2way() noexcept</div><div class="ttdoc">Останавливает процедуру запроса и приема телеметрии.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d7f/a00287_source.html#l00078">quasarsdk_telemetrysocket.c++:78</a></div></div>
+<div class="ttc" id="aa00650_html_a8e0b885b8423672eec948899b7bb504f"><div class="ttname"><a href="../../da/d36/a00650.html#a8e0b885b8423672eec948899b7bb504f">QuasarSDK::TelemetrySocket::frequency</a></div><div class="ttdeci">float frequency() const</div><div class="ttdoc">Предоставляет частоту запроса пакетов телеметрии.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d7f/a00287_source.html#l00092">quasarsdk_telemetrysocket.c++:92</a></div></div>
+<div class="ttc" id="aa00650_html_ad8136df344f340b0653c27e3317c08f5"><div class="ttname"><a href="../../da/d36/a00650.html#ad8136df344f340b0653c27e3317c08f5">QuasarSDK::TelemetrySocket::ping</a></div><div class="ttdeci">void ping()</div><div class="ttdoc">Срабатывает, когда сокет получает телеметрию.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_6719ab1f1f7655efc2fa43f7eb574fd1.html">libs</a></li><li class="navelem"><a class="el" href="../../dir_c5d4018c0fe90f1660bca3f6235e9876.html">libquasarsdk</a></li><li class="navelem"><a class="el" href="../../dir_0f9d83d35d962a1c6c5b739b964daf6d.html">src</a></li><li class="navelem"><a class="el" href="../../dir_d734eb5648cc5bb2b8e3f352630d13d6.html">public</a></li><li class="navelem"><a class="el" href="../../dir_5ae3da6fa5f3b01d46a11cfe65fb85bc.html">navd2</a></li><li class="navelem"><a class="el" href="../../dc/d5d/a00278.html">quasarsdk_telemetry.h</a></li>
+    <li class="navelem"><a class="el" href="../../dir_6719ab1f1f7655efc2fa43f7eb574fd1.html">libs</a></li><li class="navelem"><a class="el" href="../../dir_c5d4018c0fe90f1660bca3f6235e9876.html">libquasarsdk</a></li><li class="navelem"><a class="el" href="../../dir_0f9d83d35d962a1c6c5b739b964daf6d.html">src</a></li><li class="navelem"><a class="el" href="../../dir_d734eb5648cc5bb2b8e3f352630d13d6.html">public</a></li><li class="navelem"><a class="el" href="../../dir_5ae3da6fa5f3b01d46a11cfe65fb85bc.html">navd2</a></li><li class="navelem"><b>quasarsdk_telemetrysocket.h</b></li>
     <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
   </ul>
 </div>

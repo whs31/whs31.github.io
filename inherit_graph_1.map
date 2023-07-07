@@ -1,8 +1,3 @@
 <map id="Иерархия классов. Графический вид." name="Иерархия классов. Графический вид.">
-<area shape="rect" id="node1" href="$d5/d80/a00583.html" title="Базовый класс для сокетов, работающих по протоколу UDP." alt="" coords="5,84,130,112"/>
-<area shape="rect" id="node2" href="$d5/d8a/a00599.html" title="Сокет для отправки команд на РЛС." alt="" coords="204,5,307,33"/>
-<area shape="rect" id="node3" href="$de/d94/a00603.html" title="Сокет для приема и обработки вывода с РЛС." alt="" coords="201,57,310,85"/>
-<area shape="rect" id="node4" href="$de/dde/a00587.html" title="Базовый класс для UDP сокетов, требующих целостность датаграммы." alt="" coords="178,109,333,137"/>
-<area shape="rect" id="node6" href="$de/d19/a00643.html" title="Класс для работы с сервисом navd2 на РЛС." alt="" coords="191,161,320,189"/>
-<area shape="rect" id="node5" href="$dd/dc0/a00611.html" title="Класс для приема больших файлов с РЛС по протоколу UDP." alt="" coords="381,109,475,137"/>
+<area shape="rect" id="node1" href="$d5/db5/a00374.html" title="Класс&#45;синглтон для работы с локальными настройками приложения, сохранямыми на диске." alt="" coords="5,5,68,33"/>
 </map>

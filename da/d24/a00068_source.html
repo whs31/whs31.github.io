@@ -106,7 +106,7 @@ $(document).ready(function(){initNavTree('da/d24/a00068_source.html','../../'); 
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;QtPositioning/QGeoRectangle&gt;</span></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;config/paths.h&quot;</span></div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../db/ddc/a00353.html">Map</a></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d6/de1/a00356.html">Map</a></div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>{</div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>  <span class="keyword">constexpr</span> <span class="keyword">static</span> <span class="keyword">const</span> uint8_t MAX_ALLOWED_PARALLEL = 4;</div>
@@ -141,7 +141,7 @@ $(document).ready(function(){initNavTree('da/d24/a00068_source.html','../../'); 
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    , m_loadedTiles(0)</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    , m_parallelLoadedCount(0)</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    , m_serverUrl(<span class="stringliteral">&quot;https://mt.google.com/vt/lyrs=y&amp;hl=ru&amp;z=%1&amp;x=%2&amp;y=%3&quot;</span>)</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    , m_storagePath(<a class="code hl_namespace" href="../../d1/dc6/a00347.html">Config</a>::Paths::offlineTiles())</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    , m_storagePath(<a class="code hl_namespace" href="../../db/d10/a00350.html">Config</a>::Paths::offlineTiles())</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>  {</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    connect(m_netaccs, &amp;QNetworkAccessManager::finished, [<span class="keyword">this</span>](QNetworkReply* reply) {</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>      <span class="keywordflow">if</span> (reply-&gt;error() == QNetworkReply::NoError)</div>
@@ -321,8 +321,8 @@ $(document).ready(function(){initNavTree('da/d24/a00068_source.html','../../'); 
 <div class="ttc" id="aa00050_html_a76714bdbc5c536fa77dfb14533ff82a9"><div class="ttname"><a href="../../d5/de0/a00050.html#a76714bdbc5c536fa77dfb14533ff82a9">latitude</a></div><div class="ttdeci">double latitude</div><div class="ttdoc">Широта в градусах в проекции WGS-84.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de0/a00050_source.html#l00003">imagemetadata.h:3</a></div></div>
 <div class="ttc" id="aa00050_html_ac155e35fdeebafc89723a51520fb9fe6"><div class="ttname"><a href="../../d5/de0/a00050.html#ac155e35fdeebafc89723a51520fb9fe6">longitude</a></div><div class="ttdeci">double longitude</div><div class="ttdoc">Долгота в градусах в проекции WGS-84.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de0/a00050_source.html#l00004">imagemetadata.h:4</a></div></div>
 <div class="ttc" id="aa00050_html_af77b1a54442f2443cf64a4766f916bcd"><div class="ttname"><a href="../../d5/de0/a00050.html#af77b1a54442f2443cf64a4766f916bcd">y</a></div><div class="ttdeci">int16_t y</div><div class="ttdoc">Смещение по Y в метрах / 10.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de0/a00050_source.html#l00007">imagemetadata.h:7</a></div></div>
-<div class="ttc" id="aa00347_html"><div class="ttname"><a href="../../d1/dc6/a00347.html">Config</a></div><div class="ttdoc">Пространство имен для данных, сохраняемых между сессиями.</div><div class="ttdef"><b>Definition:</b> <a href="../../de/db1/a00197_source.html#l00123">config.c++:123</a></div></div>
-<div class="ttc" id="aa00353_html"><div class="ttname"><a href="../../db/ddc/a00353.html">Map</a></div><div class="ttdoc">Пространство имен для классов и функций, связанных с картографией.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d09/a00077_source.html#l00007">clickhandler.c++:8</a></div></div>
+<div class="ttc" id="aa00350_html"><div class="ttname"><a href="../../db/d10/a00350.html">Config</a></div><div class="ttdoc">Пространство имен для данных, сохраняемых между сессиями.</div><div class="ttdef"><b>Definition:</b> <a href="../../de/db1/a00197_source.html#l00123">config.c++:123</a></div></div>
+<div class="ttc" id="aa00356_html"><div class="ttname"><a href="../../d6/de1/a00356.html">Map</a></div><div class="ttdoc">Пространство имен для классов и функций, связанных с картографией.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d09/a00077_source.html#l00007">clickhandler.c++:8</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

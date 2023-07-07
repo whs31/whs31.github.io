@@ -1,4 +1,9 @@
-<map id="SeamlessUDPSocket" name="SeamlessUDPSocket">
-<area shape="rect" id="node1" title="Базовый класс для UDP сокетов, требующих целостность датаграммы." alt="" coords="5,81,161,109"/>
-<area shape="rect" id="node2" href="$d5/d80/a00583.html" title="Базовый класс для сокетов, работающих по протоколу UDP." alt="" coords="21,5,145,33"/>
+<map id="IConnectable" name="IConnectable">
+<area shape="rect" id="node1" title="Абстрактный интерфейс для классов с функционалом подключения и отключения к сетевому адресу." alt="" coords="210,5,316,33"/>
+<area shape="rect" id="node2" href="$d7/db1/a00590.html" title="Базовый класс для сокетов, работающих по протоколу UDP." alt="" coords="201,81,325,109"/>
+<area shape="rect" id="node3" href="$d8/d00/a00606.html" title="Сокет для отправки команд на РЛС." alt="" coords="5,157,108,184"/>
+<area shape="rect" id="node4" href="$da/d6e/a00610.html" title="Сокет для приема и обработки вывода с РЛС." alt="" coords="132,157,240,184"/>
+<area shape="rect" id="node5" href="$da/de4/a00594.html" title="Базовый класс для UDP сокетов, требующих целостность датаграммы." alt="" coords="264,157,420,184"/>
+<area shape="rect" id="node7" href="$da/d36/a00650.html" title="Класс для работы с сервисом navd2 на РЛС." alt="" coords="444,157,573,184"/>
+<area shape="rect" id="node6" href="$de/d85/a00618.html" title="Класс для приема больших файлов с РЛС по протоколу UDP." alt="" coords="295,232,389,260"/>
 </map>

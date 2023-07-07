@@ -1,4 +1,4 @@
 var a00338 =
 [
-    [ "SeamlessUDPSocket", "de/dde/a00587.html", "de/dde/a00587" ]
+    [ "BaseUDPSocket", "d7/db1/a00590.html", "d7/db1/a00590" ]
 ];

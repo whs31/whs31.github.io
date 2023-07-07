@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['outputredirectserver_0',['OutputRedirectServer',['../dc/d91/a00659.html',1,'QuasarSDK']]],
-  ['outputsocket_1',['OutputSocket',['../de/d94/a00603.html',1,'QuasarSDK']]]
+  ['outputredirectserver_0',['OutputRedirectServer',['../d9/d41/a00666.html',1,'QuasarSDK']]],
+  ['outputsocket_1',['OutputSocket',['../da/d6e/a00610.html',1,'QuasarSDK']]]
 ];

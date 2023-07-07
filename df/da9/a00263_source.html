@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.6"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuaSAR: Исходный файл quasarsdk_stripsocket.c++</title>
+<title>QuaSAR: Исходный файл quasarsdk_stripsocket.h</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -92,40 +92,41 @@ $(document).ready(function(){initNavTree('df/da9/a00263_source.html','../../'); 
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">quasarsdk_stripsocket.c++</div></div>
+  <div class="headertitle"><div class="title">quasarsdk_stripsocket.h</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="../../dd/dd7/a00260.html">quasarsdk_stripsocket.h</a>&quot;</span></div>
+<a href="../../df/da9/a00263.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d7/ddb/a00361.html">QuasarSDK</a></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>{</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="../../dd/dc0/a00611.html#a1dc0347f6e97ffd1f34ed614272dbb47">   14</a></span>  <a class="code hl_function" href="../../dd/dc0/a00611.html#a1dc0347f6e97ffd1f34ed614272dbb47">StripSocket::StripSocket</a>(QObject* parent)</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>      : <a class="code hl_class" href="../../de/dde/a00587.html">SeamlessUDPSocket</a>(parent)</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>  {</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    this-&gt;<a class="code hl_function" href="../../d5/d80/a00583.html#a18af9712714a5c702f50537ae560a69d">setName</a>(<span class="stringliteral">&quot;Strip&quot;</span>);</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    connect(<span class="keyword">this</span>, &amp;<a class="code hl_signal" href="../../d5/d80/a00583.html#a3eb63c5af67a44fb60ba731d3da7a56d">SeamlessUDPSocket::received</a>, <span class="keyword">this</span>, &amp;StripSocket::processChunk);</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>  }</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="../../d3/d93/a00341.html">private/quasarsdk_lfsudpsocket.h</a>&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../dc/d59/a00364.html">QuasarSDK</a></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>{</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="../../de/d85/a00618.html">   14</a></span>  <span class="keyword">class </span><a class="code hl_class" href="../../de/d85/a00618.html">StripSocket</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../da/de4/a00594.html">SeamlessUDPSocket</a></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>  {</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    Q_OBJECT</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>      <span class="keyword">explicit</span> <a class="code hl_class" href="../../de/d85/a00618.html">StripSocket</a>(QObject* parent = <span class="keyword">nullptr</span>);</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>  <span class="keywordtype">void</span> StripSocket::processChunk(<span class="keyword">const</span> QByteArray data) <span class="keyword">noexcept</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>  {</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    emit metrics(<span class="stringliteral">&quot;DATA with size of &quot;</span> + QString::number(data.size()), data.size(), <span class="keyword">false</span>);</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    emit receivedChunk(data);</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>  }</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>} <span class="comment">// QuasarSDK</span></div>
-<div class="ttc" id="aa00260_html"><div class="ttname"><a href="../../dd/dd7/a00260.html">quasarsdk_stripsocket.h</a></div></div>
-<div class="ttc" id="aa00361_html"><div class="ttname"><a href="../../d7/ddb/a00361.html">QuasarSDK</a></div><div class="ttdoc">Пространство имен комплекта разработчика РЛС &quot;Квазар&quot;.</div></div>
-<div class="ttc" id="aa00583_html_a18af9712714a5c702f50537ae560a69d"><div class="ttname"><a href="../../d5/d80/a00583.html#a18af9712714a5c702f50537ae560a69d">QuasarSDK::BaseUDPSocket::setName</a></div><div class="ttdeci">void setName(const QString &amp;) noexcept</div><div class="ttdoc">Задает отладочное название сокета.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d50/a00332_source.html#l00037">quasarsdk_baseudpsocket.c++:37</a></div></div>
-<div class="ttc" id="aa00583_html_a3eb63c5af67a44fb60ba731d3da7a56d"><div class="ttname"><a href="../../d5/d80/a00583.html#a3eb63c5af67a44fb60ba731d3da7a56d">QuasarSDK::BaseUDPSocket::received</a></div><div class="ttdeci">void received(QByteArray data)</div><div class="ttdoc">Срабатывает, когда сокет принимает датаграмму.</div></div>
-<div class="ttc" id="aa00587_html"><div class="ttname"><a href="../../de/dde/a00587.html">QuasarSDK::SeamlessUDPSocket</a></div><div class="ttdoc">Базовый класс для UDP сокетов, требующих целостность датаграммы.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d84/a00338_source.html#l00014">quasarsdk_lfsudpsocket.h:15</a></div></div>
-<div class="ttc" id="aa00611_html_a1dc0347f6e97ffd1f34ed614272dbb47"><div class="ttname"><a href="../../dd/dc0/a00611.html#a1dc0347f6e97ffd1f34ed614272dbb47">QuasarSDK::StripSocket::StripSocket</a></div><div class="ttdeci">StripSocket(QObject *parent=nullptr)</div><div class="ttdoc">Создает новый объект StripSocket с указанным родителем.</div><div class="ttdef"><b>Definition:</b> <a href="../../df/da9/a00263_source.html#l00014">quasarsdk_stripsocket.c++:14</a></div></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    signals:</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="../../de/d85/a00618.html#ae62d71d8b9f17efe249b34ac5463d24e">   23</a></span>      <span class="keywordtype">void</span> <a class="code hl_signal" href="../../de/d85/a00618.html#ae62d71d8b9f17efe249b34ac5463d24e">receivedChunk</a>(QByteArray chunk);</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>      Q_SLOT <span class="keywordtype">void</span> processChunk(<span class="keyword">const</span> QByteArray data) <span class="keyword">noexcept</span>;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>  };</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>} <span class="comment">// QuasarSDK</span></div>
+<div class="ttc" id="aa00341_html"><div class="ttname"><a href="../../d3/d93/a00341.html">quasarsdk_lfsudpsocket.h</a></div></div>
+<div class="ttc" id="aa00364_html"><div class="ttname"><a href="../../dc/d59/a00364.html">QuasarSDK</a></div><div class="ttdoc">Пространство имен комплекта разработчика РЛС &quot;Квазар&quot;.</div></div>
+<div class="ttc" id="aa00594_html"><div class="ttname"><a href="../../da/de4/a00594.html">QuasarSDK::SeamlessUDPSocket</a></div><div class="ttdoc">Базовый класс для UDP сокетов, требующих целостность датаграммы.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d93/a00341_source.html#l00014">quasarsdk_lfsudpsocket.h:15</a></div></div>
+<div class="ttc" id="aa00618_html"><div class="ttname"><a href="../../de/d85/a00618.html">QuasarSDK::StripSocket</a></div><div class="ttdoc">Класс для приема больших файлов с РЛС по протоколу UDP.</div><div class="ttdef"><b>Definition:</b> <a href="../../df/da9/a00263_source.html#l00014">quasarsdk_stripsocket.h:15</a></div></div>
+<div class="ttc" id="aa00618_html_ae62d71d8b9f17efe249b34ac5463d24e"><div class="ttname"><a href="../../de/d85/a00618.html#ae62d71d8b9f17efe249b34ac5463d24e">QuasarSDK::StripSocket::receivedChunk</a></div><div class="ttdeci">void receivedChunk(QByteArray chunk)</div><div class="ttdoc">Срабатывает при получении чанка полосового РЛИ.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_6719ab1f1f7655efc2fa43f7eb574fd1.html">libs</a></li><li class="navelem"><a class="el" href="../../dir_c5d4018c0fe90f1660bca3f6235e9876.html">libquasarsdk</a></li><li class="navelem"><a class="el" href="../../dir_0f9d83d35d962a1c6c5b739b964daf6d.html">src</a></li><li class="navelem"><a class="el" href="../../dir_d734eb5648cc5bb2b8e3f352630d13d6.html">public</a></li><li class="navelem"><a class="el" href="../../dir_dbfe41e03248d445ef5c4db290b8a1d0.html">fsend</a></li><li class="navelem"><b>quasarsdk_stripsocket.c++</b></li>
+    <li class="navelem"><a class="el" href="../../dir_6719ab1f1f7655efc2fa43f7eb574fd1.html">libs</a></li><li class="navelem"><a class="el" href="../../dir_c5d4018c0fe90f1660bca3f6235e9876.html">libquasarsdk</a></li><li class="navelem"><a class="el" href="../../dir_0f9d83d35d962a1c6c5b739b964daf6d.html">src</a></li><li class="navelem"><a class="el" href="../../dir_d734eb5648cc5bb2b8e3f352630d13d6.html">public</a></li><li class="navelem"><a class="el" href="../../dir_dbfe41e03248d445ef5c4db290b8a1d0.html">fsend</a></li><li class="navelem"><a class="el" href="../../df/da9/a00263.html">quasarsdk_stripsocket.h</a></li>
     <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
   </ul>
 </div>

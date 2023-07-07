@@ -1,3 +1,9 @@
 <map id="Иерархия классов. Графический вид." name="Иерархия классов. Графический вид.">
-<area shape="rect" id="node1" href="$d0/d2a/a00531.html" title="Class for downloading files by HTTP/HTTPS protocol." alt="" coords="5,5,139,33"/>
+<area shape="rect" id="node1" href="$d6/d92/a00586.html" title="Абстрактный интерфейс для классов с функционалом подключения и отключения к сетевому адресу." alt="" coords="5,84,112,112"/>
+<area shape="rect" id="node2" href="$d7/db1/a00590.html" title="Базовый класс для сокетов, работающих по протоколу UDP." alt="" coords="160,84,284,112"/>
+<area shape="rect" id="node3" href="$d8/d00/a00606.html" title="Сокет для отправки команд на РЛС." alt="" coords="359,5,461,33"/>
+<area shape="rect" id="node4" href="$da/d6e/a00610.html" title="Сокет для приема и обработки вывода с РЛС." alt="" coords="356,57,464,85"/>
+<area shape="rect" id="node5" href="$da/de4/a00594.html" title="Базовый класс для UDP сокетов, требующих целостность датаграммы." alt="" coords="332,109,487,137"/>
+<area shape="rect" id="node7" href="$da/d36/a00650.html" title="Класс для работы с сервисом navd2 на РЛС." alt="" coords="345,161,474,189"/>
+<area shape="rect" id="node6" href="$de/d85/a00618.html" title="Класс для приема больших файлов с РЛС по протоколу UDP." alt="" coords="535,109,630,137"/>
 </map>

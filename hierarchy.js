@@ -1,35 +1,37 @@
 var hierarchy =
 [
-    [ "ArrayReader< T >", "d7/d84/a00535.html", null ],
-    [ "BaseUDPSocket", "d5/d80/a00583.html", [
-      [ "ExecdSocket", "d5/d8a/a00599.html", null ],
-      [ "OutputSocket", "de/d94/a00603.html", null ],
-      [ "SeamlessUDPSocket", "de/dde/a00587.html", [
-        [ "StripSocket", "dd/dc0/a00611.html", null ]
-      ] ],
-      [ "TelemetrySocket", "de/d19/a00643.html", null ]
+    [ "ArrayReader< T >", "dd/d5a/a00538.html", null ],
+    [ "Config", "d5/db5/a00374.html", null ],
+    [ "Enums", "d9/db8/a00658.html", null ],
+    [ "ExecdArgument", "d7/dd2/a00598.html", null ],
+    [ "ExecdArgumentParser", "d5/d0a/a00602.html", null ],
+    [ "Filesystem", "d4/d6d/a00402.html", null ],
+    [ "HTTPDownloader", "dc/d20/a00534.html", null ],
+    [ "IConnectable", "d6/d92/a00586.html", [
+      [ "BaseUDPSocket", "d7/db1/a00590.html", [
+        [ "ExecdSocket", "d8/d00/a00606.html", null ],
+        [ "OutputSocket", "da/d6e/a00610.html", null ],
+        [ "SeamlessUDPSocket", "da/de4/a00594.html", [
+          [ "StripSocket", "de/d85/a00618.html", null ]
+        ] ],
+        [ "TelemetrySocket", "da/d36/a00650.html", null ]
+      ] ]
     ] ],
-    [ "Config", "d6/d80/a00371.html", null ],
-    [ "Enums", "de/d33/a00651.html", null ],
-    [ "ExecdArgument", "d9/dad/a00591.html", null ],
-    [ "ExecdArgumentParser", "d8/de9/a00595.html", null ],
-    [ "Filesystem", "d1/d53/a00399.html", null ],
-    [ "HTTPDownloader", "d0/d2a/a00531.html", null ],
-    [ "ImageMetadata", "db/ddc/a00353.html#d7/d5e/a00467", null ],
-    [ "ImageMetaHeader", "db/ddc/a00353.html#d3/d5d/a00463", null ],
-    [ "OutputRedirectServer", "dc/d91/a00659.html", null ],
-    [ "Paths", "da/dee/a00383.html", null ],
-    [ "PingTester", "d7/d5f/a00663.html", null ],
-    [ "PlannerAppendDatagram", "d9/d9b/a00363.html#d6/d6a/a00619", null ],
-    [ "PlannerRemoveDatagram", "d9/d9b/a00363.html#df/d6f/a00623", null ],
-    [ "PlannerResponseDatagram", "d9/d9b/a00363.html#d3/da3/a00627", null ],
-    [ "QuasarAPI", "d8/ddc/a00655.html", null ],
-    [ "RemoteData", "d9/d07/a00607.html", null ],
-    [ "StripFormatMetadata", "db/ddc/a00353.html#d9/d4a/a00479", null ],
-    [ "StripHeaderMetadata", "db/ddc/a00353.html#d4/d4b/a00471", null ],
-    [ "StripNavigationMetadata", "db/ddc/a00353.html#d1/d92/a00475", null ],
-    [ "TCPServer", "d5/dd8/a00615.html", null ],
-    [ "Telemetry", "d5/de3/a00631.html", null ],
-    [ "TelemetryDatagram", "d9/d9b/a00363.html#d4/d10/a00635", null ],
-    [ "TelemetryRequest", "d9/d9b/a00363.html#dd/db6/a00639", null ]
+    [ "ImageMetadata", "d6/de1/a00356.html#d0/d29/a00470", null ],
+    [ "ImageMetaHeader", "d6/de1/a00356.html#db/d2c/a00466", null ],
+    [ "OutputRedirectServer", "d9/d41/a00666.html", null ],
+    [ "Paths", "dd/df5/a00386.html", null ],
+    [ "PingTester", "d1/d97/a00670.html", null ],
+    [ "PlannerAppendDatagram", "d2/d3e/a00366.html#d6/dfa/a00626", null ],
+    [ "PlannerRemoveDatagram", "d2/d3e/a00366.html#dc/d66/a00630", null ],
+    [ "PlannerResponseDatagram", "d2/d3e/a00366.html#d7/de4/a00634", null ],
+    [ "QuasarAPI", "dc/df1/a00662.html", null ],
+    [ "RemoteData", "d7/d80/a00614.html", null ],
+    [ "StripFormatMetadata", "d6/de1/a00356.html#db/d8e/a00482", null ],
+    [ "StripHeaderMetadata", "d6/de1/a00356.html#d5/d26/a00474", null ],
+    [ "StripNavigationMetadata", "d6/de1/a00356.html#d9/dea/a00478", null ],
+    [ "TCPServer", "d0/db1/a00622.html", null ],
+    [ "Telemetry", "d1/daa/a00638.html", null ],
+    [ "TelemetryDatagram", "d2/d3e/a00366.html#df/dcf/a00642", null ],
+    [ "TelemetryRequest", "d2/d3e/a00366.html#d6/d08/a00646", null ]
 ];

@@ -104,15 +104,15 @@ $(document).ready(function(){initNavTree('d3/d8b/a00059_source.html','../../'); 
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;QtPositioning/QGeoCoordinate&gt;</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;config/paths.h&quot;</span></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../db/ddc/a00353.html">Map</a></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d6/de1/a00356.html">Map</a></div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>{</div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>  RouteLogger::RouteLogger(QObject* parent)</div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    : QObject{parent}</div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>  {</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>      QDir route_logs_dir(<a class="code hl_function" href="../../da/dee/a00383.html#a6c0adb24682142f6e37996b57e6e6c93">Config::Paths::logs</a>() + <span class="stringliteral">&quot;/route&quot;</span>);</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>      QDir route_logs_dir(<a class="code hl_function" href="../../dd/df5/a00386.html#a6c0adb24682142f6e37996b57e6e6c93">Config::Paths::logs</a>() + <span class="stringliteral">&quot;/route&quot;</span>);</div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>      <span class="keywordflow">if</span>(not route_logs_dir.exists())</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>          route_logs_dir.mkpath(<a class="code hl_function" href="../../da/dee/a00383.html#a6c0adb24682142f6e37996b57e6e6c93">Config::Paths::logs</a>() + <span class="stringliteral">&quot;/route&quot;</span>);</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>          route_logs_dir.mkpath(<a class="code hl_function" href="../../dd/df5/a00386.html#a6c0adb24682142f6e37996b57e6e6c93">Config::Paths::logs</a>() + <span class="stringliteral">&quot;/route&quot;</span>);</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>  }</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>  <span class="keywordtype">void</span> RouteLogger::createLog(<span class="keyword">const</span> QString&amp; log_name)</div>
@@ -121,7 +121,7 @@ $(document).ready(function(){initNavTree('d3/d8b/a00059_source.html','../../'); 
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>      <span class="keywordflow">if</span>(log_name.isEmpty())</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>          name = QDateTime::currentDateTime().toString(<span class="stringliteral">&quot;yyyy-MM-dd_hh-mm-ss&quot;</span>);</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>      QString filename = <a class="code hl_function" href="../../da/dee/a00383.html#a6c0adb24682142f6e37996b57e6e6c93">Config::Paths::logs</a>() + <span class="stringliteral">&quot;/route/routetrack-&quot;</span> + name + <span class="stringliteral">&quot;.&quot;</span> + format;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>      QString filename = <a class="code hl_function" href="../../dd/df5/a00386.html#a6c0adb24682142f6e37996b57e6e6c93">Config::Paths::logs</a>() + <span class="stringliteral">&quot;/route/routetrack-&quot;</span> + name + <span class="stringliteral">&quot;.&quot;</span> + format;</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>      qDebug().noquote() &lt;&lt; <span class="stringliteral">&quot;[ROUTELOG] Created new route log as&quot;</span> &lt;&lt; filename;</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
@@ -170,8 +170,8 @@ $(document).ready(function(){initNavTree('d3/d8b/a00059_source.html','../../'); 
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>  }</div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>} <span class="comment">// Map</span></div>
-<div class="ttc" id="aa00353_html"><div class="ttname"><a href="../../db/ddc/a00353.html">Map</a></div><div class="ttdoc">Пространство имен для классов и функций, связанных с картографией.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d09/a00077_source.html#l00007">clickhandler.c++:8</a></div></div>
-<div class="ttc" id="aa00383_html_a6c0adb24682142f6e37996b57e6e6c93"><div class="ttname"><a href="../../da/dee/a00383.html#a6c0adb24682142f6e37996b57e6e6c93">Config::Paths::logs</a></div><div class="ttdeci">static Q_INVOKABLE QString logs()</div><div class="ttdoc">Returns logs and route-logs directory.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d25/a00182_source.html#l00055">paths.c++:55</a></div></div>
+<div class="ttc" id="aa00356_html"><div class="ttname"><a href="../../d6/de1/a00356.html">Map</a></div><div class="ttdoc">Пространство имен для классов и функций, связанных с картографией.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d09/a00077_source.html#l00007">clickhandler.c++:8</a></div></div>
+<div class="ttc" id="aa00386_html_a6c0adb24682142f6e37996b57e6e6c93"><div class="ttname"><a href="../../dd/df5/a00386.html#a6c0adb24682142f6e37996b57e6e6c93">Config::Paths::logs</a></div><div class="ttdeci">static Q_INVOKABLE QString logs()</div><div class="ttdoc">Returns logs and route-logs directory.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d25/a00182_source.html#l00055">paths.c++:55</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

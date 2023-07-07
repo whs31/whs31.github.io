@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.6"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuaSAR: Класс PingTester</title>
+<title>QuaSAR: Cписок членов класса</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -66,7 +66,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('d7/d5f/a00663.html','../../'); initResizable(); });
+$(document).ready(function(){initNavTree('d9/d41/a00666.html','../../'); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -92,218 +92,22 @@ $(document).ready(function(){initNavTree('d7/d5f/a00663.html','../../'); initRes
 </div>
 
 <div class="header">
-  <div class="summary">
-<a href="#signals">Сигналы</a> &#124;
-<a href="#pub-methods">Открытые члены</a> &#124;
-<a href="../../d5/d4e/a00660.html">Полный список членов класса</a>  </div>
-  <div class="headertitle"><div class="title">Класс PingTester</div></div>
+  <div class="headertitle"><div class="title">OutputRedirectServer Cписок членов класса</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="../../db/d7b/a00296_source.html">QuasarSDK/Utility/Ping</a>&gt;</code></p>
-
-<p>Базовые классы:QObject.</p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="signals" name="signals"></a>
-Сигналы</h2></td></tr>
-<tr class="memitem:a3ec8bbafe23004823fbd69165109d0fc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d5f/a00663.html#a3ec8bbafe23004823fbd69165109d0fc">result</a> (<a class="el" href="../../de/d33/a00651.html#a26cd5c2531deeff8b716e740ddc8e469">Enums::PingStatus</a> res)</td></tr>
-<tr class="separator:a3ec8bbafe23004823fbd69165109d0fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
-Открытые члены</h2></td></tr>
-<tr class="memitem:a9bc32f421394a81fc7a63bf771b4041d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d5f/a00663.html#a9bc32f421394a81fc7a63bf771b4041d">PingTester</a> (QObject *parent=nullptr)</td></tr>
-<tr class="separator:a9bc32f421394a81fc7a63bf771b4041d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1536c93dfb1f242946cf133d92df8985"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d5f/a00663.html#a1536c93dfb1f242946cf133d92df8985">~PingTester</a> () override</td></tr>
-<tr class="separator:a1536c93dfb1f242946cf133d92df8985"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5ddebc72addc87883c9112ea98c4c517"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d5f/a00663.html#a5ddebc72addc87883c9112ea98c4c517">start</a> (const QString &amp;address, const QStringList &amp;args)</td></tr>
-<tr class="separator:a5ddebc72addc87883c9112ea98c4c517"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aba28ee97ffe6d508e26f534ec7e62f8f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d5f/a00663.html#aba28ee97ffe6d508e26f534ec7e62f8f">stop</a> () noexcept</td></tr>
-<tr class="separator:aba28ee97ffe6d508e26f534ec7e62f8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
-<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
-<div class="textblock"><p>Класс для постоянной проверки выбранного адреса на доступность. </p>
-<p>Выполняет постоянную проверку выбранного адреса командой <code>ping</code> по протоколу ICMP. Предоставляет результат в виде сигнала со статус-кодом. </p><dl class="section note"><dt>Заметки</dt><dd>На ОС Windows проверка выполняется не 5 раз, как в обычной команде <code>ping</code> на этой системе, а до тех пор, пока процесс не будет завершен, как на ОС Linux. </dd></dl>
-
-<p class="definition">См. определение в файле <a class="el" href="../../db/d7b/a00296_source.html">quasarsdk_pingtester.h</a> строка <a class="el" href="../../db/d7b/a00296_source.html#l00018">18</a></p>
-</div><h2 class="groupheader">Конструктор(ы)</h2>
-<a id="a9bc32f421394a81fc7a63bf771b4041d" name="a9bc32f421394a81fc7a63bf771b4041d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9bc32f421394a81fc7a63bf771b4041d">&#9670;&#160;</a></span>PingTester()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../d7/d5f/a00663.html">PingTester</a> </td>
-          <td>(</td>
-          <td class="paramtype">QObject *&#160;</td>
-          <td class="paramname"><em>parent</em> = <code>nullptr</code></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Создает новый экземпляр класса <a class="el" href="../../d7/d5f/a00663.html" title="Класс для постоянной проверки выбранного адреса на доступность.">PingTester</a> с указанным родителем. </p>
-
-<p class="definition">См. определение в файле <a class="el" href="../../d1/d5d/a00311_source.html">quasarsdk_pingtester.c++</a> строка <a class="el" href="../../d1/d5d/a00311_source.html#l00020">20</a></p>
-
-</div>
-</div>
-<a id="a1536c93dfb1f242946cf133d92df8985" name="a1536c93dfb1f242946cf133d92df8985"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1536c93dfb1f242946cf133d92df8985">&#9670;&#160;</a></span>~PingTester()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">~<a class="el" href="../../d7/d5f/a00663.html">PingTester</a> </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Удаляет объект и принудительно завершает все дочерние процессы. </p>
-
-<p class="definition">См. определение в файле <a class="el" href="../../d1/d5d/a00311_source.html">quasarsdk_pingtester.c++</a> строка <a class="el" href="../../d1/d5d/a00311_source.html#l00031">31</a></p>
-
-</div>
-</div>
-<h2 class="groupheader">Методы</h2>
-<a id="a5ddebc72addc87883c9112ea98c4c517" name="a5ddebc72addc87883c9112ea98c4c517"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5ddebc72addc87883c9112ea98c4c517">&#9670;&#160;</a></span>start()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void start </td>
-          <td>(</td>
-          <td class="paramtype">const QString &amp;&#160;</td>
-          <td class="paramname"><em>address</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const QStringList &amp;&#160;</td>
-          <td class="paramname"><em>args</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Запускает проверку доступности по указанному адресу. </p>
-<p>Выбрасывает исключение, если адрес некорректный. </p><dl class="params"><dt>Аргументы</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">address</td><td>- IPv4-адрес для проверки. </td></tr>
-    <tr><td class="paramname">args</td><td>- список аргументов для команды <code>ping</code>. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="exception"><dt>Исключения</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">std::invalid_argument.</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">См. определение в файле <a class="el" href="../../d1/d5d/a00311_source.html">quasarsdk_pingtester.c++</a> строка <a class="el" href="../../d1/d5d/a00311_source.html#l00040">40</a></p>
-
-</div>
-</div>
-<a id="aba28ee97ffe6d508e26f534ec7e62f8f" name="aba28ee97ffe6d508e26f534ec7e62f8f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aba28ee97ffe6d508e26f534ec7e62f8f">&#9670;&#160;</a></span>stop()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void stop </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Останавливает проверку доступности. </p>
-
-<p class="definition">См. определение в файле <a class="el" href="../../d1/d5d/a00311_source.html">quasarsdk_pingtester.c++</a> строка <a class="el" href="../../d1/d5d/a00311_source.html#l00054">54</a></p>
-
-</div>
-</div>
-<a id="a3ec8bbafe23004823fbd69165109d0fc" name="a3ec8bbafe23004823fbd69165109d0fc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3ec8bbafe23004823fbd69165109d0fc">&#9670;&#160;</a></span>result</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void result </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../de/d33/a00651.html#a26cd5c2531deeff8b716e740ddc8e469">Enums::PingStatus</a>&#160;</td>
-          <td class="paramname"><em>res</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">signal</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Сигнал предоставляет результат выполнения команды <code>ping</code>. </p>
-<dl class="params"><dt>Аргументы</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">res</td><td>- статус-код. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<hr/>Объявления и описания членов классов находятся в файлах:<ul>
-<li><a class="el" href="../../db/d7b/a00296_source.html">quasarsdk_pingtester.h</a></li>
-<li><a class="el" href="../../d1/d5d/a00311_source.html">quasarsdk_pingtester.c++</a></li>
-</ul>
-</div><!-- contents -->
+<p>Полный список членов класса <a class="el" href="../../d9/d41/a00666.html">OutputRedirectServer</a>, включая наследуемые из базового класса</p>
+<table class="directory">
+  <tr class="even"><td class="entry"><a class="el" href="../../d9/d41/a00666.html#a998b60d68b42b365b6248073502e9ff7">OutputRedirectServer</a>(QObject *parent=nullptr)</td><td class="entry"><a class="el" href="../../d9/d41/a00666.html">OutputRedirectServer</a></td><td class="entry"><span class="mlabel">explicit</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="../../d9/d41/a00666.html#ad9f50d5dc30f2e0482b19a5f0eba0e2e">push</a>(const QByteArray &amp;data) noexcept</td><td class="entry"><a class="el" href="../../d9/d41/a00666.html">OutputRedirectServer</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="../../d9/d41/a00666.html#a28ca97829e1fcdc9073ca1c651e08ffa">start</a>(const QString &amp;address) noexcept</td><td class="entry"><a class="el" href="../../d9/d41/a00666.html">OutputRedirectServer</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="../../d9/d41/a00666.html#aba28ee97ffe6d508e26f534ec7e62f8f">stop</a>() noexcept</td><td class="entry"><a class="el" href="../../d9/d41/a00666.html">OutputRedirectServer</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="../../d9/d41/a00666.html#afccfb74379bac9eb8631f93431cabbf3">~OutputRedirectServer</a>() override</td><td class="entry"><a class="el" href="../../d9/d41/a00666.html">OutputRedirectServer</a></td><td class="entry"></td></tr>
+</table></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../d7/ddb/a00361.html">QuasarSDK</a></li><li class="navelem"><a class="el" href="../../d7/d5f/a00663.html">PingTester</a></li>
     <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
   </ul>
 </div>

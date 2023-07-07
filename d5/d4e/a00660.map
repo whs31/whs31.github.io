@@ -1,0 +1,17 @@
+<map id="QuasarAPI" name="QuasarAPI">
+<area shape="rect" id="node1" title="Публичный интерфейс для работы с сетевой составляющей РЛС &quot;Квазар&quot;." alt="" coords="1115,290,1204,317"/>
+<area shape="rect" id="node2" href="$d1/daa/a00638.html" title="Класс&#45;хранилище для текущей телеметрии РЛС." alt="" coords="494,163,580,191"/>
+<area shape="rect" id="node7" href="$da/d36/a00650.html" title="Класс для работы с сервисом navd2 на РЛС." alt="" coords="787,351,916,379"/>
+<area shape="rect" id="node3" href="$d2/d3e/a00366.html#df/dcf/a00642" title="Датаграмма телеметрии от РЛС к наземке." alt="" coords="167,163,318,191"/>
+<area shape="rect" id="node4" href="$d7/d80/a00614.html" title="Класс&#45;хранилище для данных, связанных с РЛС." alt="" coords="800,94,903,122"/>
+<area shape="rect" id="node5" href="$d1/d97/a00670.html" title="Класс для постоянной проверки выбранного адреса на доступность." alt="" coords="808,183,896,211"/>
+<area shape="rect" id="node6" href="$d9/d41/a00666.html" title="Класс для перенаправления вывода РЛС в отдельный Telnet сервер." alt="" coords="771,235,932,263"/>
+<area shape="rect" id="node8" href="$d7/db1/a00590.html" title="Базовый класс для сокетов, работающих по протоколу UDP." alt="" coords="181,369,305,396"/>
+<area shape="rect" id="node10" href="$d8/d00/a00606.html" title="Сокет для отправки команд на РЛС." alt="" coords="486,482,588,510"/>
+<area shape="rect" id="node12" href="$da/d6e/a00610.html" title="Сокет для приема и обработки вывода с РЛС." alt="" coords="639,292,747,320"/>
+<area shape="rect" id="node15" href="$da/de4/a00594.html" title="Базовый класс для UDP сокетов, требующих целостность датаграммы." alt="" coords="459,403,615,431"/>
+<area shape="rect" id="node9" href="$d6/d92/a00586.html" title="Абстрактный интерфейс для классов с функционалом подключения и отключения к сетевому адресу." alt="" coords="5,369,112,396"/>
+<area shape="rect" id="node11" href="$d5/d0a/a00602.html" title="Класс для хранения и обработки аргументов команд сервиса execd." alt="" coords="161,482,324,510"/>
+<area shape="rect" id="node13" href="$d0/db1/a00622.html" title="Класс для приема больших файлов с РЛС по протоколу TCP&#45;IP." alt="" coords="808,455,895,483"/>
+<area shape="rect" id="node14" href="$de/d85/a00618.html" title="Класс для приема больших файлов с РЛС по протоколу UDP." alt="" coords="805,403,899,431"/>
+</map>

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.6"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuaSAR: Исходный файл quasarsdk_pingtester.c++</title>
+<title>QuaSAR: Исходный файл quasarsdk_outputredirectserver.c++</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -92,81 +92,80 @@ $(document).ready(function(){initNavTree('d1/d5d/a00311_source.html','../../'); 
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">quasarsdk_pingtester.c++</div></div>
+  <div class="headertitle"><div class="title">quasarsdk_outputredirectserver.c++</div></div>
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="../../db/d7b/a00296.html">quasarsdk_pingtester.h</a>&quot;</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;stdexcept&gt;</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;QtCore/QProcess&gt;</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d7/ddb/a00361.html">QuasarSDK</a></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>{</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="../../d7/d5f/a00663.html#a9bc32f421394a81fc7a63bf771b4041d">   20</a></span>  <a class="code hl_function" href="../../d7/d5f/a00663.html#a9bc32f421394a81fc7a63bf771b4041d">PingTester::PingTester</a>(QObject* parent)</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>      : QObject(parent)</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>      , m_process(new QProcess(this))</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>      , m_address(<span class="stringliteral">&quot;127.0.0.1&quot;</span>)</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>      , m_args({})</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>  {</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    m_process-&gt;setProcessChannelMode(QProcess::MergedChannels);</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    connect(m_process, &amp;QProcess::readyRead, <span class="keyword">this</span>, &amp;PingTester::recv);</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>  }</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="../../d7/d5f/a00663.html#a1536c93dfb1f242946cf133d92df8985">   31</a></span>  <a class="code hl_function" href="../../d7/d5f/a00663.html#a1536c93dfb1f242946cf133d92df8985">PingTester::~PingTester</a>() { m_process-&gt;terminate(); }</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="../../db/d7b/a00296.html">quasarsdk_outputredirectserver.h</a>&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;QtCore/QDebug&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;QtNetwork/QTcpServer&gt;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;QtNetwork/QTcpSocket&gt;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../dc/d59/a00364.html">QuasarSDK</a></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>{</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="../../d9/d41/a00666.html#a998b60d68b42b365b6248073502e9ff7">   17</a></span>  <a class="code hl_function" href="../../d9/d41/a00666.html#a998b60d68b42b365b6248073502e9ff7">OutputRedirectServer::OutputRedirectServer</a>(QObject* parent)</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>      : QObject(parent)</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>      , m_server(new QTcpServer(this))</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>      , m_socket(nullptr)</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>  {</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    connect(m_server, &amp;QTcpServer::newConnection, <span class="keyword">this</span>, &amp;OutputRedirectServer::clientConnected);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>  }</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="../../d9/d41/a00666.html#afccfb74379bac9eb8631f93431cabbf3">   26</a></span>  <a class="code hl_function" href="../../d9/d41/a00666.html#afccfb74379bac9eb8631f93431cabbf3">OutputRedirectServer::~OutputRedirectServer</a>()</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>  {</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keywordflow">if</span>(m_socket)</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>      <span class="keyword">delete</span> m_socket;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    m_server-&gt;close();</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>  }</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="../../d7/d5f/a00663.html#a5ddebc72addc87883c9112ea98c4c517">   40</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="../../d7/d5f/a00663.html#a5ddebc72addc87883c9112ea98c4c517">PingTester::start</a>(<span class="keyword">const</span> QString&amp; address, <span class="keyword">const</span> QStringList&amp; args)</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>  {</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keywordflow">if</span>(address.split(<span class="charliteral">&#39;.&#39;</span>).size() != 4)</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>      <span class="keywordflow">throw</span> std::invalid_argument(<span class="stringliteral">&quot;Invalid address is provided to ping tester&quot;</span>);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="../../d9/d41/a00666.html#a28ca97829e1fcdc9073ca1c651e08ffa">   37</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="../../d9/d41/a00666.html#a28ca97829e1fcdc9073ca1c651e08ffa">OutputRedirectServer::start</a>(<span class="keyword">const</span> QString&amp; address) <span class="keyword">noexcept</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>  {</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keywordflow">if</span>(not address.contains(<span class="stringliteral">&quot;:&quot;</span>) or address.split(<span class="stringliteral">&quot;:&quot;</span>).size() &gt; 2)</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    {</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>      qCritical().noquote() &lt;&lt; <span class="stringliteral">&quot;[TCP] Provided incorrect IP:&quot;</span> &lt;&lt; address;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>      <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    }</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    m_address = address;</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span>&amp; arg : args)</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>      m_args += QString(arg);</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    this-&gt;ping();</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>  }</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="../../d7/d5f/a00663.html#aba28ee97ffe6d508e26f534ec7e62f8f">   54</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="../../d7/d5f/a00663.html#aba28ee97ffe6d508e26f534ec7e62f8f">PingTester::stop</a>() noexcept { m_process-&gt;kill(); }</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>  <span class="keywordtype">void</span> PingTester::ping()</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>  {</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="preprocessor">    #ifdef Q_OS_WIN</span></div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    m_process-&gt;start(<span class="stringliteral">&quot;ping&quot;</span>, QStringList(<span class="stringliteral">&quot;-t&quot;</span>) &lt;&lt; QString(m_address) );</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="preprocessor">    #else</span></div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    m_process-&gt;start(<span class="stringliteral">&quot;ping&quot;</span>, QStringList() &lt;&lt; QString(m_address) );</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="preprocessor">    #endif</span></div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>  }</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>  <span class="keywordtype">void</span> PingTester::recv()</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>  {</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="keyword">auto</span> data = m_process-&gt;readAll();</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="keywordtype">bool</span> success = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="preprocessor">    #ifdef Q_OS_WIN</span></div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    success = data.contains(<span class="stringliteral">&quot;TTL=&quot;</span>);</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="preprocessor">    #else</span></div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    success = data.contains(<span class="stringliteral">&quot;time=&quot;</span>);</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="preprocessor">    #endif</span></div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    emit <a class="code hl_signal" href="../../d7/d5f/a00663.html#a3ec8bbafe23004823fbd69165109d0fc">result</a>(success ? <a class="code hl_enumvalue" href="../../de/d33/a00651.html#a26cd5c2531deeff8b716e740ddc8e469afdfbdf3247bd36a1f17270d5cec74c9c">Enums::PingStatus::Success</a> : <a class="code hl_enumvalue" href="../../de/d33/a00651.html#a26cd5c2531deeff8b716e740ddc8e469a98cb58869380e6582c793dcd0e86598c">Enums::PingStatus::Timeout</a>);</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>  }</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>} <span class="comment">// QuasarSDK</span></div>
-<div class="ttc" id="aa00296_html"><div class="ttname"><a href="../../db/d7b/a00296.html">quasarsdk_pingtester.h</a></div></div>
-<div class="ttc" id="aa00361_html"><div class="ttname"><a href="../../d7/ddb/a00361.html">QuasarSDK</a></div><div class="ttdoc">Пространство имен комплекта разработчика РЛС &quot;Квазар&quot;.</div></div>
-<div class="ttc" id="aa00651_html_a26cd5c2531deeff8b716e740ddc8e469a98cb58869380e6582c793dcd0e86598c"><div class="ttname"><a href="../../de/d33/a00651.html#a26cd5c2531deeff8b716e740ddc8e469a98cb58869380e6582c793dcd0e86598c">QuasarSDK::Enums::Timeout</a></div><div class="ttdeci">@ Timeout</div><div class="ttdoc">Команда не выполнена.</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d55/a00323_source.html#l00033">quasarsdk_enums.h:33</a></div></div>
-<div class="ttc" id="aa00651_html_a26cd5c2531deeff8b716e740ddc8e469afdfbdf3247bd36a1f17270d5cec74c9c"><div class="ttname"><a href="../../de/d33/a00651.html#a26cd5c2531deeff8b716e740ddc8e469afdfbdf3247bd36a1f17270d5cec74c9c">QuasarSDK::Enums::Success</a></div><div class="ttdeci">@ Success</div><div class="ttdoc">Успешное выполнение команды ping.</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d55/a00323_source.html#l00031">quasarsdk_enums.h:31</a></div></div>
-<div class="ttc" id="aa00663_html_a1536c93dfb1f242946cf133d92df8985"><div class="ttname"><a href="../../d7/d5f/a00663.html#a1536c93dfb1f242946cf133d92df8985">QuasarSDK::PingTester::~PingTester</a></div><div class="ttdeci">~PingTester() override</div><div class="ttdoc">Удаляет объект и принудительно завершает все дочерние процессы.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d5d/a00311_source.html#l00031">quasarsdk_pingtester.c++:31</a></div></div>
-<div class="ttc" id="aa00663_html_a3ec8bbafe23004823fbd69165109d0fc"><div class="ttname"><a href="../../d7/d5f/a00663.html#a3ec8bbafe23004823fbd69165109d0fc">QuasarSDK::PingTester::result</a></div><div class="ttdeci">void result(Enums::PingStatus res)</div><div class="ttdoc">Сигнал предоставляет результат выполнения команды ping.</div></div>
-<div class="ttc" id="aa00663_html_a5ddebc72addc87883c9112ea98c4c517"><div class="ttname"><a href="../../d7/d5f/a00663.html#a5ddebc72addc87883c9112ea98c4c517">QuasarSDK::PingTester::start</a></div><div class="ttdeci">void start(const QString &amp;address, const QStringList &amp;args)</div><div class="ttdoc">Запускает проверку доступности по указанному адресу.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d5d/a00311_source.html#l00040">quasarsdk_pingtester.c++:40</a></div></div>
-<div class="ttc" id="aa00663_html_a9bc32f421394a81fc7a63bf771b4041d"><div class="ttname"><a href="../../d7/d5f/a00663.html#a9bc32f421394a81fc7a63bf771b4041d">QuasarSDK::PingTester::PingTester</a></div><div class="ttdeci">PingTester(QObject *parent=nullptr)</div><div class="ttdoc">Создает новый экземпляр класса PingTester с указанным родителем.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d5d/a00311_source.html#l00020">quasarsdk_pingtester.c++:20</a></div></div>
-<div class="ttc" id="aa00663_html_aba28ee97ffe6d508e26f534ec7e62f8f"><div class="ttname"><a href="../../d7/d5f/a00663.html#aba28ee97ffe6d508e26f534ec7e62f8f">QuasarSDK::PingTester::stop</a></div><div class="ttdeci">void stop() noexcept</div><div class="ttdoc">Останавливает проверку доступности.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d5d/a00311_source.html#l00054">quasarsdk_pingtester.c++:54</a></div></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    QString ip = address.split(<span class="stringliteral">&quot;:&quot;</span>).first();</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    uint16_t port = address.split(<span class="stringliteral">&quot;:&quot;</span>).last().toUInt();</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keywordflow">if</span>(m_server-&gt;listen(QHostAddress(ip), port))</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>      qDebug() &lt;&lt; <span class="stringliteral">&quot;[REDIRECT] Server started successfully at&quot;</span> &lt;&lt; address;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>      qCritical() &lt;&lt; <span class="stringliteral">&quot;[REDIRECT] Server failed to start&quot;</span>;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>  }</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="../../d9/d41/a00666.html#aba28ee97ffe6d508e26f534ec7e62f8f">   55</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="../../d9/d41/a00666.html#aba28ee97ffe6d508e26f534ec7e62f8f">OutputRedirectServer::stop</a>() noexcept { m_server-&gt;close(); }</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="../../d9/d41/a00666.html#ad9f50d5dc30f2e0482b19a5f0eba0e2e">   61</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="../../d9/d41/a00666.html#ad9f50d5dc30f2e0482b19a5f0eba0e2e">OutputRedirectServer::push</a>(<span class="keyword">const</span> QByteArray&amp; data) <span class="keyword">noexcept</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>  {</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keywordflow">if</span>(m_socket == <span class="keyword">nullptr</span>)</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>      <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    m_socket-&gt;write(data);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    m_socket-&gt;flush();</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    m_socket-&gt;waitForBytesWritten();</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>  }</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>  <span class="keywordtype">void</span> OutputRedirectServer::clientConnected()</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>  {</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="keywordflow">if</span>(m_socket != <span class="keyword">nullptr</span>)</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>      <span class="keyword">delete</span> m_socket;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    m_socket = m_server-&gt;nextPendingConnection();</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>  }</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>} <span class="comment">// QuasarSDK</span></div>
+<div class="ttc" id="aa00296_html"><div class="ttname"><a href="../../db/d7b/a00296.html">quasarsdk_outputredirectserver.h</a></div></div>
+<div class="ttc" id="aa00364_html"><div class="ttname"><a href="../../dc/d59/a00364.html">QuasarSDK</a></div><div class="ttdoc">Пространство имен комплекта разработчика РЛС &quot;Квазар&quot;.</div></div>
+<div class="ttc" id="aa00666_html_a28ca97829e1fcdc9073ca1c651e08ffa"><div class="ttname"><a href="../../d9/d41/a00666.html#a28ca97829e1fcdc9073ca1c651e08ffa">QuasarSDK::OutputRedirectServer::start</a></div><div class="ttdeci">void start(const QString &amp;address) noexcept</div><div class="ttdoc">Запускает сервер перенаправления вывода на указанном адресе.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d5d/a00311_source.html#l00037">quasarsdk_outputredirectserver.c++:37</a></div></div>
+<div class="ttc" id="aa00666_html_a998b60d68b42b365b6248073502e9ff7"><div class="ttname"><a href="../../d9/d41/a00666.html#a998b60d68b42b365b6248073502e9ff7">QuasarSDK::OutputRedirectServer::OutputRedirectServer</a></div><div class="ttdeci">OutputRedirectServer(QObject *parent=nullptr)</div><div class="ttdoc">Создает новый объект сервера перенаправления вывода с указанным родителем.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d5d/a00311_source.html#l00017">quasarsdk_outputredirectserver.c++:17</a></div></div>
+<div class="ttc" id="aa00666_html_aba28ee97ffe6d508e26f534ec7e62f8f"><div class="ttname"><a href="../../d9/d41/a00666.html#aba28ee97ffe6d508e26f534ec7e62f8f">QuasarSDK::OutputRedirectServer::stop</a></div><div class="ttdeci">void stop() noexcept</div><div class="ttdoc">Останавливает сервер.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d5d/a00311_source.html#l00055">quasarsdk_outputredirectserver.c++:55</a></div></div>
+<div class="ttc" id="aa00666_html_ad9f50d5dc30f2e0482b19a5f0eba0e2e"><div class="ttname"><a href="../../d9/d41/a00666.html#ad9f50d5dc30f2e0482b19a5f0eba0e2e">QuasarSDK::OutputRedirectServer::push</a></div><div class="ttdeci">void push(const QByteArray &amp;data) noexcept</div><div class="ttdoc">Отправляет данные в сервер.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d5d/a00311_source.html#l00061">quasarsdk_outputredirectserver.c++:61</a></div></div>
+<div class="ttc" id="aa00666_html_afccfb74379bac9eb8631f93431cabbf3"><div class="ttname"><a href="../../d9/d41/a00666.html#afccfb74379bac9eb8631f93431cabbf3">QuasarSDK::OutputRedirectServer::~OutputRedirectServer</a></div><div class="ttdeci">~OutputRedirectServer() override</div><div class="ttdoc">Удаляет объект и закрывает сервер.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d5d/a00311_source.html#l00026">quasarsdk_outputredirectserver.c++:26</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_6719ab1f1f7655efc2fa43f7eb574fd1.html">libs</a></li><li class="navelem"><a class="el" href="../../dir_c5d4018c0fe90f1660bca3f6235e9876.html">libquasarsdk</a></li><li class="navelem"><a class="el" href="../../dir_0f9d83d35d962a1c6c5b739b964daf6d.html">src</a></li><li class="navelem"><a class="el" href="../../dir_d734eb5648cc5bb2b8e3f352630d13d6.html">public</a></li><li class="navelem"><a class="el" href="../../dir_6044e2781c4e00bfc2204a54460222f5.html">utl</a></li><li class="navelem"><b>quasarsdk_pingtester.c++</b></li>
+    <li class="navelem"><a class="el" href="../../dir_6719ab1f1f7655efc2fa43f7eb574fd1.html">libs</a></li><li class="navelem"><a class="el" href="../../dir_c5d4018c0fe90f1660bca3f6235e9876.html">libquasarsdk</a></li><li class="navelem"><a class="el" href="../../dir_0f9d83d35d962a1c6c5b739b964daf6d.html">src</a></li><li class="navelem"><a class="el" href="../../dir_d734eb5648cc5bb2b8e3f352630d13d6.html">public</a></li><li class="navelem"><a class="el" href="../../dir_6044e2781c4e00bfc2204a54460222f5.html">utl</a></li><li class="navelem"><b>quasarsdk_outputredirectserver.c++</b></li>
     <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
   </ul>
 </div>
