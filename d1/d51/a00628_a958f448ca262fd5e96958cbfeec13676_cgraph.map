@@ -1,5 +1,0 @@
-<map id="start" name="start">
-<area shape="rect" id="node1" title="Starts socket on given address." alt="" coords="5,14,57,42"/>
-<area shape="rect" id="node2" href="$d0/d8d/a00612.html#a01948d8cb99ea51677e34382c9e2c8aa" title="Binds this socket to specified address." alt="" coords="105,5,312,50"/>
-<area shape="rect" id="node3" href="$d0/d8d/a00612.html#a6aac8bbc4a1ac6c37d4c9f0564256fbd" title="Returns current socket port." alt="" coords="360,5,567,50"/>
-</map>

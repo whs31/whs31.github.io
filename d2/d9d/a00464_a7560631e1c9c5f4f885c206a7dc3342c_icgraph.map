@@ -1,6 +1,0 @@
-<map id="tcp" name="tcp">
-<area shape="rect" id="node1" title="Returns TCP&#45;IP cache directory." alt="" coords="459,32,500,60"/>
-<area shape="rect" id="node2" href="$d2/d9d/a00464.html#a1979f13990bd009fe15969804f0e30bf" title="Creates and setups image cache." alt="" coords="228,5,371,33"/>
-<area shape="rect" id="node4" href="$d9/dc5/a00480.html#aa5a5adb0e730b9b703d52015ee744bca" title="Searches for image files in application TCP&#45;IO cache directory." alt="" coords="188,57,411,85"/>
-<area shape="rect" id="node3" href="$d2/d9d/a00464.html#a302e70bd6e9c041eee58143363ab1475" title="Erases image and TCP&#45;IP cache from disk." alt="" coords="5,5,140,33"/>
-</map>

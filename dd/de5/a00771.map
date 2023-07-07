@@ -1,5 +1,0 @@
-<map id="StripSocket" name="StripSocket">
-<area shape="rect" id="node1" title="Класс для приема больших файлов с РЛС по протоколу UDP." alt="" coords="36,157,130,184"/>
-<area shape="rect" id="node2" href="$d5/de8/a00749.html" title="Базовый класс для UDP сокетов, требующих целостность датаграммы." alt="" coords="5,81,161,109"/>
-<area shape="rect" id="node3" href="$d1/d79/a00745.html" title="Базовый класс для сокетов, работающих по протоколу UDP." alt="" coords="21,5,145,33"/>
-</map>

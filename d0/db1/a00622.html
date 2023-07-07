@@ -101,8 +101,24 @@ $(document).ready(function(){initNavTree('d0/db1/a00622.html','../../'); initRes
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="../../d5/d42/a00269_source.html">QuasarSDK/FSend/TCP</a>&gt;</code></p>
-
-<p>Базовые классы:QObject.</p>
+<div class="dynheader">
+Граф наследования:TCPServer:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dc/db1/a00621.png" border="0" usemap="#aTCPServer_inherit__map" alt="Inheritance graph"/></div>
+<map name="aTCPServer_inherit__map" id="aTCPServer_inherit__map">
+<area shape="rect" title="Класс для приема больших файлов с РЛС по протоколу TCP&#45;IP." alt="" coords="15,81,102,109"/>
+<area shape="rect" href="../../d6/d92/a00586.html" title="Абстрактный интерфейс для классов с функционалом подключения и отключения к сетевому адресу." alt="" coords="5,5,112,33"/>
+</map>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">см. легенду</a>]</span></center></div>
+<div class="dynheader">
+Граф связей класса TCPServer:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dc/d4d/a00620.png" border="0" usemap="#aTCPServer_coll__map" alt="Collaboration graph"/></div>
+<map name="aTCPServer_coll__map" id="aTCPServer_coll__map">
+<area shape="rect" title="Класс для приема больших файлов с РЛС по протоколу TCP&#45;IP." alt="" coords="15,81,102,109"/>
+<area shape="rect" href="../../d6/d92/a00586.html" title="Абстрактный интерфейс для классов с функционалом подключения и отключения к сетевому адресу." alt="" coords="5,5,112,33"/>
+</map>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">см. легенду</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="signals" name="signals"></a>
 Сигналы</h2></td></tr>
@@ -117,17 +133,29 @@ $(document).ready(function(){initNavTree('d0/db1/a00622.html','../../'); initRes
 Открытые члены</h2></td></tr>
 <tr class="memitem:aae83f860fbaa08693629478bba2b0ae0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/db1/a00622.html#aae83f860fbaa08693629478bba2b0ae0">TCPServer</a> (QObject *parent=nullptr)</td></tr>
 <tr class="separator:aae83f860fbaa08693629478bba2b0ae0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a28ca97829e1fcdc9073ca1c651e08ffa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/db1/a00622.html#a28ca97829e1fcdc9073ca1c651e08ffa">start</a> (const QString &amp;address) noexcept</td></tr>
-<tr class="separator:a28ca97829e1fcdc9073ca1c651e08ffa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aba28ee97ffe6d508e26f534ec7e62f8f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/db1/a00622.html#aba28ee97ffe6d508e26f534ec7e62f8f">stop</a> () noexcept</td></tr>
-<tr class="separator:aba28ee97ffe6d508e26f534ec7e62f8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9ba761a38a1a632dc057acba7c1a5ea"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/db1/a00622.html#ab9ba761a38a1a632dc057acba7c1a5ea">start</a> (const QString &amp;address) override</td></tr>
+<tr class="separator:ab9ba761a38a1a632dc057acba7c1a5ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6dd2bfebf59a94006c2c8273546a685c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/db1/a00622.html#a6dd2bfebf59a94006c2c8273546a685c">start</a> (const QHostAddress &amp;address) noexcept final</td></tr>
+<tr class="separator:a6dd2bfebf59a94006c2c8273546a685c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a840c0d27d0ff00ce555c1a539adf8abf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/db1/a00622.html#a840c0d27d0ff00ce555c1a539adf8abf">start</a> (const QHostAddress &amp;address, uint16_t port) noexcept override</td></tr>
+<tr class="separator:a840c0d27d0ff00ce555c1a539adf8abf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add3dd658f58b302a080d9d8d6e57812b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/db1/a00622.html#add3dd658f58b302a080d9d8d6e57812b">stop</a> () noexcept override</td></tr>
+<tr class="separator:add3dd658f58b302a080d9d8d6e57812b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e4a08a21d3f225b03765b409527bb77"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d92/a00586.html#a7e4a08a21d3f225b03765b409527bb77">start</a> (const QString &amp;address)=0</td></tr>
+<tr class="separator:a7e4a08a21d3f225b03765b409527bb77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a242f95d43813c916dff2aad4b347dd43"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d92/a00586.html#a242f95d43813c916dff2aad4b347dd43">start</a> (const QHostAddress &amp;address) noexcept=0</td></tr>
+<tr class="separator:a242f95d43813c916dff2aad4b347dd43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4e3f660e7c998c947c410d10c21982f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d92/a00586.html#ac4e3f660e7c998c947c410d10c21982f">start</a> (const QHostAddress &amp;address, uint16_t port) noexcept=0</td></tr>
+<tr class="separator:ac4e3f660e7c998c947c410d10c21982f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b7e5ca7163374ca49fea010385f3513"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d92/a00586.html#a5b7e5ca7163374ca49fea010385f3513">stop</a> () noexcept=0</td></tr>
+<tr class="separator:a5b7e5ca7163374ca49fea010385f3513"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
 <div class="textblock"><p>Класс для приема больших файлов с РЛС по протоколу TCP-IP. </p>
 <p>Используется для приема цельных пакетов с телескопическими и полосовыми изображениями с РЛС, а также для приёма .zip-архивов.</p>
-<p>Предоставляет отладочные метрики по аналогии с классами-наследниками <a class="el" href="../../d7/db1/a00590.html" title="Базовый класс для сокетов, работающих по протоколу UDP.">BaseUDPSocket</a>. </p>
+<p>Предоставляет отладочные метрики по аналогии с классами-наследниками <a class="el" href="../../d7/db1/a00590.html" title="Базовый класс для сокетов, работающих по протоколу UDP.">BaseUDPSocket</a>. , <a class="el" href="../../d6/d92/a00586.html" title="Абстрактный интерфейс для классов с функционалом подключения и отключения к сетевому адресу.">IConnectable</a> </p>
 
-<p class="definition">См. определение в файле <a class="el" href="../../d5/d42/a00269_source.html">quasarsdk_tcpserver.h</a> строка <a class="el" href="../../d5/d42/a00269_source.html#l00018">18</a></p>
+<p class="definition">См. определение в файле <a class="el" href="../../d5/d42/a00269_source.html">quasarsdk_tcpserver.h</a> строка <a class="el" href="../../d5/d42/a00269_source.html#l00019">19</a></p>
 </div><h2 class="groupheader">Конструктор(ы)</h2>
 <a id="aae83f860fbaa08693629478bba2b0ae0" name="aae83f860fbaa08693629478bba2b0ae0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aae83f860fbaa08693629478bba2b0ae0">&#9670;&#160;</a></span>TCPServer()</h2>
@@ -160,8 +188,8 @@ $(document).ready(function(){initNavTree('d0/db1/a00622.html','../../'); initRes
 </div>
 </div>
 <h2 class="groupheader">Методы</h2>
-<a id="a28ca97829e1fcdc9073ca1c651e08ffa" name="a28ca97829e1fcdc9073ca1c651e08ffa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a28ca97829e1fcdc9073ca1c651e08ffa">&#9670;&#160;</a></span>start()</h2>
+<a id="ab9ba761a38a1a632dc057acba7c1a5ea" name="ab9ba761a38a1a632dc057acba7c1a5ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9ba761a38a1a632dc057acba7c1a5ea">&#9670;&#160;</a></span>start() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -179,7 +207,7 @@ $(document).ready(function(){initNavTree('d0/db1/a00622.html','../../'); initRes
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -192,12 +220,101 @@ $(document).ready(function(){initNavTree('d0/db1/a00622.html','../../'); initRes
   </dd>
 </dl>
 
-<p class="definition">См. определение в файле <a class="el" href="../../d9/dd6/a00272_source.html">quasarsdk_tcpserver.c++</a> строка <a class="el" href="../../d9/dd6/a00272_source.html#l00038">38</a></p>
+<p>Замещает <a class="el" href="../../d6/d92/a00586.html#a7e4a08a21d3f225b03765b409527bb77">IConnectable</a>.</p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d9/dd6/a00272_source.html">quasarsdk_tcpserver.c++</a> строка <a class="el" href="../../d9/dd6/a00272_source.html#l00039">39</a></p>
 
 </div>
 </div>
-<a id="aba28ee97ffe6d508e26f534ec7e62f8f" name="aba28ee97ffe6d508e26f534ec7e62f8f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aba28ee97ffe6d508e26f534ec7e62f8f">&#9670;&#160;</a></span>stop()</h2>
+<a id="a6dd2bfebf59a94006c2c8273546a685c" name="a6dd2bfebf59a94006c2c8273546a685c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6dd2bfebf59a94006c2c8273546a685c">&#9670;&#160;</a></span>start() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void start </td>
+          <td>(</td>
+          <td class="paramtype">const QHostAddress &amp;&#160;</td>
+          <td class="paramname"><em>address</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">final</span><span class="mlabel">virtual</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Не имеет реализации. </p>
+<p>Функция унаследована от интерфейса <a class="el" href="../../d6/d92/a00586.html" title="Абстрактный интерфейс для классов с функционалом подключения и отключения к сетевому адресу.">IConnectable</a> и не имеет реализации в этом классе. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">address</td><td>- QHostAddress. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Замещает <a class="el" href="../../d6/d92/a00586.html#a242f95d43813c916dff2aad4b347dd43">IConnectable</a>.</p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d9/dd6/a00272_source.html">quasarsdk_tcpserver.c++</a> строка <a class="el" href="../../d9/dd6/a00272_source.html#l00150">150</a></p>
+
+</div>
+</div>
+<a id="a840c0d27d0ff00ce555c1a539adf8abf" name="a840c0d27d0ff00ce555c1a539adf8abf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a840c0d27d0ff00ce555c1a539adf8abf">&#9670;&#160;</a></span>start() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void start </td>
+          <td>(</td>
+          <td class="paramtype">const QHostAddress &amp;&#160;</td>
+          <td class="paramname"><em>address</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>port</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Запускает TCP-IP сервер на указанном адресе. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">address</td><td>- IPv4-адрес сервера. </td></tr>
+    <tr><td class="paramname">port</td><td>- порт, на котором должен быть запущен сервер. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Замещает <a class="el" href="../../d6/d92/a00586.html#ac4e3f660e7c998c947c410d10c21982f">IConnectable</a>.</p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d9/dd6/a00272_source.html">quasarsdk_tcpserver.c++</a> строка <a class="el" href="../../d9/dd6/a00272_source.html#l00157">157</a></p>
+
+</div>
+</div>
+<a id="add3dd658f58b302a080d9d8d6e57812b" name="add3dd658f58b302a080d9d8d6e57812b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add3dd658f58b302a080d9d8d6e57812b">&#9670;&#160;</a></span>stop()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -214,14 +331,16 @@ $(document).ready(function(){initNavTree('d0/db1/a00622.html','../../'); initRes
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p>Останавливает запущенный TCP-IP сервер. </p>
 
-<p class="definition">См. определение в файле <a class="el" href="../../d9/dd6/a00272_source.html">quasarsdk_tcpserver.c++</a> строка <a class="el" href="../../d9/dd6/a00272_source.html#l00058">58</a></p>
+<p>Замещает <a class="el" href="../../d6/d92/a00586.html#a5b7e5ca7163374ca49fea010385f3513">IConnectable</a>.</p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d9/dd6/a00272_source.html">quasarsdk_tcpserver.c++</a> строка <a class="el" href="../../d9/dd6/a00272_source.html#l00059">59</a></p>
 
 </div>
 </div>

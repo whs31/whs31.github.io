@@ -1,4 +1,4 @@
-<map id="ExecdSocket" name="ExecdSocket">
-<area shape="rect" id="node1" title="Class for execd service interactions." alt="" coords="16,81,119,109"/>
-<area shape="rect" id="node2" href="$da/d6e/a00610.html" title="Base class for handling UDP connections." alt="" coords="5,5,130,33"/>
+<map id="TCPServer" name="TCPServer">
+<area shape="rect" id="node1" title="Класс для приема больших файлов с РЛС по протоколу TCP&#45;IP." alt="" coords="15,81,102,109"/>
+<area shape="rect" id="node2" href="$d6/d92/a00586.html" title="Абстрактный интерфейс для классов с функционалом подключения и отключения к сетевому адресу." alt="" coords="5,5,112,33"/>
 </map>

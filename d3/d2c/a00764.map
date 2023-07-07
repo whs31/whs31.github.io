@@ -1,4 +1,0 @@
-<map id="OutputSocket" name="OutputSocket">
-<area shape="rect" id="node1" title="Сокет для приема и обработки вывода с РЛС." alt="" coords="13,81,122,109"/>
-<area shape="rect" id="node2" href="$d4/dfa/a00746.html" title="Базовый класс для сокетов, работающих по протоколу UDP." alt="" coords="5,5,130,33"/>
-</map>

@@ -1,4 +1,4 @@
-<map id="TCPServer" name="TCPServer">
-<area shape="rect" id="node1" title="Класс для приема больших файлов с РЛС по протоколу TCP&#45;IP." alt="" coords="15,81,102,109"/>
+<map id="PingTester" name="PingTester">
+<area shape="rect" id="node1" title="Класс для постоянной проверки выбранного адреса на доступность." alt="" coords="14,81,103,109"/>
 <area shape="rect" id="node2" href="$d6/d92/a00586.html" title="Абстрактный интерфейс для классов с функционалом подключения и отключения к сетевому адресу." alt="" coords="5,5,112,33"/>
 </map>

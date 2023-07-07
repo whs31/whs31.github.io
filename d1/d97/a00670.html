@@ -101,8 +101,24 @@ $(document).ready(function(){initNavTree('d1/d97/a00670.html','../../'); initRes
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="../../df/d95/a00299_source.html">QuasarSDK/Utility/Ping</a>&gt;</code></p>
-
-<p>Базовые классы:QObject.</p>
+<div class="dynheader">
+Граф наследования:PingTester:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d8/d7a/a00669.png" border="0" usemap="#aPingTester_inherit__map" alt="Inheritance graph"/></div>
+<map name="aPingTester_inherit__map" id="aPingTester_inherit__map">
+<area shape="rect" title="Класс для постоянной проверки выбранного адреса на доступность." alt="" coords="14,81,103,109"/>
+<area shape="rect" href="../../d6/d92/a00586.html" title="Абстрактный интерфейс для классов с функционалом подключения и отключения к сетевому адресу." alt="" coords="5,5,112,33"/>
+</map>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">см. легенду</a>]</span></center></div>
+<div class="dynheader">
+Граф связей класса PingTester:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d0/d5c/a00668.png" border="0" usemap="#aPingTester_coll__map" alt="Collaboration graph"/></div>
+<map name="aPingTester_coll__map" id="aPingTester_coll__map">
+<area shape="rect" title="Класс для постоянной проверки выбранного адреса на доступность." alt="" coords="14,81,103,109"/>
+<area shape="rect" href="../../d6/d92/a00586.html" title="Абстрактный интерфейс для классов с функционалом подключения и отключения к сетевому адресу." alt="" coords="5,5,112,33"/>
+</map>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">см. легенду</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="signals" name="signals"></a>
 Сигналы</h2></td></tr>
@@ -115,16 +131,28 @@ $(document).ready(function(){initNavTree('d1/d97/a00670.html','../../'); initRes
 <tr class="separator:a9bc32f421394a81fc7a63bf771b4041d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1536c93dfb1f242946cf133d92df8985"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d97/a00670.html#a1536c93dfb1f242946cf133d92df8985">~PingTester</a> () override</td></tr>
 <tr class="separator:a1536c93dfb1f242946cf133d92df8985"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5ddebc72addc87883c9112ea98c4c517"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d97/a00670.html#a5ddebc72addc87883c9112ea98c4c517">start</a> (const QString &amp;address, const QStringList &amp;args)</td></tr>
-<tr class="separator:a5ddebc72addc87883c9112ea98c4c517"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aba28ee97ffe6d508e26f534ec7e62f8f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d97/a00670.html#aba28ee97ffe6d508e26f534ec7e62f8f">stop</a> () noexcept</td></tr>
-<tr class="separator:aba28ee97ffe6d508e26f534ec7e62f8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9ba761a38a1a632dc057acba7c1a5ea"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d97/a00670.html#ab9ba761a38a1a632dc057acba7c1a5ea">start</a> (const QString &amp;address) override</td></tr>
+<tr class="separator:ab9ba761a38a1a632dc057acba7c1a5ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3a95a94e1a45edb95f16cdc0376a375"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d97/a00670.html#ac3a95a94e1a45edb95f16cdc0376a375">start</a> (const QHostAddress &amp;address) noexcept override</td></tr>
+<tr class="separator:ac3a95a94e1a45edb95f16cdc0376a375"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a840c0d27d0ff00ce555c1a539adf8abf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d97/a00670.html#a840c0d27d0ff00ce555c1a539adf8abf">start</a> (const QHostAddress &amp;address, uint16_t port) noexcept override</td></tr>
+<tr class="separator:a840c0d27d0ff00ce555c1a539adf8abf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add3dd658f58b302a080d9d8d6e57812b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d97/a00670.html#add3dd658f58b302a080d9d8d6e57812b">stop</a> () noexcept override</td></tr>
+<tr class="separator:add3dd658f58b302a080d9d8d6e57812b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e4a08a21d3f225b03765b409527bb77"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d92/a00586.html#a7e4a08a21d3f225b03765b409527bb77">start</a> (const QString &amp;address)=0</td></tr>
+<tr class="separator:a7e4a08a21d3f225b03765b409527bb77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a242f95d43813c916dff2aad4b347dd43"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d92/a00586.html#a242f95d43813c916dff2aad4b347dd43">start</a> (const QHostAddress &amp;address) noexcept=0</td></tr>
+<tr class="separator:a242f95d43813c916dff2aad4b347dd43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4e3f660e7c998c947c410d10c21982f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d92/a00586.html#ac4e3f660e7c998c947c410d10c21982f">start</a> (const QHostAddress &amp;address, uint16_t port) noexcept=0</td></tr>
+<tr class="separator:ac4e3f660e7c998c947c410d10c21982f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b7e5ca7163374ca49fea010385f3513"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d92/a00586.html#a5b7e5ca7163374ca49fea010385f3513">stop</a> () noexcept=0</td></tr>
+<tr class="separator:a5b7e5ca7163374ca49fea010385f3513"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
 <div class="textblock"><p>Класс для постоянной проверки выбранного адреса на доступность. </p>
-<p>Выполняет постоянную проверку выбранного адреса командой <code>ping</code> по протоколу ICMP. Предоставляет результат в виде сигнала со статус-кодом. </p><dl class="section note"><dt>Заметки</dt><dd>На ОС Windows проверка выполняется не 5 раз, как в обычной команде <code>ping</code> на этой системе, а до тех пор, пока процесс не будет завершен, как на ОС Linux. </dd></dl>
+<p>Выполняет постоянную проверку выбранного адреса командой <code>ping</code> по протоколу ICMP. Предоставляет результат в виде сигнала со статус-кодом. </p><dl class="section note"><dt>Заметки</dt><dd>На ОС Windows проверка выполняется не 5 раз, как в обычной команде <code>ping</code> на этой системе, а до тех пор, пока процесс не будет завершен, как на ОС Linux. , <a class="el" href="../../d6/d92/a00586.html" title="Абстрактный интерфейс для классов с функционалом подключения и отключения к сетевому адресу.">IConnectable</a> </dd></dl>
 
-<p class="definition">См. определение в файле <a class="el" href="../../df/d95/a00299_source.html">quasarsdk_pingtester.h</a> строка <a class="el" href="../../df/d95/a00299_source.html#l00018">18</a></p>
+<p class="definition">См. определение в файле <a class="el" href="../../df/d95/a00299_source.html">quasarsdk_pingtester.h</a> строка <a class="el" href="../../df/d95/a00299_source.html#l00019">19</a></p>
 </div><h2 class="groupheader">Конструктор(ы)</h2>
 <a id="a9bc32f421394a81fc7a63bf771b4041d" name="a9bc32f421394a81fc7a63bf771b4041d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9bc32f421394a81fc7a63bf771b4041d">&#9670;&#160;</a></span>PingTester()</h2>
@@ -181,42 +209,39 @@ $(document).ready(function(){initNavTree('d1/d97/a00670.html','../../'); initRes
 
 <p>Удаляет объект и принудительно завершает все дочерние процессы. </p>
 
-<p class="definition">См. определение в файле <a class="el" href="../../d0/d39/a00314_source.html">quasarsdk_pingtester.c++</a> строка <a class="el" href="../../d0/d39/a00314_source.html#l00031">31</a></p>
+<p class="definition">См. определение в файле <a class="el" href="../../d0/d39/a00314_source.html">quasarsdk_pingtester.c++</a> строка <a class="el" href="../../d0/d39/a00314_source.html#l00030">30</a></p>
 
 </div>
 </div>
 <h2 class="groupheader">Методы</h2>
-<a id="a5ddebc72addc87883c9112ea98c4c517" name="a5ddebc72addc87883c9112ea98c4c517"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5ddebc72addc87883c9112ea98c4c517">&#9670;&#160;</a></span>start()</h2>
+<a id="ab9ba761a38a1a632dc057acba7c1a5ea" name="ab9ba761a38a1a632dc057acba7c1a5ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9ba761a38a1a632dc057acba7c1a5ea">&#9670;&#160;</a></span>start() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void start </td>
           <td>(</td>
           <td class="paramtype">const QString &amp;&#160;</td>
-          <td class="paramname"><em>address</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"><em>address</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">const QStringList &amp;&#160;</td>
-          <td class="paramname"><em>args</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Запускает проверку доступности по указанному адресу. </p>
 <p>Выбрасывает исключение, если адрес некорректный. </p><dl class="params"><dt>Аргументы</dt><dd>
   <table class="params">
-    <tr><td class="paramname">address</td><td>- IPv4-адрес для проверки. </td></tr>
-    <tr><td class="paramname">args</td><td>- список аргументов для команды <code>ping</code>. </td></tr>
+    <tr><td class="paramname">address</td><td>- IPv4-адрес для проверки в виде строки. </td></tr>
   </table>
   </dd>
 </dl>
@@ -227,12 +252,101 @@ $(document).ready(function(){initNavTree('d1/d97/a00670.html','../../'); initRes
   </dd>
 </dl>
 
-<p class="definition">См. определение в файле <a class="el" href="../../d0/d39/a00314_source.html">quasarsdk_pingtester.c++</a> строка <a class="el" href="../../d0/d39/a00314_source.html#l00040">40</a></p>
+<p>Замещает <a class="el" href="../../d6/d92/a00586.html#a7e4a08a21d3f225b03765b409527bb77">IConnectable</a>.</p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d0/d39/a00314_source.html">quasarsdk_pingtester.c++</a> строка <a class="el" href="../../d0/d39/a00314_source.html#l00038">38</a></p>
 
 </div>
 </div>
-<a id="aba28ee97ffe6d508e26f534ec7e62f8f" name="aba28ee97ffe6d508e26f534ec7e62f8f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aba28ee97ffe6d508e26f534ec7e62f8f">&#9670;&#160;</a></span>stop()</h2>
+<a id="ac3a95a94e1a45edb95f16cdc0376a375" name="ac3a95a94e1a45edb95f16cdc0376a375"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3a95a94e1a45edb95f16cdc0376a375">&#9670;&#160;</a></span>start() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void start </td>
+          <td>(</td>
+          <td class="paramtype">const QHostAddress &amp;&#160;</td>
+          <td class="paramname"><em>address</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Запускает проверку доступности по указанному адресу. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">address</td><td>- IPv4-адрес для проверки в виде QHostAddress. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Замещает <a class="el" href="../../d6/d92/a00586.html#a242f95d43813c916dff2aad4b347dd43">IConnectable</a>.</p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d0/d39/a00314_source.html">quasarsdk_pingtester.c++</a> строка <a class="el" href="../../d0/d39/a00314_source.html#l00052">52</a></p>
+
+</div>
+</div>
+<a id="a840c0d27d0ff00ce555c1a539adf8abf" name="a840c0d27d0ff00ce555c1a539adf8abf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a840c0d27d0ff00ce555c1a539adf8abf">&#9670;&#160;</a></span>start() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void start </td>
+          <td>(</td>
+          <td class="paramtype">const QHostAddress &amp;&#160;</td>
+          <td class="paramname"><em>address</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>port</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Запускает проверку доступности по указанному адресу. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">address</td><td>- IPv4-адрес для проверки в виде QHostAddress. </td></tr>
+    <tr><td class="paramname">port</td><td>- не используется. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Замещает <a class="el" href="../../d6/d92/a00586.html#ac4e3f660e7c998c947c410d10c21982f">IConnectable</a>.</p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d0/d39/a00314_source.html">quasarsdk_pingtester.c++</a> строка <a class="el" href="../../d0/d39/a00314_source.html#l00063">63</a></p>
+
+</div>
+</div>
+<a id="add3dd658f58b302a080d9d8d6e57812b" name="add3dd658f58b302a080d9d8d6e57812b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add3dd658f58b302a080d9d8d6e57812b">&#9670;&#160;</a></span>stop()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -249,14 +363,16 @@ $(document).ready(function(){initNavTree('d1/d97/a00670.html','../../'); initRes
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p>Останавливает проверку доступности. </p>
 
-<p class="definition">См. определение в файле <a class="el" href="../../d0/d39/a00314_source.html">quasarsdk_pingtester.c++</a> строка <a class="el" href="../../d0/d39/a00314_source.html#l00054">54</a></p>
+<p>Замещает <a class="el" href="../../d6/d92/a00586.html#a5b7e5ca7163374ca49fea010385f3513">IConnectable</a>.</p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d0/d39/a00314_source.html">quasarsdk_pingtester.c++</a> строка <a class="el" href="../../d0/d39/a00314_source.html#l00070">70</a></p>
 
 </div>
 </div>

@@ -1,7 +1,0 @@
-<map id="BaseUDPSocket" name="BaseUDPSocket">
-<area shape="rect" id="node1" title="Базовый класс для сокетов, работающих по протоколу UDP." alt="" coords="153,5,278,33"/>
-<area shape="rect" id="node2" href="$d4/d13/a00766.html" title="Сокет для приема и обработки вывода с РЛС." alt="" coords="5,81,114,109"/>
-<area shape="rect" id="node3" href="$d9/db0/a00750.html" title="Базовый класс для UDP сокетов, требующих целостность датаграммы." alt="" coords="138,81,293,109"/>
-<area shape="rect" id="node5" href="$d0/dad/a00806.html" title="Класс для работы с сервисом navd2 на РЛС." alt="" coords="318,81,447,109"/>
-<area shape="rect" id="node4" href="$d3/dee/a00774.html" title="Класс для приема больших файлов с РЛС по протоколу UDP." alt="" coords="168,157,263,184"/>
-</map>

@@ -1,6 +1,0 @@
-<map id="fetchImageDirectory" name="fetchImageDirectory">
-<area shape="rect" id="node1" title="Searches for image files in application cache directory." alt="" coords="5,5,161,33"/>
-<area shape="rect" id="node2" href="$d2/d9d/a00464.html#ac4c96993778b59c29057bef3144fb4d0" title="Returns specified LOD directory." alt="" coords="209,5,342,33"/>
-<area shape="rect" id="node3" href="$d2/d9d/a00464.html#a91948fb992ef0c3c951e0708346d1c85" title="Returns cache directory." alt="" coords="390,5,584,33"/>
-<area shape="rect" id="node4" href="$d2/d9d/a00464.html#ae7dd14725f2a5c12505996dc310610c1" title="Returns application root directory." alt="" coords="632,5,772,33"/>
-</map>

@@ -1,5 +1,0 @@
-<map id="mapConfig" name="mapConfig">
-<area shape="rect" id="node1" title="Returns osmconfigs directory." alt="" coords="5,5,97,33"/>
-<area shape="rect" id="node2" href="$d2/d9d/a00464.html#a8c771e9a4eb6555d1dc3e348244e2596" title="Returns config directory." alt="" coords="145,5,205,33"/>
-<area shape="rect" id="node3" href="$d2/d9d/a00464.html#ae7dd14725f2a5c12505996dc310610c1" title="Returns application root directory." alt="" coords="253,5,300,33"/>
-</map>

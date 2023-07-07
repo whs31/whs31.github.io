@@ -1,6 +1,0 @@
-<map id="Иерархия классов. Графический вид." name="Иерархия классов. Графический вид.">
-<area shape="rect" id="node1" href="$d6/d6a/a00619.html" title="Base class for handling UDP connections." alt="" coords="5,57,130,85"/>
-<area shape="rect" id="node2" href="$d5/de3/a00631.html" title="Class for execd service interactions." alt="" coords="190,5,292,33"/>
-<area shape="rect" id="node3" href="$d4/d10/a00635.html" title="Class for receiving feedback from SAR." alt="" coords="178,57,304,85"/>
-<area shape="rect" id="node4" href="$d3/d8e/a00647.html" title="Class for receiving large files from SAR via UDP." alt="" coords="194,109,288,137"/>
-</map>

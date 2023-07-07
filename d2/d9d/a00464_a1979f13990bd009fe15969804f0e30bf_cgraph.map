@@ -1,7 +1,0 @@
-<map id="createImageCache" name="createImageCache">
-<area shape="rect" id="node1" title="Creates and setups image cache." alt="" coords="5,19,149,47"/>
-<area shape="rect" id="node2" href="$d2/d9d/a00464.html#a91948fb992ef0c3c951e0708346d1c85" title="Returns cache directory." alt="" coords="286,19,388,47"/>
-<area shape="rect" id="node4" href="$d2/d9d/a00464.html#ac4c96993778b59c29057bef3144fb4d0" title="Returns specified LOD directory." alt="" coords="197,19,238,47"/>
-<area shape="rect" id="node5" href="$d2/d9d/a00464.html#a7560631e1c9c5f4f885c206a7dc3342c" title="Returns TCP&#45;IP cache directory." alt="" coords="197,71,238,99"/>
-<area shape="rect" id="node3" href="$d2/d9d/a00464.html#ae7dd14725f2a5c12505996dc310610c1" title="Returns application root directory." alt="" coords="436,19,484,47"/>
-</map>

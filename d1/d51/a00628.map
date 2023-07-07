@@ -1,5 +1,0 @@
-<map id="ExecdSocket" name="ExecdSocket">
-<area shape="rect" id="node1" title="Class for execd service interactions." alt="" coords="96,98,199,126"/>
-<area shape="rect" id="node2" href="$de/d85/a00618.html" title="Base class for handling UDP connections." alt="" coords="5,5,130,33"/>
-<area shape="rect" id="node3" href="$d6/dfa/a00626.html" title="Class for storing and processing execd arguments." alt="" coords="154,5,301,33"/>
-</map>

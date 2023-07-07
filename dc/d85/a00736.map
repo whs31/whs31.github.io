@@ -1,4 +1,0 @@
-<map id="BaseUDPSocket" name="BaseUDPSocket">
-<area shape="rect" id="node1" title="Базовый класс для сокетов, работающих по протоколу UDP." alt="" coords="21,5,145,33"/>
-<area shape="rect" id="node2" href="$da/da3/a00741.html" title="Базовый класс для UDP сокетов, требующих целостность датаграммы." alt="" coords="5,81,161,109"/>
-</map>

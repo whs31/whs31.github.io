@@ -1,4 +1,0 @@
-<map id="executeCommand" name="executeCommand">
-<area shape="rect" id="node1" title="Executes any command in execd service." alt="" coords="5,14,145,42"/>
-<area shape="rect" id="node2" href="$d0/d8d/a00612.html#ad1239ca09fddf150d1584cdf26baf7f3" title="Sends given QByteArray to socket." alt="" coords="193,5,400,50"/>
-</map>

@@ -1,5 +1,0 @@
-<map id="tcp" name="tcp">
-<area shape="rect" id="node1" title="Returns TCP&#45;IP cache directory." alt="" coords="5,5,47,33"/>
-<area shape="rect" id="node2" href="$d2/d9d/a00464.html#a91948fb992ef0c3c951e0708346d1c85" title="Returns cache directory." alt="" coords="95,5,197,33"/>
-<area shape="rect" id="node3" href="$d2/d9d/a00464.html#ae7dd14725f2a5c12505996dc310610c1" title="Returns application root directory." alt="" coords="245,5,292,33"/>
-</map>

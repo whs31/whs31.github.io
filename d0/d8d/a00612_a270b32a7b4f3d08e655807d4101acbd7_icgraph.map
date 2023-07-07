@@ -1,8 +1,0 @@
-<map id="socketDisconnected" name="socketDisconnected">
-<area shape="rect" id="node1" title="Emitted when socket breaks connection." alt="" coords="609,83,761,111"/>
-<area shape="rect" id="node2" href="$d0/d8d/a00612.html#a960705de531a20389fb29928d43258c3" title="Returns socket to unconnected state." alt="" coords="470,83,561,111"/>
-<area shape="rect" id="node3" href="$d3/dd6/a00624.html#a8c528baf37154d347366083f0f816846" title="Stops socket." alt="" coords="225,5,410,50"/>
-<area shape="rect" id="node5" href="$d1/d51/a00628.html#a8c528baf37154d347366083f0f816846" title="Stops socket." alt="" coords="213,75,422,119"/>
-<area shape="rect" id="node6" href="$dc/d62/a00640.html#a8c528baf37154d347366083f0f816846" title="Stops socket." alt="" coords="229,144,406,189"/>
-<area shape="rect" id="node4" href="$df/d37/a00652.html#aba28ee97ffe6d508e26f534ec7e62f8f" title="Производит отключение от РЛС." alt="" coords="5,75,165,119"/>
-</map>
