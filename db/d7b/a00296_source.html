@@ -99,36 +99,42 @@ $(document).ready(function(){initNavTree('db/d7b/a00296_source.html','../../'); 
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;QtCore/QObject&gt;</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">class </span>QTcpServer;</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">class </span>QTcpSocket;</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../dc/d59/a00364.html">QuasarSDK</a></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>{</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="../../d9/d41/a00666.html">   17</a></span>  <span class="keyword">class </span><a class="code hl_class" href="../../d9/d41/a00666.html">OutputRedirectServer</a> : <span class="keyword">public</span> QObject</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>  {</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    Q_OBJECT</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>      <span class="keyword">explicit</span> <a class="code hl_class" href="../../d9/d41/a00666.html">OutputRedirectServer</a>(QObject* parent = <span class="keyword">nullptr</span>);</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>      <a class="code hl_function" href="../../d9/d41/a00666.html#afccfb74379bac9eb8631f93431cabbf3">~OutputRedirectServer</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>      <span class="keywordtype">void</span> <a class="code hl_function" href="../../d9/d41/a00666.html#a28ca97829e1fcdc9073ca1c651e08ffa">start</a>(<span class="keyword">const</span> QString&amp; address) <span class="keyword">noexcept</span>;</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>      <span class="keywordtype">void</span> <a class="code hl_function" href="../../d9/d41/a00666.html#aba28ee97ffe6d508e26f534ec7e62f8f">stop</a>() <span class="keyword">noexcept</span>;</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>      <span class="keywordtype">void</span> <a class="code hl_function" href="../../d9/d41/a00666.html#ad9f50d5dc30f2e0482b19a5f0eba0e2e">push</a>(<span class="keyword">const</span> QByteArray&amp; data) <span class="keyword">noexcept</span>;</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>      Q_SLOT <span class="keywordtype">void</span> clientConnected();</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>      QTcpServer* m_server;</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>      QTcpSocket* m_socket;</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>  };</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>} <span class="comment">// QuasarSDK</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="../../d7/d40/a00236.html">interfaces/quasarsdk_iconnectable.h</a>&quot;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">class </span>QTcpServer;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">class </span>QTcpSocket;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../dc/d59/a00364.html">QuasarSDK</a></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>{</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="../../d9/d41/a00666.html">   18</a></span>  <span class="keyword">class </span><a class="code hl_class" href="../../d9/d41/a00666.html">OutputRedirectServer</a> : <span class="keyword">public</span> QObject</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>                             , <span class="keyword">public</span> <a class="code hl_class" href="../../d6/d92/a00586.html">IConnectable</a></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>  {</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    Q_OBJECT</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>      <span class="keyword">explicit</span> <a class="code hl_class" href="../../d9/d41/a00666.html">OutputRedirectServer</a>(QObject* parent = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>      <a class="code hl_function" href="../../d9/d41/a00666.html#afccfb74379bac9eb8631f93431cabbf3">~OutputRedirectServer</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>      <span class="keywordtype">void</span> <a class="code hl_function" href="../../d9/d41/a00666.html#abccbfc4c0255716f52c689b0f7b7cf16">start</a>(<span class="keyword">const</span> QString&amp; address) <span class="keyword">final</span>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>      <span class="keywordtype">void</span> <a class="code hl_function" href="../../d9/d41/a00666.html#abccbfc4c0255716f52c689b0f7b7cf16">start</a>(<span class="keyword">const</span> QHostAddress&amp; address) <span class="keyword">noexcept</span> <span class="keyword">final</span>;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>      <span class="keywordtype">void</span> <a class="code hl_function" href="../../d9/d41/a00666.html#abccbfc4c0255716f52c689b0f7b7cf16">start</a>(<span class="keyword">const</span> QHostAddress&amp; address, uint16_t port) <span class="keyword">noexcept</span> <span class="keyword">final</span>;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>      <span class="keywordtype">void</span> <a class="code hl_function" href="../../d9/d41/a00666.html#a4008ad2c644d84457e83d74b3809f2ec">stop</a>() <span class="keyword">noexcept</span> <span class="keyword">final</span>;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>      <span class="keywordtype">void</span> <a class="code hl_function" href="../../d9/d41/a00666.html#ad9f50d5dc30f2e0482b19a5f0eba0e2e">push</a>(<span class="keyword">const</span> QByteArray&amp; data) <span class="keyword">noexcept</span>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>      Q_SLOT <span class="keywordtype">void</span> clientConnected();</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>      QTcpServer* m_server;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>      QTcpSocket* m_socket;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>  };</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>} <span class="comment">// QuasarSDK</span></div>
+<div class="ttc" id="aa00236_html"><div class="ttname"><a href="../../d7/d40/a00236.html">quasarsdk_iconnectable.h</a></div></div>
 <div class="ttc" id="aa00364_html"><div class="ttname"><a href="../../dc/d59/a00364.html">QuasarSDK</a></div><div class="ttdoc">Пространство имен комплекта разработчика РЛС &quot;Квазар&quot;.</div></div>
-<div class="ttc" id="aa00666_html"><div class="ttname"><a href="../../d9/d41/a00666.html">QuasarSDK::OutputRedirectServer</a></div><div class="ttdoc">Класс для перенаправления вывода РЛС в отдельный Telnet сервер.</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d7b/a00296_source.html#l00017">quasarsdk_outputredirectserver.h:18</a></div></div>
-<div class="ttc" id="aa00666_html_a28ca97829e1fcdc9073ca1c651e08ffa"><div class="ttname"><a href="../../d9/d41/a00666.html#a28ca97829e1fcdc9073ca1c651e08ffa">QuasarSDK::OutputRedirectServer::start</a></div><div class="ttdeci">void start(const QString &amp;address) noexcept</div><div class="ttdoc">Запускает сервер перенаправления вывода на указанном адресе.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d5d/a00311_source.html#l00037">quasarsdk_outputredirectserver.c++:37</a></div></div>
-<div class="ttc" id="aa00666_html_aba28ee97ffe6d508e26f534ec7e62f8f"><div class="ttname"><a href="../../d9/d41/a00666.html#aba28ee97ffe6d508e26f534ec7e62f8f">QuasarSDK::OutputRedirectServer::stop</a></div><div class="ttdeci">void stop() noexcept</div><div class="ttdoc">Останавливает сервер.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d5d/a00311_source.html#l00055">quasarsdk_outputredirectserver.c++:55</a></div></div>
+<div class="ttc" id="aa00586_html"><div class="ttname"><a href="../../d6/d92/a00586.html">QuasarSDK::IConnectable</a></div><div class="ttdoc">Абстрактный интерфейс для классов с функционалом подключения и отключения к сетевому адресу.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d40/a00236_source.html#l00019">quasarsdk_iconnectable.h:20</a></div></div>
+<div class="ttc" id="aa00666_html"><div class="ttname"><a href="../../d9/d41/a00666.html">QuasarSDK::OutputRedirectServer</a></div><div class="ttdoc">Класс для перенаправления вывода РЛС в отдельный Telnet сервер.</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d7b/a00296_source.html#l00018">quasarsdk_outputredirectserver.h:20</a></div></div>
+<div class="ttc" id="aa00666_html_a4008ad2c644d84457e83d74b3809f2ec"><div class="ttname"><a href="../../d9/d41/a00666.html#a4008ad2c644d84457e83d74b3809f2ec">QuasarSDK::OutputRedirectServer::stop</a></div><div class="ttdeci">void stop() noexcept final</div><div class="ttdoc">Останавливает сервер.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d5d/a00311_source.html#l00055">quasarsdk_outputredirectserver.c++:55</a></div></div>
+<div class="ttc" id="aa00666_html_abccbfc4c0255716f52c689b0f7b7cf16"><div class="ttname"><a href="../../d9/d41/a00666.html#abccbfc4c0255716f52c689b0f7b7cf16">QuasarSDK::OutputRedirectServer::start</a></div><div class="ttdeci">void start(const QString &amp;address) final</div><div class="ttdoc">Запускает сервер перенаправления вывода на указанном адресе.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d5d/a00311_source.html#l00037">quasarsdk_outputredirectserver.c++:37</a></div></div>
 <div class="ttc" id="aa00666_html_ad9f50d5dc30f2e0482b19a5f0eba0e2e"><div class="ttname"><a href="../../d9/d41/a00666.html#ad9f50d5dc30f2e0482b19a5f0eba0e2e">QuasarSDK::OutputRedirectServer::push</a></div><div class="ttdeci">void push(const QByteArray &amp;data) noexcept</div><div class="ttdoc">Отправляет данные в сервер.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d5d/a00311_source.html#l00061">quasarsdk_outputredirectserver.c++:61</a></div></div>
 <div class="ttc" id="aa00666_html_afccfb74379bac9eb8631f93431cabbf3"><div class="ttname"><a href="../../d9/d41/a00666.html#afccfb74379bac9eb8631f93431cabbf3">QuasarSDK::OutputRedirectServer::~OutputRedirectServer</a></div><div class="ttdeci">~OutputRedirectServer() override</div><div class="ttdoc">Удаляет объект и закрывает сервер.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d5d/a00311_source.html#l00026">quasarsdk_outputredirectserver.c++:26</a></div></div>
 </div><!-- fragment --></div><!-- contents -->

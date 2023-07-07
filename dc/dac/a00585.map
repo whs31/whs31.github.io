@@ -1,8 +1,9 @@
 <map id="IConnectable" name="IConnectable">
-<area shape="rect" id="node1" title="Абстрактный интерфейс для классов с функционалом подключения и отключения к сетевому адресу." alt="" coords="341,5,447,33"/>
+<area shape="rect" id="node1" title="Абстрактный интерфейс для классов с функционалом подключения и отключения к сетевому адресу." alt="" coords="451,5,558,33"/>
 <area shape="rect" id="node2" href="$d7/db1/a00590.html" title="Базовый класс для сокетов, работающих по протоколу UDP." alt="" coords="201,81,325,109"/>
-<area shape="rect" id="node8" href="$d1/d97/a00670.html" title="Класс для постоянной проверки выбранного адреса на доступность." alt="" coords="350,81,438,109"/>
-<area shape="rect" id="node9" href="$d0/db1/a00622.html" title="Класс для приема больших файлов с РЛС по протоколу TCP&#45;IP." alt="" coords="462,81,550,109"/>
+<area shape="rect" id="node8" href="$d9/d41/a00666.html" title="Класс для перенаправления вывода РЛС в отдельный Telnet сервер." alt="" coords="349,81,511,109"/>
+<area shape="rect" id="node9" href="$d1/d97/a00670.html" title="Класс для постоянной проверки выбранного адреса на доступность." alt="" coords="535,81,623,109"/>
+<area shape="rect" id="node10" href="$d0/db1/a00622.html" title="Класс для приема больших файлов с РЛС по протоколу TCP&#45;IP." alt="" coords="648,81,735,109"/>
 <area shape="rect" id="node3" href="$d8/d00/a00606.html" title="Сокет для отправки команд на РЛС." alt="" coords="5,157,108,184"/>
 <area shape="rect" id="node4" href="$da/d6e/a00610.html" title="Сокет для приема и обработки вывода с РЛС." alt="" coords="132,157,240,184"/>
 <area shape="rect" id="node5" href="$da/de4/a00594.html" title="Базовый класс для UDP сокетов, требующих целостность датаграммы." alt="" coords="264,157,420,184"/>

@@ -1,11 +1,12 @@
 <map id="Иерархия классов. Графический вид." name="Иерархия классов. Графический вид.">
-<area shape="rect" id="node1" href="$d6/d92/a00586.html" title="Абстрактный интерфейс для классов с функционалом подключения и отключения к сетевому адресу." alt="" coords="5,135,112,162"/>
-<area shape="rect" id="node2" href="$d7/db1/a00590.html" title="Базовый класс для сокетов, работающих по протоколу UDP." alt="" coords="160,83,284,110"/>
-<area shape="rect" id="node8" href="$d1/d97/a00670.html" title="Класс для постоянной проверки выбранного адреса на доступность." alt="" coords="178,135,266,162"/>
-<area shape="rect" id="node9" href="$d0/db1/a00622.html" title="Класс для приема больших файлов с РЛС по протоколу TCP&#45;IP." alt="" coords="178,187,266,214"/>
-<area shape="rect" id="node3" href="$d8/d00/a00606.html" title="Сокет для отправки команд на РЛС." alt="" coords="359,5,461,33"/>
-<area shape="rect" id="node4" href="$da/d6e/a00610.html" title="Сокет для приема и обработки вывода с РЛС." alt="" coords="356,57,464,85"/>
-<area shape="rect" id="node5" href="$da/de4/a00594.html" title="Базовый класс для UDP сокетов, требующих целостность датаграммы." alt="" coords="332,109,487,137"/>
-<area shape="rect" id="node7" href="$da/d36/a00650.html" title="Класс для работы с сервисом navd2 на РЛС." alt="" coords="345,161,474,189"/>
-<area shape="rect" id="node6" href="$de/d85/a00618.html" title="Класс для приема больших файлов с РЛС по протоколу UDP." alt="" coords="535,109,630,137"/>
+<area shape="rect" id="node1" href="$d6/d92/a00586.html" title="Абстрактный интерфейс для классов с функционалом подключения и отключения к сетевому адресу." alt="" coords="5,161,112,189"/>
+<area shape="rect" id="node2" href="$d7/db1/a00590.html" title="Базовый класс для сокетов, работающих по протоколу UDP." alt="" coords="178,83,303,110"/>
+<area shape="rect" id="node8" href="$d9/d41/a00666.html" title="Класс для перенаправления вывода РЛС в отдельный Telnet сервер." alt="" coords="160,135,321,162"/>
+<area shape="rect" id="node9" href="$d1/d97/a00670.html" title="Класс для постоянной проверки выбранного адреса на доступность." alt="" coords="196,187,285,214"/>
+<area shape="rect" id="node10" href="$d0/db1/a00622.html" title="Класс для приема больших файлов с РЛС по протоколу TCP&#45;IP." alt="" coords="197,239,284,266"/>
+<area shape="rect" id="node3" href="$d8/d00/a00606.html" title="Сокет для отправки команд на РЛС." alt="" coords="396,5,498,33"/>
+<area shape="rect" id="node4" href="$da/d6e/a00610.html" title="Сокет для приема и обработки вывода с РЛС." alt="" coords="393,57,501,85"/>
+<area shape="rect" id="node5" href="$da/de4/a00594.html" title="Базовый класс для UDP сокетов, требующих целостность датаграммы." alt="" coords="369,109,524,137"/>
+<area shape="rect" id="node7" href="$da/d36/a00650.html" title="Класс для работы с сервисом navd2 на РЛС." alt="" coords="382,161,511,189"/>
+<area shape="rect" id="node6" href="$de/d85/a00618.html" title="Класс для приема больших файлов с РЛС по протоколу UDP." alt="" coords="572,109,667,137"/>
 </map>

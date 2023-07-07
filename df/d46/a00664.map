@@ -1,0 +1,4 @@
+<map id="OutputRedirectServer" name="OutputRedirectServer">
+<area shape="rect" id="node1" title="Класс для перенаправления вывода РЛС в отдельный Telnet сервер." alt="" coords="5,81,167,109"/>
+<area shape="rect" id="node2" href="$d6/d92/a00586.html" title="Абстрактный интерфейс для классов с функционалом подключения и отключения к сетевому адресу." alt="" coords="33,5,139,33"/>
+</map>

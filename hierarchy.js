@@ -16,12 +16,12 @@ var hierarchy =
         ] ],
         [ "TelemetrySocket", "da/d36/a00650.html", null ]
       ] ],
+      [ "OutputRedirectServer", "d9/d41/a00666.html", null ],
       [ "PingTester", "d1/d97/a00670.html", null ],
       [ "TCPServer", "d0/db1/a00622.html", null ]
     ] ],
     [ "ImageMetadata", "d6/de1/a00356.html#d0/d29/a00470", null ],
     [ "ImageMetaHeader", "d6/de1/a00356.html#db/d2c/a00466", null ],
-    [ "OutputRedirectServer", "d9/d41/a00666.html", null ],
     [ "Paths", "dd/df5/a00386.html", null ],
     [ "PlannerAppendDatagram", "d2/d3e/a00366.html#d6/dfa/a00626", null ],
     [ "PlannerRemoveDatagram", "d2/d3e/a00366.html#dc/d66/a00630", null ],

@@ -156,9 +156,9 @@ html {
     html:not(.light-mode) {
         color-scheme: dark;
 
-        --primary-color: #7661b3;
-        --primary-dark-color: #ae9ed6;
-        --primary-light-color: #2a2536;
+        --primary-color: #f1b602;
+        --primary-dark-color: #ceb670;
+        --primary-light-color: #3b2e04;
 
         --box-shadow: 0 8px 8px 0 rgba(0,0,0,.35);
 
