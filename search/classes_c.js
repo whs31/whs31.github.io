@@ -1,8 +1,7 @@
 var searchData=
 [
-  ['tcpserver_0',['TCPServer',['../d0/db1/a00622.html',1,'QuasarSDK']]],
-  ['telemetry_1',['Telemetry',['../d1/daa/a00638.html',1,'QuasarSDK']]],
-  ['telemetrydatagram_2',['TelemetryDatagram',['../d2/d3e/a00366.html#df/dcf/a00642',1,'QuasarSDK::Datagrams']]],
-  ['telemetryrequest_3',['TelemetryRequest',['../d2/d3e/a00366.html#d6/d08/a00646',1,'QuasarSDK::Datagrams']]],
-  ['telemetrysocket_4',['TelemetrySocket',['../da/d36/a00650.html',1,'QuasarSDK']]]
+  ['offlinetileloader_0',['OfflineTileLoader',['../d8/d14/a00522.html',1,'Map']]],
+  ['orthodrom_1',['Orthodrom',['../de/de7/a00550.html',1,'SDK::Cartography']]],
+  ['outputredirectserver_2',['OutputRedirectServer',['../da/d6e/a00610.html',1,'QuasarSDK']]],
+  ['outputsocket_3',['OutputSocket',['../d7/d80/a00614.html',1,'QuasarSDK']]]
 ];

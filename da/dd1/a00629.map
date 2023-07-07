@@ -1,0 +1,7 @@
+<map id="SeamlessUDPSocket" name="SeamlessUDPSocket">
+<area shape="rect" id="node1" title="Базовый класс для UDP сокетов, требующих целостность датаграммы." alt="" coords="42,157,197,184"/>
+<area shape="rect" id="node5" href="$d7/de4/a00634.html" title="Класс для приема больших файлов с РЛС по протоколу UDP." alt="" coords="72,232,167,260"/>
+<area shape="rect" id="node2" href="$d6/d92/a00586.html" title="Базовый класс для сокетов, работающих по протоколу UDP." alt="" coords="57,81,182,109"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,5,106,33"/>
+<area shape="rect" id="node4" href="$da/d36/a00650.html" title="Абстрактный интерфейс для классов с функционалом подключения и отключения к сетевому адресу." alt="" coords="130,5,237,33"/>
+</map>

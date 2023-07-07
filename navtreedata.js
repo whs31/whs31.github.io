@@ -25,6 +25,17 @@
 var NAVTREE =
 [
   [ "QuaSAR", "index.html", [
+    [ "Документация по сервису execd", "de/de6/a00723.html", [
+      [ "Принятые выражения", "de/de6/a00723.html#EXECD_DOCUMENTATION_LEGEND", null ],
+      [ "Формирование запроса", "de/de6/a00723.html#EXECD_DOCUMENTATION_FORMING", null ],
+      [ "Специальные команды", "de/de6/a00723.html#EXECD_DOCUMENTATION_SPECIAL_COMMANDS", null ],
+      [ "Создание динамических очередей", "de/de6/a00723.html#EXECD_DOCUMENTATION_DYNAMIC_QUEUES", null ],
+      [ "Ответ сервиса", "de/de6/a00723.html#EXECD_DOCUMENTATION_RESPONSE", null ],
+      [ "Контрольная сумма", "de/de6/a00723.html#EXECD_DOCUMENTATION_CHECKSUM", null ],
+      [ "Настройки", "de/de6/a00723.html#EXECD_DOCUMENTATION_SETTINGS", null ],
+      [ "Сборка", "de/de6/a00723.html#EXECD_DOCUMENTATION_BUILD", null ],
+      [ "Правила оформления скриптов", "de/de6/a00723.html#EXECD_DOCUMENTATION_RULES", null ]
+    ] ],
     [ "Список устаревших определений и описаний", "d1/dc6/a00347.html", null ],
     [ "Список задач", "df/d03/a00348.html", null ],
     [ "Пространства имен", "namespaces.html", [
@@ -60,9 +71,9 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"d5/db5/a00374.html#afdd91838bc17767a1510db9d4e569aaa",
-"d9/db8/a00658.html#a8dd47094c7079ec1fcbd5df9870c486ea29db7d56a39efc080425bc86be966a1f",
-"dir_fcb2a60e1810a51543a3cc3a113d0956.html"
+"d5/db5/a00374.html#a6e81ba455ac73046cba68a75c0d34991",
+"d7/dd2/a00598.html#aa15f3f718db408445afc1b93c12294c5a1e2f89e867cd91c3de2ea9fbd2ef96a3",
+"de/d85/a00618.html#ab9ba761a38a1a632dc057acba7c1a5ea"
 ];
 
 var SYNCONMSG = 'нажмите на выключить для синхронизации панелей';

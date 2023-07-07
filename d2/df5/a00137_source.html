@@ -102,28 +102,29 @@ $(document).ready(function(){initNavTree('d2/df5/a00137_source.html','../../'); 
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">namespace </span>SDK::Cartography</div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>{</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>  <span class="keyword">class </span>Orthodrom</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="../../de/de7/a00550.html">    8</a></span>  <span class="keyword">class </span><a class="code hl_class" href="../../de/de7/a00550.html">Orthodrom</a></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>  {</div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>      Orthodrom(<span class="keyword">const</span> QGeoCoordinate&amp; first, <span class="keyword">const</span> QGeoCoordinate&amp; second);</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>      Orthodrom();</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>      <a class="code hl_class" href="../../de/de7/a00550.html">Orthodrom</a>(<span class="keyword">const</span> QGeoCoordinate&amp; first, <span class="keyword">const</span> QGeoCoordinate&amp; second);</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>      <a class="code hl_class" href="../../de/de7/a00550.html">Orthodrom</a>();</div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>      [[nodiscard]] <span class="keyword">auto</span> get() const noexcept -&gt; QList&lt;QVariant&gt;;</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>      <span class="keywordtype">void</span> set(const QGeoCoordinate&amp; first, const QGeoCoordinate&amp; second) noexcept;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>      [[nodiscard]] <span class="keyword">auto</span> get() <span class="keyword">const</span> <span class="keyword">noexcept</span> -&gt; QList&lt;QVariant&gt;;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>      <span class="keywordtype">void</span> set(<span class="keyword">const</span> QGeoCoordinate&amp; first, <span class="keyword">const</span> QGeoCoordinate&amp; second) <span class="keyword">noexcept</span>;</div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>      [[nodiscard]] <span class="keywordtype">double</span> latitudeAt(<span class="keywordtype">double</span> <a class="code hl_variable" href="../../d5/de0/a00050.html#ac155e35fdeebafc89723a51520fb9fe6">longitude</a>) const noexcept;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>      [[nodiscard]] <span class="keywordtype">double</span> latitudeAt(<span class="keywordtype">double</span> <a class="code hl_variable" href="../../d5/de0/a00050.html#ac155e35fdeebafc89723a51520fb9fe6">longitude</a>) <span class="keyword">const</span> <span class="keyword">noexcept</span>;</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    private:</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>      <span class="keywordtype">void</span> distribute() noexcept;</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>      [[nodiscard]] <span class="keywordtype">double</span> distance() const noexcept;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>      <span class="keywordtype">void</span> distribute() <span class="keyword">noexcept</span>;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>      [[nodiscard]] <span class="keywordtype">double</span> distance() <span class="keyword">const</span> <span class="keyword">noexcept</span>;</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    private:</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keyword">private</span>:</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>      <span class="keywordtype">double</span> a1, a2;</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>      QGeoCoordinate first, second;</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>      QList&lt;QVariant&gt; path;</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>  };</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>} <span class="comment">// SDK::Cartography</span></div>
 <div class="ttc" id="aa00050_html_ac155e35fdeebafc89723a51520fb9fe6"><div class="ttname"><a href="../../d5/de0/a00050.html#ac155e35fdeebafc89723a51520fb9fe6">longitude</a></div><div class="ttdeci">double longitude</div><div class="ttdoc">Долгота в градусах в проекции WGS-84.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de0/a00050_source.html#l00004">imagemetadata.h:4</a></div></div>
+<div class="ttc" id="aa00550_html"><div class="ttname"><a href="../../de/de7/a00550.html">SDK::Cartography::Orthodrom</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/df5/a00137_source.html#l00008">sdkorthodrom.h:9</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

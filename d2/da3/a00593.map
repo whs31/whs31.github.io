@@ -1,6 +1,4 @@
-<map id="SeamlessUDPSocket" name="SeamlessUDPSocket">
-<area shape="rect" id="node1" title="Базовый класс для UDP сокетов, требующих целостность датаграммы." alt="" coords="5,157,161,184"/>
-<area shape="rect" id="node4" href="$de/d85/a00618.html" title="Класс для приема больших файлов с РЛС по протоколу UDP." alt="" coords="36,232,130,260"/>
-<area shape="rect" id="node2" href="$d7/db1/a00590.html" title="Базовый класс для сокетов, работающих по протоколу UDP." alt="" coords="21,81,145,109"/>
-<area shape="rect" id="node3" href="$d6/d92/a00586.html" title="Абстрактный интерфейс для классов с функционалом подключения и отключения к сетевому адресу." alt="" coords="30,5,136,33"/>
+<map id="Enums" name="Enums">
+<area shape="rect" id="node1" title="Класс&#45;обёртка для общих перечислений SDK РЛС &quot;Квазар&quot;." alt="" coords="9,81,75,109"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,5,79,33"/>
 </map>

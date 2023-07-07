@@ -1,0 +1,291 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>QuaSAR: Документация по сервису execd</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="../../icon.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">QuaSAR<span id="projectnumber">&#160;2.12.0</span>
+   </div>
+   <div id="projectbrief">SAR control software</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.6 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('de/de6/a00723.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Документация по сервису execd </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p>Сервис выполняет роль планировщика задач. Обеспечивает следующий функционал:</p><ul>
+<li>принимает команды от удаленных клиентов с последующим их исполнением</li>
+<li>позволяет отслеживать и изменять статус выполнения команд</li>
+<li>строит очереди на выполнение команд</li>
+</ul>
+<h1><a class="anchor" id="EXECD_DOCUMENTATION_LEGEND"></a>
+Принятые выражения</h1>
+<ul>
+<li><code>XX</code> - значение поля не рассматривается в контексте</li>
+<li><code>CMD</code> - условное обозначение любой команды, задаваемой пользователем</li>
+<li><code>SPEC_CMD</code> - условное обозначение любой специальной команды, задаваемой пользователем (см. п. <a class="el" href="../../de/de6/a00723.html#EXECD_DOCUMENTATION_SPECIAL_COMMANDS">Специальные команды</a>)</li>
+<li><code>arg</code> - условное обозначение любого аргумента, передаваемого команде CMD или SPEC_CMD</li>
+</ul>
+<h1><a class="anchor" id="EXECD_DOCUMENTATION_FORMING"></a>
+Формирование запроса</h1>
+<p>Пример команды запроса сервису: </p><div class="fragment"><div class="line">:0001|09|$FORM(3)|da0f</div>
+</div><!-- fragment --><ul>
+<li>*:* - символ начала сообщения</li>
+<li><em>0001</em> - id сообщения (hex)</li>
+<li><em>09</em> - полный размер команды, не считая специальные поля и символы (hex)</li>
+<li><em>$</em> - ключ формат команды</li>
+<li><em>FORM</em> - команда</li>
+<li>*(3)* - аргументы</li>
+<li><em>da0f</em> - контрольная сумма CRC16 (hex)</li>
+</ul>
+<p>Ключи формата команд:</p><ul>
+<li><em>&amp;</em> - выполнение shell команды - <code>:0001|08|&amp;ls(-la)|0daa</code></li>
+<li><em>$</em> - выполнение программы из каталога scripts - <code>:0001|09|$FORM(3)|da0f</code></li>
+<li>*#* - специальная команда (см. пункт <a class="el" href="../../de/de6/a00723.html#EXECD_DOCUMENTATION_SPECIAL_COMMANDS">Специальные команды</a>)</li>
+</ul>
+<p>Правила формирования команды:</p><ul>
+<li>поле "команда" - должно содержать полное название команды, учитывая регистр.</li>
+<li>поле "аргументы" - записывается внутри круглых скобок "(" и ")".</li>
+</ul>
+<p>Аргументы могут перечисляться через пробел или запятую:</p><ul>
+<li><code>:XXXX|XX|$CMD(arg1, arg2)|XXXX</code></li>
+<li><code>:XXXX|XX|$CMD(arg1 arg2)|XXXX</code></li>
+</ul>
+<p>Если аргументам присваивается значение, то допускаются следующие варианты записи:</p><ul>
+<li><code>:XXXX|XX|$CMD(arg1=1, arg2=2)|XXXX</code></li>
+<li><code>:XXXX|XX|$CMD(arg1 1, arg2 2)|XXXX</code></li>
+<li><code>:XXXX|XX|$CMD(arg1 1 arg2 2)|XXXX</code></li>
+</ul>
+<p>Допускается передавать сразу несколько команд: </p><div class="fragment"><div class="line">:XXXX|XX|$CMD1(1, 2) $CMD2(1, 2) $CMD3(1, 2)|XXXX</div>
+</div><!-- fragment --><p> В таком случае команды будет создана статическая очередь и все переданные команды будут выполнены последовательно. По завершению выполнения статической очереди формируется ответ, который содержит коды завершения каждой команды: </p><div class="fragment"><div class="line">:XXXX|XX|$=0000 $=0022 E=0002|XXXX</div>
+<div class="line">            ^      ^      ^ код завершения $CMD3</div>
+<div class="line">            |      | код завершения $CMD2</div>
+<div class="line">            | код завершения $CMD1</div>
+</div><!-- fragment --><h1><a class="anchor" id="EXECD_DOCUMENTATION_SPECIAL_COMMANDS"></a>
+Специальные команды</h1>
+<p>Для формирования специальной команды используется знак-префикс "#": </p><div class="fragment"><div class="line">:XXXX|XX|<span class="comment">#SPEC_CMD(arg)|XXXX</span></div>
+</div><!-- fragment --><p>Список специальных команд:</p><ul>
+<li><code>kill(YYYY)</code> - принудительно завершить процесс с индексом <code>YYYY</code></li>
+<li><code>:XXXX|XX|#kill(YYYY)|XXXX</code></li>
+<li><code>YYYY</code> (hex) - id сообщения процесса</li>
+<li><code>sig(ZZ,YYYY)</code> - подать сигнал №ZZ (<a href="https://ru.wikipedia.org/wiki/Сигнал_(Unix)">https://ru.wikipedia.org/wiki/Сигнал_(Unix)</a>) процессу id = YYYY (hex)</li>
+<li><code>:XXXX|XX|#sig(ZZ,YYYY)|XXXX</code></li>
+<li><code>ZZ</code> (dec) - номер сигнала</li>
+<li><code>YYYY</code> (hex) - id сообщения процесса</li>
+<li><code>feedback(ZZZ,YYY)</code> - установить тип соединения и адрес канала для обратной связи stdout, stderr последующей команды в статической очереди.<ul>
+<li><code>:XXXX|XX|#feedback(ZZZ,YYY) $CMD1(1, 2)|XXXX</code><ul>
+<li><code>ZZZ</code> - тип соединения (TCP, UDP)</li>
+<li><code>YYY</code> - адрес канала обратной связи (<code>192.168.1.2:9945</code>)</li>
+<li><code>$CMD1(1, 2)</code> - команда, поток которой будет перенаправлен</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>queue()</code> - вернуть список процессов, поставленных в динамическую очередь<ul>
+<li><code>:XXXX|XX|#queue()|XXXX</code></li>
+</ul>
+</li>
+<li><code>queue(clear)</code> - очистить динамическую очередь<ul>
+<li><code>:XXXX|XX|#queue(clear)|XXXX</code></li>
+</ul>
+</li>
+<li><code>queue(pop)</code> - удалить последнюю команду из динамической очереди<ul>
+<li><code>:XXXX|XX|#queue(pop)|XXXX</code></li>
+</ul>
+</li>
+<li><code>ssh('YYYY')</code> - запуск команды YYYY на удаленном хосте через ssh (значения хоста и пароля - по-умолчанию, см. п. <a class="el" href="../../de/de6/a00723.html#EXECD_DOCUMENTATION_SETTINGS">Настройки</a>)<ul>
+<li><code>:XXXX|XX|#ssh('YYYY')|XXXX</code><ul>
+<li>YYYY - команда для удаленного хоста, наример 'uname -a'</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>ssh('YYYY', ZZZZ)</code> - запуск команды YYYY на удаленном хосте ZZZZ через ssh (значение пароля - по-умолчанию, см. п. <a class="el" href="../../de/de6/a00723.html#EXECD_DOCUMENTATION_SETTINGS">Настройки</a>)<ul>
+<li><code>:XXXX|XX|#ssh('YYYY', ZZZZ)|XXXX</code><ul>
+<li>ZZZZ - имя удаленного хоста, например <code><a href="#" onclick="location.href='mai'+'lto:'+'use'+'r@'+'192'+'.1'+'68.'+'1.'+'48'; return false;">user@<span class="obfuscator">.nosp@m.</span>192.<span class="obfuscator">.nosp@m.</span>168.1<span class="obfuscator">.nosp@m.</span>.48</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>ssh('YYYY', ZZZZ, WWWW)</code> - запуск команды YYYY на удаленном хосте ZZZZ через ssh (значение пароля - WWWW)<ul>
+<li><code>:XXXX|XX|#ssh('YYYY', ZZZZ, WWWW)|XXXX</code><ul>
+<li>WWWW - пароль удаленного хоста, например, 123</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>occupied(YY)</code> - проверка id процесса на занятость<ul>
+<li><code>:XXXX|XX|#occupied(YY)|XXXX</code><ul>
+<li>YY - id процесса, занятость которого необходимо проверить. Допускается передавать id в десятичном или шестнадцатеричном виде.</li>
+</ul>
+</li>
+<li>Пример допустимых видов записи:<ul>
+<li><code>:XXXX|XX|#occupied(1)|XXXX</code></li>
+<li><code>:XXXX|XX|#occupied(01)|XXXX</code></li>
+<li><code>:XXXX|XX|#occupied(0x01)|XXXX</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Возвращаемые значения: </p><div class="fragment"><div class="line">- `:XXXX|XX|$=0000|XXXX` - id свободен</div>
+<div class="line">- `:XXXX|XX|$=0001|XXXX` - id занят</div>
+</div><!-- fragment --><h1><a class="anchor" id="EXECD_DOCUMENTATION_DYNAMIC_QUEUES"></a>
+Создание динамических очередей</h1>
+<p>Для создания динамической очереди достаточно отправить запрос с уже "занятым"<sup>1</sup> ID сообщения: </p><div class="fragment"><div class="line">:0001|XX|$CMD1(arg1)|XXXX</div>
+<div class="line">:0001|XX|$CMD2(arg1, arg2, arg3)|XXXX</div>
+</div><!-- fragment --><p>Таким образом $CMD1 немедленно начнет выполнение, а $CMD2 - сразу после $CMD1. По мере необходимости можно пополнять очередь во время ее выполнения: </p><div class="fragment"><div class="line">:0001|XX|$CMD3(arg1)|XXXX</div>
+<div class="line">:0001|XX|$CMD4(arg1, arg2)|XXXX</div>
+<div class="line">:0001|XX|$CMD5(arg1)|XXXX</div>
+<div class="line">...</div>
+</div><!-- fragment --><p> В отличии от статической очереди, ответ формируется всякий раз, когда завершается выполнение очередной команды.</p>
+<p><sup>1</sup> <em>Примечание - id "освобождается" сразу же после выполнения команды или завершения очереди.</em></p>
+<h1><a class="anchor" id="EXECD_DOCUMENTATION_RESPONSE"></a>
+Ответ сервиса</h1>
+<p>Сервис формирует ответ с результатом выполнения команды: </p><div class="fragment"><div class="line">:XXXX|XX|$=0000|XXXX</div>
+</div><!-- fragment --><p>Например: </p><div class="fragment"><div class="line">:0001|06|$=0000|6f24</div>
+</div><!-- fragment --><ul>
+<li><code>:</code> - символ начала сообщения</li>
+<li><code>0001</code> - id сообщения (hex)</li>
+<li><code>06</code> - полный размер ответа, не считая специальные поля и символы (hex)</li>
+<li><code>$</code> - ключ формата команды</li>
+<li><code>=0000</code> - код завершения программы</li>
+<li><code>6f24</code> - контрольная сумма CRC16 (hex)</li>
+</ul>
+<p>Ключ формата команды ответа соответствует ключу формата запроса, однако формат ответа содержит дополнительный ключ - "E" Ключ "E" возникает в случае системной ошибки, например, запрашиваемая команда отсутствует: </p><div class="fragment"><div class="line">:0001|06|E=0002|0976</div>
+</div><!-- fragment --><h1><a class="anchor" id="EXECD_DOCUMENTATION_CHECKSUM"></a>
+Контрольная сумма</h1>
+<p>Проверка контрольной суммы может быть отключена (см. п. <a class="el" href="../../de/de6/a00723.html#EXECD_DOCUMENTATION_SETTINGS">Настройки</a>). Пример реализации подсчета контрольной суммы представлены в</p><ul>
+<li>utils/crc16.c - С/С++</li>
+<li>utils/cli.py - Python</li>
+<li>src/misc.rs - Rust</li>
+<li><a class="el" href="../../dc/d84/a00338.html">FCRC16.h</a> - в этой библиотеке (C/C++)</li>
+</ul>
+<h1><a class="anchor" id="EXECD_DOCUMENTATION_SETTINGS"></a>
+Настройки</h1>
+<p>Настройки хранятся в конфигурационном файле config.ini и имеет следующие поля:</p><ul>
+<li><code>main/remote_address</code> - ip адрес сервиса. Например, <code>192.168.1.47:21030</code>.</li>
+<li><code>main/remote_type</code> - тип соединения сервиса. Возможны следующие значения:<ul>
+<li><code>udp</code></li>
+<li><code>tcp</code></li>
+<li><code>com</code> (в разработке)</li>
+<li><code>tlg</code> (в разработке)</li>
+</ul>
+</li>
+<li><code>main/log_level</code> - уровень сообщений, которые будут выводиться в терминал. Возможны следующие значения:<ul>
+<li><code>info</code></li>
+<li><code>warn</code></li>
+<li><code>error</code></li>
+</ul>
+</li>
+<li><code>main/crc_check</code> - флаг проверки контрольной суммы. Возможны следующие значения <code>true</code>, <code>false</code></li>
+<li><code>main/feedback_address</code> - ip адрес сервера, на который будет перенаправлен вывод исполняемой программы. Например, <code>192.168.1.1:10000</code>.</li>
+<li><code>main/feedback_type</code> - тип соединения сервера, на который будет перенаправлен вывод исполняемой программы. Возможны следующие значения:<ul>
+<li><code>udp</code></li>
+<li><code>tcp</code></li>
+<li><code>com</code> (в разработке)</li>
+<li><code>tlg</code> (в разработке)</li>
+</ul>
+</li>
+<li><code>ssh/host</code> - адрес хоста по-умолчанию, к которому обращается сервис посредством ssh с целью исполнения на нем программы или сценария. Например, <code><a href="#" onclick="location.href='mai'+'lto:'+'use'+'r@'+'192'+'.1'+'68.'+'1.'+'48'; return false;">user@<span class="obfuscator">.nosp@m.</span>192.<span class="obfuscator">.nosp@m.</span>168.1<span class="obfuscator">.nosp@m.</span>.48</a></code>.</li>
+<li><code>ssh/password</code> - пароль хоста по-умолчанию, к которому обращается сервис посредством ssh с целью исполнения на нем программы или сценария. Например, <code>123</code></li>
+</ul>
+<h1><a class="anchor" id="EXECD_DOCUMENTATION_BUILD"></a>
+Сборка</h1>
+<div class="fragment"><div class="line">cargo --config Cargo.config build</div>
+</div><!-- fragment --><h1><a class="anchor" id="EXECD_DOCUMENTATION_RULES"></a>
+Правила оформления скриптов</h1>
+<p>Каждый скрипт, добавленный в каталог scripts должен иметь заголовок с указанием интерпретатора, например: </p><div class="fragment"><div class="line">#!/bin/bash</div>
+</div><!-- fragment --> </div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
+</body>
+</html>

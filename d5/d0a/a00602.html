@@ -101,9 +101,25 @@ $(document).ready(function(){initNavTree('d5/d0a/a00602.html','../../'); initRes
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="../../dd/dd7/a00248_source.html">QuasarSDK/Private/ArgumentList</a>&gt;</code></p>
-
-<p>Базовые классы:QObject.</p>
+<p><code>#include &lt;<a class="el" href="../../dd/dd7/a00260_source.html">QuasarSDK/Networking/CExecdArgumentParser.h</a>&gt;</code></p>
+<div class="dynheader">
+Граф наследования:ExecdArgumentParser:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d6/db2/a00601.png" border="0" usemap="#aExecdArgumentParser_inherit__map" alt="Inheritance graph"/></div>
+<map name="aExecdArgumentParser_inherit__map" id="aExecdArgumentParser_inherit__map">
+<area shape="rect" title="Класс для хранения и обработки аргументов команд сервиса execd." alt="" coords="5,81,169,109"/>
+<area shape="rect" title=" " alt="" coords="50,5,124,33"/>
+</map>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">см. легенду</a>]</span></center></div>
+<div class="dynheader">
+Граф связей класса ExecdArgumentParser:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d1/d8c/a00600.png" border="0" usemap="#aExecdArgumentParser_coll__map" alt="Collaboration graph"/></div>
+<map name="aExecdArgumentParser_coll__map" id="aExecdArgumentParser_coll__map">
+<area shape="rect" title="Класс для хранения и обработки аргументов команд сервиса execd." alt="" coords="5,81,169,109"/>
+<area shape="rect" title=" " alt="" coords="50,5,124,33"/>
+</map>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">см. легенду</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Открытые члены</h2></td></tr>
@@ -151,7 +167,7 @@ $(document).ready(function(){initNavTree('d5/d0a/a00602.html','../../'); initRes
 <tr>
 <td>Высота БПЛА, м</td><td>-e</td><td>Float</td><td>-1</td><td>any</td><td>От уровня моря. -1 означает автоматически </td></tr>
 <tr>
-<td>Скорость БПЛА, км/ч</td><td>-v</td><td>Float</td><td>-1</td><td>0 - ∞</td><td>-1 означает автоматически/td&gt; </td></tr>
+<td>Скорость БПЛА, км/ч</td><td>-v</td><td>Float</td><td>-1</td><td>0 - ∞</td><td>-1 означает автоматически </td></tr>
 <tr>
 <td>Режим интерполяции по скорости</td><td>-i</td><td>Integer</td><td>0</td><td>0 или 1</td><td></td></tr>
 <tr>
@@ -200,7 +216,7 @@ $(document).ready(function(){initNavTree('d5/d0a/a00602.html','../../'); initRes
 <td>Количество гипотез по скорости для фокусировки</td><td>&ndash;ni</td><td>Integer</td><td>10</td><td>1 - ∞</td><td></td></tr>
 </table>
 
-<p class="definition">См. определение в файле <a class="el" href="../../dd/dd7/a00248_source.html">quasarsdk_execdargumentparser.h</a> строка <a class="el" href="../../dd/dd7/a00248_source.html#l00039">39</a></p>
+<p class="definition">См. определение в файле <a class="el" href="../../dd/dd7/a00260_source.html">CExecdArgumentParser.h</a> строка <a class="el" href="../../dd/dd7/a00260_source.html#l00039">39</a></p>
 </div><h2 class="groupheader">Конструктор(ы)</h2>
 <a id="a23840d07c2c2be84085e51406495a5d6" name="a23840d07c2c2be84085e51406495a5d6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a23840d07c2c2be84085e51406495a5d6">&#9670;&#160;</a></span>ExecdArgumentParser()</h2>
@@ -228,7 +244,7 @@ $(document).ready(function(){initNavTree('d5/d0a/a00602.html','../../'); initRes
 
 <p>Создает объект <a class="el" href="../../d5/d0a/a00602.html" title="Класс для хранения и обработки аргументов команд сервиса execd.">ExecdArgumentParser</a> с указанным родителем. </p>
 
-<p class="definition">См. определение в файле <a class="el" href="../../d2/dc8/a00242_source.html">quasarsdk_execdargumentparser.c++</a> строка <a class="el" href="../../d2/dc8/a00242_source.html#l00062">62</a></p>
+<p class="definition">См. определение в файле <a class="el" href="../../d1/d5d/a00311_source.html">CExecdArgumentParser.c++</a> строка <a class="el" href="../../d1/d5d/a00311_source.html#l00062">62</a></p>
 
 </div>
 </div>
@@ -259,7 +275,7 @@ $(document).ready(function(){initNavTree('d5/d0a/a00602.html','../../'); initRes
 <p>Возвращает строку с аргументами для режима формирования. </p>
 <p>Строка обернута в круглые скобки. Строка содержит только те аргументы, чьи значения отличаются от значений по умолчанию. Строка вернет пустые скобки, если все аргументы совпадают с таковыми по умолчанию. </p>
 
-<p class="definition">См. определение в файле <a class="el" href="../../d2/dc8/a00242_source.html">quasarsdk_execdargumentparser.c++</a> строка <a class="el" href="../../d2/dc8/a00242_source.html#l00073">73</a></p>
+<p class="definition">См. определение в файле <a class="el" href="../../d1/d5d/a00311_source.html">CExecdArgumentParser.c++</a> строка <a class="el" href="../../d1/d5d/a00311_source.html#l00073">73</a></p>
 
 </div>
 </div>
@@ -289,7 +305,7 @@ $(document).ready(function(){initNavTree('d5/d0a/a00602.html','../../'); initRes
 <p>Возвращает строку с аргументами для режима переформирования. </p>
 <p>Строка обернута в круглые скобки. Строка содержит только те аргументы, чьи значения отличаются от значений по умолчанию. Строка вернет пустые скобки, если все аргументы совпадают с таковыми по умолчанию. </p>
 
-<p class="definition">См. определение в файле <a class="el" href="../../d2/dc8/a00242_source.html">quasarsdk_execdargumentparser.c++</a> строка <a class="el" href="../../d2/dc8/a00242_source.html#l00100">100</a></p>
+<p class="definition">См. определение в файле <a class="el" href="../../d1/d5d/a00311_source.html">CExecdArgumentParser.c++</a> строка <a class="el" href="../../d1/d5d/a00311_source.html#l00100">100</a></p>
 
 </div>
 </div>
@@ -319,7 +335,7 @@ $(document).ready(function(){initNavTree('d5/d0a/a00602.html','../../'); initRes
 <p>Возвращает строку с аргументами для режима фокусировки. </p>
 <p>Строка обернута в круглые скобки. Строка содержит только те аргументы, чьи значения отличаются от значений по умолчанию. Строка вернет пустые скобки, если все аргументы совпадают с таковыми по умолчанию. </p>
 
-<p class="definition">См. определение в файле <a class="el" href="../../d2/dc8/a00242_source.html">quasarsdk_execdargumentparser.c++</a> строка <a class="el" href="../../d2/dc8/a00242_source.html#l00127">127</a></p>
+<p class="definition">См. определение в файле <a class="el" href="../../d1/d5d/a00311_source.html">CExecdArgumentParser.c++</a> строка <a class="el" href="../../d1/d5d/a00311_source.html#l00127">127</a></p>
 
 </div>
 </div>
@@ -370,12 +386,12 @@ $(document).ready(function(){initNavTree('d5/d0a/a00602.html','../../'); initRes
 <div class="line"> </div>
 <div class="line">          {<span class="stringliteral">&quot;--e0&quot;</span>, ExecdArgument(0.0f)}</div>
 <div class="line">      }</div>
-<div class="ttc" id="aa00598_html"><div class="ttname"><a href="../../d7/dd2/a00598.html">QuasarSDK::ExecdArgument</a></div><div class="ttdoc">Тип данных для работы с сервисом execd.</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dd7/a00248_source.html#l00015">quasarsdk_execdargumentparser.h:16</a></div></div>
+<div class="ttc" id="aa00598_html"><div class="ttname"><a href="../../d7/dd2/a00598.html">QuasarSDK::ExecdArgument</a></div><div class="ttdoc">Тип данных для работы с сервисом execd.</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dd7/a00260_source.html#l00015">CExecdArgumentParser.h:16</a></div></div>
 </div><!-- fragment -->
 <p>Значения по умолчанию для режима формирования и переформирования в сервисе <code>execd</code>. </p>
 <dl class="deprecated"><dt><b><a class="el" href="../../d1/dc6/a00347.html#_deprecated000001">Уст.:</a></b></dt><dd>В будущем будет заменено на файл .json. </dd></dl>
 
-<p class="definition">См. определение в файле <a class="el" href="../../dd/dd7/a00248_source.html">quasarsdk_execdargumentparser.h</a> строка <a class="el" href="../../dd/dd7/a00248_source.html#l00048">48</a></p>
+<p class="definition">См. определение в файле <a class="el" href="../../dd/dd7/a00260_source.html">CExecdArgumentParser.h</a> строка <a class="el" href="../../dd/dd7/a00260_source.html#l00048">48</a></p>
 
 </div>
 </div>
@@ -418,7 +434,7 @@ $(document).ready(function(){initNavTree('d5/d0a/a00602.html','../../'); initRes
 <p>Значения аргументов для режима фокусировки по умолчанию. </p>
 <dl class="deprecated"><dt><b><a class="el" href="../../d1/dc6/a00347.html#_deprecated000002">Уст.:</a></b></dt><dd>В будущем будет заменено на файл .json. </dd></dl>
 
-<p class="definition">См. определение в файле <a class="el" href="../../dd/dd7/a00248_source.html">quasarsdk_execdargumentparser.h</a> строка <a class="el" href="../../dd/dd7/a00248_source.html#l00080">80</a></p>
+<p class="definition">См. определение в файле <a class="el" href="../../dd/dd7/a00260_source.html">CExecdArgumentParser.h</a> строка <a class="el" href="../../dd/dd7/a00260_source.html#l00080">80</a></p>
 
 </div>
 </div>
@@ -436,7 +452,7 @@ $(document).ready(function(){initNavTree('d5/d0a/a00602.html','../../'); initRes
 
 <p>Список аргументов для режима формирования. </p>
 
-<p class="definition">См. определение в файле <a class="el" href="../../dd/dd7/a00248_source.html">quasarsdk_execdargumentparser.h</a> строка <a class="el" href="../../dd/dd7/a00248_source.html#l00104">104</a></p>
+<p class="definition">См. определение в файле <a class="el" href="../../dd/dd7/a00260_source.html">CExecdArgumentParser.h</a> строка <a class="el" href="../../dd/dd7/a00260_source.html#l00104">104</a></p>
 
 </div>
 </div>
@@ -454,7 +470,7 @@ $(document).ready(function(){initNavTree('d5/d0a/a00602.html','../../'); initRes
 
 <p>Список аргументов для режима переформирования. </p>
 
-<p class="definition">См. определение в файле <a class="el" href="../../dd/dd7/a00248_source.html">quasarsdk_execdargumentparser.h</a> строка <a class="el" href="../../dd/dd7/a00248_source.html#l00105">105</a></p>
+<p class="definition">См. определение в файле <a class="el" href="../../dd/dd7/a00260_source.html">CExecdArgumentParser.h</a> строка <a class="el" href="../../dd/dd7/a00260_source.html#l00105">105</a></p>
 
 </div>
 </div>
@@ -472,13 +488,13 @@ $(document).ready(function(){initNavTree('d5/d0a/a00602.html','../../'); initRes
 
 <p>Список аргументов для режима фокусировки. </p>
 
-<p class="definition">См. определение в файле <a class="el" href="../../dd/dd7/a00248_source.html">quasarsdk_execdargumentparser.h</a> строка <a class="el" href="../../dd/dd7/a00248_source.html#l00106">106</a></p>
+<p class="definition">См. определение в файле <a class="el" href="../../dd/dd7/a00260_source.html">CExecdArgumentParser.h</a> строка <a class="el" href="../../dd/dd7/a00260_source.html#l00106">106</a></p>
 
 </div>
 </div>
 <hr/>Объявления и описания членов классов находятся в файлах:<ul>
-<li><a class="el" href="../../dd/dd7/a00248_source.html">quasarsdk_execdargumentparser.h</a></li>
-<li><a class="el" href="../../d2/dc8/a00242_source.html">quasarsdk_execdargumentparser.c++</a></li>
+<li><a class="el" href="../../dd/dd7/a00260_source.html">CExecdArgumentParser.h</a></li>
+<li><a class="el" href="../../d1/d5d/a00311_source.html">CExecdArgumentParser.c++</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

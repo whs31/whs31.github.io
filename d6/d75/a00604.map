@@ -1,6 +1,8 @@
 <map id="ExecdSocket" name="ExecdSocket">
-<area shape="rect" id="node1" title="Сокет для отправки команд на РЛС." alt="" coords="100,175,203,203"/>
-<area shape="rect" id="node2" href="$d7/db1/a00590.html" title="Базовый класс для сокетов, работающих по протоколу UDP." alt="" coords="5,82,130,110"/>
-<area shape="rect" id="node3" href="$d6/d92/a00586.html" title="Абстрактный интерфейс для классов с функционалом подключения и отключения к сетевому адресу." alt="" coords="14,5,121,33"/>
-<area shape="rect" id="node4" href="$d5/d0a/a00602.html" title="Класс для хранения и обработки аргументов команд сервиса execd." alt="" coords="154,82,317,110"/>
+<area shape="rect" id="node1" title="Сокет для отправки команд на РЛС." alt="" coords="187,175,289,203"/>
+<area shape="rect" id="node2" href="$d6/d92/a00586.html" title="Базовый класс для сокетов, работающих по протоколу UDP." alt="" coords="93,82,218,110"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,5,106,33"/>
+<area shape="rect" id="node4" href="$da/d36/a00650.html" title="Абстрактный интерфейс для классов с функционалом подключения и отключения к сетевому адресу." alt="" coords="130,5,237,33"/>
+<area shape="rect" id="node5" href="$d5/d0a/a00602.html" title="Класс для хранения и обработки аргументов команд сервиса execd." alt="" coords="242,82,405,110"/>
+<area shape="rect" id="node6" title=" " alt="" coords="287,5,360,33"/>
 </map>

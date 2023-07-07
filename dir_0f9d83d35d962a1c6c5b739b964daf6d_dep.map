@@ -1,10 +1,5 @@
 <map id="src" name="src">
-<area shape="rect" id="node2" href="dir_b3119b0f0bef4116aba67c56aab782e1.html" title="interfaces" alt="" coords="53,216,139,244"/>
-<area shape="rect" id="node3" href="dir_4cd9bb01dd5ff2baf10feb838ba082e1.html" title="private" alt="" coords="78,141,146,168"/>
-<area shape="rect" id="edge1-headlabel" href="dir_000020_000013.html" title="1" alt="" coords="107,191,115,208"/>
-<area shape="rect" id="node4" href="dir_d734eb5648cc5bb2b8e3f352630d13d6.html" title="public" alt="" coords="38,65,98,93"/>
-<area shape="rect" id="edge3-headlabel" href="dir_000022_000013.html" title="3" alt="" coords="82,188,90,205"/>
-<area shape="rect" id="edge2-headlabel" href="dir_000022_000020.html" title="4" alt="" coords="98,112,106,129"/>
-<area shape="rect" id="clust2" href="dir_0f9d83d35d962a1c6c5b739b964daf6d.html" alt="" coords="27,54,173,255"/>
-<area shape="rect" id="clust1" href="dir_c5d4018c0fe90f1660bca3f6235e9876.html" title="libquasarsdk" alt="" coords="16,16,184,265"/>
+<area shape="rect" id="node2" href="dir_bcc87e96ad48aad0b7d2cce6e389158e.html" title="Networking" alt="" coords="37,65,134,93"/>
+<area shape="rect" id="clust2" href="dir_0f9d83d35d962a1c6c5b739b964daf6d.html" alt="" coords="27,54,208,103"/>
+<area shape="rect" id="clust1" href="dir_c5d4018c0fe90f1660bca3f6235e9876.html" title="libquasarsdk" alt="" coords="16,16,219,114"/>
 </map>

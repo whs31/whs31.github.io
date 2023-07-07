@@ -1,4 +1,4 @@
 var a00320 =
 [
-    [ "QuasarAPI", "dc/df1/a00662.html", "dc/df1/a00662" ]
+    [ "Enums", "da/de4/a00594.html", "da/de4/a00594" ]
 ];

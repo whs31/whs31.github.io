@@ -1,5 +1,5 @@
-<map id="OutputSocket" name="OutputSocket">
-<area shape="rect" id="node1" title="Сокет для приема и обработки вывода с РЛС." alt="" coords="13,157,122,184"/>
-<area shape="rect" id="node2" href="$d7/db1/a00590.html" title="Базовый класс для сокетов, работающих по протоколу UDP." alt="" coords="5,81,130,109"/>
-<area shape="rect" id="node3" href="$d6/d92/a00586.html" title="Абстрактный интерфейс для классов с функционалом подключения и отключения к сетевому адресу." alt="" coords="14,5,121,33"/>
+<map id="OutputRedirectServer" name="OutputRedirectServer">
+<area shape="rect" id="node1" title="Класс для перенаправления вывода РЛС в отдельный Telnet сервер." alt="" coords="17,81,179,109"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,5,79,33"/>
+<area shape="rect" id="node3" href="$da/d36/a00650.html" title="Абстрактный интерфейс для классов с функционалом подключения и отключения к сетевому адресу." alt="" coords="102,5,209,33"/>
 </map>

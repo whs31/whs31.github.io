@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.6"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuaSAR: Класс TelemetrySocket</title>
+<title>QuaSAR: Класс IConnectable</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -93,103 +93,50 @@ $(document).ready(function(){initNavTree('da/d36/a00650.html','../../'); initRes
 
 <div class="header">
   <div class="summary">
-<a href="#signals">Сигналы</a> &#124;
 <a href="#pub-methods">Открытые члены</a> &#124;
 <a href="../../d3/d8e/a00647.html">Полный список членов класса</a>  </div>
-  <div class="headertitle"><div class="title">Класс TelemetrySocket</div></div>
+  <div class="headertitle"><div class="title">Класс IConnectable<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="../../dc/d5d/a00278_source.html">QuasarSDK/Telemetry/Socket</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="../../d5/d0f/a00308_source.html">IConnectable.h</a>&gt;</code></p>
 <div class="dynheader">
-Граф наследования:TelemetrySocket:</div>
+Граф наследования:IConnectable:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../dd/d6b/a00649.png" border="0" usemap="#aTelemetrySocket_inherit__map" alt="Inheritance graph"/></div>
-<map name="aTelemetrySocket_inherit__map" id="aTelemetrySocket_inherit__map">
-<area shape="rect" title="Класс для работы с сервисом navd2 на РЛС." alt="" coords="5,157,135,184"/>
-<area shape="rect" href="../../d7/db1/a00590.html" title="Базовый класс для сокетов, работающих по протоколу UDP." alt="" coords="8,81,132,109"/>
-<area shape="rect" href="../../d6/d92/a00586.html" title="Абстрактный интерфейс для классов с функционалом подключения и отключения к сетевому адресу." alt="" coords="17,5,123,33"/>
-</map>
-<center><span class="legend">[<a target="top" href="../../graph_legend.html">см. легенду</a>]</span></center></div>
-<div class="dynheader">
-Граф связей класса TelemetrySocket:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../dd/d1f/a00648.png" border="0" usemap="#aTelemetrySocket_coll__map" alt="Collaboration graph"/></div>
-<map name="aTelemetrySocket_coll__map" id="aTelemetrySocket_coll__map">
-<area shape="rect" title="Класс для работы с сервисом navd2 на РЛС." alt="" coords="67,191,196,218"/>
-<area shape="rect" href="../../d7/db1/a00590.html" title="Базовый класс для сокетов, работающих по протоколу UDP." alt="" coords="5,98,130,126"/>
-<area shape="rect" href="../../d6/d92/a00586.html" title="Абстрактный интерфейс для классов с функционалом подключения и отключения к сетевому адресу." alt="" coords="8,5,114,33"/>
-<area shape="rect" href="../../d1/daa/a00638.html" title="Класс&#45;хранилище для текущей телеметрии РЛС." alt="" coords="166,98,252,126"/>
-<area shape="rect" href="../../d2/d3e/a00366.html#df/dcf/a00642" title="Датаграмма телеметрии от РЛС к наземке." alt="" coords="139,5,290,33"/>
+<div class="center"><img src="../../dd/d6b/a00649.png" border="0" usemap="#aIConnectable_inherit__map" alt="Inheritance graph"/></div>
+<map name="aIConnectable_inherit__map" id="aIConnectable_inherit__map">
+<area shape="rect" title="Абстрактный интерфейс для классов с функционалом подключения и отключения к сетевому адресу." alt="" coords="451,5,558,33"/>
+<area shape="rect" href="../../d6/d92/a00586.html" title="Базовый класс для сокетов, работающих по протоколу UDP." alt="" coords="201,81,325,109"/>
+<area shape="rect" href="../../da/d6e/a00610.html" title="Класс для перенаправления вывода РЛС в отдельный Telnet сервер." alt="" coords="349,81,511,109"/>
+<area shape="rect" href="../../de/d85/a00618.html" title="Класс для постоянной проверки выбранного адреса на доступность." alt="" coords="535,81,623,109"/>
+<area shape="rect" href="../../d1/daa/a00638.html" title="Класс для приема больших файлов с РЛС по протоколу TCP&#45;IP." alt="" coords="648,81,735,109"/>
+<area shape="rect" href="../../d8/d00/a00606.html" title="Сокет для отправки команд на РЛС." alt="" coords="5,157,108,184"/>
+<area shape="rect" href="../../d7/d80/a00614.html" title="Сокет для приема и обработки вывода с РЛС." alt="" coords="132,157,240,184"/>
+<area shape="rect" href="../../dc/d66/a00630.html" title="Базовый класс для UDP сокетов, требующих целостность датаграммы." alt="" coords="264,157,420,184"/>
+<area shape="rect" href="../../d6/d08/a00646.html" title="Класс для работы с сервисом navd2 на РЛС." alt="" coords="444,157,573,184"/>
+<area shape="rect" href="../../d7/de4/a00634.html" title="Класс для приема больших файлов с РЛС по протоколу UDP." alt="" coords="295,232,389,260"/>
 </map>
 <center><span class="legend">[<a target="top" href="../../graph_legend.html">см. легенду</a>]</span></center></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="signals" name="signals"></a>
-Сигналы</h2></td></tr>
-<tr class="memitem:ad8136df344f340b0653c27e3317c08f5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d36/a00650.html#ad8136df344f340b0653c27e3317c08f5">ping</a> ()</td></tr>
-<tr class="separator:ad8136df344f340b0653c27e3317c08f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header signals_a00590"><td colspan="2" onclick="javascript:toggleInherit('signals_a00590')"><img src="../../closed.png" alt="-"/>&#160;Сигналы унаследованные от <a class="el" href="../../d7/db1/a00590.html">BaseUDPSocket</a></td></tr>
-<tr class="memitem:a3eb63c5af67a44fb60ba731d3da7a56d inherit signals_a00590"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/db1/a00590.html#a3eb63c5af67a44fb60ba731d3da7a56d">received</a> (QByteArray data)</td></tr>
-<tr class="separator:a3eb63c5af67a44fb60ba731d3da7a56d inherit signals_a00590"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a563a67ebf5e4d8ba152045a7c51fd604 inherit signals_a00590"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/db1/a00590.html#a563a67ebf5e4d8ba152045a7c51fd604">metrics</a> (const QString &amp;data, int data_size, bool out)</td></tr>
-<tr class="separator:a563a67ebf5e4d8ba152045a7c51fd604 inherit signals_a00590"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Открытые члены</h2></td></tr>
-<tr class="memitem:af45ae5dae59622dc9960f4e454f8a7ee"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d36/a00650.html#af45ae5dae59622dc9960f4e454f8a7ee">TelemetrySocket</a> (QObject *parent=nullptr, <a class="el" href="../../d1/daa/a00638.html">Telemetry</a> *output=nullptr)</td></tr>
-<tr class="separator:af45ae5dae59622dc9960f4e454f8a7ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a23b677bb8d8ff349a72183584dfef999"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d36/a00650.html#a23b677bb8d8ff349a72183584dfef999">start2way</a> (const QString &amp;address, const QString &amp;recv_address) noexcept</td></tr>
-<tr class="separator:a23b677bb8d8ff349a72183584dfef999"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7dd4a4ce2846754fe0c1f93bcf5d0a86"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d36/a00650.html#a7dd4a4ce2846754fe0c1f93bcf5d0a86">stop2way</a> () noexcept</td></tr>
-<tr class="separator:a7dd4a4ce2846754fe0c1f93bcf5d0a86"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8e0b885b8423672eec948899b7bb504f"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d36/a00650.html#a8e0b885b8423672eec948899b7bb504f">frequency</a> () const</td></tr>
-<tr class="separator:a8e0b885b8423672eec948899b7bb504f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4e364dd16670e0b52593e57472de695c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d36/a00650.html#a4e364dd16670e0b52593e57472de695c">checkCRC</a> () const</td></tr>
-<tr class="separator:a4e364dd16670e0b52593e57472de695c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_a00590"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_a00590')"><img src="../../closed.png" alt="-"/>&#160;Открытые члены унаследованные от <a class="el" href="../../d7/db1/a00590.html">BaseUDPSocket</a></td></tr>
-<tr class="memitem:aa74c6101467f5a492c111453e39d89ea inherit pub_methods_a00590"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/db1/a00590.html#aa74c6101467f5a492c111453e39d89ea">BaseUDPSocket</a> (QObject *parent=nullptr)</td></tr>
-<tr class="separator:aa74c6101467f5a492c111453e39d89ea inherit pub_methods_a00590"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8d9883122ea68f3982da0a6820e31ca5 inherit pub_methods_a00590"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/db1/a00590.html#a8d9883122ea68f3982da0a6820e31ca5">~BaseUDPSocket</a> () override</td></tr>
-<tr class="separator:a8d9883122ea68f3982da0a6820e31ca5 inherit pub_methods_a00590"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a85e6ea749496bfaa328adc586fe00c87 inherit pub_methods_a00590"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/db1/a00590.html#a85e6ea749496bfaa328adc586fe00c87">name</a> () const</td></tr>
-<tr class="separator:a85e6ea749496bfaa328adc586fe00c87 inherit pub_methods_a00590"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a18af9712714a5c702f50537ae560a69d inherit pub_methods_a00590"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/db1/a00590.html#a18af9712714a5c702f50537ae560a69d">setName</a> (const QString &amp;) noexcept</td></tr>
-<tr class="separator:a18af9712714a5c702f50537ae560a69d inherit pub_methods_a00590"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab9ba761a38a1a632dc057acba7c1a5ea inherit pub_methods_a00590"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/db1/a00590.html#ab9ba761a38a1a632dc057acba7c1a5ea">start</a> (const QString &amp;address) override</td></tr>
-<tr class="separator:ab9ba761a38a1a632dc057acba7c1a5ea inherit pub_methods_a00590"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6dd2bfebf59a94006c2c8273546a685c inherit pub_methods_a00590"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/db1/a00590.html#a6dd2bfebf59a94006c2c8273546a685c">start</a> (const QHostAddress &amp;address) noexcept final</td></tr>
-<tr class="separator:a6dd2bfebf59a94006c2c8273546a685c inherit pub_methods_a00590"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a840c0d27d0ff00ce555c1a539adf8abf inherit pub_methods_a00590"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/db1/a00590.html#a840c0d27d0ff00ce555c1a539adf8abf">start</a> (const QHostAddress &amp;address, uint16_t <a class="el" href="../../d7/db1/a00590.html#a6aac8bbc4a1ac6c37d4c9f0564256fbd">port</a>) noexcept override</td></tr>
-<tr class="separator:a840c0d27d0ff00ce555c1a539adf8abf inherit pub_methods_a00590"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:add3dd658f58b302a080d9d8d6e57812b inherit pub_methods_a00590"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/db1/a00590.html#add3dd658f58b302a080d9d8d6e57812b">stop</a> () noexcept override</td></tr>
-<tr class="separator:add3dd658f58b302a080d9d8d6e57812b inherit pub_methods_a00590"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5ff727bb24a856b41e03e5c2da1b7970 inherit pub_methods_a00590"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/db1/a00590.html#a5ff727bb24a856b41e03e5c2da1b7970">send</a> (const QByteArray &amp;data) noexcept</td></tr>
-<tr class="separator:a5ff727bb24a856b41e03e5c2da1b7970 inherit pub_methods_a00590"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3c07e52a7dd282bbffe449aaca5b4604 inherit pub_methods_a00590"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/db1/a00590.html#a3c07e52a7dd282bbffe449aaca5b4604">addressString</a> () const noexcept</td></tr>
-<tr class="separator:a3c07e52a7dd282bbffe449aaca5b4604 inherit pub_methods_a00590"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa72de19e524866d67eac108348a7141a inherit pub_methods_a00590"><td class="memItemLeft" align="right" valign="top">QHostAddress&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/db1/a00590.html#aa72de19e524866d67eac108348a7141a">hostAddress</a> () const noexcept</td></tr>
-<tr class="separator:aa72de19e524866d67eac108348a7141a inherit pub_methods_a00590"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa28fa3e334a61f326e74a170334fce3b inherit pub_methods_a00590"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/db1/a00590.html#aa28fa3e334a61f326e74a170334fce3b">hostAddressString</a> () const noexcept</td></tr>
-<tr class="separator:aa28fa3e334a61f326e74a170334fce3b inherit pub_methods_a00590"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6aac8bbc4a1ac6c37d4c9f0564256fbd inherit pub_methods_a00590"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/db1/a00590.html#a6aac8bbc4a1ac6c37d4c9f0564256fbd">port</a> () const noexcept</td></tr>
-<tr class="separator:a6aac8bbc4a1ac6c37d4c9f0564256fbd inherit pub_methods_a00590"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7e4a08a21d3f225b03765b409527bb77"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d92/a00586.html#a7e4a08a21d3f225b03765b409527bb77">start</a> (const QString &amp;address)=0</td></tr>
+<tr class="memitem:a7e4a08a21d3f225b03765b409527bb77"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d36/a00650.html#a7e4a08a21d3f225b03765b409527bb77">start</a> (const QString &amp;address)=0</td></tr>
 <tr class="separator:a7e4a08a21d3f225b03765b409527bb77"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a242f95d43813c916dff2aad4b347dd43"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d92/a00586.html#a242f95d43813c916dff2aad4b347dd43">start</a> (const QHostAddress &amp;address) noexcept=0</td></tr>
+<tr class="memitem:a242f95d43813c916dff2aad4b347dd43"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d36/a00650.html#a242f95d43813c916dff2aad4b347dd43">start</a> (const QHostAddress &amp;address) noexcept=0</td></tr>
 <tr class="separator:a242f95d43813c916dff2aad4b347dd43"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac4e3f660e7c998c947c410d10c21982f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d92/a00586.html#ac4e3f660e7c998c947c410d10c21982f">start</a> (const QHostAddress &amp;address, uint16_t port) noexcept=0</td></tr>
+<tr class="memitem:ac4e3f660e7c998c947c410d10c21982f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d36/a00650.html#ac4e3f660e7c998c947c410d10c21982f">start</a> (const QHostAddress &amp;address, uint16_t port) noexcept=0</td></tr>
 <tr class="separator:ac4e3f660e7c998c947c410d10c21982f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5b7e5ca7163374ca49fea010385f3513"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d92/a00586.html#a5b7e5ca7163374ca49fea010385f3513">stop</a> () noexcept=0</td></tr>
+<tr class="memitem:a5b7e5ca7163374ca49fea010385f3513"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d36/a00650.html#a5b7e5ca7163374ca49fea010385f3513">stop</a> () noexcept=0</td></tr>
 <tr class="separator:a5b7e5ca7163374ca49fea010385f3513"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
-<div class="textblock"><p>Класс для работы с сервисом <code>navd2</code> на РЛС. </p>
-<p>Предоставляет функционал запроса и приема датаграмм телеметрии с РЛС. Автоматически парсит пакеты телеметрии и записывает значения в класс-хранилище <a class="el" href="../../d1/daa/a00638.html" title="Класс-хранилище для текущей телеметрии РЛС.">Telemetry</a>. </p>
+<div class="textblock"><p>Абстрактный интерфейс для классов с функционалом подключения и отключения к сетевому адресу. </p>
+<p>Обладает функциями <a class="el" href="../../da/d36/a00650.html#a7e4a08a21d3f225b03765b409527bb77" title="Подключается к указанному адресу в виде строки.">start()</a> и <a class="el" href="../../da/d36/a00650.html#a5b7e5ca7163374ca49fea010385f3513" title="Разрывает существующее соединение.">stop()</a>. </p>
 
-<p class="definition">См. определение в файле <a class="el" href="../../dc/d5d/a00278_source.html">quasarsdk_telemetrysocket.h</a> строка <a class="el" href="../../dc/d5d/a00278_source.html#l00017">17</a></p>
-</div><h2 class="groupheader">Конструктор(ы)</h2>
-<a id="af45ae5dae59622dc9960f4e454f8a7ee" name="af45ae5dae59622dc9960f4e454f8a7ee"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af45ae5dae59622dc9960f4e454f8a7ee">&#9670;&#160;</a></span>TelemetrySocket()</h2>
+<p class="definition">См. определение в файле <a class="el" href="../../d5/d0f/a00308_source.html">IConnectable.h</a> строка <a class="el" href="../../d5/d0f/a00308_source.html#l00019">19</a></p>
+</div><h2 class="groupheader">Методы</h2>
+<a id="a7e4a08a21d3f225b03765b409527bb77" name="a7e4a08a21d3f225b03765b409527bb77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e4a08a21d3f225b03765b409527bb77">&#9670;&#160;</a></span>start() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -198,46 +145,35 @@ $(document).ready(function(){initNavTree('da/d36/a00650.html','../../'); initRes
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../da/d36/a00650.html">TelemetrySocket</a> </td>
+          <td class="memname">virtual void start </td>
           <td>(</td>
-          <td class="paramtype">QObject *&#160;</td>
-          <td class="paramname"><em>parent</em> = <code>nullptr</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>address</em></td><td>)</td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../d1/daa/a00638.html">Telemetry</a> *&#160;</td>
-          <td class="paramname"><em>output</em> = <code>nullptr</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Создает новый объект <a class="el" href="../../da/d36/a00650.html" title="Класс для работы с сервисом navd2 на РЛС.">TelemetrySocket</a> с указанным родителем и целью для вывода телеметрии. </p>
+<p>Подключается к указанному адресу в виде строки. </p>
+<dl class="section note"><dt>Заметки</dt><dd>Предполагается, что эта функция может выбрасывать исключения (например, если предоставленная строка некорректна). </dd></dl>
 <dl class="params"><dt>Аргументы</dt><dd>
   <table class="params">
-    <tr><td class="paramname">parent</td><td>- родитель класса в иерархии Qt. </td></tr>
-    <tr><td class="paramname">output</td><td>- указатель на класс <a class="el" href="../../d1/daa/a00638.html" title="Класс-хранилище для текущей телеметрии РЛС.">Telemetry</a>, в который будет отправляться результат парсинга датаграмм. </td></tr>
+    <tr><td class="paramname">address</td><td>- строка с адресом. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">См. определение в файле <a class="el" href="../../d6/d7f/a00287_source.html">quasarsdk_telemetrysocket.c++</a> строка <a class="el" href="../../d6/d7f/a00287_source.html#l00027">27</a></p>
+<p>Замещается в <a class="el" href="../../da/d6e/a00610.html#abccbfc4c0255716f52c689b0f7b7cf16">OutputRedirectServer</a>, <a class="el" href="../../d6/d92/a00586.html#ab9ba761a38a1a632dc057acba7c1a5ea">BaseUDPSocket</a>, <a class="el" href="../../de/d85/a00618.html#ab9ba761a38a1a632dc057acba7c1a5ea">PingTester</a> и <a class="el" href="../../d1/daa/a00638.html#ab9ba761a38a1a632dc057acba7c1a5ea">TCPServer</a>.</p>
 
 </div>
 </div>
-<h2 class="groupheader">Методы</h2>
-<a id="a23b677bb8d8ff349a72183584dfef999" name="a23b677bb8d8ff349a72183584dfef999"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a23b677bb8d8ff349a72183584dfef999">&#9670;&#160;</a></span>start2way()</h2>
+<a id="a242f95d43813c916dff2aad4b347dd43" name="a242f95d43813c916dff2aad4b347dd43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a242f95d43813c916dff2aad4b347dd43">&#9670;&#160;</a></span>start() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -246,16 +182,52 @@ $(document).ready(function(){initNavTree('da/d36/a00650.html','../../'); initRes
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void start2way </td>
+          <td class="memname">virtual void start </td>
           <td>(</td>
-          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramtype">const QHostAddress &amp;&#160;</td>
+          <td class="paramname"><em>address</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Подключается к указанному сетевому адресу (QHostAddress). </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">address</td><td>- сетевой адрес. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Замещается в <a class="el" href="../../d6/d92/a00586.html#a6dd2bfebf59a94006c2c8273546a685c">BaseUDPSocket</a>, <a class="el" href="../../da/d6e/a00610.html#a6dd2bfebf59a94006c2c8273546a685c">OutputRedirectServer</a>, <a class="el" href="../../d1/daa/a00638.html#a6dd2bfebf59a94006c2c8273546a685c">TCPServer</a> и <a class="el" href="../../de/d85/a00618.html#ac3a95a94e1a45edb95f16cdc0376a375">PingTester</a>.</p>
+
+</div>
+</div>
+<a id="ac4e3f660e7c998c947c410d10c21982f" name="ac4e3f660e7c998c947c410d10c21982f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4e3f660e7c998c947c410d10c21982f">&#9670;&#160;</a></span>start() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void start </td>
+          <td>(</td>
+          <td class="paramtype">const QHostAddress &amp;&#160;</td>
           <td class="paramname"><em>address</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const QString &amp;&#160;</td>
-          <td class="paramname"><em>recv_address</em>&#160;</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>port</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -265,27 +237,26 @@ $(document).ready(function(){initNavTree('da/d36/a00650.html','../../'); initRes
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel">pure virtual</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Начинает процедуру запроса и приема телеметрии с РЛС. </p>
-<dl class="section note"><dt>Заметки</dt><dd>Несмотря на то, что класс <a class="el" href="../../da/d36/a00650.html" title="Класс для работы с сервисом navd2 на РЛС.">TelemetrySocket</a> - наследник <a class="el" href="../../d7/db1/a00590.html" title="Базовый класс для сокетов, работающих по протоколу UDP.">BaseUDPSocket</a>, запуск и остановка должна производиться через вызов этой функции, а не функций <a class="el" href="../../d7/db1/a00590.html#ab9ba761a38a1a632dc057acba7c1a5ea" title="Производит попытку подключения к указанному адресу.">start()</a> и <a class="el" href="../../d7/db1/a00590.html#add3dd658f58b302a080d9d8d6e57812b" title="Отключает сокет от адреса, если он был подключен.">stop()</a>. </dd></dl>
+<p>Подключается к указанной паре из QHostAddress и port. </p>
 <dl class="params"><dt>Аргументы</dt><dd>
   <table class="params">
-    <tr><td class="paramname">address</td><td>- полный адрес (IPv4 и порт) для запроса телеметрии. </td></tr>
-    <tr><td class="paramname">recv_address</td><td>- полный адрес для приёма телеметрии. </td></tr>
+    <tr><td class="paramname">address</td><td>- сетевой адрес. </td></tr>
+    <tr><td class="paramname">port</td><td>- порт для подключения. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">См. определение в файле <a class="el" href="../../d6/d7f/a00287_source.html">quasarsdk_telemetrysocket.c++</a> строка <a class="el" href="../../d6/d7f/a00287_source.html#l00050">50</a></p>
+<p>Замещается в <a class="el" href="../../da/d6e/a00610.html#aec9b533a5c3d825c0fd5ee1734801b8f">OutputRedirectServer</a>, <a class="el" href="../../d6/d92/a00586.html#a840c0d27d0ff00ce555c1a539adf8abf">BaseUDPSocket</a>, <a class="el" href="../../de/d85/a00618.html#a840c0d27d0ff00ce555c1a539adf8abf">PingTester</a> и <a class="el" href="../../d1/daa/a00638.html#a840c0d27d0ff00ce555c1a539adf8abf">TCPServer</a>.</p>
 
 </div>
 </div>
-<a id="a7dd4a4ce2846754fe0c1f93bcf5d0a86" name="a7dd4a4ce2846754fe0c1f93bcf5d0a86"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7dd4a4ce2846754fe0c1f93bcf5d0a86">&#9670;&#160;</a></span>stop2way()</h2>
+<a id="a5b7e5ca7163374ca49fea010385f3513" name="a5b7e5ca7163374ca49fea010385f3513"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b7e5ca7163374ca49fea010385f3513">&#9670;&#160;</a></span>stop()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -294,7 +265,7 @@ $(document).ready(function(){initNavTree('da/d36/a00650.html','../../'); initRes
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void stop2way </td>
+          <td class="memname">virtual void stop </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -302,98 +273,26 @@ $(document).ready(function(){initNavTree('da/d36/a00650.html','../../'); initRes
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel">pure virtual</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Останавливает процедуру запроса и приема телеметрии. </p>
+<p>Разрывает существующее соединение. </p>
 
-<p class="definition">См. определение в файле <a class="el" href="../../d6/d7f/a00287_source.html">quasarsdk_telemetrysocket.c++</a> строка <a class="el" href="../../d6/d7f/a00287_source.html#l00078">78</a></p>
-
-</div>
-</div>
-<a id="a8e0b885b8423672eec948899b7bb504f" name="a8e0b885b8423672eec948899b7bb504f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8e0b885b8423672eec948899b7bb504f">&#9670;&#160;</a></span>frequency()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">float frequency </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Предоставляет частоту запроса пакетов телеметрии. </p>
-<p>По умолчанию равно 0.2 секунды. Свойство доступно и для чтения, и для записи. Значение представлено интервалом в секундах между двумя смежными входящими пакетами телеметрии. </p>
-
-<p class="definition">См. определение в файле <a class="el" href="../../d6/d7f/a00287_source.html">quasarsdk_telemetrysocket.c++</a> строка <a class="el" href="../../d6/d7f/a00287_source.html#l00092">92</a></p>
+<p>Замещается в <a class="el" href="../../da/d6e/a00610.html#a4008ad2c644d84457e83d74b3809f2ec">OutputRedirectServer</a>, <a class="el" href="../../d6/d92/a00586.html#add3dd658f58b302a080d9d8d6e57812b">BaseUDPSocket</a>, <a class="el" href="../../de/d85/a00618.html#add3dd658f58b302a080d9d8d6e57812b">PingTester</a> и <a class="el" href="../../d1/daa/a00638.html#add3dd658f58b302a080d9d8d6e57812b">TCPServer</a>.</p>
 
 </div>
 </div>
-<a id="a4e364dd16670e0b52593e57472de695c" name="a4e364dd16670e0b52593e57472de695c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4e364dd16670e0b52593e57472de695c">&#9670;&#160;</a></span>checkCRC()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool checkCRC </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Предоставляет состояние проверки контрольной суммы на входящих пакетах. </p>
-<p>По умолчанию - <code>true</code>. Свойство доступно и для чтения, и для записи. Если свойство равно <code>true</code>, то проверка будет производится, и, в случае несовпадения, будет выброшено предупреждение в консоль. </p>
-
-<p class="definition">См. определение в файле <a class="el" href="../../d6/d7f/a00287_source.html">quasarsdk_telemetrysocket.c++</a> строка <a class="el" href="../../d6/d7f/a00287_source.html#l00102">102</a></p>
-
-</div>
-</div>
-<a id="ad8136df344f340b0653c27e3317c08f5" name="ad8136df344f340b0653c27e3317c08f5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad8136df344f340b0653c27e3317c08f5">&#9670;&#160;</a></span>ping</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ping </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">signal</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Срабатывает, когда сокет получает телеметрию. </p>
-
-</div>
-</div>
-<hr/>Объявления и описания членов классов находятся в файлах:<ul>
-<li><a class="el" href="../../dc/d5d/a00278_source.html">quasarsdk_telemetrysocket.h</a></li>
-<li><a class="el" href="../../d6/d7f/a00287_source.html">quasarsdk_telemetrysocket.c++</a></li>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li><a class="el" href="../../d5/d0f/a00308_source.html">IConnectable.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dc/d59/a00364.html">QuasarSDK</a></li><li class="navelem"><a class="el" href="../../da/d36/a00650.html">TelemetrySocket</a></li>
+    <li class="navelem"><a class="el" href="../../dc/d59/a00364.html">QuasarSDK</a></li><li class="navelem"><a class="el" href="../../da/d36/a00650.html">IConnectable</a></li>
     <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
   </ul>
 </div>
